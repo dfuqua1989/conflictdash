@@ -1,29 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import WorldConflictDebrief from "@/components/WorldConflictDebrief.jsx";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "World Conflict Debrief · Live" },
+      { name: "description", content: "Live briefing on active global conflicts — casualties, displacement, and daily situation reports." },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { property: "og:title", content: "World Conflict Debrief" },
+      { property: "og:description", content: "Live briefing on active global conflicts." },
     ],
   }),
-  component: Index,
+  component: WorldConflictDebrief,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
