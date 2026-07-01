@@ -11,5 +11,5 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Live briefing on active global conflicts." },
     ],
   }),
-  component: WorldConflictDebrief,
+  component: () => <WorldConflictDebrief />,
 });
