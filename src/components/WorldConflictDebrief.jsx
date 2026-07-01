@@ -195,7 +195,7 @@ Write a concise strategic briefing. Respond ONLY with a valid JSON object, no ma
     <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
       <span style={{width:8,height:8,borderRadius:"50%",background:loading?"#f59e0b":"#22c55e",display:"inline-block",flexShrink:0,animation:loading?"shimmer 1s infinite":"none"}}/>
       <span style={{fontSize:10,fontWeight:800,color:"#5b8ec8",textTransform:"uppercase",letterSpacing:".1em"}}>AI Daily Briefing</span>
-      <span style={{fontSize:10,color:t.sub,marginLeft:"auto"}}>{new Date(briefing.generatedAt).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</span>
+      <ClientTime iso={briefing.generatedAt} style={{fontSize:10,color:t.sub,marginLeft:"auto"}}/>
     </div>
     {error&&<div style={{fontSize:11,color:"#ef4444",marginBottom:8,background:"rgba(239,68,68,0.1)",borderRadius:6,padding:"5px 8px"}}>{error}</div>}
     <p style={{fontSize:13,color:t.text,lineHeight:1.7,margin:"0 0 12px"}}>{briefing.summary}</p>
