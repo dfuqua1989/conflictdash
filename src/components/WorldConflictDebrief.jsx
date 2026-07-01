@@ -2101,12 +2101,12 @@ const VIEWS=[{id:"today",label:"Today",icon:"📡"},{id:"theaters",label:"Theate
 const SECTIONS=CONFLICT_SECTIONS.map(s=>({id:s.id,label:s.label,tabs:[{id:"overview",label:"Overview"}]}));
 
 function useIsLandscape(){
-  const[isLandscape,setIsLandscape]=useState(typeof window!=="undefined"&&window.innerWidth>window.innerHeight);
+  const[isLandscape,setIsLandscape]=useState(false);
   useEffect(()=>{
     const handler=()=>setIsLandscape(window.innerWidth>window.innerHeight);
+    handler();
     window.addEventListener("resize",handler);
     window.addEventListener("orientationchange",handler);
-    handler();
     return()=>{window.removeEventListener("resize",handler);window.removeEventListener("orientationchange",handler);};
   },[]);
   return isLandscape;
@@ -2143,7 +2143,7 @@ export default function App(){
             <span style={{fontSize:13,fontWeight:800,color:t.isDark?"#dde6f5":t.text,letterSpacing:"-.01em"}}>World Conflict Debrief</span>
             <span style={{fontSize:10,color:t.sub}}>· Live</span>
           </div>
-          <div style={{fontSize:11,color:t.sub,marginTop:1}}>30 June 2026 · War Day {UA_WAR_DAY}</div>
+          <div style={{fontSize:11,color:t.sub,marginTop:1}}>1 July 2026 · War Day {UA_WAR_DAY}</div>
         </div>
         <button onClick={()=>setPaletteOpen(true)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 10px",cursor:"pointer",color:t.sub,fontSize:12,fontFamily:FONT}}>🔍 <span style={{fontSize:10}}>⌘K</span></button>
         <button onClick={()=>setDark(d=>!d)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 9px",cursor:"pointer",fontSize:16,fontFamily:FONT}}>{dark?"☀️":"🌙"}</button>
