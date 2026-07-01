@@ -150,6 +150,7 @@ function Freshness({t,date}){const info=ageInfo(date);if(!info)return null;const
 function NewsTicker(){const doubled=[...TICKER_ITEMS,...TICKER_ITEMS];return <div className="ticker-wrap" style={{background:"#070d1c",borderBottom:"1px solid rgba(91,142,196,0.2)",overflow:"hidden",height:34,display:"flex",alignItems:"center"}}><div className="ticker-inner" style={{display:"flex",gap:40,alignItems:"center",animation:"ticker 90s linear infinite",whiteSpace:"nowrap",willChange:"transform"}}>{doubled.map((n,i)=><span key={i} style={{fontSize:12,color:"rgba(255,255,255,.7)",display:"flex",alignItems:"center",gap:6}}><span style={{background:n.color+"30",border:`1px solid ${n.color}55`,borderRadius:20,padding:"1px 7px",fontSize:11,fontWeight:700,color:n.color}}>{n.tag}</span>{n.text}</span>)}</div></div>;}
 
 // ── Briefing Panel ───────────────────────────────────────────────────────────────
+function ClientTime({iso,style}){const[s,setS]=useState("");useEffect(()=>{setS(new Date(iso).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}));},[iso]);return <span style={style} suppressHydrationWarning>{s}</span>;}
 function BriefingPanel({t}){
   const SC={Ukraine:"#5b8ec8",Sudan:"#f97316",Gaza:"#f59e0b",Taiwan:"#eab308",Iran:"#8b5cf6",Global:"#22c55e"};
   const[briefing,setBriefing]=useState(BRIEFING);
