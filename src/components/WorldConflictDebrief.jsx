@@ -2143,6 +2143,7 @@ export default function App(){
             <span style={{width:7,height:7,borderRadius:"50%",background:"#ef4444",display:"inline-block",animation:"blink 1.4s ease-in-out infinite",flexShrink:0}}/>
             <span style={{fontSize:13,fontWeight:800,color:t.isDark?"#dde6f5":t.text,letterSpacing:"-.01em"}}>World Conflict Debrief</span>
             <span style={{fontSize:10,color:t.sub}}>· Live</span>
+            <span style={{marginLeft:"auto",fontSize:9,fontWeight:700,color:t.sub,letterSpacing:".15em",textTransform:"uppercase",opacity:0.55}}>FuQuAD</span>
           </div>
           <div style={{fontSize:11,color:t.sub,marginTop:1}}>1 July 2026 · War Day {UA_WAR_DAY}</div>
         </div>
