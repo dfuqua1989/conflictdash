@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "World Conflict Debrief · Live" },
+      { name: "description", content: "Live briefing on active global conflicts — casualties, displacement, and daily situation reports." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "World Conflict Debrief · Live" },
+      { property: "og:description", content: "Live briefing on active global conflicts — casualties, displacement, and daily situation reports." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "World Conflict Debrief · Live" },
+      { name: "twitter:description", content: "Live briefing on active global conflicts — casualties, displacement, and daily situation reports." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/05269ba0-5e7a-4847-a852-af980994fa5c/id-preview-74466bf7--f124cd8e-a625-46ff-a71c-7c46b0bde029.lovable.app-1783136448832.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/05269ba0-5e7a-4847-a852-af980994fa5c/id-preview-74466bf7--f124cd8e-a625-46ff-a71c-7c46b0bde029.lovable.app-1783136448832.png" },
     ],
     links: [
       {
