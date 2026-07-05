@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import WorldConflictDebrief from "@/components/WorldConflictDebrief.jsx";
+import WorldConflictDebrief from "@/components/WorldConflictDebrief.tsx";
 
 export const Route = createFileRoute("/")({
   head: () => ({
