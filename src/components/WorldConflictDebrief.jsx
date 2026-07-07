@@ -2481,7 +2481,7 @@ const VIEWS=[{id:"today",label:"Today",icon:"📡"},{id:"theaters",label:"Theate
 const SECTIONS=CONFLICT_SECTIONS.map(s=>({id:s.id,label:s.label,tabs:[{id:"overview",label:"Overview"}]}));
 
 function useIsLandscape(){
-  const[isLandscape,setIsLandscape]=useState(typeof window!=="undefined"&&window.innerWidth>window.innerHeight);
+  const[isLandscape,setIsLandscape]=useState(false);
   useEffect(()=>{
     const handler=()=>setIsLandscape(window.innerWidth>window.innerHeight);
     window.addEventListener("resize",handler);
