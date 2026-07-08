@@ -2818,7 +2818,7 @@ export default function App(){
   const handleNavigate=(sectionId,_tabId)=>{setSelectedConflict(sectionId);setView("deepdive");setPaletteOpen(false);};
 
   return <div style={{background:t.bg,minHeight:"100vh",maxWidth:t.isLandscape?900:480,margin:"0 auto",fontFamily:FONT,lineHeight:1.5,WebkitFontSmoothing:"antialiased",paddingBottom:16}}>
-    <style>{GCSS}{NAV_ANIM_CSS}</style>
+    <style dangerouslySetInnerHTML={{__html: GCSS + NAV_ANIM_CSS}} />
     {showSplash&&<SplashScreen onDone={()=>setShowSplash(false)}/>}
     <NavBurst flash={flash}/>
     <CommandPalette open={paletteOpen} onClose={()=>setPaletteOpen(false)} sections={SECTIONS} onNavigate={handleNavigate} t={t}/>
