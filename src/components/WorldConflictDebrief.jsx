@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceLine, ComposedChart, Bar, ScatterChart, Scatter, ZAxis, Cell, CartesianGrid, Legend, ReferenceArea } from "recharts";
 
+
+function ClientTime({iso,style}){const[v,setV]=useState("");useEffect(()=>{setV(new Date(iso).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}));},[iso]);return <span style={style} suppressHydrationWarning>{v}</span>;}
 const DARK={bg:"#0b1220",card:"#101d30",text:"#c8d8ed",sub:"#7d94b3",sep:"rgba(91,142,196,0.1)",border:"rgba(91,142,196,0.22)",isDark:true};
 const LIGHT={bg:"#e8edf5",card:"#f4f7fb",text:"#0d1826",sub:"#37516e",sep:"rgba(70,110,170,0.1)",border:"rgba(70,110,170,0.18)",isDark:false};
 const GCSS=`@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}.ticker-wrap:hover .ticker-inner{animation-play-state:paused}::-webkit-scrollbar{display:none}*{-webkit-tap-highlight-color:transparent;box-sizing:border-box}@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}@keyframes shimmer{0%,100%{opacity:1}50%{opacity:.4}}@keyframes splashFadeOut{from{opacity:1}to{opacity:0}}@keyframes bandL{from{transform:translateX(-105%)}to{transform:translateX(0)}}@keyframes bandR{from{transform:translateX(105%)}to{transform:translateX(0)}}@keyframes tridentIn{0%{opacity:0;transform:scale(.3) rotate(-8deg)}60%{opacity:1;transform:scale(1.12) rotate(2deg)}100%{opacity:1;transform:scale(1) rotate(0)}}@keyframes glowRing{0%{transform:scale(.4);opacity:.9}100%{transform:scale(2.6);opacity:0}}@keyframes textReveal{from{opacity:0;letter-spacing:.55em;transform:translateY(8px)}to{opacity:1;letter-spacing:.22em;transform:translateY(0)}}@keyframes scanline{0%{transform:translateY(-100%)}100%{transform:translateY(100vh)}}@keyframes flagWave{0%,100%{transform:perspective(600px) rotateY(0deg)}50%{transform:perspective(600px) rotateY(4deg)}}@keyframes splashPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}@keyframes particleDrift{0%{transform:translateY(0);opacity:0}12%{opacity:.85}88%{opacity:.85}100%{transform:translateY(-110vh);opacity:0}}@keyframes radarSweep{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}@keyframes radarPing{0%{transform:scale(.15);opacity:.7}100%{transform:scale(1.15);opacity:0}}@keyframes sheen{0%{transform:translateX(-130%) skewX(-18deg)}100%{transform:translateX(230%) skewX(-18deg)}}@keyframes loadBar{from{width:0%}to{width:100%}}@keyframes crosshairBlink{0%,100%{opacity:.5}50%{opacity:.12}}@keyframes criticalPulse{0%,100%{box-shadow:0 2px 10px rgba(0,0,0,.35),0 0 0 1px rgba(220,38,38,.25),0 0 8px 0 rgba(220,38,38,.15)}50%{box-shadow:0 2px 16px rgba(0,0,0,.45),0 0 0 1px rgba(220,38,38,.7),0 0 22px 2px rgba(220,38,38,.5)}}@keyframes edgeSheen{0%{opacity:.0}50%{opacity:.5}100%{opacity:.0}}.theater-card{transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s ease;position:relative}.theater-card:active{transform:scale(.94);box-shadow:0 1px 4px rgba(0,0,0,.3)}.theater-card::after{content:"";position:absolute;inset:0;border-radius:14px;background:radial-gradient(circle at var(--px,50%) var(--py,50%),rgba(91,142,196,.55),rgba(91,142,196,.12) 45%,transparent 68%);opacity:0;pointer-events:none;transition:opacity .5s ease}.theater-card:active::after{opacity:1;transition:opacity 0s}.theater-card:active::before{content:"";position:absolute;inset:0;border-radius:14px;border:1.5px solid rgba(91,142,196,.6);pointer-events:none;animation:cardFlash .5s ease-out}@keyframes cardFlash{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.015)}}@keyframes riseIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@keyframes barGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}.pill-tab{transition:transform .14s ease,background .15s ease,color .15s ease,border-color .15s ease}.pill-tab:active{transform:scale(.9)}.rise{animation:riseIn .3s ease-out both}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}`;
@@ -181,7 +183,7 @@ function BriefingPanel({t}){
     <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
       <span style={{width:8,height:8,borderRadius:"50%",background:"#22c55e",display:"inline-block",flexShrink:0}}/>
       <span style={{fontSize:10,fontWeight:800,color:"#5b8ec8",textTransform:"uppercase",letterSpacing:".1em"}}>Daily Briefing</span>
-      <span style={{fontSize:10,color:t.sub,marginLeft:"auto"}}>{new Date(briefing.generatedAt).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</span>
+      <ClientTime iso={briefing.generatedAt} style={{fontSize:10,color:t.sub,marginLeft:"auto"}} />
     </div>
     <p style={{fontSize:13,color:t.text,lineHeight:1.7,margin:"0 0 12px"}}>{briefing.summary}</p>
     <div style={{display:"flex",flexWrap:"wrap",gap:6,marginBottom:10}}>{briefing.signals.map((sig,i)=>{const color=SC[sig.theater]??"#7a93b8";return <span key={i} style={{background:color+"18",border:`1px solid ${color}40`,borderRadius:20,padding:"3px 10px",fontSize:11,fontWeight:600,color}}>{sig.theater}: {sig.text}</span>;})}</div>
@@ -2682,7 +2684,7 @@ const VIEWS=[{id:"today",label:"Today",icon:"📡"},{id:"theaters",label:"Theate
 const SECTIONS=CONFLICT_SECTIONS.map(s=>({id:s.id,label:s.label,tabs:[{id:"overview",label:"Overview"}]}));
 
 function useIsLandscape(){
-  const[isLandscape,setIsLandscape]=useState(typeof window!=="undefined"&&window.innerWidth>window.innerHeight);
+  const[isLandscape,setIsLandscape]=useState(false);
   useEffect(()=>{
     const handler=()=>setIsLandscape(window.innerWidth>window.innerHeight);
     window.addEventListener("resize",handler);
@@ -2822,7 +2824,7 @@ export default function App(){
   const handleNavigate=(sectionId,_tabId)=>{setSelectedConflict(sectionId);setView("deepdive");setPaletteOpen(false);};
 
   return <div style={{background:t.bg,minHeight:"100vh",maxWidth:t.isLandscape?900:480,margin:"0 auto",fontFamily:FONT,lineHeight:1.5,WebkitFontSmoothing:"antialiased",paddingBottom:16}}>
-    <style>{GCSS}{NAV_ANIM_CSS}</style>
+    <style dangerouslySetInnerHTML={{__html: GCSS + NAV_ANIM_CSS}} />
     {showSplash&&<SplashScreen onDone={()=>setShowSplash(false)}/>}
     <NavBurst flash={flash}/>
     <CommandPalette open={paletteOpen} onClose={()=>setPaletteOpen(false)} sections={SECTIONS} onNavigate={handleNavigate} t={t}/>
