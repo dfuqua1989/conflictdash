@@ -2984,14 +2984,14 @@ export default function App(){
         <div style={{flex:1}}>
           <div style={{display:"flex",alignItems:"center",gap:6}}>
             <span style={{width:7,height:7,borderRadius:"50%",background:"#ef4444",display:"inline-block",animation:"blink 1.4s ease-in-out infinite",flexShrink:0}}/>
-            <span style={{fontSize:13,fontWeight:800,color:t.isDark?"#dde6f5":t.text,letterSpacing:"-.01em"}}>World Conflict Debrief</span>
+            <h1 style={{fontSize:13,fontWeight:800,color:t.isDark?"#dde6f5":t.text,letterSpacing:"-.01em",margin:0,display:"inline"}}>World Conflict Debrief</h1>
             <span style={{fontSize:10,color:t.sub}}>· Live</span>
           </div>
           <div style={{fontSize:11,color:t.sub,marginTop:1}}>{REPORT_NOW.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})} · War Day {UA_WAR_DAY}</div>
         </div>
         <span style={{fontSize:9,fontWeight:700,color:t.sub,opacity:0.45,letterSpacing:".12em",marginRight:2,fontFamily:FONT,userSelect:"none",whiteSpace:"nowrap"}}>@FUQUAD08</span>
-        <button className="pill-tab" onClick={()=>setPaletteOpen(true)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 10px",cursor:"pointer",color:t.sub,fontSize:12,fontFamily:FONT}}>🔍 <span style={{fontSize:10}}>⌘K</span></button>
-        <button className="pill-tab" onClick={()=>setDark(d=>!d)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 9px",cursor:"pointer",fontSize:16,fontFamily:FONT}}>{dark?"☀️":"🌙"}</button>
+        <button aria-label="Open command palette" className="pill-tab" onClick={()=>setPaletteOpen(true)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 10px",cursor:"pointer",color:t.sub,fontSize:12,fontFamily:FONT}}>🔍 <span style={{fontSize:10}}>⌘K</span></button>
+        <button aria-label="Toggle dark mode" className="pill-tab" onClick={()=>setDark(d=>!d)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 9px",cursor:"pointer",fontSize:16,fontFamily:FONT}}>{dark?"☀️":"🌙"}</button>
       </div>
       <div style={{display:"flex",gap:0}}>
         {VIEWS.map(v=>{const badge=v.id==="today"&&criticalCount>0?criticalCount:v.id==="theaters"&&CONFLICTS.length?CONFLICTS.length:0;return <button key={v.id} onClick={()=>setView(v.id)} style={{flex:1,padding:"8px 4px 10px",background:"none",border:"none",borderBottom:view===v.id?"2px solid #5b8ec8":"2px solid transparent",cursor:"pointer",fontFamily:FONT,fontSize:12,fontWeight:view===v.id?700:400,color:view===v.id?"#5b8ec8":t.sub,display:"flex",alignItems:"center",justifyContent:"center",gap:5,position:"relative"}}><span style={{fontSize:14}}>{v.icon}</span><span>{v.label}</span>{badge>0&&<span style={{background:v.id==="today"?"#ef4444":"#5b8ec8",color:"#fff",borderRadius:10,fontSize:9,fontWeight:800,padding:"1px 5px",lineHeight:1.5,minWidth:16,textAlign:"center",display:"inline-block",animation:v.id==="today"?"splashPulse 1.8s ease-in-out infinite":"none"}}>{badge}</span>}</button>;})}
