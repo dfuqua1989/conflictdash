@@ -2913,7 +2913,7 @@ export default function App(){
           <div style={{fontSize:8.5,fontWeight:700,color:t.sub,letterSpacing:".2em",textTransform:"uppercase",marginBottom:2,opacity:0.85}}>Daily Intelligence Brief · Global Conflict Desk</div>
           <div style={{display:"flex",alignItems:"center",gap:6}}>
             <span style={{width:7,height:7,borderRadius:"50%",background:"#ef4444",display:"inline-block",animation:"blink 1.4s ease-in-out infinite",flexShrink:0}}/>
-            <span style={{fontSize:15,fontWeight:800,color:t.isDark?"#e4ecf6":t.text,letterSpacing:"-.01em"}}>WORLD CONFLICT DEBRIEF</span>
+            <h1 style={{margin:0,fontSize:15,fontWeight:800,color:t.isDark?"#e4ecf6":t.text,letterSpacing:"-.01em",display:"inline",fontFamily:FONT}}>WORLD CONFLICT DEBRIEF</h1>
           </div>
           <div style={{fontSize:10,color:t.sub,marginTop:2,letterSpacing:".03em"}}>As of {REPORT_NOW.toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}).toUpperCase()} · WAR DAY {UA_WAR_DAY} · SERIAL WCD-{UA_WAR_DAY}</div>
         </div>
