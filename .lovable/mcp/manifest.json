@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "world-conflict-debrief-mcp",
+      "version": "0.1.0",
+      "title": "World Conflict Debrief"
+    },
+    "tools": [
+      {
+        "name": "list_conflicts",
+        "title": "List tracked conflicts",
+        "description": "List every active or watched conflict tracked by the World Conflict Debrief dashboard, with region, status, and casualty/displacement figures.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "region": {
+              "description": "Optional region filter, e.g. 'Middle East', 'Indo-Pacific'.",
+              "type": "string"
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_conflict",
+        "title": "Get conflict briefing",
+        "description": "Return the full briefing (status, casualties, displacement, summary) for one tracked conflict by its id. Use list_conflicts first to discover valid ids.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Conflict id, e.g. 'ukraine', 'gaza', 'iran', 'taiwan', 'south-china-sea', 'caribbean', 'venezuela', 'north-korea'."
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
