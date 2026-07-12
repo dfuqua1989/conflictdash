@@ -2185,7 +2185,7 @@ function DroneWarSection({ t, initialTab }) {
       <div style={{ marginBottom:16 }}>
         <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
           <span style={{ fontSize:20 }}>🛸</span>
-          <h1 style={{ margin:0, fontSize:19, fontWeight:900, letterSpacing:-.5 }}>DRONE WAR</h1>
+          <h2 style={{ margin:0, fontSize:19, fontWeight:900, letterSpacing:-.5 }}>DRONE WAR</h2>
           <span style={{ background:"#1e3a5f", color:DWC.uaLt, borderRadius:4, padding:"2px 8px", fontSize:11, fontWeight:700 }}>RUSSIA-UKRAINE · UPDATED JUL 2 '26</span>
         </div>
         <p style={{ margin:"5px 0 0", color:DWC.muted, fontSize:11 }}>
