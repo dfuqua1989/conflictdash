@@ -2339,7 +2339,7 @@ function DroneWarSection({ t, initialTab }) {
       <div style={{ marginBottom:16 }}>
         <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
           <span style={{ fontSize:20 }}>🛸</span>
-          <h1 style={{ margin:0, fontSize:19, fontWeight:900, letterSpacing:-.5 }}>DRONE WAR</h1>
+          <h2 style={{ margin:0, fontSize:19, fontWeight:900, letterSpacing:-.5 }}>DRONE WAR</h2>
           <span style={{ background:"#1e3a5f", color:DWC.uaLt, borderRadius:4, padding:"2px 8px", fontSize:11, fontWeight:700 }}>RUSSIA-UKRAINE · UPDATED {DW_DAILY[DW_DAILY.length-1].date.toUpperCase()} '26</span>
         </div>
         <p style={{ margin:"5px 0 0", color:DWC.muted, fontSize:11 }}>
@@ -3084,13 +3084,14 @@ export default function App(){
           <div style={{fontSize:8.5,fontWeight:700,color:t.sub,letterSpacing:".2em",textTransform:"uppercase",marginBottom:2,opacity:0.85}}>Daily Intelligence Brief · Global Conflict Desk</div>
           <div style={{display:"flex",alignItems:"center",gap:6}}>
             <span style={{width:7,height:7,borderRadius:"50%",background:"#ef4444",display:"inline-block",animation:"blink 1.4s ease-in-out infinite",flexShrink:0}}/>
-            <span style={{fontSize:15,fontWeight:800,color:t.isDark?"#e4ecf6":t.text,letterSpacing:"-.01em"}}>WORLD CONFLICT DEBRIEF<span className="tt-cursor"/></span>
+            <h1 style={{margin:0,fontSize:15,fontWeight:800,color:t.isDark?"#e4ecf6":t.text,letterSpacing:"-.01em",fontFamily:FONT}}>WORLD CONFLICT DEBRIEF<span className="tt-cursor"/></h1>
           </div>
           <div style={{fontSize:10,color:t.sub,marginTop:2,letterSpacing:".03em"}}>As of {REPORT_NOW.toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}).toUpperCase()} · WAR DAY {UA_WAR_DAY} · SERIAL WCD-{UA_WAR_DAY}</div>
         </div>
         <span style={{fontSize:9,fontWeight:700,color:t.sub,opacity:0.45,letterSpacing:".12em",marginRight:2,fontFamily:FONT,userSelect:"none",whiteSpace:"nowrap"}}>@FUQUAD08</span>
-        <button className="pill-tab" onClick={()=>setPaletteOpen(true)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 10px",cursor:"pointer",color:t.sub,fontSize:12,fontFamily:FONT}}>🔍 <span style={{fontSize:10}}>⌘K</span></button>
-        <button className="pill-tab" onClick={()=>setDark(d=>!d)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 9px",cursor:"pointer",fontSize:16,fontFamily:FONT}}>{dark?"☀️":"🌙"}</button>
+        <button aria-label="Open command palette (Cmd+K)" className="pill-tab" onClick={()=>setPaletteOpen(true)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 10px",cursor:"pointer",color:t.sub,fontSize:12,fontFamily:FONT}}>🔍 <span style={{fontSize:10}}>⌘K</span></button>
+        <button aria-label={dark?"Switch to light mode":"Switch to dark mode"} className="pill-tab" onClick={()=>setDark(d=>!d)} style={{background:t.isDark?"rgba(59,130,246,0.12)":"rgba(59,130,246,0.08)",border:`1px solid ${t.border}`,borderRadius:8,padding:"5px 9px",cursor:"pointer",fontSize:16,fontFamily:FONT}}>{dark?"☀️":"🌙"}</button>
+
       </div>
       <div style={{display:"flex",gap:0}}>
         {VIEWS.map(v=>{const badge=v.id==="today"&&criticalCount>0?criticalCount:v.id==="theaters"&&CONFLICTS.length?CONFLICTS.length:0;return <button key={v.id} onClick={()=>setView(v.id)} style={{flex:1,padding:"8px 4px 10px",background:"none",border:"none",borderBottom:view===v.id?"2px solid #5b8ec8":"2px solid transparent",cursor:"pointer",fontFamily:FONT,fontSize:12,fontWeight:view===v.id?700:400,color:view===v.id?"#5b8ec8":t.sub,display:"flex",alignItems:"center",justifyContent:"center",gap:5,position:"relative"}}><span style={{fontSize:14}}>{v.icon}</span><span>{v.label}</span>{badge>0&&<span style={{background:v.id==="today"?"#ef4444":"#5b8ec8",color:"#fff",borderRadius:10,fontSize:9,fontWeight:800,padding:"1px 5px",lineHeight:1.5,minWidth:16,textAlign:"center",display:"inline-block",animation:v.id==="today"?"splashPulse 1.8s ease-in-out infinite":"none"}}>{badge}</span>}</button>;})}
