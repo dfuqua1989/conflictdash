@@ -3067,7 +3067,7 @@ export default function App(){
   const handleNavigate=(sectionId,tabId)=>{setSelectedConflict(sectionId);setPendingTab(tabId||null);setView("deepdive");setPaletteOpen(false);};
 
   return <div style={{background:t.bg,minHeight:"100vh",maxWidth:t.isLandscape?900:480,margin:"0 auto",fontFamily:FONT,lineHeight:1.5,WebkitFontSmoothing:"antialiased",paddingBottom:34,position:"relative"}} className={t.isDark?"t-dark":""}>
-    <style>{GCSS}{NAV_ANIM_CSS}</style>
+    <style dangerouslySetInnerHTML={{__html:GCSS+NAV_ANIM_CSS}}/>
     <div className="grain-overlay"/>
     <div style={{position:"fixed",bottom:0,left:0,right:0,zIndex:90,pointerEvents:"none",background:"#1f6f43",color:"#e8f5ec",fontSize:8,fontWeight:700,letterSpacing:".2em",textAlign:"center",padding:"2px 0",fontFamily:FONT,textTransform:"uppercase",maxWidth:t.isLandscape?900:480,margin:"0 auto"}}>Unclassified · OSINT · @FUQUAD08</div>
     {showSplash&&<SplashScreen onDone={()=>setShowSplash(false)}/>}
