@@ -35,6 +35,10 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: () => <WorldConflictDebrief />,
+  component: () => (
+    <main>
+      <WorldConflictDebrief />
+    </main>
+  ),
 });
 
