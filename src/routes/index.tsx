@@ -9,20 +9,12 @@ const URL = "https://conflictdash.lovable.app/";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
       {
         name: "keywords",
         content:
           "global conflict tracker, world conflict map, osint dashboard, ukraine war live, gaza ceasefire, taiwan strait, north korea, daily conflict briefing",
       },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
       { property: "og:url", content: URL },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "World Conflict Debrief" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [
