@@ -17,8 +17,6 @@ export const Route = createFileRoute("/")({
           "global conflict tracker, world conflict map, osint dashboard, ukraine war live, gaza ceasefire, taiwan strait, north korea, daily conflict briefing",
       },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: URL },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "World Conflict Debrief" },
