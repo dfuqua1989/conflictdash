@@ -15,7 +15,13 @@ export const Route = createFileRoute("/sitemap.xml")({
           `    <changefreq>daily</changefreq>`,
           `    <priority>1.0</priority>`,
           `  </url>`,
+          `  <url>`,
+          `    <loc>${BASE_URL}/background/strait-of-hormuz</loc>`,
+          `    <changefreq>monthly</changefreq>`,
+          `    <priority>0.7</priority>`,
+          `  </url>`,
           `</urlset>`,
+
         ].join("\n");
 
         return new Response(xml, {
