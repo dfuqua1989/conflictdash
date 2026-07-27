@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /mcp
+Disallow: /.mcp/
+Disallow: /.well-known/
 
 Sitemap: https://conflictdash.lovable.app/sitemap.xml
