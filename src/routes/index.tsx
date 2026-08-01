@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
               name: "How often is the Global Conflict Tracker updated?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "The dashboard is refreshed daily with situation reports aggregated from open-source intelligence, including Ukrainian General Staff, Russian MoD, ISW, ACLED, UN OCHA, CSIS, and major news outlets.",
+                text: "The dashboard is refreshed twice daily, by 8:00 PM EST, from open-source intelligence including the Ukrainian General Staff, Russian MoD, ISW, ACLED, UN OCHA, CSIS and major news outlets.",
               },
             },
             {
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
               name: "Which conflicts does the dashboard track?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Ukraine, Gaza and the West Bank, the US–Iran situation, Taiwan Strait, South China Sea, the Caribbean and Cuba blockade, Venezuela, and North Korea.",
+                text: "Ukraine; Israel and the Levant, including Gaza and the West Bank; Iran; the Taiwan Strait; the South China Sea; and the Americas, covering Cuba, Venezuela, Mexico and Haiti. Three thematic sections cover drone warfare, great-power rivalry, and strategic, nuclear and hybrid threats.",
               },
             },
             {
