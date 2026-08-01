@@ -6,7 +6,7 @@ const DESCRIPTION =
 const URL = "https://conflictdash.lovable.app/background/strait-of-hormuz";
 const SOCIAL_TITLE = "Strait of Hormuz: Oil Chokepoint Primer";
 const SOCIAL_DESCRIPTION =
-  "Transit volumes, geography, Iranian closure threats and the history of US–Iran naval confrontations at the world"s key oil chokepoint.";
+  "Transit volumes, geography, Iranian closure threats and the history of US–Iran naval confrontations at the world's key oil chokepoint.";
 const IMAGE = "https://conflictdash.lovable.app/og-strait-of-hormuz.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';

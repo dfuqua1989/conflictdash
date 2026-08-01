@@ -6,7 +6,7 @@ const DESCRIPTION =
 const URL = "https://conflictdash.lovable.app/background/hezbollah-capabilities";
 const SOCIAL_TITLE = "Hezbollah in 2026: Structure & Arsenal";
 const SOCIAL_DESCRIPTION =
-  "Hezbollah"s command structure, force strength and rocket arsenal after the 2024 decapitation — and its role as Iran"s forward deterrent.";
+  "Hezbollah's command structure, force strength and rocket arsenal after the 2024 decapitation — and its role as Iran's forward deterrent.";
 const IMAGE = "https://conflictdash.lovable.app/og-hezbollah-capabilities.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
