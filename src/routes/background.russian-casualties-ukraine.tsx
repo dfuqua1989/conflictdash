@@ -4,6 +4,10 @@ const TITLE = "How Many Russian Soldiers Have Died in Ukraine? | World Conflict 
 const DESCRIPTION =
   "Why casualty figures for the Russian army in Ukraine range from 250,000 to over 1.4 million — what each number actually counts, who produces it, and which one to trust.";
 const URL = "https://conflictdash.lovable.app/background/russian-casualties-ukraine";
+const SOCIAL_TITLE = "Russian Casualties in Ukraine, Explained";
+const SOCIAL_DESCRIPTION =
+  "Why Russian loss estimates range from 250,000 to 1.4 million — what each figure counts, who publishes it, and which one to trust.";
+const IMAGE = "https://conflictdash.lovable.app/og-russian-casualties-ukraine.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
 const T = {
@@ -88,12 +92,17 @@ export const Route = createFileRoute("/background/russian-casualties-ukraine")({
           "russian casualties ukraine, how many russian soldiers died, russian death toll ukraine, russian losses 2026, ukraine war casualties, russian army deaths",
       },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+      { property: "og:title", content: SOCIAL_TITLE },
+      { property: "og:description", content: SOCIAL_DESCRIPTION },
       { property: "og:url", content: URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:title", content: SOCIAL_TITLE },
+      { name: "twitter:description", content: SOCIAL_DESCRIPTION },
+      { property: "og:image", content: IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Abstract casualty trend line on a dark chart" },
+      { name: "twitter:image", content: IMAGE },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [

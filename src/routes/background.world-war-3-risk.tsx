@@ -4,6 +4,10 @@ const TITLE = "Are We Heading Toward World War 3? Global Escalation Risk Assessm
 const DESCRIPTION =
   "A sober, theater-by-theater assessment of global escalation risk in 2026 — Ukraine, Iran, Israel, Taiwan, and the Americas — and why no two nuclear powers are yet in direct combat.";
 const URL = "https://conflictdash.lovable.app/background/world-war-3-risk";
+const SOCIAL_TITLE = "World War 3 Risk: 2026 Assessment";
+const SOCIAL_DESCRIPTION =
+  "A theater-by-theater read on global escalation risk in 2026 — Ukraine, Iran, Israel, Taiwan and the Americas — and why no nuclear powers are in direct combat.";
+const IMAGE = "https://conflictdash.lovable.app/og-world-war-3-risk.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
 const T = {
@@ -42,12 +46,17 @@ export const Route = createFileRoute("/background/world-war-3-risk")({
           "world war 3, are we at war, world war 3 risk, global escalation, is ww3 happening, nuclear war risk 2026, great power conflict",
       },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+      { property: "og:title", content: SOCIAL_TITLE },
+      { property: "og:description", content: SOCIAL_DESCRIPTION },
       { property: "og:url", content: URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:title", content: SOCIAL_TITLE },
+      { name: "twitter:description", content: SOCIAL_DESCRIPTION },
+      { property: "og:image", content: IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Abstract world map with glowing conflict hotspots" },
+      { name: "twitter:image", content: IMAGE },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [

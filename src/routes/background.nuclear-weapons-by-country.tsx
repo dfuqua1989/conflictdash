@@ -4,6 +4,10 @@ const TITLE = "How Many Nuclear Weapons Does Each Country Have? (2026) | World C
 const DESCRIPTION =
   "Nuclear warhead counts for all nine armed states in 2026, why the numbers are estimates rather than facts, and what changed when New START expired in February leaving the two largest arsenals uncapped for the first time since 1972.";
 const URL = "https://conflictdash.lovable.app/background/nuclear-weapons-by-country";
+const SOCIAL_TITLE = "Nuclear Weapons by Country (2026)";
+const SOCIAL_DESCRIPTION =
+  "Warhead counts for all nine nuclear-armed states in 2026, why the totals are estimates, and what changed when New START expired.";
+const IMAGE = "https://conflictdash.lovable.app/og-nuclear-weapons-by-country.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
 const T = {
@@ -65,12 +69,17 @@ export const Route = createFileRoute("/background/nuclear-weapons-by-country")({
           "nuclear weapons by country, how many nuclear weapons, nuclear arsenal 2026, nuclear warheads list, new start treaty expired, which countries have nuclear weapons",
       },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+      { property: "og:title", content: SOCIAL_TITLE },
+      { property: "og:description", content: SOCIAL_DESCRIPTION },
       { property: "og:url", content: URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:title", content: SOCIAL_TITLE },
+      { name: "twitter:description", content: SOCIAL_DESCRIPTION },
+      { property: "og:image", content: IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Abstract world map with nuclear hotspot rings" },
+      { name: "twitter:image", content: IMAGE },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [

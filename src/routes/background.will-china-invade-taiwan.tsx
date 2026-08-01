@@ -4,6 +4,10 @@ const TITLE = "Will China Invade Taiwan? What the 2026 Indicators Actually Show 
 const DESCRIPTION =
   "An assessment of Chinese military pressure on Taiwan in 2026 — why a blockade is more likely than an amphibious invasion, what the warning indicators would be, and why $1 trillion of global GDP rides on the answer.";
 const URL = "https://conflictdash.lovable.app/background/will-china-invade-taiwan";
+const SOCIAL_TITLE = "Will China Invade Taiwan? 2026 Indicators";
+const SOCIAL_DESCRIPTION =
+  "Why a blockade is likelier than an invasion, the warning indicators to watch, and why $1 trillion of global GDP rides on the Taiwan Strait.";
+const IMAGE = "https://conflictdash.lovable.app/og-will-china-invade-taiwan.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
 const T = {
@@ -84,12 +88,17 @@ export const Route = createFileRoute("/background/will-china-invade-taiwan")({
           "will china invade taiwan, taiwan invasion 2026, china taiwan war, taiwan strait blockade, pla taiwan, taiwan semiconductor conflict, china taiwan tensions",
       },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+      { property: "og:title", content: SOCIAL_TITLE },
+      { property: "og:description", content: SOCIAL_DESCRIPTION },
       { property: "og:url", content: URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:title", content: SOCIAL_TITLE },
+      { name: "twitter:description", content: SOCIAL_DESCRIPTION },
+      { property: "og:image", content: IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Abstract radar rings around a Taiwan-like island" },
+      { name: "twitter:image", content: IMAGE },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [
