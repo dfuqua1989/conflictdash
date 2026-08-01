@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
 const BASE_URL = "https://conflictdash.lovable.app";
+const LAST_UPDATED = "2026-07-31";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
