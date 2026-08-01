@@ -33,8 +33,6 @@ export const Route = createFileRoute("/sitemap.xml")({
           `    <priority>0.8</priority>`,
           `  </url>`,
           `</urlset>`,
-
-
         ].join("\n");
 
         return new Response(xml, {
