@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import WorldConflictDebrief from "@/components/WorldConflictDebrief.jsx";
 
-const TITLE = "Global Conflict Tracker — Live OSINT Dashboard | World Conflict Debrief";
+const TITLE = "Global Conflict Tracker — Live OSINT Dashboard";
 const DESCRIPTION =
-  "Live global conflict tracker and OSINT dashboard. Daily situation reports on Ukraine, Gaza, Iran, Taiwan, South China Sea, Sudan, and North Korea — casualties, displacement, drone activity, and trend analysis.";
+  "Live OSINT conflict dashboard with twice-daily briefings on Ukraine, Gaza, Iran, Taiwan, the South China Sea and the Americas, plus drone warfare and nuclear risk.";
 const URL = "https://conflictdash.lovable.app/";
 
 export const Route = createFileRoute("/")({
