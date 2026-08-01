@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import WorldConflictDebrief from "@/components/WorldConflictDebrief.jsx";
 
-const TITLE = "Global Conflict Tracker — Live OSINT Dashboard | World Conflict Debrief";
+const TITLE = "Global Conflict Tracker — Live OSINT Dashboard";
 const DESCRIPTION =
-  "Live global conflict tracker and OSINT dashboard. Daily situation reports on Ukraine, Gaza, Iran, Taiwan, South China Sea, Sudan, and North Korea — casualties, displacement, drone activity, and trend analysis.";
+  "Live OSINT conflict dashboard with twice-daily briefings on Ukraine, Gaza, Iran, Taiwan, the South China Sea and the Americas, plus drone warfare and nuclear risk.";
 const URL = "https://conflictdash.lovable.app/";
 
 export const Route = createFileRoute("/")({
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "global conflict tracker, world conflict map, osint dashboard, ukraine war live, gaza ceasefire, taiwan strait, north korea, daily conflict briefing",
+          "global conflict tracker, osint dashboard, ukraine war live, gaza, iran, taiwan strait, south china sea, drone war tracker, daily conflict briefing",
       },
       { property: "og:url", content: URL },
     ],
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
               name: "How often is the Global Conflict Tracker updated?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "The dashboard is refreshed daily with situation reports aggregated from open-source intelligence, including Ukrainian General Staff, Russian MoD, ISW, ACLED, UN OCHA, CSIS, and major news outlets.",
+                text: "The dashboard is refreshed twice daily, by 8:00 PM EST, from open-source intelligence including the Ukrainian General Staff, Russian MoD, ISW, ACLED, UN OCHA, CSIS and major news outlets.",
               },
             },
             {
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
               name: "Which conflicts does the dashboard track?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Ukraine, Gaza and the West Bank, the US–Iran situation, Taiwan Strait, South China Sea, the Caribbean and Cuba blockade, Venezuela, and North Korea.",
+                text: "Ukraine; Israel and the Levant, including Gaza and the West Bank; Iran; the Taiwan Strait; the South China Sea; and the Americas, covering Cuba, Venezuela, Mexico and Haiti. Three thematic sections cover drone warfare, great-power rivalry, and strategic, nuclear and hybrid threats.",
               },
             },
             {

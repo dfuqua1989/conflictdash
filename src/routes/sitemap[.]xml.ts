@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
 const BASE_URL = "https://conflictdash.lovable.app";
+const LAST_UPDATED = "2026-07-31";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
@@ -12,6 +13,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
           `  <url>`,
           `    <loc>${BASE_URL}/</loc>`,
+          `    <lastmod>${LAST_UPDATED}</lastmod>`,
           `    <changefreq>daily</changefreq>`,
           `    <priority>1.0</priority>`,
           `  </url>`,
@@ -31,8 +33,6 @@ export const Route = createFileRoute("/sitemap.xml")({
           `    <priority>0.8</priority>`,
           `  </url>`,
           `</urlset>`,
-
-
         ].join("\n");
 
         return new Response(xml, {
