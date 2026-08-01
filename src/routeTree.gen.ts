@@ -13,7 +13,10 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BackgroundWorldWar3RiskRouteImport } from './routes/background.world-war-3-risk'
+import { Route as BackgroundWillChinaInvadeTaiwanRouteImport } from './routes/background.will-china-invade-taiwan'
 import { Route as BackgroundStraitOfHormuzRouteImport } from './routes/background.strait-of-hormuz'
+import { Route as BackgroundRussianCasualtiesUkraineRouteImport } from './routes/background.russian-casualties-ukraine'
+import { Route as BackgroundNuclearWeaponsByCountryRouteImport } from './routes/background.nuclear-weapons-by-country'
 import { Route as BackgroundHezbollahCapabilitiesRouteImport } from './routes/background.hezbollah-capabilities'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -39,10 +42,28 @@ const BackgroundWorldWar3RiskRoute = BackgroundWorldWar3RiskRouteImport.update({
   path: '/background/world-war-3-risk',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BackgroundWillChinaInvadeTaiwanRoute =
+  BackgroundWillChinaInvadeTaiwanRouteImport.update({
+    id: '/background/will-china-invade-taiwan',
+    path: '/background/will-china-invade-taiwan',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BackgroundStraitOfHormuzRoute =
   BackgroundStraitOfHormuzRouteImport.update({
     id: '/background/strait-of-hormuz',
     path: '/background/strait-of-hormuz',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BackgroundRussianCasualtiesUkraineRoute =
+  BackgroundRussianCasualtiesUkraineRouteImport.update({
+    id: '/background/russian-casualties-ukraine',
+    path: '/background/russian-casualties-ukraine',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BackgroundNuclearWeaponsByCountryRoute =
+  BackgroundNuclearWeaponsByCountryRouteImport.update({
+    id: '/background/nuclear-weapons-by-country',
+    path: '/background/nuclear-weapons-by-country',
     getParentRoute: () => rootRouteImport,
   } as any)
 const BackgroundHezbollahCapabilitiesRoute =
@@ -77,7 +98,10 @@ export interface FileRoutesByFullPath {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
+  '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
+  '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
+  '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
@@ -88,7 +112,10 @@ export interface FileRoutesByTo {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
+  '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
+  '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
+  '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
@@ -100,7 +127,10 @@ export interface FileRoutesById {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
+  '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
+  '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
+  '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
@@ -113,7 +143,10 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/hezbollah-capabilities'
+    | '/background/nuclear-weapons-by-country'
+    | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
+    | '/background/will-china-invade-taiwan'
     | '/background/world-war-3-risk'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesByTo: FileRoutesByTo
@@ -124,7 +157,10 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/hezbollah-capabilities'
+    | '/background/nuclear-weapons-by-country'
+    | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
+    | '/background/will-china-invade-taiwan'
     | '/background/world-war-3-risk'
     | '/.mcp/invoke-tool/$tool'
   id:
@@ -135,7 +171,10 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/hezbollah-capabilities'
+    | '/background/nuclear-weapons-by-country'
+    | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
+    | '/background/will-china-invade-taiwan'
     | '/background/world-war-3-risk'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesById: FileRoutesById
@@ -147,7 +186,10 @@ export interface RootRouteChildren {
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BackgroundHezbollahCapabilitiesRoute: typeof BackgroundHezbollahCapabilitiesRoute
+  BackgroundNuclearWeaponsByCountryRoute: typeof BackgroundNuclearWeaponsByCountryRoute
+  BackgroundRussianCasualtiesUkraineRoute: typeof BackgroundRussianCasualtiesUkraineRoute
   BackgroundStraitOfHormuzRoute: typeof BackgroundStraitOfHormuzRoute
+  BackgroundWillChinaInvadeTaiwanRoute: typeof BackgroundWillChinaInvadeTaiwanRoute
   BackgroundWorldWar3RiskRoute: typeof BackgroundWorldWar3RiskRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
@@ -182,11 +224,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackgroundWorldWar3RiskRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/background/will-china-invade-taiwan': {
+      id: '/background/will-china-invade-taiwan'
+      path: '/background/will-china-invade-taiwan'
+      fullPath: '/background/will-china-invade-taiwan'
+      preLoaderRoute: typeof BackgroundWillChinaInvadeTaiwanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/background/strait-of-hormuz': {
       id: '/background/strait-of-hormuz'
       path: '/background/strait-of-hormuz'
       fullPath: '/background/strait-of-hormuz'
       preLoaderRoute: typeof BackgroundStraitOfHormuzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/background/russian-casualties-ukraine': {
+      id: '/background/russian-casualties-ukraine'
+      path: '/background/russian-casualties-ukraine'
+      fullPath: '/background/russian-casualties-ukraine'
+      preLoaderRoute: typeof BackgroundRussianCasualtiesUkraineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/background/nuclear-weapons-by-country': {
+      id: '/background/nuclear-weapons-by-country'
+      path: '/background/nuclear-weapons-by-country'
+      fullPath: '/background/nuclear-weapons-by-country'
+      preLoaderRoute: typeof BackgroundNuclearWeaponsByCountryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/background/hezbollah-capabilities': {
@@ -228,7 +291,12 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BackgroundHezbollahCapabilitiesRoute: BackgroundHezbollahCapabilitiesRoute,
+  BackgroundNuclearWeaponsByCountryRoute:
+    BackgroundNuclearWeaponsByCountryRoute,
+  BackgroundRussianCasualtiesUkraineRoute:
+    BackgroundRussianCasualtiesUkraineRoute,
   BackgroundStraitOfHormuzRoute: BackgroundStraitOfHormuzRoute,
+  BackgroundWillChinaInvadeTaiwanRoute: BackgroundWillChinaInvadeTaiwanRoute,
   BackgroundWorldWar3RiskRoute: BackgroundWorldWar3RiskRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
