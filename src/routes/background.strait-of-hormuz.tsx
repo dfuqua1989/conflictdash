@@ -4,6 +4,10 @@ const TITLE = "Strait of Hormuz: Strategic Primer — Chokepoint, Oil Transit & 
 const DESCRIPTION =
   "Why the Strait of Hormuz is the world's most important oil chokepoint: transit volumes, geography, Iranian closure threats, and a history of US–Iran naval confrontations from the Tanker War to today.";
 const URL = "https://conflictdash.lovable.app/background/strait-of-hormuz";
+const SOCIAL_TITLE = "Strait of Hormuz: Oil Chokepoint Primer";
+const SOCIAL_DESCRIPTION =
+  "Transit volumes, geography, Iranian closure threats and the history of US–Iran naval confrontations at the world"s key oil chokepoint.";
+const IMAGE = "https://conflictdash.lovable.app/og-strait-of-hormuz.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
 const T = {
@@ -92,12 +96,17 @@ export const Route = createFileRoute("/background/strait-of-hormuz")({
           "strait of hormuz, hormuz chokepoint, us iran maritime flashpoint, oil transit chokepoint, tanker war, iran navy, persian gulf shipping",
       },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+      { property: "og:title", content: SOCIAL_TITLE },
+      { property: "og:description", content: SOCIAL_DESCRIPTION },
       { property: "og:url", content: URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:title", content: SOCIAL_TITLE },
+      { name: "twitter:description", content: SOCIAL_DESCRIPTION },
+      { property: "og:image", content: IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Abstract nautical chart of the Strait of Hormuz" },
+      { name: "twitter:image", content: IMAGE },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [

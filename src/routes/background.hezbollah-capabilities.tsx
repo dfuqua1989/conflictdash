@@ -4,6 +4,10 @@ const TITLE = "Hezbollah: Strategic Primer — Structure, Capabilities & Iran's 
 const DESCRIPTION =
   "A background primer on Hezbollah's political-military structure, estimated force strength and arsenal, the 2024 command degradation, and its role as Iran's forward deterrent against Israel.";
 const URL = "https://conflictdash.lovable.app/background/hezbollah-capabilities";
+const SOCIAL_TITLE = "Hezbollah in 2026: Structure & Arsenal";
+const SOCIAL_DESCRIPTION =
+  "Hezbollah"s command structure, force strength and rocket arsenal after the 2024 decapitation — and its role as Iran"s forward deterrent.";
+const IMAGE = "https://conflictdash.lovable.app/og-hezbollah-capabilities.jpg";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
 const T = {
@@ -58,12 +62,17 @@ export const Route = createFileRoute("/background/hezbollah-capabilities")({
           "hezbollah capabilities, hezbollah military strength, hezbollah rocket arsenal, hezbollah iran, axis of resistance, naim qassem, lebanon israel conflict",
       },
       { property: "og:type", content: "article" },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+      { property: "og:title", content: SOCIAL_TITLE },
+      { property: "og:description", content: SOCIAL_DESCRIPTION },
       { property: "og:url", content: URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:title", content: SOCIAL_TITLE },
+      { name: "twitter:description", content: SOCIAL_DESCRIPTION },
+      { property: "og:image", content: IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Abstract map of Lebanon's terrain — Hezbollah capabilities primer" },
+      { name: "twitter:image", content: IMAGE },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [
