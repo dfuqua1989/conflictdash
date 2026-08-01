@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "global conflict tracker, world conflict map, osint dashboard, ukraine war live, gaza ceasefire, taiwan strait, north korea, daily conflict briefing",
+          "global conflict tracker, osint dashboard, ukraine war live, gaza, iran, taiwan strait, south china sea, drone war tracker, daily conflict briefing",
       },
       { property: "og:url", content: URL },
     ],
