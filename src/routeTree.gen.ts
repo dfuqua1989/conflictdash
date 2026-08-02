@@ -20,6 +20,7 @@ import { Route as BackgroundStraitOfHormuzRouteImport } from './routes/backgroun
 import { Route as BackgroundRussianCasualtiesUkraineRouteImport } from './routes/background.russian-casualties-ukraine'
 import { Route as BackgroundPakistanAfghanistanWarExplainedRouteImport } from './routes/background.pakistan-afghanistan-war-explained'
 import { Route as BackgroundNuclearWeaponsByCountryRouteImport } from './routes/background.nuclear-weapons-by-country'
+import { Route as BackgroundIsTheUsAtWarRouteImport } from './routes/background.is-the-us-at-war'
 import { Route as BackgroundHezbollahCapabilitiesRouteImport } from './routes/background.hezbollah-capabilities'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -87,6 +88,11 @@ const BackgroundNuclearWeaponsByCountryRoute =
     path: '/background/nuclear-weapons-by-country',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BackgroundIsTheUsAtWarRoute = BackgroundIsTheUsAtWarRouteImport.update({
+  id: '/background/is-the-us-at-war',
+  path: '/background/is-the-us-at-war',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BackgroundHezbollahCapabilitiesRoute =
   BackgroundHezbollahCapabilitiesRouteImport.update({
     id: '/background/hezbollah-capabilities',
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
+  '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
@@ -136,6 +143,7 @@ export interface FileRoutesByTo {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
+  '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
@@ -154,6 +162,7 @@ export interface FileRoutesById {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
+  '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
@@ -173,6 +182,7 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/hezbollah-capabilities'
+    | '/background/is-the-us-at-war'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/russian-casualties-ukraine'
@@ -190,6 +200,7 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/hezbollah-capabilities'
+    | '/background/is-the-us-at-war'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/russian-casualties-ukraine'
@@ -207,6 +218,7 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/hezbollah-capabilities'
+    | '/background/is-the-us-at-war'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/russian-casualties-ukraine'
@@ -225,6 +237,7 @@ export interface RootRouteChildren {
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BackgroundHezbollahCapabilitiesRoute: typeof BackgroundHezbollahCapabilitiesRoute
+  BackgroundIsTheUsAtWarRoute: typeof BackgroundIsTheUsAtWarRoute
   BackgroundNuclearWeaponsByCountryRoute: typeof BackgroundNuclearWeaponsByCountryRoute
   BackgroundPakistanAfghanistanWarExplainedRoute: typeof BackgroundPakistanAfghanistanWarExplainedRoute
   BackgroundRussianCasualtiesUkraineRoute: typeof BackgroundRussianCasualtiesUkraineRoute
@@ -315,6 +328,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackgroundNuclearWeaponsByCountryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/background/is-the-us-at-war': {
+      id: '/background/is-the-us-at-war'
+      path: '/background/is-the-us-at-war'
+      fullPath: '/background/is-the-us-at-war'
+      preLoaderRoute: typeof BackgroundIsTheUsAtWarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/background/hezbollah-capabilities': {
       id: '/background/hezbollah-capabilities'
       path: '/background/hezbollah-capabilities'
@@ -354,6 +374,7 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BackgroundHezbollahCapabilitiesRoute: BackgroundHezbollahCapabilitiesRoute,
+  BackgroundIsTheUsAtWarRoute: BackgroundIsTheUsAtWarRoute,
   BackgroundNuclearWeaponsByCountryRoute:
     BackgroundNuclearWeaponsByCountryRoute,
   BackgroundPakistanAfghanistanWarExplainedRoute:
