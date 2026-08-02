@@ -8,7 +8,7 @@ import Dashboard from "@/components/WorldConflictDebrief.jsx";
 
 const BASE_URL = "https://conflictdash.lovable.app";
 
-const SECTION_META = {
+const SECTION_META: Record<string, { title: string; description: string }> = {
   ukraine: {
     title: "Ukraine War Deep Dive — Losses, Frontline, Diplomacy",
     description:
