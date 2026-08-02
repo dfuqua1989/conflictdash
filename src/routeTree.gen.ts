@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DeepDiveSectionRouteImport } from './routes/deep-dive.$section'
 import { Route as BackgroundWorldWar3RiskRouteImport } from './routes/background.world-war-3-risk'
 import { Route as BackgroundWillIndiaPakistanGoToWarAgainRouteImport } from './routes/background.will-india-pakistan-go-to-war-again'
 import { Route as BackgroundWillChinaInvadeTaiwanRouteImport } from './routes/background.will-china-invade-taiwan'
@@ -39,6 +40,11 @@ const McpRoute = McpRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeepDiveSectionRoute = DeepDiveSectionRouteImport.update({
+  id: '/deep-dive/$section',
+  path: '/deep-dive/$section',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BackgroundWorldWar3RiskRoute = BackgroundWorldWar3RiskRouteImport.update({
@@ -134,6 +140,7 @@ export interface FileRoutesByFullPath {
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/will-india-pakistan-go-to-war-again': typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
+  '/deep-dive/$section': typeof DeepDiveSectionRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesByTo {
@@ -152,6 +159,7 @@ export interface FileRoutesByTo {
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/will-india-pakistan-go-to-war-again': typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
+  '/deep-dive/$section': typeof DeepDiveSectionRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesById {
@@ -171,6 +179,7 @@ export interface FileRoutesById {
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/will-india-pakistan-go-to-war-again': typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
+  '/deep-dive/$section': typeof DeepDiveSectionRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRouteTypes {
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/background/will-china-invade-taiwan'
     | '/background/will-india-pakistan-go-to-war-again'
     | '/background/world-war-3-risk'
+    | '/deep-dive/$section'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -209,6 +219,7 @@ export interface FileRouteTypes {
     | '/background/will-china-invade-taiwan'
     | '/background/will-india-pakistan-go-to-war-again'
     | '/background/world-war-3-risk'
+    | '/deep-dive/$section'
     | '/.mcp/invoke-tool/$tool'
   id:
     | '__root__'
@@ -227,6 +238,7 @@ export interface FileRouteTypes {
     | '/background/will-china-invade-taiwan'
     | '/background/will-india-pakistan-go-to-war-again'
     | '/background/world-war-3-risk'
+    | '/deep-dive/$section'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesById: FileRoutesById
 }
@@ -246,6 +258,7 @@ export interface RootRouteChildren {
   BackgroundWillChinaInvadeTaiwanRoute: typeof BackgroundWillChinaInvadeTaiwanRoute
   BackgroundWillIndiaPakistanGoToWarAgainRoute: typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   BackgroundWorldWar3RiskRoute: typeof BackgroundWorldWar3RiskRoute
+  DeepDiveSectionRoute: typeof DeepDiveSectionRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
@@ -270,6 +283,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deep-dive/$section': {
+      id: '/deep-dive/$section'
+      path: '/deep-dive/$section'
+      fullPath: '/deep-dive/$section'
+      preLoaderRoute: typeof DeepDiveSectionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/background/world-war-3-risk': {
@@ -387,6 +407,7 @@ const rootRouteChildren: RootRouteChildren = {
   BackgroundWillIndiaPakistanGoToWarAgainRoute:
     BackgroundWillIndiaPakistanGoToWarAgainRoute,
   BackgroundWorldWar3RiskRoute: BackgroundWorldWar3RiskRoute,
+  DeepDiveSectionRoute: DeepDiveSectionRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
