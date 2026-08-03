@@ -111,11 +111,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           `    <priority>0.8</priority>`,
           `  </url>`,
           `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/nuclear</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
+
           `  <url>`,
           `    <loc>${BASE_URL}/deep-dive/venezuela</loc>`,
           `    <lastmod>${LAST_UPDATED}</lastmod>`,
