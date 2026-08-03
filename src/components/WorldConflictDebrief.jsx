@@ -331,7 +331,7 @@ function AirDefTab({t}){return <div>
       </div>;})}
       <div style={{fontSize:11,color:t.sub,lineHeight:1.5,marginTop:8}}>Ballistic intercept performance collapsed from 26% in June to zero for most of mid-July as PAC-3 stocks ran out, then partially recovered late-month — Jul 13–19 and Jul 20–26 both show a real rebound (50% and 56%), and the Jul 25–26 Kyiv strike downed 5 of 7 (71%), the best single-night rate since the shortage began. The drone intercept rate has stayed near 90% throughout — this is specifically an interceptor-inventory story. Mixed granularity by necessity: June is a monthly figure (CSIS), weekly rows sum only nights with a confirmed ballistic-specific breakdown, and the most recent nights are single engagements (UA Air Force). Sources noted per row.</div>
     </Card>
-      <Note t={t} color="#06b6d4">Intercept rates: UA Air Force nightly reports (via Militarnyi/Ukrinform); economics per interceptor-drone program disclosures. Cross-reference: Drone War → Intercept & AD Systems, Great Power Rivalry → Defense Industry (PAC-3 production).</Note>
+      <Note t={t} color="#06b6d4">Intercept rates: UA Air Force nightly reports (via Militarnyi/Ukrinform); economics per interceptor-drone program disclosures. Cross-reference: Drone War → Intercept & AD Systems, Great Powers → Defense Industry (PAC-3 production).</Note>
     </div>;}
 
 function SouthernFrontTab({t}){const[sub,setSub]=useState("crimea");return <div><div style={{display:"flex",gap:6,marginBottom:12,flexWrap:"wrap"}}>{[{id:"crimea",label:"🏴 Crimea"},{id:"blacksea",label:"🌊 Black Sea"},].map(o=><button key={o.id} onClick={()=>setSub(o.id)} style={{padding:"4px 12px",fontSize:11,borderRadius:14,cursor:"pointer",fontFamily:FONT,fontWeight:700,background:sub===o.id?"#5b8ec8":"none",color:sub===o.id?"#fff":t.sub,border:`1px solid ${sub===o.id?"#5b8ec8":t.border}`}}>{o.label}</button>)}</div>{sub==="crimea"&&<CrimeaTab t={t}/>}{sub==="blacksea"&&<BlackSeaTab t={t}/>}</div>;}
@@ -515,9 +515,9 @@ function UkraineSection({t,initialTab}){const[tab,setTab]=useState(initialTab??"
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>Deep-strike weapons</span> — FP-5 Flamingo cruise missiles (Volgograd plant strike, Jun 27), long-range drones behind the refinery campaign that has Russian refining at 42.47% of capacity, and naval drones that forced the Black Sea Fleet east. The St. Petersburg/Kronstadt strike (Jul 3-4) was flown almost entirely on domestic airframes.</div>
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>Artillery & armor</span> — Bohdan SPH at 20+/month (18 built for Denmark in 8 weeks), 152mm and 155mm shell lines (the latter ~$1,500/round), with Rheinmetall JV plants localizing NATO-caliber production in-country.</div>
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>The export turn</span> — Denmark-model contracts (frozen-asset profits funding UA production for UA use), propellant JV with D&M in the US (production from mid-2026), and EW systems like Sky Fortress marketed at a fraction of Western cost. RUSI's read: Ukraine's industry is Europe's fastest path to closing its own production gap.</div>
-        <div><span style={{color:t.text,fontWeight:700}}>Constraints</span> — Funding (capacity exceeds contracts), Russian strikes on plants (a propellant facility lost early-war), and energetics inputs shared with the West's own bottleneck (see Great Power Rivalry → Critical Minerals).</div>
+        <div><span style={{color:t.text,fontWeight:700}}>Constraints</span> — Funding (capacity exceeds contracts), Russian strikes on plants (a propellant facility lost early-war), and energetics inputs shared with the West's own bottleneck (see Great Powers → Critical Minerals).</div>
       </div></div></Card>
-      <Note t={t} color="#eab308">Figures: RUSI, Militarnyi, UA GenStaff and program disclosures; production rates are announced capacities, not audited output. Cross-reference: Great Power Rivalry → Defense Industry & Arms Flow, Drone War → Cost.</Note>
+      <Note t={t} color="#eab308">Figures: RUSI, Militarnyi, UA GenStaff and program disclosures; production rates are announced capacities, not audited output. Cross-reference: Great Powers → Defense Industry & Arms Flow, Drone War → Cost.</Note>
     </div>}
     {tab==="analysts"&&<AnalystsTab t={t}/>}</div>;}
 
@@ -601,9 +601,8 @@ function TheatersOverview({t,conflicts,onSelectConflict}){const STATUS_ORDER={"E
   <div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?12:0}}>
   {[
     {id:"dronewar",name:"Drone War Dashboard",icon:"🛸",status:"WEEKLY TRACKER",statusColor:"#22c55e",region:"Ukraine / Russia",s1l:"RU launch rate",s1v:"~5k/mo",s2l:"UA output",s2v:"100k+/mo",summary:"Nightly launch/intercept data, saturation model, strike log, cost race, AD systems, and drone asset library. Current through Jul 8."},
-    {id:"usmil",name:"Great Power Rivalry",icon:"⚔️",status:"REFERENCE",statusColor:"#5b8ec8",region:"US / China / Russia",s1l:"Tabs",s1v:"14",s2l:"Focus",s2v:"Mil balance",summary:"Power comparison, rankings, naval pipeline, 5th-gen fighters, space & counterspace, critical minerals, arms flow, Arctic, and the defense-industrial production race."},
-    {id:"nuclear",name:"Strategic & Hybrid",icon:"☢️",status:"POST-TREATY",statusColor:"#ef4444",region:"Global",s1l:"New START",s1v:"Expired",s2l:"Iran MoU",s2v:"Aug 16",summary:"Active vectors, global arsenals, delivery-system triad modernization, treaty architecture after New START's Feb 2026 lapse — plus Cyber & Hybrid: undersea cables, electronic warfare, and the grey-zone playbook."},
-  ].map((c,ci)=><button key={c.id} className="theater-card" onPointerDown={e=>{const r=e.currentTarget.getBoundingClientRect();e.currentTarget.style.setProperty("--px",`${((e.clientX-r.left)/r.width*100)}%`);e.currentTarget.style.setProperty("--py",`${((e.clientY-r.top)/r.height*100)}%`);}} onClick={()=>onSelectConflict(c.id)} style={{display:"block",width:"100%",background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`4px solid ${c.statusColor}`,borderRadius:14,padding:"16px 18px",marginBottom:12,cursor:"pointer",fontFamily:FONT,textAlign:"left",animation:`riseIn .3s ease-out ${ci*0.05}s both`}}><div style={{display:"flex",alignItems:"flex-start",gap:12,marginBottom:10}}><span style={{fontSize:28,flexShrink:0,lineHeight:1}}>{c.icon}</span><div style={{flex:1,minWidth:0}}><div style={{fontSize:15,fontWeight:800,color:t.text,lineHeight:1.2,marginBottom:4}}>{c.name}</div><div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}}><span style={{background:c.statusColor+"22",border:`1px solid ${c.statusColor}55`,borderRadius:20,padding:"2px 10px",fontSize:10,fontWeight:700,color:c.statusColor,textTransform:"uppercase"}}>{c.status}</span><span style={{fontSize:11,color:t.sub}}>{c.region}</span></div></div><span style={{fontSize:16,color:t.sub,flexShrink:0,marginTop:4}}>→</span></div><div style={{display:"flex",gap:20,marginBottom:10}}><div><div style={{fontSize:10,color:t.sub,marginBottom:1}}>{c.s1l}</div><div style={{fontSize:13,fontWeight:700,color:c.statusColor}}>{c.s1v}</div></div><div><div style={{fontSize:10,color:t.sub,marginBottom:1}}>{c.s2l}</div><div style={{fontSize:13,fontWeight:700,color:t.text}}>{c.s2v}</div></div></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6,background:t.isDark?"rgba(255,255,255,.03)":"rgba(0,0,0,.03)",borderRadius:8,padding:"9px 11px"}}>{c.summary}</div><div style={{marginTop:10,fontSize:11,color:"#5b8ec8",fontWeight:600}}>Open Deep Dive →</div></button>)}
+    {id:"usmil",name:"Great Powers",icon:"⚔️",status:"REFERENCE",statusColor:"#5b8ec8",region:"US / China / Russia",s1l:"Tabs",s1v:"19",s2l:"Focus",s2v:"Escalation risk",summary:"Escalation risk assessment and power comparison lead, then rankings, naval pipeline, 5th-gen fighters, space & counterspace, critical minerals, arms flow, Arctic, defense-industrial production, nuclear arsenals and delivery systems, treaty architecture, and Cyber & Hybrid warfare."},
+    ].map((c,ci)=><button key={c.id} className="theater-card" onPointerDown={e=>{const r=e.currentTarget.getBoundingClientRect();e.currentTarget.style.setProperty("--px",`${((e.clientX-r.left)/r.width*100)}%`);e.currentTarget.style.setProperty("--py",`${((e.clientY-r.top)/r.height*100)}%`);}} onClick={()=>onSelectConflict(c.id)} style={{display:"block",width:"100%",background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`4px solid ${c.statusColor}`,borderRadius:14,padding:"16px 18px",marginBottom:12,cursor:"pointer",fontFamily:FONT,textAlign:"left",animation:`riseIn .3s ease-out ${ci*0.05}s both`}}><div style={{display:"flex",alignItems:"flex-start",gap:12,marginBottom:10}}><span style={{fontSize:28,flexShrink:0,lineHeight:1}}>{c.icon}</span><div style={{flex:1,minWidth:0}}><div style={{fontSize:15,fontWeight:800,color:t.text,lineHeight:1.2,marginBottom:4}}>{c.name}</div><div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}}><span style={{background:c.statusColor+"22",border:`1px solid ${c.statusColor}55`,borderRadius:20,padding:"2px 10px",fontSize:10,fontWeight:700,color:c.statusColor,textTransform:"uppercase"}}>{c.status}</span><span style={{fontSize:11,color:t.sub}}>{c.region}</span></div></div><span style={{fontSize:16,color:t.sub,flexShrink:0,marginTop:4}}>→</span></div><div style={{display:"flex",gap:20,marginBottom:10}}><div><div style={{fontSize:10,color:t.sub,marginBottom:1}}>{c.s1l}</div><div style={{fontSize:13,fontWeight:700,color:c.statusColor}}>{c.s1v}</div></div><div><div style={{fontSize:10,color:t.sub,marginBottom:1}}>{c.s2l}</div><div style={{fontSize:13,fontWeight:700,color:t.text}}>{c.s2v}</div></div></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6,background:t.isDark?"rgba(255,255,255,.03)":"rgba(0,0,0,.03)",borderRadius:8,padding:"9px 11px"}}>{c.summary}</div><div style={{marginTop:10,fontSize:11,color:"#5b8ec8",fontWeight:600}}>Open Deep Dive →</div></button>)}
   </div></div>;}
 
 // ── Today View ─────────────────────────────────────────────────────────────────────
@@ -715,7 +714,7 @@ function TodayView({t}){const critical=NEWS.filter(n=>n.severity==="critical");c
     <div style={{background:t.isDark?"rgba(220,38,38,.07)":"rgba(220,38,38,.05)",border:"1px solid rgba(220,38,38,.18)",borderRadius:12,padding:"12px 16px",marginBottom:20,display:"flex",alignItems:"center",gap:12,flexWrap:"wrap"}}><span style={{width:8,height:8,borderRadius:"50%",background:"#dc2626",display:"inline-block",animation:"blink 1s ease-in-out infinite",flexShrink:0}}/><span style={{fontSize:12,fontWeight:700,color:"#dc2626"}}>{shownCritical} critical · {shownMajor} major · {shownWatch} watch</span><span style={{marginLeft:"auto",fontSize:11,color:t.sub}}>War Day {getWarDay()} · {REPORT_NOW.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</span></div><CollapsibleSection t={t} title="01 · Breaking"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{shown.map((story,si)=>{const sc=story.severity==="critical"?"#dc2626":story.severity==="major"?"#f97316":"#eab308";const isCrit=story.severity==="critical";return <div key={story.id} style={{position:"relative",overflow:"hidden",background:t.isDark?"linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0) 40%),"+t.card:t.card,borderTop:t.isDark?"1px solid rgba(255,255,255,.08)":`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${sc}`,borderRadius:12,padding:"14px 16px",marginBottom:10,boxShadow:t.isDark?"0 3px 12px rgba(0,0,0,.38)":"0 2px 8px rgba(59,130,246,.10)",animation:`riseIn .32s ease-out ${si*0.05}s both${isCrit?", criticalPulse 2.2s ease-in-out "+(si*0.05+0.4)+"s infinite":""}`}}>{isCrit&&<div style={{position:"absolute",inset:0,background:"linear-gradient(180deg,rgba(220,38,38,.10),transparent 30%)",animation:"edgeSheen 2.6s ease-in-out infinite",pointerEvents:"none"}}/>}{isCrit&&<div className="stamp">Priority</div>}<div style={{display:"flex",alignItems:"flex-start",gap:10,marginBottom:6}}><span style={{fontSize:18,flexShrink:0,marginTop:1}}>{story.icon}</span><div style={{flex:1,minWidth:0}}><div style={{fontSize:13,fontWeight:700,color:t.text,lineHeight:1.4,marginBottom:5}}>{story.headline}</div><div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}><span style={{background:story.conflictColor+"22",border:`1px solid ${story.conflictColor}55`,borderRadius:20,padding:"2px 8px",fontSize:10,fontWeight:700,color:story.conflictColor}}>{story.conflict}</span><span style={{fontSize:10,color:t.sub}}>{story.publishedAt}</span><Freshness t={t} date={story.publishedAt}/><ConfidenceTag level={story.confidence}/></div></div></div><div style={{fontSize:11,fontWeight:600,color:story.impactColor}}>{story.impact}</div></div>;})}</div></CollapsibleSection><CollapsibleSection t={t} title="02 · Combined Toll — All Tracked Conflicts"><div style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:"3px solid #dc2626",borderRadius:12,padding:"14px 16px"}}><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,marginBottom:8}}><div><div style={{fontSize:10,color:t.sub}}>Deaths</div><div style={{fontSize:22,fontWeight:800,color:"#dc2626",fontVariantNumeric:"tabular-nums"}}>{GLOBAL_TOLL.deaths}</div></div><div><div style={{fontSize:10,color:t.sub}}>Displaced</div><div style={{fontSize:22,fontWeight:800,color:"#f97316",fontVariantNumeric:"tabular-nums"}}>{GLOBAL_TOLL.displaced}</div></div></div><div style={{fontSize:11,color:t.sub,lineHeight:1.55}}>{GLOBAL_TOLL.note}</div></div></CollapsibleSection><CollapsibleSection t={t} title="03 · Global Energy Disruption"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{ENERGY_DISRUPTIONS.map((e,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${e.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3}}><span style={{fontSize:16}}>{e.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text}}>{e.label}</div></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{e.text}</div></div>)}<TrendChart t={t} data={HISTORICAL.oilPriceBrent} color="#f97316" label="Brent Crude" unit="$ per barrel" area desc="From $61 in January to a $118 peak in March after the Feb 28 US-Israel strikes on Iran shut most Hormuz traffic — the largest inflation-adjusted quarterly jump on record (EIA). Eased to ~$74 by June as Hormuz reopened. Ties together every energy story on this dashboard — Ukraine's refinery campaign, Hormuz, and the Cuba/Venezuela fuel crisis all move this one number." /></div></CollapsibleSection><CollapsibleSection t={t} title="04 · Sanctions Tracker"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{SANCTIONS_TRACKER.map((s,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${s.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3,flexWrap:"wrap"}}><span style={{fontSize:16}}>{s.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{s.label}</div><span style={{fontSize:9,fontWeight:700,color:s.color,background:s.color+"18",borderRadius:10,padding:"1px 7px"}}>{s.theater}</span></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{s.text}</div></div>)}</div></CollapsibleSection><CollapsibleSection t={t} title="05 · Political Calendar"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{POLITICAL_CALENDAR.map((p,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${p.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8,display:"flex",gap:12}}><div style={{minWidth:78,fontSize:10,fontWeight:700,color:p.color,flexShrink:0,paddingTop:1}}>{p.date}</div><div><div style={{fontSize:13,fontWeight:700,color:t.text,marginBottom:2}}>{p.label}</div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{p.note}</div></div></div>)}</div></CollapsibleSection><CollapsibleSection t={t} title="06 · Legal & Accountability Tracker"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{LEGAL_TRACKER.map((l,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${l.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3,flexWrap:"wrap"}}><span style={{fontSize:16}}>{l.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{l.label}</div><span style={{background:l.color+"22",border:`1px solid ${l.color}55`,borderRadius:20,padding:"1px 8px",fontSize:9,fontWeight:700,color:l.color,textTransform:"uppercase"}}>{l.theater}</span></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{l.text}</div></div>)}</div></CollapsibleSection><CollapsibleSection t={t} title="07 · Upcoming Deadlines"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{DEADLINES.map((d,i)=><DeadlineCard key={i} d={d} t={t}/>)}</div></CollapsibleSection><CollapsibleSection t={t} title="🕵️ Cyber & Hybrid Warfare"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{CYBER_HYBRID.map((c,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${c.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3,flexWrap:"wrap"}}><span style={{fontSize:16}}>{c.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{c.label}</div><ConfidenceTag level={c.confidence}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{c.text}</div></div>)}</div><div style={{fontSize:10.5,color:t.sub,fontStyle:"italic",padding:"6px 2px 0"}}>See full Cyber section → Deep Dive. Attribution in cyber/hybrid incidents is frequently contested — treat sourcing as preliminary unless independently confirmed.</div></CollapsibleSection></div>;}
 
 // ── Deep Dive View ─────────────────────────────────────────────────────────────────
-const CONFLICT_SECTIONS=[{id:"ukraine",label:"🇺🇦 Ukraine",conflictId:"ukraine"},{id:"dronewar",label:"🛸 Drone War",conflictId:"dronewar"},{id:"usmil",label:"⚔️ Great Power Rivalry",conflictId:"usmil"},{id:"iran",label:"🇮🇷 Iran",conflictId:"iran"},{id:"gaza",label:"🌍 Israel & Levant",conflictId:"gaza"},{id:"scs",label:"🏝️ S. China Sea & Taiwan",conflictId:"south-china-sea"},{id:"nuclear",label:"☢️ Strategic & Hybrid",conflictId:"nuclear"},{id:"venezuela",label:"🌎 Americas",conflictId:"venezuela"},{id:"africa",label:"🌍 Africa",conflictId:"sudan"},{id:"southasia",label:"🌏 South Asia",conflictId:"indopak"}];
+const CONFLICT_SECTIONS=[{id:"ukraine",label:"🇺🇦 Ukraine",conflictId:"ukraine"},{id:"dronewar",label:"🛸 Drone War",conflictId:"dronewar"},{id:"usmil",label:"⚔️ Great Powers",conflictId:"usmil"},{id:"iran",label:"🇮🇷 Iran",conflictId:"iran"},{id:"gaza",label:"🌍 Israel & Levant",conflictId:"gaza"},{id:"scs",label:"🏝️ S. China Sea & Taiwan",conflictId:"south-china-sea"},{id:"venezuela",label:"🌎 Americas",conflictId:"venezuela"},{id:"africa",label:"🌍 Africa",conflictId:"sudan"},{id:"southasia",label:"🌏 South Asia",conflictId:"indopak"}];
 
 function GazaSection({t,initialTab}){
   const[tab,setTab]=useState(initialTab??"conflict");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
@@ -1061,7 +1060,7 @@ function BelarusSection({t,initialTab}){
   const NUCLEAR_FACTS=[
     {icon:"🚀",label:"Delivery systems",text:"Iskander-M tactical missile systems (dual-capable, conventional or nuclear) confirmed deployed to Belarus. Belarus's Su-25 fleet was also reportedly modified for nuclear delivery."},
     {icon:"🔢",label:"Warhead count — undisclosed",text:"Neither Moscow nor Minsk has confirmed a number. Independent estimates (SIPRI, FAS) generally describe a small tactical arsenal — likely low double digits — but this is inference, not disclosure."},
-    {icon:"🏛️",label:"Legal basis",text:"Lukashenko and Putin frame this under the Union State treaty framework — Belarus argues it retains 'control' while Russia controls launch authority, echoing NATO's own nuclear-sharing arrangements (see Great Power Rivalry → NATO tab)."},
+    {icon:"🏛️",label:"Legal basis",text:"Lukashenko and Putin frame this under the Union State treaty framework — Belarus argues it retains 'control' while Russia controls launch authority, echoing NATO's own nuclear-sharing arrangements (see Great Powers → NATO tab)."},
     {icon:"🌍",label:"NATO response",text:"NATO has not repositioned its own nuclear posture in response, but cites the deployment as justification for continued Eastern Flank reinforcement."},
   ];
   const BEL_EVENTS=[
@@ -1120,137 +1119,6 @@ function BelarusSection({t,initialTab}){
 }
 
 
-function NuclearSection({t,initialTab}){
-  const[tab,setTab]=useState(initialTab??"escalation");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
-  const[escExpanded,setEscExpanded]=useState(false);
-  const TABS=[{id:"escalation",label:"🌐 Escalation Risk"},{id:"vectors",label:"⚠️ Active Vectors"},{id:"arsenals",label:"🌐 Global Arsenals"},{id:"delivery",label:"🚀 Delivery Systems"},{id:"treaties",label:"📜 Treaties & Doctrine"},{id:"cyber",label:"🌪️ Cyber & Hybrid"}];
-
-  const VECTORS=[
-    {flag:"🇷🇺",name:"Russia — Strategic Signalling",status:"ACTIVE",color:"#ef4444",text:"Largest arsenal on earth. Putin has repeatedly invoked nuclear rhetoric. IC consensus (Jun 2026): threats are coercive, not operational — any use would forfeit Chinese support, Putin's true red line."},
-    {flag:"🇧🇾",name:"Belarus — Forward-Based Tac-Nukes",status:"DEPLOYED",color:"#f97316",text:"Hosts Russian tactical nuclear weapons since 2023 — first deployment outside Russia since the USSR. Russia has now started building a forward-operating base in Belarus for its dual-capable Oreshnik IRBM (SIPRI); Oreshnik has already struck Ukraine with conventional warheads, most recently May 2026. Separately, Russia claims a 2025 successful 14,000km test of the nuclear-powered Burevestnik cruise missile after repeated failures."},
-    {flag:"🇮🇷",name:"Iran — Nuclear Clock",status:"21 DAYS",color:"#8b5cf6",text:"Islamabad MoU 60-day window closes ~Aug 16. IAEA inspector access disputed. Enrichment red lines unresolved — Pezeshkian: 'we will never back down from the right to enrich uranium.'"},
-    {flag:"🇺🇦",name:"Ukraine — Deterrence Shift",status:"WATCH",color:"#22c55e",text:"Fire Point's FP-9 (850km, Moscow-capable) and the Freyja ABM system mark a move toward sovereign strategic deterrence outside the US approval cycle — a structural change in the strike balance."},
-  ];
-
-  const ARSENALS=[
-    {country:"🇷🇺 Russia",warheads:"~5,580",deployed:"~1,718 deployed strategic",color:"#ef4444"},
-    {country:"🇺🇸 United States",warheads:"~5,044",deployed:"~1,670 deployed strategic",color:"#5b8ec8"},
-    {country:"🇨🇳 China",warheads:"~620",deployed:"Rapidly expanding — fastest growth rate of any state (SIPRI, Jun 2026)",color:"#eab308"},
-    {country:"🇫🇷 France",warheads:"~290",deployed:"~280 (submarine + air) — Macron ordered an increase Mar 2026; France stopped disclosing figures the same month",color:"#8b5cf6"},
-    {country:"🇬🇧 United Kingdom",warheads:"~225",deployed:"~120 deployed (submarine-only, no longer publicly disclosed since 2021)",color:"#5b8ec8"},
-    {country:"🇵🇰 Pakistan",warheads:"~170",deployed:"Non-deployed — assembled on short notice",color:"#22c55e"},
-    {country:"🇮🇳 India",warheads:"~172",deployed:"Non-deployed — declared 'no first use' doctrine",color:"#f97316"},
-    {country:"🇮🇱 Israel",warheads:"~90 (undeclared)",deployed:"Policy of deliberate ambiguity — never officially confirmed",color:"#f97316"},
-    {country:"🇰🇵 North Korea",warheads:"~60 (est.)",deployed:"Non-NPT signatory — SIPRI Jun 2026 estimate, up from ~50",color:"#dc2626"},
-  ];
-
-  const TREATIES=[
-    {icon:"📉",label:"New START — EXPIRED Feb 5, 2026",color:"#ef4444",text:"The last US-Russia strategic arms treaty, capping deployed strategic warheads at 1,550 each, lapsed on Feb 5, 2026 with no replacement — the first time since 1972 the two largest arsenals operate without a binding numerical cap. The US left a Russian offer to informally observe the limits for one more year unanswered; Trump wants a 'modernized' treaty including China, which Beijing refuses. Both sides retain upload capacity (Minuteman III / Trident II) to add warheads if either breaks out."},
-    {icon:"✍️",label:"Non-Proliferation Treaty (NPT)",color:"#5b8ec8",text:"191 states party — the cornerstone of the global non-proliferation regime since 1970. India, Pakistan, Israel, and North Korea (which withdrew in 2003) sit outside it entirely, which is why their arsenals are tracked separately from the five NPT-recognized nuclear states (US, Russia, China, France, UK)."},
-    {icon:"🎯",label:"Doctrine: No-First-Use vs. Ambiguity",color:"#eab308",text:"China and India maintain declared no-first-use policies. The US, Russia, France, UK, Pakistan, and Israel maintain deliberate ambiguity or explicit first-use options under certain conditions — Russia's doctrine permits nuclear response to conventional threats against its territorial integrity."},
-    {icon:"🤝",label:"NATO Nuclear Sharing",color:"#5b8ec8",text:"US tactical weapons are forward-deployed under dual-key arrangements in Belgium, Germany, Italy, the Netherlands, and Turkey — host nations maintain delivery aircraft, but launch authority remains exclusively American. Full detail in Great Power Rivalry → NATO & Allies tab."},
-    {icon:"🛰️",label:"Missile Defense Treaties",color:"#8b5cf6",text:"The US withdrew from the 1972 Anti-Ballistic Missile Treaty in 2002, freeing it to pursue GMD and Aegis BMD systems — a long-standing Russian grievance cited in Moscow's own strategic modernization justifications."},
-  ];
-
-
-  const DELIVERY=[
-    {leg:"🚀 Land — ICBMs",color:"#ef4444",rows:[
-      {country:"🇺🇸 US",sys:"Minuteman III → Sentinel (LGM-35A)",note:"400 silos; Sentinel replacement running years late and over budget, first fielding now late-decade."},
-      {country:"🇷🇺 Russia",sys:"RS-28 Sarmat ('Satan II'), Yars, Avangard HGV",note:"Heavy Sarmat had a troubled test record; Avangard hypersonic glide vehicle fielded on some ICBMs."},
-      {country:"🇨🇳 China",sys:"DF-41, DF-31AG, DF-5B",note:"350+ new silos since 2021 across three fields — the core of China's rapid expansion."},
-    ]},
-    {leg:"🌊 Sea — SLBMs / SSBNs",color:"#5b8ec8",rows:[
-      {country:"🇺🇸 US",sys:"Ohio-class → Columbia-class, Trident II D5",note:"Columbia SSBN entering production to replace 14 Ohio boats; the most survivable US leg."},
-      {country:"🇷🇺 Russia",sys:"Borei-A class, Bulava SLBM",note:"Newer Borei-A boats steadily replacing Soviet-era Delta-class."},
-      {country:"🇨🇳 China",sys:"Type 094 → Type 096, JL-3 SLBM",note:"JL-3 gives China's boats the range to target the continental US from bastions closer to home."},
-    ]},
-    {leg:"✈️ Air — Bombers / ALCMs",color:"#eab308",rows:[
-      {country:"🇺🇸 US",sys:"B-52J, B-2 → B-21 Raider, LRSO cruise missile",note:"B-21 in flight test — the first new US strategic bomber in decades; LRSO replaces the aging AGM-86."},
-      {country:"🇷🇺 Russia",sys:"Tu-160M, Tu-95MS, Kh-102 ALCM",note:"Tu-160M 'Blackjack' production restarted; several airframes damaged in Ukraine's 2025 Operation Spiderweb."},
-      {country:"🇨🇳 China",sys:"H-6N (air-launched ballistic), H-20 (in development)",note:"H-20 stealth bomber would complete China's triad; not yet public."},
-    ]},
-  ];
-
-  return <div>
-    <div style={{display:"flex",gap:4,flexWrap:"wrap",marginBottom:12}}>
-      {TABS.map(tb=><button key={tb.id} onClick={()=>setTab(tb.id)} style={{padding:"5px 10px",fontSize:11,borderRadius:16,cursor:"pointer",fontFamily:FONT,fontWeight:600,background:tab===tb.id?"#ef4444":"none",color:tab===tb.id?"#fff":t.sub,border:`1px solid ${tab===tb.id?"#ef4444":t.border}`}}>{tb.label}</button>)}
-    </div>
-
-    {tab==="vectors"&&<div>
-      <Hero t={t} style={{borderLeft:"4px solid #ef4444"}}>
-        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>☢️ Nuclear Posture Tracker — Jul 2026</div>
-        <div style={{fontSize:13,color:"rgba(255,255,255,.75)",lineHeight:1.6}}>Three live nuclear vectors: Russian coercive signalling around Ukraine, Russian tactical weapons forward-based in Belarus, and the Iran enrichment standoff under a ticking MoU clock.</div>
-      </Hero>
-      <ST t={t} color="#ef4444">⚠️ Active Nuclear Vectors</ST>
-      {VECTORS.map((v,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${v.color}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:5}}><span style={{fontSize:18}}>{v.flag}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{v.name}</div><Pill label={v.status} color={v.color}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{v.text}</div></div></Card>)}
-    </div>}
-
-    {tab==="arsenals"&&<div>
-      <Hero t={t} style={{borderLeft:"4px solid #8b5cf6"}}>
-        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>🌐 Global Nuclear Arsenals</div>
-        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>All 9 confirmed or widely-assessed nuclear-armed states. Russia and the US together hold roughly 88% of the world's total warheads.</div>
-      </Hero>
-      <ST t={t} color="#8b5cf6">☢️ Arsenal Comparison (est. warheads)</ST>
-      <Card t={t}><div style={{padding:"12px 14px"}}>{ARSENALS.map((a,i)=>{const n=parseFloat(String(a.warheads).replace(/[^0-9.]/g,""))||0;const max=5580;const w=Math.max(3,Math.sqrt(n/max)*100);return <div key={i} style={{marginBottom:i===ARSENALS.length-1?0:11}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:3}}><span style={{fontSize:12,fontWeight:600,color:t.text}}>{a.country}</span><span style={{fontSize:13,fontWeight:700,color:a.color,fontVariantNumeric:"tabular-nums"}}>{a.warheads}</span></div><div style={{height:8,borderRadius:4,background:t.isDark?"rgba(255,255,255,.05)":"rgba(0,0,0,.06)",overflow:"hidden"}}><div style={{height:"100%",width:`${w}%`,borderRadius:4,background:`linear-gradient(90deg,${a.color}88,${a.color})`,transformOrigin:"left",animation:`barGrow .7s cubic-bezier(.22,1,.36,1) ${i*0.06}s both`}}/></div><div style={{fontSize:10,color:t.sub,marginTop:2}}>{a.deployed}</div></div>;})}</div></Card>
-      <Note t={t} color="#8b5cf6">Bar lengths use a square-root scale so smaller arsenals stay visible against the US/Russia totals — compare the printed numbers for true ratios. Warhead estimates: Federation of American Scientists / SIPRI 2026. Figures are approximate; deployed vs stockpiled counts vary significantly by source, and several states (Israel, North Korea) have never officially confirmed their arsenal size.</Note>
-    </div>}
-
-    {tab==="delivery"&&<div>
-      <Hero t={t} style={{borderLeft:"4px solid #ef4444"}}>
-        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>🚀 The Nuclear Triad — Delivery Systems</div>
-        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>Warhead counts say who has what; delivery systems say how it gets there — and this is the fastest-moving dimension. All three major powers are mid-modernization across land, sea and air, with the US racing to replace Cold War platforms and China building a full triad for the first time.</div>
-      </Hero>
-      {DELIVERY.map((leg,i)=><div key={i}><ST t={t} color={leg.color}>{leg.leg}</ST><Card t={t}>{leg.rows.map((r,j)=><Row key={j} t={t} last={j===leg.rows.length-1}><div style={{flex:1,minWidth:0}}><div style={{fontSize:13,fontWeight:700,color:t.text}}>{r.country}</div><div style={{fontSize:11.5,fontWeight:600,color:leg.color,margin:"2px 0 3px"}}>{r.sys}</div><div style={{fontSize:11,color:t.sub,lineHeight:1.55}}>{r.note}</div></div></Row>)}</Card></div>)}
-      <Note t={t} color="#ef4444">Programme status and platform names: CSIS Missile Threat, USNI, FAS Nuclear Notebook, Mitchell Institute (2026). Fielding timelines for next-gen systems (Sentinel, Columbia, B-21, H-20) shift frequently — treat as directional. UK (Dreadnought SSBN) and France (SNLE 3G) run submarine-only deterrents.</Note>
-    </div>}
-
-    {tab==="treaties"&&<div>
-      <Hero t={t} style={{borderLeft:"4px solid #5b8ec8"}}>
-        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>📜 Treaties & Doctrine</div>
-        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>The legal and doctrinal frameworks — and their erosion — that shape current nuclear risk.</div>
-      </Hero>
-      {TREATIES.map((item,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${item.color}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:4}}><span style={{fontSize:18}}>{item.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text}}>{item.label}</div></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{item.text}</div></div></Card>)}
-    </div>}
-    {tab==="escalation"&&<div>
-      <Hero t={t} style={{borderLeft:"4px solid #dc2626"}}>
-        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>🌐 Global Escalation Risk Assessment</div>
-        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>How many fronts are live, and whether any involve direct combat between the great powers whose own war would be systemic. Per-theater risk levels below; full analysis expands beneath.</div>
-      </Hero>
-      <ST t={t} color="#dc2626">🚦 Per-Theater Risk Levels</ST>
-      {ESCALATION_RISKS.map((r,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${r.color}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:5}}><span style={{fontSize:18}}>{r.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{r.theater}</div><Pill label={r.level} color={r.color}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{r.text}</div></div></Card>)}
-      <ST t={t} color="#dc2626">🤖 AI Analysis</ST>
-      <Card t={t}><div style={{padding:"14px 16px"}}>
-        <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:10}}>
-          <span style={{width:8,height:8,borderRadius:"50%",background:"#dc2626",display:"inline-block",flexShrink:0}}/>
-          <span style={{fontSize:11,fontWeight:700,color:t.text,letterSpacing:".04em"}}>WORLD WAR 3 RISK ASSESSMENT</span>
-          <span style={{marginLeft:"auto",fontSize:10,color:t.sub}}>{new Date(ESCALATION_BRIEFING.generatedAt).toLocaleDateString([],{month:"short",day:"numeric"})}</span>
-        </div>
-        <div style={{fontSize:12.5,color:t.text,lineHeight:1.6,marginBottom:12}}>{ESCALATION_BRIEFING.summaryShort}</div>
-        <div style={{fontSize:11,color:t.sub,fontStyle:"italic",paddingTop:10,paddingBottom:2,borderTop:`1px solid ${t.isDark?"rgba(255,255,255,.08)":"rgba(0,0,0,.08)"}`,marginBottom:10}}>
-          👁 <strong style={{color:t.text,fontStyle:"normal"}}>Watch: </strong>{ESCALATION_BRIEFING.watch}
-        </div>
-        <div style={{display:"flex",gap:6}}>
-          <button onClick={()=>setEscExpanded(e=>!e)} aria-expanded={escExpanded} style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:6,background:"none",border:`1px solid ${t.border}`,borderRadius:8,padding:"7px 10px",cursor:"pointer",color:"#dc2626",fontSize:11,fontWeight:700,fontFamily:FONT,letterSpacing:".03em"}}>
-            {escExpanded?"▲ Show Less":"📝 Read Full Analysis"}
-          </button>
-          <ReadAloudButton text={[ESCALATION_BRIEFING.summary,...ESCALATION_BRIEFING.assessment.map(a=>`${a.cat}: ${a.text}`)].join(". ")} color="#dc2626" t={t}/>
-        </div>
-        {escExpanded&&<div style={{marginTop:10,paddingTop:10,borderTop:`1px solid ${t.isDark?"rgba(255,255,255,.08)":"rgba(0,0,0,.08)"}`}}>
-          <div style={{fontSize:12.5,color:t.text,lineHeight:1.6,marginBottom:12}}>{ESCALATION_BRIEFING.summary}</div>
-          <div style={{display:"flex",flexDirection:"column",gap:7}}>
-            {ESCALATION_BRIEFING.assessment.map((a,i)=><div key={i} style={{display:"flex",gap:8,fontSize:11.5}}>
-              <span style={{color:"#dc2626",fontWeight:700,minWidth:100,flexShrink:0}}>{a.cat}</span>
-              <span style={{color:t.sub,lineHeight:1.5}}>{a.text}</span>
-            </div>)}
-          </div>
-        </div>}
-      </div></Card>
-      <Note t={t} color="#dc2626">Assessment synthesizes the per-theater data tracked elsewhere on this dashboard — not an independent intelligence product. Distinguishes live regional conflicts from direct great-power combat, which remains the decisive threshold for a systemic war.</Note>
-    </div>}
-    {tab==="cyber"&&<CyberSection t={t}/>}
-  </div>;
-}
-
 function CyberSection({t,initialTab}){
   const[tab,setTab]=useState(initialTab??"overview");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
   const TABS=[{id:"overview",label:"🌪️ Overview"},{id:"cables",label:"⚓ Cables"},{id:"ew",label:"🛰️ EW"},{id:"cyber",label:"🌪️ Cyber Intrusions"},{id:"greyzone",label:"🎭 Grey-Zone"}];
@@ -1305,7 +1173,8 @@ function CyberSection({t,initialTab}){
 }
 
 function USMilSection({t,initialTab}){
-  const[tab,setTab]=useState(initialTab??"compare");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
+  const[tab,setTab]=useState(initialTab??"escalation");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
+  const[escExpanded,setEscExpanded]=useState(false);
   const INDOPAC_BALANCE=[
     {flag:"🇨🇳",name:"China",nuclear:"620",color:"#ef4444",personnel:"2.0M",budget:"$266B",navy:"730 hulls (largest by count)",air:"3,309 aircraft, ~250+ J-20",posture:"Area-denial architecture (DF-21D/DF-26 umbrella) + Taiwan-contingency buildup — the pacing threat all US Indo-Pacific planning is organized around."},
     {flag:"🇮🇳",name:"India",nuclear:"190",color:"#f97316",personnel:"1.46M active",budget:"$75B",navy:"295 vessels, 2 carriers",air:"2,229 aircraft",posture:"Swing power — Quad member and largest resident Indian Ocean navy; two-front posture vs China (LAC) and Pakistan simultaneously."},
@@ -1317,7 +1186,57 @@ function USMilSection({t,initialTab}){
     {flag:"🇦🇺",name:"Australia",nuclear:"— (AUKUS — nuclear-powered, not armed)",color:"#5b8ec8",personnel:"60K active",budget:"~$37B",navy:"~50 vessels; Virginia-class SSNs arriving 2030s under AUKUS",air:"F-35A fleet (72), P-8, E-7",posture:"Continental defense + alliance integration; AUKUS submarine pathway is the region's most significant force-structure shift outside China itself."},
   ];
   const indopacSorted=useMemo(()=>[...INDOPAC_BALANCE].sort((a,b)=>(parseFloat(String(b.budget).replace(/[^0-9.]/g,""))||0)-(parseFloat(String(a.budget).replace(/[^0-9.]/g,""))||0)),[]);
-  const TABS=[{id:"compare",label:"⚖️ Power Comparison"},{id:"china",label:"🇨🇳 China Deep Dive"},{id:"systems",label:"🚀 Systems"},{id:"posture",label:"🌍 Posture"},{id:"nato",label:"🤝 NATO & Allies"},{id:"rankings",label:"🌐 Global Rankings"},{id:"indopac",label:"🌏 Indo-Pacific Balance"},{id:"fighters5g",label:"✈️ 5th-Gen Fighters"},{id:"navypipe",label:"🚢 Naval Pipeline"},{id:"space",label:"🛰️ Space & Counterspace"},{id:"minerals",label:"⛏️ Critical Minerals"},{id:"arctic",label:"🧊 Arctic"},{id:"defindustry",label:"🏭 Defense Industry"},{id:"dprk",label:"🇰🇵 DPRK-Russia Axis"}];
+  const TABS=[{id:"escalation",label:"🌐 Escalation Risk"},{id:"china",label:"🇨🇳 China Deep Dive"},{id:"systems",label:"🚀 Systems"},{id:"posture",label:"🌍 Posture"},{id:"nato",label:"🤝 NATO & Allies"},{id:"rankings",label:"🌐 Global Rankings"},{id:"indopac",label:"🌏 Indo-Pacific Balance"},{id:"fighters5g",label:"✈️ 5th-Gen Fighters"},{id:"navypipe",label:"🚢 Naval Pipeline"},{id:"space",label:"🛰️ Space & Counterspace"},{id:"minerals",label:"⛏️ Critical Minerals"},{id:"arctic",label:"🧊 Arctic"},{id:"defindustry",label:"🏭 Defense Industry"},{id:"dprk",label:"🇰🇵 DPRK-Russia Axis"},{id:"vectors",label:"⚠️ Active Vectors"},{id:"arsenals",label:"🌐 Global Arsenals"},{id:"delivery",label:"🚀 Delivery Systems"},{id:"treaties",label:"📜 Treaties & Doctrine"},{id:"cyber",label:"🌪️ Cyber & Hybrid"}]
+
+  // ── merged from former Strategic & Hybrid (Nuclear) section ──
+  const VECTORS=[
+    {flag:"🇷🇺",name:"Russia — Strategic Signalling",status:"ACTIVE",color:"#ef4444",text:"Largest arsenal on earth. Putin has repeatedly invoked nuclear rhetoric. IC consensus (Jun 2026): threats are coercive, not operational — any use would forfeit Chinese support, Putin's true red line."},
+    {flag:"🇧🇾",name:"Belarus — Forward-Based Tac-Nukes",status:"DEPLOYED",color:"#f97316",text:"Hosts Russian tactical nuclear weapons since 2023 — first deployment outside Russia since the USSR. Russia has now started building a forward-operating base in Belarus for its dual-capable Oreshnik IRBM (SIPRI); Oreshnik has already struck Ukraine with conventional warheads, most recently May 2026. Separately, Russia claims a 2025 successful 14,000km test of the nuclear-powered Burevestnik cruise missile after repeated failures."},
+    {flag:"🇮🇷",name:"Iran — Nuclear Clock",status:"21 DAYS",color:"#8b5cf6",text:"Islamabad MoU 60-day window closes ~Aug 16. IAEA inspector access disputed. Enrichment red lines unresolved — Pezeshkian: 'we will never back down from the right to enrich uranium.'"},
+    {flag:"🇺🇦",name:"Ukraine — Deterrence Shift",status:"WATCH",color:"#22c55e",text:"Fire Point's FP-9 (850km, Moscow-capable) and the Freyja ABM system mark a move toward sovereign strategic deterrence outside the US approval cycle — a structural change in the strike balance."},
+  ];
+
+  const ARSENALS=[
+    {country:"🇷🇺 Russia",warheads:"~5,580",deployed:"~1,718 deployed strategic",color:"#ef4444"},
+    {country:"🇺🇸 United States",warheads:"~5,044",deployed:"~1,670 deployed strategic",color:"#5b8ec8"},
+    {country:"🇨🇳 China",warheads:"~620",deployed:"Rapidly expanding — fastest growth rate of any state (SIPRI, Jun 2026)",color:"#eab308"},
+    {country:"🇫🇷 France",warheads:"~290",deployed:"~280 (submarine + air) — Macron ordered an increase Mar 2026; France stopped disclosing figures the same month",color:"#8b5cf6"},
+    {country:"🇬🇧 United Kingdom",warheads:"~225",deployed:"~120 deployed (submarine-only, no longer publicly disclosed since 2021)",color:"#5b8ec8"},
+    {country:"🇵🇰 Pakistan",warheads:"~170",deployed:"Non-deployed — assembled on short notice",color:"#22c55e"},
+    {country:"🇮🇳 India",warheads:"~172",deployed:"Non-deployed — declared 'no first use' doctrine",color:"#f97316"},
+    {country:"🇮🇱 Israel",warheads:"~90 (undeclared)",deployed:"Policy of deliberate ambiguity — never officially confirmed",color:"#f97316"},
+    {country:"🇰🇵 North Korea",warheads:"~60 (est.)",deployed:"Non-NPT signatory — SIPRI Jun 2026 estimate, up from ~50",color:"#dc2626"},
+  ];
+
+  const TREATIES=[
+    {icon:"📉",label:"New START — EXPIRED Feb 5, 2026",color:"#ef4444",text:"The last US-Russia strategic arms treaty, capping deployed strategic warheads at 1,550 each, lapsed on Feb 5, 2026 with no replacement — the first time since 1972 the two largest arsenals operate without a binding numerical cap. The US left a Russian offer to informally observe the limits for one more year unanswered; Trump wants a 'modernized' treaty including China, which Beijing refuses. Both sides retain upload capacity (Minuteman III / Trident II) to add warheads if either breaks out."},
+    {icon:"✍️",label:"Non-Proliferation Treaty (NPT)",color:"#5b8ec8",text:"191 states party — the cornerstone of the global non-proliferation regime since 1970. India, Pakistan, Israel, and North Korea (which withdrew in 2003) sit outside it entirely, which is why their arsenals are tracked separately from the five NPT-recognized nuclear states (US, Russia, China, France, UK)."},
+    {icon:"🎯",label:"Doctrine: No-First-Use vs. Ambiguity",color:"#eab308",text:"China and India maintain declared no-first-use policies. The US, Russia, France, UK, Pakistan, and Israel maintain deliberate ambiguity or explicit first-use options under certain conditions — Russia's doctrine permits nuclear response to conventional threats against its territorial integrity."},
+    {icon:"🤝",label:"NATO Nuclear Sharing",color:"#5b8ec8",text:"US tactical weapons are forward-deployed under dual-key arrangements in Belgium, Germany, Italy, the Netherlands, and Turkey — host nations maintain delivery aircraft, but launch authority remains exclusively American. Full detail in Great Powers → NATO & Allies tab."},
+    {icon:"🛰️",label:"Missile Defense Treaties",color:"#8b5cf6",text:"The US withdrew from the 1972 Anti-Ballistic Missile Treaty in 2002, freeing it to pursue GMD and Aegis BMD systems — a long-standing Russian grievance cited in Moscow's own strategic modernization justifications."},
+  ];
+
+
+  const DELIVERY=[
+    {leg:"🚀 Land — ICBMs",color:"#ef4444",rows:[
+      {country:"🇺🇸 US",sys:"Minuteman III → Sentinel (LGM-35A)",note:"400 silos; Sentinel replacement running years late and over budget, first fielding now late-decade."},
+      {country:"🇷🇺 Russia",sys:"RS-28 Sarmat ('Satan II'), Yars, Avangard HGV",note:"Heavy Sarmat had a troubled test record; Avangard hypersonic glide vehicle fielded on some ICBMs."},
+      {country:"🇨🇳 China",sys:"DF-41, DF-31AG, DF-5B",note:"350+ new silos since 2021 across three fields — the core of China's rapid expansion."},
+    ]},
+    {leg:"🌊 Sea — SLBMs / SSBNs",color:"#5b8ec8",rows:[
+      {country:"🇺🇸 US",sys:"Ohio-class → Columbia-class, Trident II D5",note:"Columbia SSBN entering production to replace 14 Ohio boats; the most survivable US leg."},
+      {country:"🇷🇺 Russia",sys:"Borei-A class, Bulava SLBM",note:"Newer Borei-A boats steadily replacing Soviet-era Delta-class."},
+      {country:"🇨🇳 China",sys:"Type 094 → Type 096, JL-3 SLBM",note:"JL-3 gives China's boats the range to target the continental US from bastions closer to home."},
+    ]},
+    {leg:"✈️ Air — Bombers / ALCMs",color:"#eab308",rows:[
+      {country:"🇺🇸 US",sys:"B-52J, B-2 → B-21 Raider, LRSO cruise missile",note:"B-21 in flight test — the first new US strategic bomber in decades; LRSO replaces the aging AGM-86."},
+      {country:"🇷🇺 Russia",sys:"Tu-160M, Tu-95MS, Kh-102 ALCM",note:"Tu-160M 'Blackjack' production restarted; several airframes damaged in Ukraine's 2025 Operation Spiderweb."},
+      {country:"🇨🇳 China",sys:"H-6N (air-launched ballistic), H-20 (in development)",note:"H-20 stealth bomber would complete China's triad; not yet public."},
+    ]},
+  ];
+
+  
+;
 
   const PEERS=[
     {flag:"🇺🇸",name:"United States",color:"#5b8ec8",personnel:"~1.32M active + 800K reserve",budget:"~$895B (FY26 enacted)",carriers:"11 supercarriers (all nuclear-powered)",fighters5gen:"~630 (F-22 + F-35A/B/C)",nuclearTriad:"Complete — Ohio SSBNs, B-2/B-21, Minuteman III silos",satellites:"~250 military/ISR satellites — dominant"},
@@ -1423,20 +1342,6 @@ function USMilSection({t,initialTab}){
     <div style={{display:"flex",gap:4,flexWrap:"wrap",marginBottom:12}}>
       {TABS.map(tb=><button key={tb.id} onClick={()=>setTab(tb.id)} style={{padding:"5px 10px",fontSize:11,borderRadius:16,cursor:"pointer",fontFamily:FONT,fontWeight:600,background:tab===tb.id?"#5b8ec8":"none",color:tab===tb.id?"#fff":t.sub,border:`1px solid ${tab===tb.id?"#5b8ec8":t.border}`}}>{tb.label}</button>)}
     </div>
-
-    {tab==="compare"&&<div>
-      <Hero t={t} style={{borderLeft:"4px solid #5b8ec8"}}>
-        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>⚖️ US vs. China — Power Comparison</div>
-        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>Russia retains the world's largest nuclear stockpile but its conventional military has been substantially degraded by the Ukraine war (see Manpower tab). China is the only peer-tier competitor across most conventional categories.</div>
-      </Hero>
-      {PEERS.map((p,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${p.color}`}}><div style={{padding:"12px 14px"}}>
-        <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}><span style={{fontSize:22}}>{p.flag}</span><div style={{fontSize:14,fontWeight:800,color:t.text}}>{p.name}</div></div>
-        {[["Active personnel",p.personnel],["Defense budget",p.budget],["Carriers",p.carriers],["5th-gen fighters",p.fighters5gen],["Nuclear triad",p.nuclearTriad],["Military satellites",p.satellites]].map(([k,v],j)=><div key={j} style={{display:"flex",justifyContent:"space-between",gap:10,fontSize:12,padding:"4px 0",borderBottom:j<5?`.5px solid ${t.sep}`:0}}><span style={{color:t.sub,flexShrink:0}}>{k}</span><span style={{color:t.text,fontWeight:600,textAlign:"right"}}>{v}</span></div>)}
-      </div></Card>)}
-      <ST t={t} color="#5b8ec8">🏆 Category Leaders</ST>
-      <Grid2 t={t} items={EDGE_CATEGORIES.map(e=>({val:e.val,label:e.label,sub:e.sub,color:e.color}))}/>
-      <Note t={t} color="#5b8ec8">Budget and inventory figures blend DoD's annual China Military Power Report, SIPRI, and IISS Military Balance estimates. China's official defense budget is widely assessed by Western analysts as substantially understated.</Note>
-    </div>}
 
     {tab==="china"&&<div>
       <Hero t={t} style={{borderLeft:"4px solid #ef4444"}}>
@@ -1731,8 +1636,89 @@ function USMilSection({t,initialTab}){
         <div><span style={{color:t.text,fontWeight:700}}>Why it matters beyond Ukraine</span> — The arrangement gives North Korea combat-tested troops, potential missile-tech uplift, and a great-power patron willing to shield it at the UN — durably changing the Korean Peninsula's risk calculus independent of how the Ukraine war ends.</div>
       </div></div></Card>
       <TrendChart t={t} data={HISTORICAL.dprkCasualties} color="#ef4444" label="DPRK Casualties in Kursk (cumulative)" unit="killed/wounded, Western vs Ukrainian estimates" desc="UK MoD/South Korean NIS estimated ~6,000 DPRK casualties from Apr 2025 through early 2026 — a plateau. Ukraine's HUR claimed 7,000+ by late June 2026, a figure that exceeds the Western estimate; shown as reported, not reconciled." />
-      <Note t={t} color="#ef4444">Figures are Western/South Korean intelligence estimates (DIA, NIS, RUSI) — North Korea does not confirm troop or material commitments, and ranges are wide. Cross-reference: Arms Flow (NATO & Allies tab), Nuclear → Delivery Systems (DPRK's own arsenal is tracked separately there).</Note>
+      <Note t={t} color="#ef4444">Figures are Western/South Korean intelligence estimates (DIA, NIS, RUSI) — North Korea does not confirm troop or material commitments, and ranges are wide. Cross-reference: Arms Flow (NATO & Allies tab), the Delivery Systems tab (DPRK's own arsenal is tracked separately there).</Note>
     </div>}
+    {tab==="vectors"&&<div>
+      <Hero t={t} style={{borderLeft:"4px solid #ef4444"}}>
+        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>☢️ Nuclear Posture Tracker — Jul 2026</div>
+        <div style={{fontSize:13,color:"rgba(255,255,255,.75)",lineHeight:1.6}}>Three live nuclear vectors: Russian coercive signalling around Ukraine, Russian tactical weapons forward-based in Belarus, and the Iran enrichment standoff under a ticking MoU clock.</div>
+      </Hero>
+      <ST t={t} color="#ef4444">⚠️ Active Nuclear Vectors</ST>
+      {VECTORS.map((v,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${v.color}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:5}}><span style={{fontSize:18}}>{v.flag}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{v.name}</div><Pill label={v.status} color={v.color}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{v.text}</div></div></Card>)}
+    </div>}
+
+    {tab==="arsenals"&&<div>
+      <Hero t={t} style={{borderLeft:"4px solid #8b5cf6"}}>
+        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>🌐 Global Nuclear Arsenals</div>
+        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>All 9 confirmed or widely-assessed nuclear-armed states. Russia and the US together hold roughly 88% of the world's total warheads.</div>
+      </Hero>
+      <ST t={t} color="#8b5cf6">☢️ Arsenal Comparison (est. warheads)</ST>
+      <Card t={t}><div style={{padding:"12px 14px"}}>{ARSENALS.map((a,i)=>{const n=parseFloat(String(a.warheads).replace(/[^0-9.]/g,""))||0;const max=5580;const w=Math.max(3,Math.sqrt(n/max)*100);return <div key={i} style={{marginBottom:i===ARSENALS.length-1?0:11}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:3}}><span style={{fontSize:12,fontWeight:600,color:t.text}}>{a.country}</span><span style={{fontSize:13,fontWeight:700,color:a.color,fontVariantNumeric:"tabular-nums"}}>{a.warheads}</span></div><div style={{height:8,borderRadius:4,background:t.isDark?"rgba(255,255,255,.05)":"rgba(0,0,0,.06)",overflow:"hidden"}}><div style={{height:"100%",width:`${w}%`,borderRadius:4,background:`linear-gradient(90deg,${a.color}88,${a.color})`,transformOrigin:"left",animation:`barGrow .7s cubic-bezier(.22,1,.36,1) ${i*0.06}s both`}}/></div><div style={{fontSize:10,color:t.sub,marginTop:2}}>{a.deployed}</div></div>;})}</div></Card>
+      <Note t={t} color="#8b5cf6">Bar lengths use a square-root scale so smaller arsenals stay visible against the US/Russia totals — compare the printed numbers for true ratios. Warhead estimates: Federation of American Scientists / SIPRI 2026. Figures are approximate; deployed vs stockpiled counts vary significantly by source, and several states (Israel, North Korea) have never officially confirmed their arsenal size.</Note>
+    </div>}
+
+    {tab==="delivery"&&<div>
+      <Hero t={t} style={{borderLeft:"4px solid #ef4444"}}>
+        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>🚀 The Nuclear Triad — Delivery Systems</div>
+        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>Warhead counts say who has what; delivery systems say how it gets there — and this is the fastest-moving dimension. All three major powers are mid-modernization across land, sea and air, with the US racing to replace Cold War platforms and China building a full triad for the first time.</div>
+      </Hero>
+      {DELIVERY.map((leg,i)=><div key={i}><ST t={t} color={leg.color}>{leg.leg}</ST><Card t={t}>{leg.rows.map((r,j)=><Row key={j} t={t} last={j===leg.rows.length-1}><div style={{flex:1,minWidth:0}}><div style={{fontSize:13,fontWeight:700,color:t.text}}>{r.country}</div><div style={{fontSize:11.5,fontWeight:600,color:leg.color,margin:"2px 0 3px"}}>{r.sys}</div><div style={{fontSize:11,color:t.sub,lineHeight:1.55}}>{r.note}</div></div></Row>)}</Card></div>)}
+      <Note t={t} color="#ef4444">Programme status and platform names: CSIS Missile Threat, USNI, FAS Nuclear Notebook, Mitchell Institute (2026). Fielding timelines for next-gen systems (Sentinel, Columbia, B-21, H-20) shift frequently — treat as directional. UK (Dreadnought SSBN) and France (SNLE 3G) run submarine-only deterrents.</Note>
+    </div>}
+
+    {tab==="treaties"&&<div>
+      <Hero t={t} style={{borderLeft:"4px solid #5b8ec8"}}>
+        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>📜 Treaties & Doctrine</div>
+        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>The legal and doctrinal frameworks — and their erosion — that shape current nuclear risk.</div>
+      </Hero>
+      {TREATIES.map((item,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${item.color}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:4}}><span style={{fontSize:18}}>{item.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text}}>{item.label}</div></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{item.text}</div></div></Card>)}
+    </div>}
+    {tab==="escalation"&&<div>
+      <Hero t={t} style={{borderLeft:"4px solid #dc2626"}}>
+        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>🌐 Global Escalation Risk Assessment</div>
+        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>How many fronts are live, and whether any involve direct combat between the great powers whose own war would be systemic. Full analysis first, per-theater risk levels below.</div>
+      </Hero>
+      <ST t={t} color="#dc2626">🤖 AI Analysis</ST>
+      <Card t={t}><div style={{padding:"14px 16px"}}>
+        <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:10}}>
+          <span style={{width:8,height:8,borderRadius:"50%",background:"#dc2626",display:"inline-block",flexShrink:0}}/>
+          <span style={{fontSize:11,fontWeight:700,color:t.text,letterSpacing:".04em"}}>WORLD WAR 3 RISK ASSESSMENT</span>
+          <span style={{marginLeft:"auto",fontSize:10,color:t.sub}}>{new Date(ESCALATION_BRIEFING.generatedAt).toLocaleDateString([],{month:"short",day:"numeric"})}</span>
+        </div>
+        <div style={{fontSize:12.5,color:t.text,lineHeight:1.6,marginBottom:12}}>{ESCALATION_BRIEFING.summaryShort}</div>
+        <div style={{fontSize:11,color:t.sub,fontStyle:"italic",paddingTop:10,paddingBottom:2,borderTop:`1px solid ${t.isDark?"rgba(255,255,255,.08)":"rgba(0,0,0,.08)"}`,marginBottom:10}}>
+          👁 <strong style={{color:t.text,fontStyle:"normal"}}>Watch: </strong>{ESCALATION_BRIEFING.watch}
+        </div>
+        <div style={{display:"flex",gap:6}}>
+          <button onClick={()=>setEscExpanded(e=>!e)} aria-expanded={escExpanded} style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:6,background:"none",border:`1px solid ${t.border}`,borderRadius:8,padding:"7px 10px",cursor:"pointer",color:"#dc2626",fontSize:11,fontWeight:700,fontFamily:FONT,letterSpacing:".03em"}}>
+            {escExpanded?"▲ Show Less":"📝 Read Full Analysis"}
+          </button>
+          <ReadAloudButton text={[ESCALATION_BRIEFING.summary,...ESCALATION_BRIEFING.assessment.map(a=>`${a.cat}: ${a.text}`)].join(". ")} color="#dc2626" t={t}/>
+        </div>
+        {escExpanded&&<div style={{marginTop:10,paddingTop:10,borderTop:`1px solid ${t.isDark?"rgba(255,255,255,.08)":"rgba(0,0,0,.08)"}`}}>
+          <div style={{fontSize:12.5,color:t.text,lineHeight:1.6,marginBottom:12}}>{ESCALATION_BRIEFING.summary}</div>
+          <div style={{display:"flex",flexDirection:"column",gap:7}}>
+            {ESCALATION_BRIEFING.assessment.map((a,i)=><div key={i} style={{display:"flex",gap:8,fontSize:11.5}}>
+              <span style={{color:"#dc2626",fontWeight:700,minWidth:100,flexShrink:0}}>{a.cat}</span>
+              <span style={{color:t.sub,lineHeight:1.5}}>{a.text}</span>
+            </div>)}
+          </div>
+        </div>}
+      </div></Card>
+      <ST t={t} color="#dc2626">🚦 Per-Theater Risk Levels</ST>
+      {ESCALATION_RISKS.map((r,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${r.color}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:5}}><span style={{fontSize:18}}>{r.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{r.theater}</div><Pill label={r.level} color={r.color}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{r.text}</div></div></Card>)}
+    <ST t={t} color="#5b8ec8">⚖️ US vs. China — Power Comparison</ST>
+      <Note t={t} color="#5b8ec8">Russia retains the world's largest nuclear stockpile but its conventional military has been substantially degraded by the Ukraine war (see Manpower tab). China is the only peer-tier competitor across most conventional categories.</Note>
+      {PEERS.map((p,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${p.color}`}}><div style={{padding:"12px 14px"}}>
+        <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}><span style={{fontSize:22}}>{p.flag}</span><div style={{fontSize:14,fontWeight:800,color:t.text}}>{p.name}</div></div>
+        {[["Active personnel",p.personnel],["Defense budget",p.budget],["Carriers",p.carriers],["5th-gen fighters",p.fighters5gen],["Nuclear triad",p.nuclearTriad],["Military satellites",p.satellites]].map(([k,v],j)=><div key={j} style={{display:"flex",justifyContent:"space-between",gap:10,fontSize:12,padding:"4px 0",borderBottom:j<5?`.5px solid ${t.sep}`:0}}><span style={{color:t.sub,flexShrink:0}}>{k}</span><span style={{color:t.text,fontWeight:600,textAlign:"right"}}>{v}</span></div>)}
+      </div></Card>)}
+      <ST t={t} color="#5b8ec8">🏆 Category Leaders</ST>
+      <Grid2 t={t} items={EDGE_CATEGORIES.map(e=>({val:e.val,label:e.label,sub:e.sub,color:e.color}))}/>
+      <Note t={t} color="#5b8ec8">Budget and inventory figures blend DoD's annual China Military Power Report, SIPRI, and IISS Military Balance estimates. China's official defense budget is widely assessed by Western analysts as substantially understated.</Note>
+      <Note t={t} color="#dc2626">Assessment synthesizes the per-theater data tracked elsewhere on this dashboard — not an independent intelligence product. Distinguishes live regional conflicts from direct great-power combat, which remains the decisive threshold for a systemic war.</Note>
+    </div>}
+    {tab==="cyber"&&<CyberSection t={t}/>}
   </div>;
 }
 
@@ -1922,7 +1908,7 @@ function VenezuelaSection({t,initialTab}){
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>Jul 12 — Sheinbaum escalates</span> — At a press conference, Sheinbaum announced Mexico is formally seeking criminal and civil investigations in US courts over the 17 deaths — the toughest action Mexico has taken on this issue, going, in her words, "beyond the diplomatic realm." Mexico had already filed 11 formal diplomatic protest notes.</div>
         <div><span style={{color:t.text,fontWeight:700}}>The bind</span> — Analysts note migration enforcement and cartel policy now sit in tension: FTO designations and military pressure risk displacing communities and driving new asylum claims at the very border Trump wants closed. Mass deportations continue in parallel — 75,900+ Mexican nationals repatriated in a six-month window per Mexican government figures from an earlier phase of the crackdown, with the pace unchanged since.</div>
       </div></div></Card>
-      <Note t={t} color="#006341">Sources: Atlantic Council, CFR, CNN, Al Jazeera, Newsweek, Bloomberg, Ken Klippenstein reporting on NORTHCOM planning, EveryCRSReport (CRS). Cartel/FTO and NORTHCOM detail is fast-moving and often based on leaked planning documents rather than confirmed operations — treat "prepared to strike" and "has struck" as distinct claims. Cross-reference: Southern Spear tab (the one confirmed kinetic campaign in this theater) and Great Power Rivalry → Critical Minerals (China-Mexico transshipment angle).</Note>
+      <Note t={t} color="#006341">Sources: Atlantic Council, CFR, CNN, Al Jazeera, Newsweek, Bloomberg, Ken Klippenstein reporting on NORTHCOM planning, EveryCRSReport (CRS). Cartel/FTO and NORTHCOM detail is fast-moving and often based on leaked planning documents rather than confirmed operations — treat "prepared to strike" and "has struck" as distinct claims. Cross-reference: Southern Spear tab (the one confirmed kinetic campaign in this theater) and Great Powers → Critical Minerals (China-Mexico transshipment angle).</Note>
     </div>}
     {tab==="haiti"&&<div>
       <Hero t={t} color="#00209F"><div style={{fontSize:11,fontWeight:800,letterSpacing:".12em",color:"#6699ff",marginBottom:6}}>🇭🇹 A STATE THAT HAS LARGELY STOPPED GOVERNING ITS CAPITAL</div><div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>Since the Viv Ansanm gang coalition's Feb 2024 offensive, Haiti's crisis has deepened rather than stabilized: gangs hold most of Port-au-Prince, a new UN-blessed force is only beginning to deploy, and the planned Aug 30 elections have already been postponed to December — proof the gangs, not the ballot, currently set the state's calendar.</div></Hero>
@@ -3265,7 +3251,7 @@ function AfricaSection({t,initialTab,onFlash}){
       <Card t={t}><div style={{padding:"11px 14px"}}><div style={{fontSize:12,color:t.sub,lineHeight:1.7}}>The DRC and Rwanda signed a US-brokered peace agreement in Washington on Jun 27, 2025, demanding "disengagement, disarmament and conditional integration" of armed groups. A follow-up Doha framework between the DRC government and M23 directly followed in late 2025, with a comprehensive deal targeted for summer 2026. But by early 2026, fighting had not only resumed but intensified in several areas, and most of the eight peace-framework pillars remain unimplemented. Former president Joseph Kabila dismissed the Washington deal as "nothing more than a trade agreement."</div></div></Card>
       <ST t={t} color="#eab308">⛏️ Minerals & the US Deal</ST>
       <Card t={t}><div style={{padding:"11px 14px"}}>
-        <div style={{fontSize:12,color:t.sub,lineHeight:1.7}}>Eastern DRC holds some of the world's largest reserves of coltan (used in every smartphone and laptop), cobalt and tin — the same territory M23 has seized. After losing Goma and Bukavu, Kinshasa turned to Washington for security guarantees, reportedly offering US access to critical minerals in exchange. That mineral-access arrangement is widely seen as the deciding factor that brought Rwanda to the table for the June 2025 Washington deal — a resource-for-security trade with clear echoes of the critical-minerals diplomacy playing out elsewhere in Great Power Rivalry. Skepticism runs deep on the ground: in rebel-held Goma, residents and former officials have dismissed the peace agreement as a transaction over resources rather than a genuine settlement, and M23 leadership has vowed to keep fighting despite EU sanctions on its commanders. The UN Human Rights Council pressed in Oct 2025 for a Commission of Inquiry field mission by Jan 2026, but this has been delayed by UN funding shortages.</div>
+        <div style={{fontSize:12,color:t.sub,lineHeight:1.7}}>Eastern DRC holds some of the world's largest reserves of coltan (used in every smartphone and laptop), cobalt and tin — the same territory M23 has seized. After losing Goma and Bukavu, Kinshasa turned to Washington for security guarantees, reportedly offering US access to critical minerals in exchange. That mineral-access arrangement is widely seen as the deciding factor that brought Rwanda to the table for the June 2025 Washington deal — a resource-for-security trade with clear echoes of the critical-minerals diplomacy playing out elsewhere in Great Powers. Skepticism runs deep on the ground: in rebel-held Goma, residents and former officials have dismissed the peace agreement as a transaction over resources rather than a genuine settlement, and M23 leadership has vowed to keep fighting despite EU sanctions on its commanders. The UN Human Rights Council pressed in Oct 2025 for a Commission of Inquiry field mission by Jan 2026, but this has been delayed by UN funding shortages.</div>
       </div></Card>
     </div>}
 
@@ -3332,15 +3318,14 @@ function SouthAsiaSection({t,initialTab,onFlash}){
   </div>;
 }
 
-function DeepDiveView({t,selectedConflict,setSelectedConflict,initialTab,onFlash}){useEffect(()=>{window.scrollTo({top:0,behavior:"instant"});},[selectedConflict]);const conflictId=selectedConflict==="scs"?"south-china-sea":(CONFLICT_SECTIONS.find(s=>s.id===selectedConflict)?.conflictId??selectedConflict);const conflict=CONFLICTS.find(c=>c.id===conflictId);return <div style={{animation:"fadeIn .25s ease-out",position:"relative"}}><SJMark size={22} style={{top:6,right:10,transform:"rotate(-10deg)"}}/><div onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onTouchEnd={e=>e.stopPropagation()} style={{background:t.card,borderBottom:`1px solid ${t.border}`,padding:"10px 14px",overflowX:"auto",scrollbarWidth:"none",display:"flex",gap:6}}>{CONFLICT_SECTIONS.map(sec=><button key={sec.id} className="pill-tab" onClick={()=>setSelectedConflict(sec.id)} style={{flexShrink:0,padding:"6px 12px",borderRadius:20,border:`1px solid ${selectedConflict===sec.id?"#5b8ec8":t.border}`,background:selectedConflict===sec.id?"#5b8ec8":"none",color:selectedConflict===sec.id?"#fff":t.sub,fontSize:12,fontWeight:selectedConflict===sec.id?700:400,cursor:"pointer",fontFamily:FONT,whiteSpace:"nowrap"}}>{sec.label}</button>)}</div><div key={selectedConflict} className="rise" style={{padding:"14px 16px 0"}}>{selectedConflict==="ukraine"&&<UkraineSection t={t} initialTab={initialTab}/>}{selectedConflict==="scs"&&<SCSSection t={t} initialTab={initialTab}/>}{selectedConflict==="nuclear"&&<NuclearSection t={t} initialTab={initialTab}/>}{selectedConflict==="gaza"&&<GazaSection t={t} initialTab={initialTab}/>}{selectedConflict==="iran"&&<IranSection t={t} initialTab={initialTab}/>}{selectedConflict==="usmil"&&<USMilSection t={t} initialTab={initialTab}/>}{selectedConflict==="venezuela"&&<VenezuelaSection t={t} initialTab={initialTab}/>}{selectedConflict==="dronewar"&&<DroneWarSection t={t} initialTab={initialTab}/>}{selectedConflict==="africa"&&<AfricaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{selectedConflict==="southasia"&&<SouthAsiaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{!["ukraine","scs","nuclear","usmil","venezuela","dronewar","gaza","iran","africa","southasia"].includes(selectedConflict)&&<TheaterSection t={t} conflict={conflict}/>}</div></div>;}
+function DeepDiveView({t,selectedConflict,setSelectedConflict,initialTab,onFlash}){useEffect(()=>{window.scrollTo({top:0,behavior:"instant"});},[selectedConflict]);const conflictId=selectedConflict==="scs"?"south-china-sea":(CONFLICT_SECTIONS.find(s=>s.id===selectedConflict)?.conflictId??selectedConflict);const conflict=CONFLICTS.find(c=>c.id===conflictId);return <div style={{animation:"fadeIn .25s ease-out",position:"relative"}}><SJMark size={22} style={{top:6,right:10,transform:"rotate(-10deg)"}}/><div onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onTouchEnd={e=>e.stopPropagation()} style={{background:t.card,borderBottom:`1px solid ${t.border}`,padding:"10px 14px",overflowX:"auto",scrollbarWidth:"none",display:"flex",gap:6}}>{CONFLICT_SECTIONS.map(sec=><button key={sec.id} className="pill-tab" onClick={()=>setSelectedConflict(sec.id)} style={{flexShrink:0,padding:"6px 12px",borderRadius:20,border:`1px solid ${selectedConflict===sec.id?"#5b8ec8":t.border}`,background:selectedConflict===sec.id?"#5b8ec8":"none",color:selectedConflict===sec.id?"#fff":t.sub,fontSize:12,fontWeight:selectedConflict===sec.id?700:400,cursor:"pointer",fontFamily:FONT,whiteSpace:"nowrap"}}>{sec.label}</button>)}</div><div key={selectedConflict} className="rise" style={{padding:"14px 16px 0"}}>{selectedConflict==="ukraine"&&<UkraineSection t={t} initialTab={initialTab}/>}{selectedConflict==="scs"&&<SCSSection t={t} initialTab={initialTab}/>}{selectedConflict==="gaza"&&<GazaSection t={t} initialTab={initialTab}/>}{selectedConflict==="iran"&&<IranSection t={t} initialTab={initialTab}/>}{selectedConflict==="usmil"&&<USMilSection t={t} initialTab={initialTab}/>}{selectedConflict==="venezuela"&&<VenezuelaSection t={t} initialTab={initialTab}/>}{selectedConflict==="dronewar"&&<DroneWarSection t={t} initialTab={initialTab}/>}{selectedConflict==="africa"&&<AfricaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{selectedConflict==="southasia"&&<SouthAsiaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{!["ukraine","scs","usmil","venezuela","dronewar","gaza","iran","africa","southasia"].includes(selectedConflict)&&<TheaterSection t={t} conflict={conflict}/>}</div></div>;}
 
 // ── Main App ────────────────────────────────────────────────────────────────────────
 const VIEWS=[{id:"today",label:"Today",icon:"📡"},{id:"theaters",label:"Theaters",icon:"🌍"},{id:"deepdive",label:"Deep Dive",icon:"🔬"}];
 const SECTION_TAB_LISTS={
   ukraine:[{id:"overview",label:"📊 Overview"},{id:"losses",label:"⚖️ Losses"},{id:"manpower",label:"👥 Manpower"},{id:"frontline",label:"🎯 Frontline"},{id:"southernfront",label:"🌊 Southern Front"},{id:"strikewar",label:"💥 Strike War"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"analysts",label:"📺 Analysts"},{id:"belarus",label:"🇧🇾 Belarus Axis"}],
-  usmil:[{id:"compare",label:"⚖️ Power Comparison"},{id:"china",label:"🇨🇳 China Deep Dive"},{id:"systems",label:"🚀 Systems"},{id:"posture",label:"🌍 Posture"},{id:"nato",label:"🤝 NATO & Allies"},{id:"rankings",label:"🌐 Global Rankings"},{id:"indopac",label:"🌏 Indo-Pacific Balance"},{id:"fighters5g",label:"✈️ 5th-Gen Fighters"},{id:"navypipe",label:"🚢 Naval Pipeline"},{id:"space",label:"🛰️ Space & Counterspace"},{id:"minerals",label:"⛏️ Critical Minerals"},{id:"arctic",label:"🧊 Arctic"},{id:"defindustry",label:"🏭 Defense Industry"},{id:"dprk",label:"🇰🇵 DPRK-Russia Axis"}],
+  usmil:[{id:"escalation",label:"🌐 Escalation Risk"},{id:"china",label:"🇨🇳 China Deep Dive"},{id:"systems",label:"🚀 Systems"},{id:"posture",label:"🌍 Posture"},{id:"nato",label:"🤝 NATO & Allies"},{id:"rankings",label:"🌐 Global Rankings"},{id:"indopac",label:"🌏 Indo-Pacific Balance"},{id:"fighters5g",label:"✈️ 5th-Gen Fighters"},{id:"navypipe",label:"🚢 Naval Pipeline"},{id:"space",label:"🛰️ Space & Counterspace"},{id:"minerals",label:"⛏️ Critical Minerals"},{id:"arctic",label:"🧊 Arctic"},{id:"defindustry",label:"🏭 Defense Industry"},{id:"dprk",label:"🇰🇵 DPRK-Russia Axis"},{id:"vectors",label:"⚠️ Active Vectors"},{id:"arsenals",label:"🌐 Global Arsenals"},{id:"delivery",label:"🚀 Delivery Systems"},{id:"treaties",label:"📜 Treaties & Doctrine"},{id:"cyber",label:"🌪️ Cyber & Hybrid"}],
   dronewar:[{id:"overview",label:"Overview"},{id:"saturation",label:"🌡 Saturation"},{id:"strikelog",label:"📋 Strike Log"},{id:"yearly",label:"📅 Yearly"},{id:"intercept",label:"Intercept"},{id:"cost",label:"💰 Cost"},{id:"impact",label:"⚠️ Casualties"},{id:"assets",label:"Drone Assets"},{id:"events",label:"Key Events"}],
-  nuclear:[{id:"escalation",label:"🌐 Escalation Risk"},{id:"vectors",label:"⚠️ Active Vectors"},{id:"arsenals",label:"🌐 Global Arsenals"},{id:"delivery",label:"🚀 Delivery Systems"},{id:"treaties",label:"📜 Treaties & Doctrine"},{id:"cyber",label:"🌪️ Cyber & Hybrid"}],
   iran:[{id:"overview",label:"🇮🇷 Overview"},{id:"hormuz",label:"🚢 Hormuz"},{id:"timeline",label:"📅 Timeline"},{id:"gaps",label:"⚠️ Gaps"}],
   venezuela:[{id:"cuba",label:"🇨🇺 Cuba Blockade"},{id:"spear",label:"🚤 Southern Spear"},{id:"conflict",label:"🇻🇪 Venezuela"},{id:"mexico",label:"🇲🇽 Mexico"},{id:"haiti",label:"🇭🇹 Haiti"},{id:"colombia",label:"🇨🇴 Colombia"}],
   scs:[{id:"overview",label:"🗺️ Overview"},{id:"incidents",label:"⚠️ Incidents"},{id:"military",label:"⚔️ Military"},{id:"law",label:"⚖️ Law & Claims"},{id:"taiwan",label:"🌊 Taiwan Strait"}],
@@ -3442,7 +3427,6 @@ const CONFLICT_ANIM = {
   venezuela:{icon:"\uD83C\uDDFB\uD83C\uDDEA",a:"#ffcd00",b:"#cf142b",label:"VENEZUELA"},
   usmil:{icon:"\u2694\uFE0F",a:"#5b8ec8",b:"#8b5cf6",label:"GREAT POWER"},
   dronewar:{icon:"\uD83D\uDEF8",a:"#22c55e",b:"#5b8ec8",label:"DRONE WAR"},
-  nuclear:{icon:"\u2622\uFE0F",a:"#eab308",b:"#ef4444",label:"NUCLEAR"},
   cyber:{icon:"\uD83D\uDEF0\uFE0F",a:"#0ea5e9",b:"#8b5cf6",label:"CYBER & HYBRID"},
   sudan:{icon:"🇸🇩",a:"#D21034",b:"#007A3D",label:"SUDAN"},
   drc:{icon:"🇨🇩",a:"#007FFF",b:"#F7D618",label:"DR CONGO"},
