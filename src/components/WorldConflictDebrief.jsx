@@ -204,8 +204,9 @@ const Grid2=({t,items})=><div style={{display:"grid",gridTemplateColumns:"1fr 1f
 const Note=({t,children,color})=><div style={{background:color+"11",border:`1px solid ${color}30`,borderRadius:8,padding:"9px 12px",fontSize:11.5,color:t.sub,lineHeight:1.55,marginBottom:10}}>{children}</div>;
 const ReadAloudButton=({text,color,t})=>{
   const[speaking,setSpeaking]=useState(false);
-  const supported=typeof window!=="undefined"&&"speechSynthesis" in window;
-  useEffect(()=>()=>{if(supported)window.speechSynthesis.cancel();},[supported]);
+  const[supported,setSupported]=useState(false);
+  useEffect(()=>{if(typeof window!=="undefined"&&"speechSynthesis" in window)setSupported(true);},[]);
+  useEffect(()=>()=>{if(typeof window!=="undefined"&&"speechSynthesis" in window)window.speechSynthesis.cancel();},[]);
   if(!supported) return null;
   const toggle=()=>{
     if(speaking){window.speechSynthesis.cancel();setSpeaking(false);return;}
