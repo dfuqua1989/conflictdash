@@ -13,6 +13,12 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    cloudflare: {
+      // nodejs_compat is implicit as of 2026-08-04; emitting it now hard-fails the worker loader.
+      nodeCompat: false,
+    },
+  },
   vite: {
     plugins: [mcpPlugin()],
   },
