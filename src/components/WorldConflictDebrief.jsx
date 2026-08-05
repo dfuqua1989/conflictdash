@@ -31,6 +31,7 @@ const CONFLICTS=[
 ];
 
 const NEWS=[
+  {id:"b_us_sanctions_ru_wmd_aug4",confidence:"Confirmed",conflictId:"ukraine",severity:"watch",icon:"🟡",headline:"US Sanctions Russian Defense Ministry Units Over Iran, North Korea, Syria Arms Proliferation",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Aug 4, 2026",bullets:["State Department notice published Aug 4 sanctions the Russian Ground Forces, Main Missile and Artillery Directorate, the 1061st Logistics Support Center, and the Directorate for Advanced Inter-Service Research and Special Projects, plus two companies and five individuals","Measures cite violations of the Iran, North Korea, and Syria Nonproliferation Act (INKSNA) and took effect retroactively on Jul 24; they bar US agencies from purchasing from, assisting, or selling weapons to the sanctioned entities for two years","Follows the Senate's Jul 28 vote to advance a bipartisan Russia sanctions bill named for the late Sen. Lindsey Graham, aimed at reducing Russia's oil and gas revenue via tariffs on buyer countries"],sources:["Kyiv Independent","State Department"],impact:"Narrow legal/diplomatic measure rather than a new sanctions regime — targets proliferation-law violations specifically, layered onto the broader Graham-bill sanctions push still moving through Congress",impactColor:"#eab308"},
   {id:"b_wide_drone_campaign_aug4",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"🟠",headline:"Ukraine Launches Wide Overnight Drone Attack on Russian Logistics and Oil Infrastructure",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Aug 4, 2026",bullets:["Ukraine's military launched a wide-ranging drone attack overnight into Aug 4, reportedly striking logistics and oil infrastructure in multiple Russian regions, per Russian Telegram channels cited by the Kyiv Independent","Part of a sustained campaign against Wildberries' logistics network specifically — Ukrainian strikes have now damaged more than 17% of the retailer's entire infrastructure in just a few weeks, per RBC-Ukraine","Lands the same day Russian losses came in lighter than the recent run (+1,240 on Aug 3, down from a 1,300\\u20131,500+ daily range), and as NATO Ambassador Whitaker said a joint US-Ukraine Patriot-production deal remains unlikely before winter"],sources:["Kyiv Independent","RBC-Ukraine"],impact:"Continues the established pattern of sustained pressure on Russian logistics and fuel infrastructure even as the personnel-attrition numbers ease slightly day to day",impactColor:"#f97316"},
   {id:"b_moscow_chayko_bombing_aug1",confidence:"Confirmed",conflictId:"ukraine",severity:"critical",icon:"\ud83d\udca3",headline:"Bomb Kills 3 at Moscow Restaurant in Suspected Assassination Attempt on Russian Aerospace Forces Commander",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Aug 3, 2026",bullets:["A bomb delivered by a female courier detonated at Moscow's Balzi Rossi restaurant on Aug 1, killing her, a security guard who'd refused her entry, and a third person, and injuring 20+, per Russia's National Anti-Terrorism Committee","Multiple Russian and Ukrainian sources, and a source who spoke to the Kyiv Independent, say the target was Gen. Alexander Chayko, commander of Russia's Aerospace Forces since May 2026 \u2014 he was celebrating his 55th birthday at the restaurant and is wanted in Ukraine for war crimes tied to the 2022 Bucha occupation","Follows a similar late-July incident in Kharkiv, where a man recruited by Russian intelligence posing as Ukraine's SBU attempted to assassinate a Ukrainian brigade commander \u2014 both incidents point to an intensifying campaign of targeted killings on both sides"],sources:["Kyiv Independent","Meduza","CNN"],impact:"If confirmed as a targeted hit, one of the most senior Russian military figures targeted for assassination since the full-scale invasion began \u2014 a marked escalation in the shadow war running alongside the front line",impactColor:"#dc2626"},
   {id:"b_engels_saratov_strike_aug2",confidence:"Confirmed",conflictId:"ukraine",severity:"critical",icon:"\ud83d\udca3",headline:"Ukraine Hits Russian Strategic Bomber Base at Engels-2 and Saratov Refinery, 600km From the Front",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Aug 2, 2026",bullets:["Zelensky personally confirmed simultaneous strikes on the Saratov oil refinery (~7M tonnes/year) and the Engels-2 strategic bomber base 17km away, home to the Tu-95MS and Tu-160 aircraft Russia uses to launch cruise-missile strikes on Ukraine \u2014 both over 600km from the front line","The same night's operation also hit a fuel depot in Kaluga Oblast and a drone-preparation site near Navlya, Bryansk Oblast, per the General Staff","Follows an Aug 1 multi-target night in Crimea \u2014 two rail bridges (Sivash/Chonhar and Vladyslavivka), a naval-drone storage depot, a Black Sea Fleet electronic-reconnaissance unit in Sevastopol \u2014 and lands the same week Russia's General Staff confirmed a 2026-record 42,860 personnel losses for July"],sources:["Reuters","Kyiv Independent","Militarnyi"],impact:"A strategic bomber base is a materially different target class than the refinery-focused campaign of recent months \u2014 direct pressure on Russia's long-range strike capability, not just its fuel economy",impactColor:"#dc2626"},
@@ -133,9 +134,9 @@ const EVENTS={ukraine:[{id:1,date:"Jan 6, 2026",label:"Coalition of Willing — 
     {id:26,date:"Jul 30-31, 2026",label:"Retaliation widens; CENTCOM reviews Qeshm strike; Egypt denial",note:"Iran\u2019s retaliation for the Qeshm strike proved broader than first reported \u2014 IRGC claims hit US-linked targets across Kuwait, Jordan and Bahrain; Iraq\u2019s Iran-backed militias claim 20 killed, 32 wounded from US counter-strikes; more US troops wounded. CENTCOM says it is reviewing the Qeshm strike itself. Iran\u2019s Foreign Ministry has now officially denied any role in the Egypt tanker incident, walking back the earlier anonymous hints. Trump says he is \u2018losing faith\u2019 with Iran but has not ruled out a deal.",color:"#dc2626",isUpcoming:false},
     {id:27,date:"~Aug 16, 2026",label:"60-day MoU clock expires",note:"Window closes. Trump has said he could relaunch full military strikes if talks fail. If no deal, Iran could resume full enrichment and Hormuz re-closure.",color:"#ef4444",isUpcoming:true},
   ],taiwan:[{id:13,date:"Oct 1, 2025",label:"PLA median line crossings surge",note:"PLA aircraft and vessels crossing Taiwan Strait median line at record frequency — 200+ crossings in 2025.",color:"#eab308",isUpcoming:false},{id:14,date:"Feb 15, 2026",label:"Joint combat readiness patrol",note:"PLA Eastern Theater launched largest joint patrol exercise since 2023.",color:"#ef4444",isUpcoming:false},{id:15,date:"Jun 1, 2026",label:"CCG patrols east of Taiwan",note:"Japan-Philippines EEZ talks trigger PRC response beyond China own 10-dash line.",color:"#eab308",isUpcoming:false},{id:16,date:"Jun 18, 2026",label:"Taiwan defense budget raised",note:"Taiwan Legislature approved $19.7B defense budget — largest in history.",color:"#22c55e",isUpcoming:false},{id:161,date:"Jul 24, 2026",label:"China's first live-fire drill near Okinotori",note:"Directly contests a Japanese maritime claim, days after a Taiwan Strait live-fire exercise \u2014 widening friction to a second US treaty ally in the same week.",color:"#ef4444",isUpcoming:false}],"south-china-sea":[{id:17,date:"Jul 12, 2016",label:"UNCLOS Tribunal ruling",note:"PCA ruled China Nine-Dash Line has no legal basis. China rejected ruling as null and void.",color:"#22c55e",isUpcoming:false},{id:18,date:"Feb 1, 2021",label:"China Coast Guard Law enacted",note:"Authorizes CCG to use all necessary means including weapons against foreign vessels in claimed waters.",color:"#ef4444",isUpcoming:false},{id:19,date:"Mar 1, 2026",label:"EDCA sites expansion completed",note:"Philippines and US complete expansion to 9 EDCA military access sites.",color:"#5b8ec8",isUpcoming:false},{id:20,date:"Jun 3, 2026",label:"220 militia vessels — Whitsun Reef",note:"Largest maritime militia presence recorded at Whitsun Reef.",color:"#ef4444",isUpcoming:false},{id:21,date:"Jun 10, 2026",label:"Laser incident — Philippine helicopter",note:"Chinese vessel directed military-grade laser at PCG helicopter; pilot temporarily blinded.",color:"#ef4444",isUpcoming:false},{id:22,date:"Jun 24, 2026",label:"Water cannon attack — BRP Kalayaan",note:"CCG fired water cannons 18 minutes at Philippine supply boat. 2 sailors injured.",color:"#ef4444",isUpcoming:false},{id:23,date:"Jul 20, 2026",label:"CCG baton strike injures PH sailor — 2nd Thomas Shoal",note:"Chinese coast guard personnel struck a Philippine Navy sailor with a wooden baton during a confrontation near the BRP Sierra Madre. Rubio: US \u2018condemns China\u2019s dangerous and aggressive actions.\u2019",color:"#ef4444",isUpcoming:false},{id:24,date:"Jul 24, 2026",label:"3rd clash in a week — Scarborough Shoal",note:"CCG fired water cannon at Philippine vessels for the third confrontation in a single week. USS George Washington CSG transited the Luzon Strait Jul 22 in response; joint US-Philippines-Japan maritime drills followed.",color:"#ef4444",isUpcoming:false}],gaza:[{id:23,date:"Oct 10, 2025",label:"Ceasefire begins",note:"Fragile ceasefire following intensive international pressure. Hamas not disarming.",color:"#22c55e",isUpcoming:false},{id:24,date:"Jan 15, 2026",label:"1,000+ killed post-ceasefire",note:"UN: more than 1,000 Palestinians killed since the Oct 2025 ceasefire.",color:"#ef4444",isUpcoming:false},{id:25,date:"May 10, 2026",label:"ICJ orders aid corridor",note:"International Court of Justice orders Israel to open aid corridors. Only partial compliance.",color:"#f59e0b",isUpcoming:false},{id:26,date:"Jun 20, 2026",label:"UN flash appeal 13% funded",note:"$4B+ Gaza reconstruction appeal only 13% funded. Hospital system collapsed.",color:"#ef4444",isUpcoming:false},{id:52,date:"Jul 17, 2026",label:"Heaviest fire since ceasefire",note:"14+ killed in a single day including a funeral-procession strike; post-ceasefire toll passes 1,123. IDF cites control of ~65% of Gaza.",color:"#ef4444",isUpcoming:false}],venezuela:[{id:34,date:"Aug 2025",label:"Operation Southern Spear begins",note:"US Navy begins deploying warships and personnel to the Caribbean, citing the need to combat drug trafficking.",color:"#f97316",isUpcoming:false},{id:35,date:"Sep 2, 2025",label:"First lethal boat strike",note:"US strikes a vessel from Venezuela, killing all 11 aboard. Trump releases video; administration says operation will continue.",color:"#ef4444",isUpcoming:false},{id:36,date:"Nov 2025",label:"Secret Maduro-Trump contacts",note:"NYT reports Trump and Rubio spoke with Maduro by phone; a potential leaders' meeting reportedly discussed.",color:"#eab308",isUpcoming:false},{id:37,date:"Dec 2025",label:"Oil tanker seizures begin",note:"US seizures expand to sanctioned Venezuelan oil tankers as part of mounting pressure campaign.",color:"#f97316",isUpcoming:false},{id:38,date:"Jan 3, 2026",label:"Maduro captured — Operation Absolute Resolve",note:"~200 US special operations forces and 150 aircraft from 20 bases strike Caracas; Maduro and wife Cilia Flores captured and flown to New York to face narcoterrorism charges. Lasted ~2hrs 20min.",color:"#dc2626",isUpcoming:false},{id:39,date:"Jan 5, 2026",label:"Colombia's Petro threatens response",note:"Petro warns he would 'take up arms' if similar intervention occurred in Colombia. Thousands protest in Cúcuta near Venezuelan border.",color:"#f97316",isUpcoming:false},{id:40,date:"Jan 2026",label:"Rubio signals Cuba could be next",note:"Secretary of State Rubio: 'Cuban leaders should be concerned' — cites deep Cuban security/intelligence presence inside Venezuela's former government.",color:"#eab308",isUpcoming:false},{id:41,date:"Mar 6, 2026",label:"Strikes expand into Ecuador",note:"US strikes a target on the Colombia-Ecuador border, initially described as a FARC dissident compound; NYT later reports it was a dairy farm.",color:"#ef4444",isUpcoming:false},{id:42,date:"Jun 12, 2026",label:"Tren de Aragua leader killed",note:"US airstrike, conducted in coordination with Venezuelan authorities, kills Héctor 'Niño Guerrero' Guerrero Flores, leader of Tren de Aragua.",color:"#dc2626",isUpcoming:false},{id:43,date:"Jun 21, 2026",label:"221+ killed in boat strikes to date",note:"Wikipedia/AS-COA tracker: at least 221 people killed (17 missing presumed dead) across 64+ strikes on 65 vessels since Sept 2025 — UN data disputes the administration's underlying drug-trafficking-route claims.",color:"#ef4444",isUpcoming:false},{id:44,date:"Jan 29, 2026",label:"Executive Order 14380 — Cuba oil blockade",note:"Trump declares national emergency, authorizes tariffs on any country supplying oil to Cuba. NYT: first effective US blockade of Cuba since the 1962 Missile Crisis.",color:"#dc2626",isUpcoming:false},{id:45,date:"Dec 2025",label:"Venezuelan oil to Cuba cut off",note:"As part of the Venezuela intervention buildup, the US seizes tankers carrying Venezuelan oil bound for Cuba and declares a blockade on those exports — Cuba's main fuel lifeline severed a month before the broader blockade EO.",color:"#f97316",isUpcoming:false},{id:46,date:"Mar 13, 2026",label:"Díaz-Canel confirms talks with US",note:"Cuban First Secretary publicly confirms diplomatic talks aimed at addressing the oil/energy blockade. Cuba releases 51 political prisoners as part of the opening; 2,000+ more released by Apr 3.",color:"#eab308",isUpcoming:false},{id:47,date:"Mar 30, 2026",label:"Russian oil tanker defies blockade",note:"100,000-tonne Russian crude shipment arrives in Havana — described by CSIS as calculated blockade-running timed to avoid a showdown while the Iran war was still active. A reported second shipment later turned back.",color:"#f97316",isUpcoming:false},{id:48,date:"May 14, 2026",label:"Cuba: out of oil and diesel",note:"Cuban Ministry of Energy and Mines warns the country has run out of oil and diesel entirely.",color:"#ef4444",isUpcoming:false},{id:49,date:"May 21, 2026",label:"Raúl Castro indicted",note:"US indicts former Cuban leader (believed by some critics to still govern as an éminence grise) over the 1996 Brothers to the Rescue shootdown — a move analysts compare to the pre-capture indictment pattern used against Maduro.",color:"#dc2626",isUpcoming:false},{id:50,date:"Jun 2026",label:"OHCHR documents humanitarian collapse",note:"Infant mortality risen to 9.9/1,000 births, childhood cancer survival down to 65%, food production down 60%, medicine supplies at only 30% of normal levels — UN attributes the deterioration to the blockade.",color:"#dc2626",isUpcoming:false},{id:51,date:"Jul 8, 2026",label:"Cuba takes blockade to UN General Assembly",note:"FM Rodríguez: record $8B in damage Mar 2025–Feb 2026 (+7% YoY), excluding the fuel blockade's impact; talks with Washington have made 'no progress.' US Amb. Waltz: 'There is no American blockade.' Procedural vote passed 136-9-30 — but Germany and Canada abstained, signaling erosion of Cuba's traditional UN support under US lobbying.",color:"#f97316",isUpcoming:false}]};
-const BRIEFING={summaryShort:"Russian losses reached 1,451,750+ (+1,240 on Aug 3, down from the 1,300–1,500 range of recent days) per the General Staff. Ukraine launched a wide drone attack overnight into Aug 4, hitting logistics and oil infrastructure across Russia; Wildberries alone has lost over 17% of its logistics infrastructure to strikes in recent weeks. Iran: the diplomatic whiplash continued into Aug 4 — Rubio says a Hormuz deal has 'progress but not finality,' Bessent floated a resolution 'today or tomorrow,' and Iran/Oman are reportedly closing in on a channel-sharing accord with a shared service fee — but Iran's FM spokesman says no delegations or negotiators are being dispatched, and a second cargo ship was attacked near Oman overnight, sending Brent crude up 2.7%. Zelensky's Moscow-bombing/Chayko story and the Fedorov crisis remain unresolved from prior updates.",summary:"Russian combat losses climbed to roughly 1,451,750 as of the Aug 4 General Staff report (+1,240 on Aug 3), a somewhat lighter day after a stretch of 1,300–1,500+ daily losses. Ukraine's military conducted a wide-ranging drone attack overnight into Aug 4, reportedly striking logistics and oil infrastructure in multiple Russian regions, per Russian Telegram channels cited by the Kyiv Independent — part of a sustained campaign that has damaged more than 17% of Wildberries' entire logistics infrastructure in just a few weeks, according to RBC-Ukraine. Iran policy remains in its now-familiar whiplash pattern: Tuesday brought cautiously optimistic signals from Washington — Secretary of State Rubio said there's 'progress but not finality' on a Hormuz deal and stressed that 'the straits are open' with oil already moving through them, while Treasury Secretary Bessent floated a resolution as soon as 'today or tomorrow.' Iranian and US officials describe an emerging Iran-Oman arrangement in which inbound Gulf traffic transits an Iran-controlled channel and outbound traffic uses a channel near Oman, with a shared 'service fee' for security and environmental costs — though a US official disputed that any Iranian permissions or tolls would be involved, and Iran's Foreign Ministry spokesman said no delegations or negotiators are being sent abroad 'in the coming days,' maintaining Tehran's position that it isn't in direct talks with Washington. Underscoring the gap between the diplomatic signaling and the situation on the water, a second cargo vessel was struck by a projectile overnight near Oman — UKMTO reports the crew abandoned ship and one seafarer is missing — and Brent crude rose 2.7% Tuesday on the renewed uncertainty. Qatar's Foreign Ministry separately says talks are in 'very progressive stages' with draft agreement text 'being circulated,' though it stresses there's no direct US-Iran channel. Elsewhere: Ukraine's Fedorov political crisis remains unresolved, and the Aug 1 Moscow bombing/Gen. Chayko story has seen no official confirmation either way.",watch:"Whether Trump's 'today or tomorrow' timeline for a Hormuz resolution actually produces something concrete, or becomes the latest in a months-long pattern of announced-then-stalled progress; whether the second Oman-area vessel attack escalates tensions further even as diplomatic channels claim progress; and whether Ukraine's overnight drone campaign against Russian logistics draws a proportional response.",generatedAt:new Date().toISOString()};
-const UKRAINE_BRIEFING={summaryShort:"A bomb killed 3 at a Moscow restaurant Aug 1 in what multiple sources describe as an assassination attempt on Gen. Alexander Chayko, Russia's Aerospace Forces commander and a Bucha war-crimes suspect — still unconfirmed either way. Russian losses reached roughly 1,451,750 (+1,240) as of the Aug 4 General Staff report, a lighter day after a stretch of 1,300–1,500+ losses. Ukraine launched a wide overnight drone attack into Aug 4 against Russian logistics and oil infrastructure; the Wildberries strike campaign alone has now damaged over 17% of the retailer's logistics network. Fedorov/Syrskyi crisis remains unresolved.",summary:"The Moscow bombing remains the week's most striking unresolved story. A bomb delivered by a female courier detonated at the Balzi Rossi restaurant on the evening of Aug 1, killing her, a security guard who'd refused her entry, and a third victim, with 20+ injured, per Russia's National Anti-Terrorism Committee. Multiple Russian and Ukrainian outlets, and a source who spoke to the Kyiv Independent, say the actual target was Gen. Alexander Chayko — appointed commander of Russia's Aerospace Forces in May 2026, wanted in Ukraine for war crimes tied to his command of forces that occupied Bucha in 2022. Neither Russian authorities nor Ukraine has confirmed it as a targeted operation as of this report. Russia's own attrition continues at a somewhat lighter pace: cumulative losses reached roughly 1,451,750 as of the Aug 4 General Staff report (+1,240 on Aug 3), down from the 1,300–1,500+ daily range seen over the prior several days, though RBC-Ukraine reports Russia is still losing up to 40,000 personnel a month, with contract recruitment no longer sufficient to replace losses and internal Kremlin discussion reportedly turning to a new mobilization wave. Ukraine's military conducted a wide drone attack overnight into Aug 4, reportedly hitting logistics and oil infrastructure across multiple Russian regions per Russian Telegram channels — part of a sustained campaign against Wildberries' logistics network that has now damaged more than 17% of the retailer's total infrastructure in just a few weeks. The Engels-2/Saratov deep-strike campaign from Aug 1-2 remains the recent high-water mark for long-range strikes. Separately, Ukraine's Ambassador to NATO Matthew Whitaker said Washington is unlikely to reach a joint Patriot-production agreement with Ukraine before this winter, confirming the Jul 31 licensing walkback has real near-term consequences rather than being a rhetorical reversal.",assessment:[{cat:"Covert War",text:"The Aug 1 Moscow restaurant bombing that killed 3 and injured 20+ is widely reported, though still not officially confirmed, to have targeted Gen. Alexander Chayko, commander of Russia's Aerospace Forces and a Bucha war-crimes suspect. Follows a late-July attempt on a Ukrainian brigade commander in Kharkiv via a Russian-recruited asset posing as the SBU."},{cat:"Attrition",text:"Cumulative Russian losses reached roughly 1,451,750 as of the Aug 4 General Staff report (+1,240 on Aug 3) — a lighter day after a stretch running 1,300–1,500+. Russia is still losing up to 40,000 personnel a month per RBC-Ukraine, with contract recruitment reportedly no longer covering losses, prompting internal Kremlin talk of a new mobilization wave."},{cat:"Territory",text:"Russian advance remains grinding — Pokrovsk and the Sloviansk sector are the hottest points on the front, with Ukrainian counterattacks reportedly denying further Russian gains around Sloviansk on Aug 1-2. Monthly gain estimates diverge sharply by source (DeepState vs. ISW), among the slowest rates of any war in the past century either way."},{cat:"Deep Strikes",text:"Ukraine's overnight Aug 4 drone campaign hit logistics and oil infrastructure across Russia, continuing a sustained economic-target strategy that has now damaged over 17% of Wildberries' logistics network. The Aug 1-2 strikes on the Engels-2 strategic bomber base and Saratov refinery remain the campaign's most significant recent long-range escalation."},{cat:"Air Defense",text:"NATO Ambassador Matthew Whitaker said Aug 3 that a joint US-Ukraine Patriot-production deal is unlikely before winter, confirming the Jul 31 licensing walkback carries real operational consequences following the Aug 1 Kyiv attack (1 of 27 ballistic missiles intercepted)."},{cat:"Political",text:"Fedorov's dismissal remains a full command shake-up with no resolution: Zelensky replaced Commander-in-Chief Syrskyi with Mykhailo Drapatyi and General Staff chief Andrii Hnatov with Ihor Skybiuk. Separately, Ukraine imposed a new round of sanctions on the Russian defense industry via an Aug 3 presidential decree."}],watch:"Whether Russian authorities confirm or deny Chayko was the target of the Moscow bombing; whether Russia retaliates specifically against the overnight Aug 4 drone campaign or the Engels-2 strike; and whether Pokrovsk and Sloviansk hold against an otherwise favorable attrition picture.",generatedAt:new Date().toISOString()};
-const IRAN_BRIEFING={summaryShort:"Rubio says a Hormuz deal has 'progress but not finality'; Bessent floated a resolution 'today or tomorrow.' Iran and Oman are reportedly nearing a channel-sharing accord — inbound Gulf traffic via an Iran-controlled channel, outbound via a channel near Oman, with a shared service fee — though a US official disputes any Iranian tolls or permissions being involved, and Iran's FM spokesman says no delegations are being sent abroad. A second cargo ship was attacked near Oman overnight; Brent crude rose 2.7%. Core gaps — enrichment, missiles, Hormuz governance — remain unresolved with roughly 12 days left on the nominal MoU clock.",summary:"Tuesday brought the most concrete-sounding signals yet on a possible Hormuz resolution, though the underlying disagreement between Washington and Tehran hasn't actually closed. Secretary of State Rubio said there's 'progress but not finality' on an agreement, while stressing that in the meantime 'the straits are open' — ships and oil are already moving through, he said, distinguishing the immediate shipping question from the longer-term denuclearization talks. Treasury Secretary Bessent went further, floating a possible resolution 'today or tomorrow.' Iranian and US officials describe an emerging Iran-Oman arrangement: vessels entering the Gulf would transit a channel controlled by Iran, while vessels leaving use a channel near Oman, with a 'service fee' covering security, staffing and environmental costs split between the two countries. But the account isn't clean — a US official familiar with the negotiations said any 'temporary' routes would not involve Iranian permissions or tolls, directly contradicting the Iranian side's description, and Iran's Foreign Ministry spokesman Esmaeil Baqaei said Tehran has no plans to host foreign delegations or send negotiators abroad 'in the coming days,' reaffirming its position that it is not in direct talks with Washington. Qatar's Foreign Ministry, mediating a separate diplomatic track, said Tuesday that efforts are 'in very progressive stages' with draft agreement text 'being circulated,' while also confirming there is no direct US-Iran channel. Underscoring the gap between diplomatic signaling and conditions on the water, a second cargo vessel was struck by an unidentified projectile overnight near Oman — UKMTO reports the crew abandoned ship and one seafarer remains missing — and Brent crude rose 2.7% Tuesday, reversing Monday's decline on the fresh uncertainty. Trump reiterated Monday that he wants a deal 'today or tomorrow' or Iran faces 'devastating air strikes,' framing it as Iran's 'last chance... before decapitation.' None of the core negotiating gaps — uranium enrichment, the missile program, formal Hormuz shipping governance, IAEA access to bombed sites — have visibly moved. The nominal 60-day Islamabad MoU window, signed Jun 17, closes around Aug 16 — roughly 12 days out.",assessment:[{cat:"Diplomacy — Shipping Deal",text:"Rubio: 'progress but not finality' on a Hormuz agreement; Bessent floated resolution 'today or tomorrow.' Emerging Iran-Oman framework reportedly splits Gulf traffic into inbound (Iran-controlled channel) and outbound (Oman-area channel) lanes with a shared service fee — but a US official disputes Iranian tolls/permissions being involved, an unresolved discrepancy in the two sides' accounts."},{cat:"Diplomacy — Denial",text:"Iran's Foreign Ministry spokesman Baqaei says no delegations or negotiators are being sent abroad 'in the coming days,' maintaining that Tehran isn't in direct talks with Washington — consistent with the pattern of the US claiming imminent talks while Iran denies them that has repeated for weeks."},{cat:"Escalation Risk",text:"A second cargo vessel was struck by an unidentified projectile near Oman overnight into Aug 4 — UKMTO reports the crew abandoned ship and one seafarer is missing. Combined with Trump's 'devastating air strikes' threat if no deal materializes 'today or tomorrow,' the risk of renewed escalation remains live even amid diplomatic signaling."},{cat:"Markets",text:"Brent crude rose 2.7% Tuesday, reversing Monday's 4.2% drop, reflecting market skepticism about the diplomatic process rather than confidence in an imminent resolution — shipping analysts quoted by CNN describe the mood as 'less upbeat' than administration officials."},{cat:"Diplomacy/MoU",text:"Qatar's Foreign Ministry says talks are in 'very progressive stages' with draft agreement text 'being circulated,' via Qatari mediation rather than a direct US-Iran channel. Enrichment rights, the missile program, and formal Hormuz governance remain unresolved with roughly 12 days left on the nominal MoU clock (window closes ~Aug 16)."},{cat:"Iran Domestic",text:"No confirmed public appearance by successor Supreme Leader Mojtaba Khamenei since his father's Jul 9-10 burial — now nearly four weeks with no image, video or voice recording, though a photo of an Iranian woman holding his portrait circulated in Tehran press coverage Aug 4."}],watch:"Whether Trump's 'today or tomorrow' timeline actually produces a finalized Hormuz arrangement, or becomes the latest missed marker in a months-long pattern; whether the discrepancy between the US and Iranian accounts of the shipping deal gets resolved or becomes its own flashpoint; and whether the second Oman-area vessel attack draws a formal response from either side.",generatedAt:new Date().toISOString()};
+const BRIEFING={summaryShort:"Russian losses reached 1,451,750+ (+1,240 on Aug 3, down from the 1,300–1,500 range of recent days) per the General Staff; the US also sanctioned several Russian Defense Ministry units Aug 4 over Iran/North Korea/Syria arms-proliferation violations. Ukraine launched a wide drone attack overnight into Aug 4, hitting logistics and oil infrastructure across Russia; Wildberries alone has lost over 17% of its logistics infrastructure to strikes in recent weeks. Iran: Rubio says a Hormuz deal has 'progress but not finality' and Bessent floated a resolution 'today or tomorrow' — but Iran pushed back hard overnight, with a senior official calling Bessent's talks claim 'false' and a diplomat saying the US/Europe are pressuring Oman to accept a concession-laden temporary deal. A cargo ship struck near Oman Aug 3 still has one crewman missing; Brent crude rose 2.7%. Zelensky's Moscow-bombing/Chayko story and the Fedorov crisis remain unresolved from prior updates.",summary:"Russian combat losses climbed to roughly 1,451,750 as of the Aug 4 General Staff report (+1,240 on Aug 3), a somewhat lighter day after a stretch of 1,300–1,500+ daily losses; separately, the State Department sanctioned several Russian Defense Ministry units, two companies and five citizens Aug 4 for violating US nonproliferation law via arms links to Iran, North Korea and Syria. Ukraine's military conducted a wide-ranging drone attack overnight into Aug 4, reportedly striking logistics and oil infrastructure in multiple Russian regions, per Russian Telegram channels cited by the Kyiv Independent — part of a sustained campaign that has damaged more than 17% of Wildberries' entire logistics infrastructure in just a few weeks, according to RBC-Ukraine. Iran policy remains in its now-familiar whiplash pattern, though Tuesday's swing was sharper than usual: Secretary of State Rubio said there's 'progress but not finality' on a Hormuz deal, and Treasury Secretary Bessent floated a resolution as soon as 'today or tomorrow' with 'freedom of movement' rather than an Iranian toll — but a senior Iranian official told MS NOW overnight that Bessent's characterization of active US-Iran talks is 'false,' insisting Tehran is negotiating only with Oman, while a separate diplomat said the US and Europe are pressuring Muscat to accept a temporary arrangement that would hand Iran a real concession on the strait. The cargo vessel struck near Khasab, Oman on Aug 3 — since identified as the bulker Minoan Pioneer — is still missing a crew member as of this report, and Brent crude is up 2.7% on the renewed uncertainty. Elsewhere: Ukraine's Fedorov political crisis remains unresolved, and the Aug 1 Moscow bombing/Gen. Chayko story has seen no official confirmation either way.",watch:"Whether Trump's 'today or tomorrow' timeline actually produces something concrete or becomes the latest missed marker; whether Iran's hardened public denial and the reported US/Europe pressure on Oman mean a real concession is close or just more stalling; and whether the missing Minoan Pioneer crewman is found.",generatedAt:new Date().toISOString()};
+const UKRAINE_BRIEFING={summaryShort:"A bomb killed 3 at a Moscow restaurant Aug 1 in what multiple sources describe as an assassination attempt on Gen. Alexander Chayko, Russia's Aerospace Forces commander and a Bucha war-crimes suspect — still unconfirmed either way. Russian losses reached roughly 1,451,750 (+1,240) as of the Aug 4 General Staff report, a lighter day after a stretch of 1,300–1,500+ losses. Ukraine launched a wide overnight drone attack into Aug 4 against Russian logistics and oil infrastructure; the Wildberries strike campaign alone has now damaged over 17% of the retailer's logistics network. The US separately sanctioned several Russian Defense Ministry units Aug 4 over Iran/North Korea/Syria arms links. Fedorov/Syrskyi crisis remains unresolved.",summary:"The Moscow bombing remains the week's most striking unresolved story. A bomb delivered by a female courier detonated at the Balzi Rossi restaurant on the evening of Aug 1, killing her, a security guard who'd refused her entry, and a third victim, with 20+ injured, per Russia's National Anti-Terrorism Committee. Multiple Russian and Ukrainian outlets, and a source who spoke to the Kyiv Independent, say the actual target was Gen. Alexander Chayko — appointed commander of Russia's Aerospace Forces in May 2026, wanted in Ukraine for war crimes tied to his command of forces that occupied Bucha in 2022. Neither Russian authorities nor Ukraine has confirmed it as a targeted operation as of this report. Russia's own attrition continues at a somewhat lighter pace: cumulative losses reached roughly 1,451,750 as of the Aug 4 General Staff report (+1,240 on Aug 3), down from the 1,300–1,500+ daily range seen over the prior several days, though RBC-Ukraine reports Russia is still losing up to 40,000 personnel a month, with contract recruitment no longer sufficient to replace losses and internal Kremlin discussion reportedly turning to a new mobilization wave. Ukraine's military conducted a wide drone attack overnight into Aug 4, reportedly hitting logistics and oil infrastructure across multiple Russian regions per Russian Telegram channels — part of a sustained campaign against Wildberries' logistics network that has now damaged more than 17% of the retailer's total infrastructure in just a few weeks. The Engels-2/Saratov deep-strike campaign from Aug 1-2 remains the recent high-water mark for long-range strikes. Separately, Ukraine's Ambassador to NATO Matthew Whitaker said Washington is unlikely to reach a joint Patriot-production agreement with Ukraine before this winter, confirming the Jul 31 licensing walkback has real near-term consequences rather than being a rhetorical reversal. The US also layered on a narrower sanctions action Aug 4, designating several Russian Defense Ministry units, two companies and five citizens under nonproliferation law over their Iran/North Korea/Syria arms links — a step separate from, and smaller than, the broader Graham-bill sanctions push still moving through the Senate.",assessment:[{cat:"Covert War",text:"The Aug 1 Moscow restaurant bombing that killed 3 and injured 20+ is widely reported, though still not officially confirmed, to have targeted Gen. Alexander Chayko, commander of Russia's Aerospace Forces and a Bucha war-crimes suspect. Follows a late-July attempt on a Ukrainian brigade commander in Kharkiv via a Russian-recruited asset posing as the SBU."},{cat:"Attrition",text:"Cumulative Russian losses reached roughly 1,451,750 as of the Aug 4 General Staff report (+1,240 on Aug 3) — a lighter day after a stretch running 1,300–1,500+. Russia is still losing up to 40,000 personnel a month per RBC-Ukraine, with contract recruitment reportedly no longer covering losses, prompting internal Kremlin talk of a new mobilization wave."},{cat:"Territory",text:"Russian advance remains grinding — Pokrovsk and the Sloviansk sector are the hottest points on the front, with Ukrainian counterattacks reportedly denying further Russian gains around Sloviansk on Aug 1-2. Monthly gain estimates diverge sharply by source (DeepState vs. ISW), among the slowest rates of any war in the past century either way."},{cat:"Deep Strikes",text:"Ukraine's overnight Aug 4 drone campaign hit logistics and oil infrastructure across Russia, continuing a sustained economic-target strategy that has now damaged over 17% of Wildberries' logistics network. The Aug 1-2 strikes on the Engels-2 strategic bomber base and Saratov refinery remain the campaign's most significant recent long-range escalation."},{cat:"Air Defense",text:"NATO Ambassador Matthew Whitaker said Aug 3 that a joint US-Ukraine Patriot-production deal is unlikely before winter, confirming the Jul 31 licensing walkback carries real operational consequences following the Aug 1 Kyiv attack (1 of 27 ballistic missiles intercepted)."},{cat:"Political",text:"Fedorov's dismissal remains a full command shake-up with no resolution: Zelensky replaced Commander-in-Chief Syrskyi with Mykhailo Drapatyi and General Staff chief Andrii Hnatov with Ihor Skybiuk. On sanctions, Ukraine's own Aug 3 presidential decree targeting the Russian defense industry was followed a day later by a narrower US State Department action designating several Russian Defense Ministry units over Iran/North Korea/Syria proliferation links."}],watch:"Whether Russian authorities confirm or deny Chayko was the target of the Moscow bombing; whether Russia retaliates specifically against the overnight Aug 4 drone campaign or the Engels-2 strike; and whether Pokrovsk and Sloviansk hold against an otherwise favorable attrition picture.",generatedAt:new Date().toISOString()};
+const IRAN_BRIEFING={summaryShort:"Rubio says a Hormuz deal has 'progress but not finality'; Bessent floated a resolution 'today or tomorrow' and denied any Iranian tolls. Iran pushed back late Tuesday — a senior official told MS NOW Bessent's talks claim is 'false,' insisting Tehran is negotiating only with Oman on a joint monitoring mechanism, while a diplomat said the US and Europe are pressuring Muscat to accept a temporary Iran-Oman deal that hands Tehran a real concession. A cargo vessel was struck near Oman overnight into Aug 4 — UKMTO reports a missing crew member; Brent crude rose 2.7%. Core gaps — enrichment, missiles, Hormuz governance — remain unresolved with roughly 12 days left on the nominal MoU clock.",summary:"Tuesday brought the most concrete-sounding signals yet on a possible Hormuz resolution, though the underlying disagreement between Washington and Tehran hasn't actually closed — and hardened further by evening. Secretary of State Rubio said there's 'progress but not finality' on an agreement, while stressing that in the meantime 'the straits are open' — ships and oil are already moving through, he said, distinguishing the immediate shipping question from the longer-term denuclearization talks. Treasury Secretary Bessent went further, floating a possible resolution 'today or tomorrow' and saying any deal would mean 'freedom of movement' rather than an Iranian toll. Iranian and US officials describe an emerging Iran-Oman arrangement: vessels entering the Gulf would transit a channel controlled by Iran, while vessels leaving use a channel near Oman, with a 'service fee' covering security, staffing and environmental costs split between the two countries. But the account isn't clean — a US official familiar with the negotiations said any 'temporary' routes would not involve Iranian permissions or tolls, directly contradicting the Iranian side's description, and Iran's Foreign Ministry spokesman Esmaeil Baqaei said Tehran has no plans to host foreign delegations or send negotiators abroad 'in the coming days,' reaffirming its position that it is not in direct talks with Washington. That denial hardened Tuesday evening: a senior Iranian official told MS NOW that Bessent's characterization of US-Iran negotiations is 'false,' saying Tehran is 'currently engaged in negotiations with the Sultanate of Oman to establish a joint monitoring mechanism for the Strait of Hormuz' and has 'not permitted any American involvement' in strait-related decisions. Separately, a senior Middle East diplomat told MS NOW that the US and Europe are placing significant pressure on Oman to accept a temporary Iran-Oman agreement — a framing that, if accurate, would hand Tehran a real concession on the strait it has fought the war over controlling. Qatar's Foreign Ministry, mediating a separate diplomatic track, said Tuesday that efforts are 'in very progressive stages' with draft agreement text 'being circulated,' while also confirming there is no direct US-Iran channel. Underscoring the gap between diplomatic signaling and conditions on the water, a cargo vessel — since identified in shipping-security reporting as the Liberian-flagged bulker Minoan Pioneer — was struck by an unidentified projectile at 22:00 UTC Aug 3 near Khasab, Oman; UKMTO reports the crew fought an engine-room fire and a third engineer remains missing. Brent crude rose 2.7% Tuesday, reversing Monday's decline on the fresh uncertainty. Trump reiterated Monday that he wants a deal 'today or tomorrow' or Iran faces 'devastating air strikes,' framing it as Iran's 'last chance... before decapitation.' None of the core negotiating gaps — uranium enrichment, the missile program, formal Hormuz shipping governance, IAEA access to bombed sites — have visibly moved. The nominal 60-day Islamabad MoU window, signed Jun 17, closes around Aug 16 — roughly 12 days out.",assessment:[{cat:"Diplomacy — Shipping Deal",text:"Rubio: 'progress but not finality' on a Hormuz agreement; Bessent floated resolution 'today or tomorrow.' Emerging Iran-Oman framework reportedly splits Gulf traffic into inbound (Iran-controlled channel) and outbound (Oman-area channel) lanes with a shared service fee — but a US official disputes Iranian tolls/permissions being involved, an unresolved discrepancy in the two sides' accounts."},{cat:"Diplomacy — Denial",text:"Iran's rejection hardened overnight: a senior Iranian official told MS NOW Bessent's claim of US-Iran talks is 'false' and that Tehran is negotiating only with Oman on a joint monitoring mechanism, having 'not permitted any American involvement' in strait decisions — the same denial pattern that has repeated for weeks, now more pointed."},{cat:"Oman Pressure",text:"A senior Middle East diplomat told MS NOW the US and Europe are pressuring Muscat to accept a temporary Iran-Oman arrangement — a framing suggesting Washington may ultimately accept a real Iranian concession on the strait rather than the clean 'freedom of movement' outcome Bessent described publicly."},{cat:"Escalation Risk",text:"The bulker later identified as the Liberian-flagged Minoan Pioneer was struck near Khasab, Oman at 22:00 UTC Aug 3, sparking an engine-room fire; a third engineer remains missing. Combined with Trump's 'devastating air strikes' threat if no deal materializes 'today or tomorrow,' the risk of renewed escalation remains live even amid diplomatic signaling."},{cat:"Markets",text:"Brent crude rose 2.7% Tuesday, reversing Monday's 4.2% drop, reflecting market skepticism about the diplomatic process rather than confidence in an imminent resolution — shipping analysts quoted by CNN describe the mood as 'less upbeat' than administration officials."},{cat:"Diplomacy/MoU",text:"Qatar's Foreign Ministry says talks are in 'very progressive stages' with draft agreement text 'being circulated,' via Qatari mediation rather than a direct US-Iran channel. Enrichment rights, the missile program, and formal Hormuz governance remain unresolved with roughly 12 days left on the nominal MoU clock (window closes ~Aug 16)."},{cat:"Iran Domestic",text:"No confirmed public appearance by successor Supreme Leader Mojtaba Khamenei since his father's Jul 9-10 burial — now nearly four weeks with no image, video or voice recording, though a photo of an Iranian woman holding his portrait circulated in Tehran press coverage Aug 4."}],watch:"Whether Trump's 'today or tomorrow' timeline actually produces a finalized Hormuz arrangement, or becomes the latest missed marker in a months-long pattern; whether Iran's hardening public denial and the reported US/Europe pressure on Oman signal a real concession is coming or just more stalling; and whether the missing Minoan Pioneer crewman is found alive.",generatedAt:new Date().toISOString()};
 const ESCALATION_RISKS=[
   {theater:"Iran – US / Gulf",icon:"🇮🇷",level:"SEVERE",color:"#dc2626",text:"The only theater with sustained direct combat between a nuclear-armed power's forces and a state adversary. Hormuz blockade, a fortified nuclear-site target under explicit threat, and rising US/Iranian casualties push this to the top of the board."},
   {theater:"Russia – Ukraine / NATO",icon:"🇺🇦",level:"ELEVATED",color:"#f97316",text:"Deep NATO-member materiel and licensing involvement (Patriot co-production, intelligence-cued strikes) without direct NATO-Russia combat. Nuclear rhetoric remains coercive rather than operational per IC consensus — China's tacit red line is the main restraint on Moscow."},
@@ -225,8 +226,8 @@ const TT=(props)=>{const{active,payload}=props;if(!active||!payload?.length)retu
 function useCountdown(target){const[text,setText]=useState("");useEffect(()=>{const tick=()=>{const ms=target.getTime()-Date.now();if(ms<=0){setText("ELAPSED");return;}const d=Math.floor(ms/86400000),h=Math.floor((ms%86400000)/3600000),m=Math.floor((ms%3600000)/60000);setText(`D-${d} · ${h}h ${m}m`);};tick();const id=setInterval(tick,60000);return()=>clearInterval(id);},[target]);return text;}
 
 const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-const REPORT_NOW=new Date("2026-08-04T18:55:00Z");
-const BUILD_NUMBER=9;
+const REPORT_NOW=new Date("2026-08-04T23:50:00Z");
+const BUILD_NUMBER=13;
 function parseNewsDate(s){if(!s)return null;const m=s.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/);if(m)return new Date(Date.UTC(+m[3],MONTHS[m[1]],+m[2]));const m2=s.match(/([A-Z][a-z]{2})\s+(\d{4})/);if(m2)return new Date(Date.UTC(+m2[2],MONTHS[m2[1]],1));return null;}
 function ageInfo(s){const d=parseNewsDate(s);if(!d)return null;const days=Math.floor((REPORT_NOW-d)/86400000);return{days,stale:days>=10};}
 function Freshness({t,date}){const info=ageInfo(date);if(!info)return null;const label=info.days<=0?"today":info.days===1?"1d ago":`${info.days}d ago`;const color=info.stale?"#f59e0b":t.sub;return <span style={{display:"inline-flex",alignItems:"center",gap:3,fontSize:10,color,fontWeight:info.stale?700:400}}><span style={{width:5,height:5,borderRadius:"50%",background:info.stale?"#f59e0b":"#22c55e",display:"inline-block"}}/>{label}{info.stale?" · stale":""}</span>;}
@@ -909,67 +910,392 @@ const HZ_ISLES=[
   {n:"Abu Musa",lat:25.88,lon:55.03},
 ];
 
-function HormuzMap({t}){
-  const sea=t.isDark?"#08131f":"#dbeafe";
-  const land=t.isDark?"#16212e":"#e2e8f0";
-  const edge=t.isDark?"#2c3c4f":"#94a3b8";
-  return <Card t={t} style={{padding:"12px 8px 8px"}}>
-    <div style={{padding:"0 8px 8px",display:"flex",alignItems:"baseline",justifyContent:"space-between",flexWrap:"wrap",gap:4}}>
-      <div style={{fontSize:12,fontWeight:700,color:t.text}}>Strait of Hormuz — Geographic Reference</div>
-      <div style={{fontSize:10,color:t.sub}}>to scale · 330 × 255 km</div>
+const RH_IRAN = [[44, 39.4], [45, 39.2], [46.5, 38.9], [47.8, 38.5], [48.4, 37.8], [48.9, 37.5], [49.5, 37.3], [50.5, 36.9], [52, 36.7], [53.5, 36.8], [54, 37.2], [54.8, 37.4], [55.8, 38], [56.6, 38.2], [57.6, 38.2], [58.5, 37.7], [59.5, 37.5], [60.3, 36.6], [61.2, 36.1], [61.1, 35.3], [60.4, 34.1], [60.9, 33.5], [60.8, 31.4], [61.8, 31.4], [61.9, 30.9], [61.6, 29.9], [60.8, 29.8], [61.7, 28.7], [62.7, 28.3], [62.8, 27.2], [61.6, 25.8], [60.6, 25.3], [59, 25.4], [57.8, 25.6], [57.3, 25.9], [56.9, 26.6], [56.3, 26.9], [55, 26.5], [54, 26.6], [52.6, 27.4], [51.5, 28], [50.8, 28.9], [50.1, 29.9], [49, 30.3], [48.6, 30], [48.1, 30.4], [47.7, 31], [47.4, 32.5], [46.1, 33], [45.4, 33.9], [45.5, 35], [46.1, 36], [45.4, 36.6], [44.8, 37.3], [44.3, 38.3]];
+const RH_ARABIA = [[47, 30.1], [47.7, 30], [48.2, 29.5], [48.1, 28.9], [48.8, 27.8], [49.6, 27.1], [50.2, 26.6], [50.4, 25.9], [50.8, 25], [51.2, 24.6], [51.3, 25.5], [51.6, 25.9], [51.5, 25], [51.7, 24.5], [52.6, 24.2], [53.8, 24.1], [54.4, 24.4], [55.3, 25.2], [55.9, 25.6], [56.4, 26.3], [56.6, 25.7], [56.3, 25], [57.2, 24], [58.6, 23.6], [59.8, 22.5], [59.8, 21.5], [43, 21.5], [43, 30.1]];
+const RH_WEST = [[43, 40.5], [44, 39.4], [44.3, 38.3], [44.8, 37.3], [45.4, 36.6], [46.1, 36], [45.5, 35], [45.4, 33.9], [46.1, 33], [47.4, 32.5], [47.7, 31], [48.1, 30.4], [47, 30.1], [43, 30.1]];
+const RH_EAST = [[61.6, 25.8], [62.8, 27.2], [62.7, 28.3], [63.5, 28.3], [63.5, 24], [60.6, 25.3]];
+const RH_KIND = {
+  kinetic: { c: "#ff4a35", label: "Strike", tag: "t-kin" },
+  nuclear: { c: "#d4407a", label: "Nuclear", tag: "t-nuc" },
+  energy: { c: "#e0a441", label: "Energy", tag: "t-nrg" },
+  allied: { c: "#79c6d8", label: "Allied hit", tag: "t-dip" },
+  sea: { c: "#4dd98f", label: "Blockade", tag: "t-sea" },
+  diplo: { c: "#79c6d8", label: "Diplomacy", tag: "t-dip" }
+};
+const RH_COAST_ARC = [
+  [48.1, 30.4],
+  [49, 30.3],
+  [50.1, 29.9],
+  [50.8, 28.9],
+  [51.5, 28],
+  [52.6, 27.4],
+  [54, 26.6],
+  [55, 26.5],
+  [56.3, 26.9],
+  [56.9, 26.6],
+  [57.3, 25.9],
+  [57.8, 25.6],
+  [59, 25.4],
+  [60.6, 25.3],
+  [61.6, 25.8]
+];
+const RH_DEPTHS = [
+  [[48.6, 29.9], [50, 28.8], [51.6, 27.5], [53.2, 26.6], [54.8, 25.9], [56, 25.9], [56.6, 26]],
+  [[49.4, 29.6], [50.8, 28.4], [52.4, 27.2], [54, 26.4], [55.4, 26], [56.3, 26.2]],
+  [[56.9, 25.4], [58.2, 24.6], [59.6, 24], [61, 23.4]]
+];
+const RH_WATER = [
+  ["Persian Gulf", 51.4, 27.6],
+  ["Gulf of Oman", 58.6, 24.6],
+  ["Caspian Sea", 51, 38.6],
+  ["Arabian Sea", 61.2, 22.8]
+];
+const RH_LANDS = [
+  ["Iran", 54, 32.5],
+  ["Saudi Arabia", 46.4, 25],
+  ["Iraq", 44.4, 32.4],
+  ["Oman", 57.2, 22.6],
+  ["U.A.E.", 54.6, 23.4],
+  ["Pakistan", 62.4, 26.6],
+  ["Turkey", 43.6, 38.6]
+];
+const RH_CONTACTS = [
+  { n: "Natanz", la: 33.72, lo: 51.91, k: "nuclear", d: "28 Feb", x: "Enrichment facility struck in the opening wave of Operation Epic Fury. No reconstruction activity observed since, unlike Parchin." },
+  { n: "Fordow", la: 34.88, lo: 50.99, k: "nuclear", d: "28 Feb", x: "Fortified underground enrichment site hit on the first day. IAEA inspectors have not been admitted; Iran ties access to sanctions relief." },
+  { n: "Isfahan", la: 32.65, lo: 51.67, k: "nuclear", d: "28 Feb", x: "Nuclear complex struck on day one, and the city hit again during the tenth night on 21 July." },
+  { n: "Parchin \u2014 Taleghan 2", la: 35.52, lo: 51.77, k: "nuclear", d: "22 Jun", x: "Satellite imagery published 10 July shows bomb-impact holes repaired and concrete reinforced here between 22 June and 7 July \u2014 described by the Institute for Science and International Security as significant attempted reconstruction." },
+  { n: "Pickaxe Mountain", la: 33.75, lo: 51.85, k: "nuclear", d: "21 Jul", x: "A fortified underground site showing vehicle traffic on recent imagery. Trump says there is nothing Iran can do to stop the US striking it very heavily. Tehran calls any strike here a major escalation and a red line." },
+  { n: "Bushehr", la: 28.92, lo: 50.84, k: "nuclear", d: "8 Jul", x: "Struck on 8 July and again on 20 July. On 22 July an electrical installation near the nuclear plant itself was hit." },
+  { n: "Kharg Island", la: 29.25, lo: 50.32, k: "energy", d: "7 Jul", x: "Iran's principal oil export terminal, struck in the 7 July wave. The M/T Belma was disabled while running the blockade toward this island." },
+  { n: "Bandar Abbas", la: 27.18, lo: 56.28, k: "kinetic", d: "7 Jul", x: "The most repeatedly struck city of the campaign \u2014 hit on 7 July, through the tenth night on 21 July, and again on the thirteenth on 24 July. Six bridges connecting nearby cities were destroyed on 17 July." },
+  { n: "Qeshm", la: 26.95, lo: 56.27, k: "kinetic", d: "7 Jul", x: "Island in the strait itself, struck repeatedly including on the thirteenth night. Operations centres, drone storage and logistics infrastructure." },
+  { n: "Kish", la: 26.53, lo: 53.98, k: "kinetic", d: "8 Jul", x: "Struck in the second wave on 8 July and again on 14 July." },
+  { n: "Sirik", la: 26.51, lo: 57.1, k: "kinetic", d: "8 Jul", x: "Coastal site struck on 8, 14 and 21 July \u2014 anti-ship missile and coastal radar infrastructure." },
+  { n: "Jask", la: 25.65, lo: 57.77, k: "kinetic", d: "14 Jul", x: "One of six coastal areas hit in the five-hour wave that accompanied the blockade taking effect." },
+  { n: "Konarak", la: 25.36, lo: 60.39, k: "kinetic", d: "8 Jul", x: "Naval facility struck on 8, 14 and 20 July." },
+  { n: "Chabahar", la: 25.29, lo: 60.64, k: "kinetic", d: "8 Jul", x: "Iran's only oceanic port, outside the strait entirely \u2014 struck on 8, 14 and 20 July." },
+  { n: "Abadan", la: 30.34, lo: 48.3, k: "energy", d: "14 Jul", x: "Refinery city struck on 14 July alongside the blockade's first wave, and hit again on the ninth night on 20 July." },
+  { n: "Bandar Mahshahr", la: 30.56, lo: 49.2, k: "energy", d: "20 Jul", x: "Petrochemical export terminal struck during the ninth night." },
+  { n: "Bandar Imam Khomeini", la: 30.43, lo: 49.08, k: "energy", d: "20 Jul", x: "Major cargo and petrochemical port struck during the ninth night." },
+  { n: "Abu Musa", la: 25.87, lo: 55.03, k: "kinetic", d: "14 Jul", x: "Disputed island in the strait's approaches, struck on 14 July." },
+  { n: "Tabriz", la: 38.08, lo: 46.29, k: "kinetic", d: "20 Jul", x: "The north-western limit of the campaign, struck on the ninth night \u2014 the moment the war stopped being coastal." },
+  { n: "Shiraz", la: 29.59, lo: 52.58, k: "kinetic", d: "21 Jul", x: "Interior city struck during the tenth night alongside Isfahan." },
+  { n: "Tehran", la: 35.69, lo: 51.42, k: "kinetic", d: "23 Jul", x: "Not yet struck in this phase, but explicitly threatened: Trump has said he will destroy an Iranian bridge or power plant, including inside Tehran, every time Iran hits a ship in the strait." },
+  { n: "Mashhad", la: 36.3, lo: 59.6, k: "kinetic", d: "9 Jul", x: "The Tehran\u2013Mashhad rail line was damaged as strikes continued through Khamenei's funeral, despite a promised pause." },
+  { n: "M/T Belma", la: 29.05, lo: 50.2, k: "sea", d: "15 Jul", x: "Cura\xE7ao-flagged tanker, the first confirmed blockade-enforcement strike. Ignored repeated warnings on course for Kharg Island and took Hellfire missiles into its smokestack. Disabled, not sunk." },
+  { n: "Second runner", la: 26.62, lo: 56.45, k: "sea", d: "16 Jul", x: "A second vessel attempting to breach the blockade, disabled on 16 July as strikes widened into northern Iran. The same day CENTCOM destroyed an IRGC port surveillance tower near the strait." },
+  { n: "IRGC surveillance tower", la: 26.85, lo: 56.05, k: "sea", d: "16 Jul", x: "Port surveillance tower near the strait, destroyed on video by CENTCOM, which says it was used to track and target commercial vessels. Iran calls it a civilian structure." },
+  { n: "Al Juffair \u2014 5th Fleet", la: 26.21, lo: 50.6, k: "allied", d: "14 Jul", x: "US Fifth Fleet headquarters in Bahrain, hit by Iranian fire on 14 July. The IRGC had claimed strikes on 85 US installations across Bahrain and Kuwait on 8 July." },
+  { n: "Sheikh Isa air base", la: 25.92, lo: 50.59, k: "allied", d: "22 Jul", x: "Bahraini air base struck on 22 July during the eleventh night's retaliation." },
+  { n: "Ali Salem air base", la: 29.35, lo: 47.52, k: "allied", d: "8 Jul", x: "Kuwaiti air base named in the IRGC's 8 July counterstrike claim." },
+  { n: "Kuwait desalination", la: 29.3, lo: 48.05, k: "allied", d: "18 Jul", x: "Kuwait's main desalination plant, hit twice \u2014 the second time on 18 July, leaving 10,000 people without water. Power plants here caught fire during the tenth night." },
+  { n: "Al Udeid \u2014 Qatar", la: 25.12, lo: 51.32, k: "allied", d: "12 Jul", x: "Civilians were injured in Qatar during Iran's 12 July retaliation across five countries." },
+  { n: "Oman", la: 23.6, lo: 58.55, k: "allied", d: "12 Jul", x: "Struck during the 12 July retaliation. Muscat later hosted weekend talks on Hormuz alone, which reached no agreement \u2014 Tehran blamed US pressure on Oman." },
+  { n: "Chah Tangu \u2014 Qeshm", la: 26.79, lo: 55.85, k: "kinetic", d: "30 Jul", x: "A village on Qeshm Island. Iranian media report a couple and their two-year-old child killed here when their home was hit during the 30 July heavy wave \u2014 the civilian deaths Tehran cited in vowing that the aggressor would be punished." },
+  { n: "Kuwait \u2014 Chinese firm", la: 29.37, lo: 47.98, k: "allied", d: "30 Jul", x: "An Iranian strike hit a Chinese company's building in Kuwait on 30 July, killing a worker. Beijing is not a party to the war, and striking a Chinese commercial site widens the diplomatic cost of Iran's retaliation well beyond the states hosting US forces." },
+  { n: "Cargo ship \u2014 off Oman", la: 22.6, lo: 59.4, k: "sea", d: "4 Aug", x: "UKMTO reported a cargo vessel struck by a projectile off the Omani coast on 4 August. Location is approximate \u2014 UKMTO's advisory did not give precise coordinates. No party had claimed the attack as of the report." },
+  { n: "Erbil Air Base", la: 36.24, lo: 43.96, k: "allied", d: "19 Jul", x: "Sgt. Michael Emmanuel Swinton, 30, of Fayetteville, North Carolina, was killed here in a controlled detonation of a downed Iranian drone \u2014 a death separate from the Jordan strike." }
+];
+const RH_OFFSCOPE = [
+  { n: "Jordan \u2014 US position", brg: 292, x: "Iranian strikes on 17\u201318 July killed three US service members, the first American combat fatalities of this round since March. Missiles were also fired toward Aqaba." },
+  { n: "Egypt \u2014 port strike", brg: 210, x: "Egypt was struck for the first time on 30 July, when a drone hit two natural gas vessels at one of its ports. Cairo hosts no US strike aircraft and is not a belligerent; the attack marks the war spreading past the Gulf and Red Sea littoral into the Mediterranean approaches." },
+  { n: "Bab el-Mandeb", brg: 232, x: "Declared off limits to Saudi Arabia by the Houthis on 22 July, who then began attacking Saudi-bound tankers. Roughly 2.5M barrels a day at risk; six ships turned course." }
+];
+const RH_LON0=43,RH_LAT1=40,RH_PXLON=38,RH_PXLAT=44.444;
+const rhPx=(lo,la)=>[(lo-RH_LON0)*RH_PXLON,(RH_LAT1-la)*RH_PXLAT];
+const rhToPath=(pts)=>pts.map((p,i)=>(i?"L":"M")+rhPx(p[0],p[1]).map(n=>n.toFixed(1)).join(" ")).join("")+"Z";
+const rhOpenPath=(pts)=>pts.map((p,i)=>(i?"L":"M")+rhPx(p[0],p[1]).map(n=>n.toFixed(1)).join(" ")).join("");
+const RH_CTR=rhPx(56.5,26.8);
+const RH_RNG_PX=360;
+const rhBearingOf=(lo,la)=>{const[x,y]=rhPx(lo,la);const dx=x-RH_CTR[0],dy=y-RH_CTR[1];return(Math.atan2(dy,dx)*180/Math.PI+360)%360;};
+const RH_BEARINGS=RH_CONTACTS.map(c=>rhBearingOf(c.lo,c.la));
+const rhEase=(t)=>1-(1-t)*(1-t);
+
+
+function RHRadarMap({t}){
+  const DEEP="#07161c",PANEL="#0d2731",INK="#040e12",LAND="#141f18",LANDHI="#2c4034",LINE="#1b3d47",PAPER="#ece0c6",PAPERDIM="#8ba0a6",PAPERFAINT="#5b7178",PHOSPHOR="#4dd98f",ICE="#79c6d8",AMBER="#e0a441",MAGENTA="#d4407a",ALARM="#ff4a35";
+  const MODES=["all","kinetic","nuclear","energy","allied","sea"];
+  const[sel,setSel]=useState(null);
+  const[sweepOn,setSweepOn]=useState(true);
+  const[mode,setMode]=useState(0);
+  const filter=MODES[mode];
+  const rotRef=useRef(null);
+  const pingRefs=useRef([]);
+  const brgRef=useRef(null);
+  const lastAngle=useRef(0);
+  const sweepOnRef=useRef(sweepOn);
+  sweepOnRef.current=sweepOn;
+  const activePings=useRef([]);
+
+  useEffect(()=>{
+    let raf;
+    const duration=7500;
+    const started=performance.now();
+    function tick(now){
+      const elapsed=(now-started)%duration;
+      const a=(elapsed/duration)*360;
+      if(sweepOnRef.current){
+        rotRef.current?.setAttribute("transform",`rotate(${a} ${RH_CTR[0]} ${RH_CTR[1]})`);
+        if(brgRef.current) brgRef.current.textContent=String(Math.round(a)).padStart(3,"0")+"\u00b0";
+        const prev=lastAngle.current;
+        RH_BEARINGS.forEach((ca,i)=>{
+          const crossed=prev<=a?ca>prev&&ca<=a:ca>prev||ca<=a;
+          if(!crossed) return;
+          activePings.current.push({idx:i,start:now});
+        });
+        lastAngle.current=a;
+        if(activePings.current.length){
+          const pingDuration=1500;
+          const still=[];
+          for(const p of activePings.current){
+            const pt=(now-p.start)/pingDuration;
+            const node=pingRefs.current[p.idx];
+            if(pt>=1||!node) continue;
+            const eased=rhEase(pt);
+            node.setAttribute("r",String(4+eased*16));
+            node.style.opacity=String(.95*(1-eased));
+            still.push(p);
+          }
+          activePings.current=still;
+        }
+      }
+      raf=requestAnimationFrame(tick);
+    }
+    raf=requestAnimationFrame(tick);
+    return()=>cancelAnimationFrame(raf);
+  },[]);
+
+  const zoneD=rhOpenPath(RH_COAST_ARC)+RH_COAST_ARC.map(([lo,la])=>[lo+.42,la-.42]).reverse().map(p=>"L"+rhPx(p[0],p[1]).join(" ")).join("")+"Z";
+  const st=rhPx(56.35,26.05);
+
+  return <Card t={t} style={{padding:"12px 8px 8px",background:PANEL,border:`1px solid ${LINE}`}}>
+    <div style={{padding:"0 6px 6px",display:"flex",alignItems:"baseline",justifyContent:"space-between",flexWrap:"wrap",gap:4}}>
+      <div style={{fontSize:12,fontWeight:700,color:PAPER}}>\ud83d\udce1 The Plot \u2014 Radar Scope</div>
+      <div style={{fontSize:9,color:PAPERFAINT,fontFamily:"monospace"}}>{RH_CONTACTS.length+RH_OFFSCOPE.length} contacts</div>
     </div>
-    <div style={{width:"100%",overflow:"hidden",borderRadius:10}}>
-    <svg viewBox={`0 0 ${HZ.W} ${HZ.H}`} style={{width:"100%",height:"auto",display:"block",background:sea}} role="img" aria-label="Map of the Strait of Hormuz showing Iran, Oman's Musandam Peninsula, the shipping lane and the 21-nautical-mile chokepoint.">
+    <div style={{padding:"0 6px 8px",fontSize:10.5,color:PAPERDIM,lineHeight:1.6}}>Every marker is a location struck, blockaded or contested since Operation Epic Fury opened the war Feb 28. The sweep runs continuously; contacts ping as it passes them. Tap any contact for its dossier.</div>
+    <div style={{padding:"0 6px 8px",display:"flex",gap:8,alignItems:"center"}}>
+      <button onClick={()=>setSweepOn(s=>!s)} style={{fontSize:9,fontFamily:"monospace",padding:"4px 9px",borderRadius:4,cursor:"pointer",background:sweepOn?PHOSPHOR:"transparent",color:sweepOn?INK:PAPERDIM,border:`1px solid ${sweepOn?PHOSPHOR:LINE}`}}>Sweep</button>
+      <button onClick={()=>setMode(m=>(m+1)%MODES.length)} style={{fontSize:9,fontFamily:"monospace",padding:"4px 9px",borderRadius:4,cursor:"pointer",background:"transparent",color:PAPERDIM,border:`1px solid ${LINE}`}}>{filter==="all"?"All":RH_KIND[filter].label}</button>
+      <div style={{marginLeft:"auto",fontSize:8.5,fontFamily:"monospace",color:PAPERFAINT,textAlign:"right",lineHeight:1.5}}>
+        BRG <span ref={brgRef} style={{color:PHOSPHOR}}>000\u00b0</span> \u00b7 RNG <span style={{color:PHOSPHOR}}>900 KM</span>
+      </div>
+    </div>
+    <div style={{width:"100%",overflow:"hidden",borderRadius:6,background:`radial-gradient(ellipse at 62% 62%,rgba(30,90,105,.20),transparent 62%),${DEEP}`}}>
+    <svg viewBox="0 0 760 800" style={{width:"100%",height:"auto",display:"block"}} role="img" aria-label="Radar plot of Iran and the Persian Gulf showing struck and contested locations">
       <defs>
-        <pattern id="hzBlock" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <line x1="0" y1="0" x2="0" y2="7" stroke="#dc2626" strokeWidth="2" strokeOpacity="0.30"/>
-        </pattern>
+        <linearGradient id="rhsweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stopColor={PHOSPHOR} stopOpacity=".26"/><stop offset="100%" stopColor={PHOSPHOR} stopOpacity="0"/></linearGradient>
+        <filter id="rhglow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
       </defs>
-
-      {/* US blockade zone — entire Iranian coastline, effective Jul 14 */}
-      <path d={HZ_IRAN_PATH} fill="url(#hzBlock)"/>
-
-      {/* landmasses */}
-      <path d={HZ_IRAN_PATH} fill={land} stroke={edge} strokeWidth="1"/>
-      <path d={HZ_OMAN_PATH} fill={land} stroke={edge} strokeWidth="1"/>
-
-      {/* shipping lane (traffic separation scheme, Omani waters) */}
-      <path d={hzPath(HZ_LANE)} fill="none" stroke="#22d3ee" strokeWidth="7" strokeOpacity="0.16" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d={hzPath(HZ_LANE)} fill="none" stroke="#22d3ee" strokeWidth="1.6" strokeDasharray="7 5" strokeLinecap="round" strokeLinejoin="round"/>
-
-      {/* chokepoint — narrowest transit, 21 nmi / 39 km */}
-      <line x1={hzX(56.48)} y1={hzY(26.73)} x2={hzX(56.51)} y2={hzY(26.39)} stroke="#f97316" strokeWidth="1.6" strokeDasharray="3 3"/>
-      <circle cx={hzX(56.48)} cy={hzY(26.73)} r="2.4" fill="#f97316"/>
-      <circle cx={hzX(56.51)} cy={hzY(26.39)} r="2.4" fill="#f97316"/>
-      <text x={hzX(56.56)} y={hzY(26.56)} fill="#f97316" fontSize="9" fontWeight="700" fontFamily={FONT}>21 nmi</text>
-
-      {/* islands */}
-      {HZ_ISLES.map(o=><g key={o.n}>
-        <circle cx={hzX(o.lon)} cy={hzY(o.lat)} r="3.2" fill={land} stroke={edge} strokeWidth="0.8"/>
-        <text x={hzX(o.lon)+5} y={hzY(o.lat)+3} fill={t.sub} fontSize="8" fontFamily={FONT}>{o.n}</text>
-      </g>)}
-
-      {/* ports */}
-      {HZ_PORTS.map(o=><g key={o.n}>
-        <rect x={hzX(o.lon)-2.6} y={hzY(o.lat)-2.6} width="5.2" height="5.2" fill={o.side==="ir"?"#ef4444":"#22c55e"} stroke={sea} strokeWidth="0.8"/>
-        <text x={hzX(o.lon)+6} y={hzY(o.lat)+3} fill={t.text} fontSize="8.5" fontWeight="600" fontFamily={FONT}>{o.n}</text>
-      </g>)}
-
-      {/* country + water labels */}
-      <text x={hzX(55.60)} y={hzY(27.28)} fill={t.sub} fontSize="11" fontWeight="800" letterSpacing="2" fontFamily={FONT}>IRAN</text>
-      <text x={hzX(55.60)} y={hzY(25.35)} fill={t.sub} fontSize="10" fontWeight="800" letterSpacing="1.5" fontFamily={FONT}>UAE / OMAN</text>
-      <text x={hzX(56.63)} y={hzY(26.22)} fill={t.sub} fontSize="8" fontStyle="italic" fontFamily={FONT}>Musandam Pen.</text>
-      <text x={hzX(54.75)} y={hzY(26.10)} fill={t.sub} fontSize="9" fontStyle="italic" fontFamily={FONT}>Persian Gulf</text>
-      <text x={hzX(57.05)} y={hzY(25.60)} fill={t.sub} fontSize="9" fontStyle="italic" fontFamily={FONT}>Gulf of Oman</text>
+      <g>{Array.from({length:10},(_,k)=>44+k*2).map(lo=>{const a=rhPx(lo,40),b=rhPx(lo,22);return <line key={"v"+lo} x1={a[0]} y1={a[1]} x2={b[0]} y2={b[1]} stroke="rgba(120,190,205,.10)" strokeWidth=".5"/>;})}
+      {Array.from({length:8},(_,k)=>24+k*2).map(la=>{const a=rhPx(43,la),b=rhPx(63,la);return <line key={"h"+la} x1={a[0]} y1={a[1]} x2={b[0]} y2={b[1]} stroke="rgba(120,190,205,.10)" strokeWidth=".5"/>;})}</g>
+      <g>
+        <path d={rhToPath(RH_WEST)} fill="#111a17" stroke="#22302a" strokeWidth="1"/>
+        <path d={rhToPath(RH_ARABIA)} fill="#111a17" stroke="#22302a" strokeWidth="1"/>
+        <path d={rhToPath(RH_EAST)} fill="#111a17" stroke="#22302a" strokeWidth="1"/>
+        <path d={rhToPath(RH_IRAN)} fill="#20301f" stroke="#4d6b4f" strokeWidth="1.3"/>
+      </g>
+      <g>{[120,240,360].map((r,i)=><g key={r}><circle cx={RH_CTR[0]} cy={RH_CTR[1]} r={r} fill="none" stroke="rgba(77,217,143,.16)" strokeWidth=".6"/><text x={RH_CTR[0]+4} y={RH_CTR[1]-r+11} fontSize="7.5" fill="rgba(77,217,143,.5)" letterSpacing=".1em" fontFamily="monospace">{(i+1)*300} KM</text></g>)}</g>
+      <g ref={rotRef} style={{opacity:sweepOn?1:0,transition:"opacity .3s"}}>
+        <path d={`M${RH_CTR[0]} ${RH_CTR[1]} L${RH_CTR[0]+RH_RNG_PX} ${RH_CTR[1]-46} A${RH_RNG_PX} ${RH_RNG_PX} 0 0 1 ${RH_CTR[0]+RH_RNG_PX} ${RH_CTR[1]+46} Z`} fill="url(#rhsweep)"/>
+        <line x1={RH_CTR[0]} y1={RH_CTR[1]} x2={RH_CTR[0]+RH_RNG_PX} y2={RH_CTR[1]} stroke={PHOSPHOR} strokeWidth={1} opacity=".55"/>
+      </g>
+      <g>
+        <path d={zoneD} fill={MAGENTA} opacity=".07"/>
+        <path d={rhOpenPath(RH_COAST_ARC)} fill="none" stroke={MAGENTA} strokeWidth="1.4" strokeDasharray="7 5" opacity=".85"/>
+        {RH_DEPTHS.map((dp,i)=><path key={i} d={rhOpenPath(dp)} fill="none" stroke="rgba(121,198,216,.13)" strokeWidth=".75"/>)}
+      </g>
+      <g>{RH_WATER.map(([n,lo,la])=>{const p=rhPx(lo,la);return <text key={n} x={p[0]} y={p[1]} fontStyle="italic" fontSize="11" fill={ICE} opacity=".62" letterSpacing=".09em" textAnchor="middle">{n}</text>;})}
+      {RH_LANDS.map(([n,lo,la])=>{const p=rhPx(lo,la);return <text key={n} x={p[0]} y={p[1]} fontSize="12.5" fontWeight="600" fill={PAPERDIM} letterSpacing=".2em" opacity=".75" textAnchor="middle">{n.toUpperCase()}</text>;})}
+      <text x={st[0]+10} y={st[1]+22} fontStyle="italic" fontSize="10" fill={ICE} opacity=".62">Strait of Hormuz</text></g>
+      <g>{RH_CONTACTS.map((c,idx)=>{
+        const p=rhPx(c.lo,c.la);
+        const col=RH_KIND[c.k].c;
+        const on=filter==="all"||c.k===filter;
+        const isSel=sel?.kind==="contact"&&sel.i===idx;
+        return <g key={c.n} tabIndex={on?0:-1} role="button" aria-label={`${c.n} \u2014 ${RH_KIND[c.k].label}`} style={{cursor:"pointer",opacity:on?1:.12,pointerEvents:on?"auto":"none",transition:"opacity .3s"}} onClick={()=>setSel({kind:"contact",i:idx})} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSel({kind:"contact",i:idx});}}}>
+          <circle cx={p[0]} cy={p[1]} r={9} fill="transparent"/>
+          <circle ref={n=>{pingRefs.current[idx]=n;}} cx={p[0]} cy={p[1]} r={12} fill="none" stroke={col} strokeWidth="1.2" opacity="0"/>
+          <circle cx={p[0]} cy={p[1]} r={isSel?5.5:3.4} fill={col} filter="url(#rhglow)" style={{transition:"r .2s ease"}}/>
+          <text x={p[0]+8} y={p[1]-7} fontSize="8" letterSpacing=".08em" fill={PAPERDIM} opacity={isSel?1:0} style={{pointerEvents:"none"}}>{c.n.toUpperCase()}</text>
+        </g>;
+      })}</g>
+      <g>{RH_OFFSCOPE.map((o,i)=>{
+        const a=o.brg*Math.PI/180;
+        const x=RH_CTR[0]+Math.cos(a)*(RH_RNG_PX-8);
+        const y=RH_CTR[1]+Math.sin(a)*(RH_RNG_PX-8);
+        return <g key={o.n} tabIndex={0} role="button" aria-label={`${o.n} \u2014 off scope`} style={{cursor:"pointer"}} onClick={()=>setSel({kind:"off",i})} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSel({kind:"off",i});}}}>
+          <circle cx={x} cy={y} r={13} fill="transparent"/>
+          <path d={`M${x-5} ${y-5} L${x+5} ${y} L${x-5} ${y+5} Z`} fill={PAPERFAINT} transform={`rotate(${o.brg} ${x} ${y})`}/>
+          <text x={x+10} y={y+3} fontSize="8" letterSpacing=".08em" fill={PAPERFAINT}>{o.n.toUpperCase()}</text>
+        </g>;
+      })}</g>
     </svg>
     </div>
-    <div style={{display:"flex",gap:12,flexWrap:"wrap",padding:"8px 10px 2px",fontSize:9.5,color:t.sub}}>
-      <span><span style={{display:"inline-block",width:8,height:8,background:"#ef4444",marginRight:4}}/>Iranian port</span>
-      <span><span style={{display:"inline-block",width:8,height:8,background:"#22c55e",marginRight:4}}/>Oman/UAE port</span>
-      <span><span style={{display:"inline-block",width:14,height:2,background:"#22d3ee",marginRight:4,verticalAlign:"middle"}}/>Shipping lane</span>
-      <span><span style={{display:"inline-block",width:10,height:8,background:"#dc262640",marginRight:4,verticalAlign:"middle"}}/>US blockade zone</span>
+    <div style={{padding:"8px 6px 0",display:"flex",gap:8,flexWrap:"wrap",fontSize:8.5,color:PAPERDIM}}>
+      <span>\u25cf<span style={{color:ALARM}}>\u25cf</span> Struck</span>
+      <span style={{color:MAGENTA}}>\u25cf Nuclear site</span>
+      <span style={{color:AMBER}}>\u25cf Energy/port</span>
+      <span style={{color:ICE}}>\u25cf Allied base hit</span>
+      <span style={{color:PHOSPHOR}}>\u25cf Blockade enforcement</span>
     </div>
-    <div style={{fontSize:11,color:t.sub,lineHeight:1.5,padding:"6px 10px 2px"}}>The chokepoint is roughly 21 nautical miles (39 km) across at its narrowest, and the internationally used shipping lanes run through Omani territorial waters south of the median line — which is why Iran can threaten traffic without formally closing its own waters. Transit volume has collapsed to about 9 vessels a day against a pre-war average near 130. Coastlines are simplified; ports, islands and the chokepoint are plotted at true coordinates and the projection preserves scale.</div>
+    <div style={{marginTop:10,padding:"11px 12px",background:INK,borderRadius:6,border:`1px solid ${LINE}`,minHeight:70}}>
+      {!sel&&<div style={{fontSize:11,color:PAPERFAINT,fontStyle:"italic"}}>No contact selected. Tap a marker on the plot above.</div>}
+      {sel?.kind==="contact"&&(()=>{const c=RH_CONTACTS[sel.i];const k=RH_KIND[c.k];return <>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:5,flexWrap:"wrap",gap:6}}>
+          <span style={{fontSize:9,fontWeight:700,color:k.c,textTransform:"uppercase",letterSpacing:".06em"}}>{k.label}</span>
+          <span style={{fontSize:8.5,color:PAPERFAINT,fontFamily:"monospace"}}>FIRST STRUCK {c.d.toUpperCase()}</span>
+        </div>
+        <div style={{fontSize:13,fontWeight:700,color:PAPER,marginBottom:3}}>{c.n}</div>
+        <div style={{fontSize:9,color:PAPERFAINT,fontFamily:"monospace",marginBottom:7}}>{c.la.toFixed(2)}\u00b0N \u00a0 {c.lo.toFixed(2)}\u00b0E</div>
+        <div style={{fontSize:11.5,color:PAPERDIM,lineHeight:1.6}}>{c.x}</div>
+      </>;})()}
+      {sel?.kind==="off"&&(()=>{const o=RH_OFFSCOPE[sel.i];return <>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:5,flexWrap:"wrap",gap:6}}>
+          <span style={{fontSize:9,fontWeight:700,color:PAPERFAINT,textTransform:"uppercase",letterSpacing:".06em"}}>Off scope</span>
+          <span style={{fontSize:8.5,color:PAPERFAINT,fontFamily:"monospace"}}>BEARING {String(o.brg).padStart(3,"0")}\u00b0</span>
+        </div>
+        <div style={{fontSize:13,fontWeight:700,color:PAPER,marginBottom:7}}>{o.n}</div>
+        <div style={{fontSize:11.5,color:PAPERDIM,lineHeight:1.6}}>{o.x}</div>
+      </>;})()}
+    </div>
+  </Card>;
+}
+
+const HZ_CONTACTS=[...HZ_PORTS.map(p=>({...p,k:"port"})),...HZ_ISLES.map(p=>({...p,k:"isle",side:"isle"}))];
+const HZ_CTR=[hzX(56.50),hzY(26.55)];
+const HZ_RNG_PX=260;
+const hzBearingOf=(lon,lat)=>{const x=hzX(lon),y=hzY(lat);const dx=x-HZ_CTR[0],dy=y-HZ_CTR[1];return(Math.atan2(dy,dx)*180/Math.PI+360)%360;};
+const HZ_BEARINGS=HZ_CONTACTS.map(c=>hzBearingOf(c.lon,c.lat));
+const hzEase=(t)=>1-(1-t)*(1-t);
+
+function HormuzMap({t}){
+  const DEEP="#07161c",PANEL="#0d2731",INK="#040e12",LINE="#1b3d47",PAPER="#ece0c6",PAPERDIM="#8ba0a6",PAPERFAINT="#5b7178",PHOSPHOR="#4dd98f",ICE="#79c6d8",AMBER="#e0a441",MAGENTA="#d4407a";
+  const SIDE_COLOR={ir:"#ff4a35",om:PHOSPHOR,isle:ICE};
+  const[sel,setSel]=useState(null);
+  const[sweepOn,setSweepOn]=useState(true);
+  const rotRef=useRef(null);
+  const pingRefs=useRef([]);
+  const brgRef=useRef(null);
+  const lastAngle=useRef(0);
+  const sweepOnRef=useRef(sweepOn);
+  sweepOnRef.current=sweepOn;
+  const activePings=useRef([]);
+
+  useEffect(()=>{
+    let raf;
+    const duration=6000;
+    const started=performance.now();
+    function tick(now){
+      const elapsed=(now-started)%duration;
+      const a=(elapsed/duration)*360;
+      if(sweepOnRef.current){
+        rotRef.current?.setAttribute("transform",`rotate(${a} ${HZ_CTR[0]} ${HZ_CTR[1]})`);
+        if(brgRef.current) brgRef.current.textContent=String(Math.round(a)).padStart(3,"0")+"\u00b0";
+        const prev=lastAngle.current;
+        HZ_BEARINGS.forEach((ca,i)=>{
+          const crossed=prev<=a?ca>prev&&ca<=a:ca>prev||ca<=a;
+          if(!crossed) return;
+          activePings.current.push({idx:i,start:now});
+        });
+        lastAngle.current=a;
+        if(activePings.current.length){
+          const pingDuration=1200;
+          const still=[];
+          for(const p of activePings.current){
+            const pt=(now-p.start)/pingDuration;
+            const node=pingRefs.current[p.idx];
+            if(pt>=1||!node) continue;
+            const eased=hzEase(pt);
+            node.setAttribute("r",String(3.5+eased*13));
+            node.style.opacity=String(.9*(1-eased));
+            still.push(p);
+          }
+          activePings.current=still;
+        }
+      }
+      raf=requestAnimationFrame(tick);
+    }
+    raf=requestAnimationFrame(tick);
+    return()=>cancelAnimationFrame(raf);
+  },[]);
+
+  return <Card t={t} style={{padding:"12px 8px 8px",background:PANEL,border:`1px solid ${LINE}`}}>
+    <div style={{padding:"0 6px 6px",display:"flex",alignItems:"baseline",justifyContent:"space-between",flexWrap:"wrap",gap:4}}>
+      <div style={{fontSize:12,fontWeight:700,color:PAPER}}>Strait of Hormuz — Radar Scope</div>
+      <div style={{fontSize:10,color:PAPERFAINT}}>to scale · 330 × 255 km</div>
+    </div>
+    <div style={{padding:"0 6px 8px",display:"flex",gap:8,alignItems:"center"}}>
+      <button onClick={()=>setSweepOn(s=>!s)} style={{fontSize:9,fontFamily:"monospace",padding:"4px 9px",borderRadius:4,cursor:"pointer",background:sweepOn?PHOSPHOR:"transparent",color:sweepOn?INK:PAPERDIM,border:`1px solid ${sweepOn?PHOSPHOR:LINE}`}}>Sweep</button>
+      <div style={{marginLeft:"auto",fontSize:8.5,fontFamily:"monospace",color:PAPERFAINT,textAlign:"right",lineHeight:1.5}}>
+        BRG <span ref={brgRef} style={{color:PHOSPHOR}}>000\u00b0</span> \u00b7 RNG <span style={{color:PHOSPHOR}}>39 KM</span>
+      </div>
+    </div>
+    <div style={{width:"100%",overflow:"hidden",borderRadius:6,background:`radial-gradient(ellipse at 62% 55%,rgba(30,90,105,.20),transparent 62%),${DEEP}`}}>
+    <svg viewBox={`0 0 ${HZ.W} ${HZ.H}`} style={{width:"100%",height:"auto",display:"block"}} role="img" aria-label="Radar-style map of the Strait of Hormuz showing Iran, Oman's Musandam Peninsula, the shipping lane and the 21-nautical-mile chokepoint.">
+      <defs>
+        <pattern id="hzBlock" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="7" stroke="#ff4a35" strokeWidth="2" strokeOpacity="0.28"/>
+        </pattern>
+        <filter id="hzglow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+
+      <g>{[90,180,260].map(r=><g key={r}><circle cx={HZ_CTR[0]} cy={HZ_CTR[1]} r={r} fill="none" stroke="rgba(77,217,143,.15)" strokeWidth=".6"/></g>)}</g>
+
+      <path d={HZ_IRAN_PATH} fill="url(#hzBlock)"/>
+      <path d={HZ_IRAN_PATH} fill="#141f18" stroke="#2c4034" strokeWidth="1"/>
+      <path d={HZ_OMAN_PATH} fill="#141f18" stroke="#2c4034" strokeWidth="1"/>
+
+      <path d={hzPath(HZ_LANE)} fill="none" stroke={ICE} strokeWidth="7" strokeOpacity="0.14" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d={hzPath(HZ_LANE)} fill="none" stroke={ICE} strokeWidth="1.6" strokeDasharray="7 5" strokeLinecap="round" strokeLinejoin="round"/>
+
+      <line x1={hzX(56.48)} y1={hzY(26.73)} x2={hzX(56.51)} y2={hzY(26.39)} stroke={AMBER} strokeWidth="1.6" strokeDasharray="3 3"/>
+      <circle cx={hzX(56.48)} cy={hzY(26.73)} r="2.4" fill={AMBER}/>
+      <circle cx={hzX(56.51)} cy={hzY(26.39)} r="2.4" fill={AMBER}/>
+      <text x={hzX(56.56)} y={hzY(26.56)} fill={AMBER} fontSize="9" fontWeight="700" fontFamily={FONT}>21 nmi</text>
+
+      <g ref={rotRef} style={{opacity:sweepOn?1:0,transition:"opacity .3s"}}>
+        <path d={`M${HZ_CTR[0]} ${HZ_CTR[1]} L${HZ_CTR[0]+HZ_RNG_PX} ${HZ_CTR[1]-34} A${HZ_RNG_PX} ${HZ_RNG_PX} 0 0 1 ${HZ_CTR[0]+HZ_RNG_PX} ${HZ_CTR[1]+34} Z`} fill={PHOSPHOR} opacity=".16"/>
+        <line x1={HZ_CTR[0]} y1={HZ_CTR[1]} x2={HZ_CTR[0]+HZ_RNG_PX} y2={HZ_CTR[1]} stroke={PHOSPHOR} strokeWidth={1} opacity=".5"/>
+      </g>
+
+      {HZ_CONTACTS.map((o,idx)=>{
+        const isSel=sel===idx;
+        const col=SIDE_COLOR[o.side]||PAPERDIM;
+        return <g key={o.n} style={{cursor:"pointer"}} tabIndex={0} role="button" aria-label={o.n} onClick={()=>setSel(idx)} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSel(idx);}}}>
+          <circle cx={hzX(o.lon)} cy={hzY(o.lat)} r={11} fill="transparent"/>
+          <circle ref={n=>{pingRefs.current[idx]=n;}} cx={hzX(o.lon)} cy={hzY(o.lat)} r={10} fill="none" stroke={col} strokeWidth="1.1" opacity="0"/>
+          <circle cx={hzX(o.lon)} cy={hzY(o.lat)} r={isSel?4.6:3} fill={col} filter="url(#hzglow)" style={{transition:"r .2s ease"}}/>
+          <text x={hzX(o.lon)+6} y={hzY(o.lat)+3} fill={isSel?PAPER:PAPERDIM} fontSize="8.5" fontWeight={isSel?700:500} fontFamily={FONT}>{o.n}</text>
+        </g>;
+      })}
+
+      <text x={hzX(55.60)} y={hzY(27.28)} fill={PAPERDIM} fontSize="11" fontWeight="800" letterSpacing="2" fontFamily={FONT}>IRAN</text>
+      <text x={hzX(55.60)} y={hzY(25.35)} fill={PAPERDIM} fontSize="10" fontWeight="800" letterSpacing="1.5" fontFamily={FONT}>UAE / OMAN</text>
+      <text x={hzX(56.63)} y={hzY(26.22)} fill={ICE} fontSize="8" fontStyle="italic" opacity=".7" fontFamily={FONT}>Musandam Pen.</text>
+      <text x={hzX(54.75)} y={hzY(26.10)} fill={ICE} fontSize="9" fontStyle="italic" opacity=".7" fontFamily={FONT}>Persian Gulf</text>
+      <text x={hzX(57.05)} y={hzY(25.60)} fill={ICE} fontSize="9" fontStyle="italic" opacity=".7" fontFamily={FONT}>Gulf of Oman</text>
+    </svg>
+    </div>
+    <div style={{display:"flex",gap:12,flexWrap:"wrap",padding:"8px 6px 2px",fontSize:9,color:PAPERDIM}}>
+      <span>\u25cf<span style={{color:"#ff4a35"}}>\u25cf</span> Iranian port</span>
+      <span style={{color:PHOSPHOR}}>\u25cf Oman/UAE port</span>
+      <span style={{color:ICE}}>\u25cf Island</span>
+      <span><span style={{display:"inline-block",width:14,height:2,background:ICE,marginRight:4,verticalAlign:"middle"}}/>Shipping lane</span>
+      <span><span style={{display:"inline-block",width:10,height:8,background:"#ff4a3540",marginRight:4,verticalAlign:"middle"}}/>US blockade zone</span>
+    </div>
+    <div style={{marginTop:8,padding:"10px 12px",background:INK,borderRadius:6,border:`1px solid ${LINE}`,minHeight:50}}>
+      {sel==null&&<div style={{fontSize:11,color:PAPERFAINT,fontStyle:"italic"}}>No contact selected. Tap a port or island on the plot above.</div>}
+      {sel!=null&&(()=>{const c=HZ_CONTACTS[sel];const col=SIDE_COLOR[c.side]||PAPERDIM;return <>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:5,flexWrap:"wrap",gap:6}}>
+          <span style={{fontSize:9,fontWeight:700,color:col,textTransform:"uppercase",letterSpacing:".06em"}}>{c.k==="port"?(c.side==="ir"?"Iranian port":"Oman/UAE port"):"Island"}</span>
+          <span style={{fontSize:8.5,color:PAPERFAINT,fontFamily:"monospace"}}>{c.lat.toFixed(2)}\u00b0N \u00a0 {c.lon.toFixed(2)}\u00b0E</span>
+        </div>
+        <div style={{fontSize:13,fontWeight:700,color:PAPER,marginBottom:c.note?4:0}}>{c.n}</div>
+        {c.note&&<div style={{fontSize:11.5,color:PAPERDIM,lineHeight:1.6}}>{c.note}</div>}
+      </>;})()}
+    </div>
+    <div style={{fontSize:11,color:t.sub,lineHeight:1.5,padding:"8px 6px 2px"}}>The chokepoint is roughly 21 nautical miles (39 km) across at its narrowest, and the internationally used shipping lanes run through Omani territorial waters south of the median line — which is why Iran can threaten traffic without formally closing its own waters. Transit volume has collapsed to about 9 vessels a day against a pre-war average near 130. Coastlines are simplified; ports, islands and the chokepoint are plotted at true coordinates and the projection preserves scale.</div>
   </Card>;
 }
 
@@ -1327,7 +1653,7 @@ function PakAfghanMap({t}){
 }
 
 function IranSection({t,initialTab}){
-  const[tab,setTab]=useState(initialTab??"overview");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
+  const[tab,setTab]=useState(initialTab??"hormuz");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
   const[briefExpanded,setBriefExpanded]=useState(false);
   const conflict=CONFLICTS.find(c=>c.id==="iran");
   const events=EVENTS.iran??[];
@@ -1374,6 +1700,7 @@ function IranSection({t,initialTab}){
           </div>
         </div>}
       </div>
+      <RHRadarMap t={t}/>
       <ConflictOverviewCard conflict={conflict} t={t}/>
       <Hero t={t} style={{borderLeft:"4px solid #8b5cf6"}}>
         <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>🚨 War Reignites — Five-Night Pause Ends, Egypt & Saudi Arabia Drawn In</div>
@@ -3725,7 +4052,7 @@ const SECTION_TAB_LISTS={
   ukraine:[{id:"overview",label:"📊 Overview"},{id:"losses",label:"⚖️ Losses"},{id:"manpower",label:"👥 Manpower"},{id:"frontline",label:"🎯 Frontline"},{id:"southernfront",label:"🌊 Southern Front"},{id:"strikewar",label:"💥 Strike War"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"analysts",label:"📺 Analysts"},{id:"belarus",label:"🇧🇾 Belarus Axis"}],
   usmil:[{id:"escalation",label:"🌐 Escalation Risk"},{id:"china",label:"🇨🇳 China Deep Dive"},{id:"systems",label:"🚀 Systems"},{id:"posture",label:"🌍 Posture"},{id:"nato",label:"🤝 NATO & Allies"},{id:"rankings",label:"🌐 Global Rankings"},{id:"indopac",label:"🌏 Indo-Pacific Balance"},{id:"fighters5g",label:"✈️ 5th-Gen Fighters"},{id:"navypipe",label:"🚢 Naval Pipeline"},{id:"space",label:"🛰️ Space & Counterspace"},{id:"minerals",label:"⛏️ Critical Minerals"},{id:"arctic",label:"🧊 Arctic"},{id:"defindustry",label:"🏭 Defense Industry"},{id:"dprk",label:"🇰🇵 DPRK-Russia Axis"},{id:"vectors",label:"⚠️ Active Vectors"},{id:"arsenals",label:"🌐 Global Arsenals"},{id:"delivery",label:"🚀 Delivery Systems"},{id:"treaties",label:"📜 Treaties & Doctrine"},{id:"cyber",label:"🌪️ Cyber & Hybrid"}],
   dronewar:[{id:"overview",label:"Overview"},{id:"saturation",label:"🌡 Saturation"},{id:"strikelog",label:"📋 Strike Log"},{id:"yearly",label:"📅 Yearly"},{id:"intercept",label:"Intercept"},{id:"cost",label:"💰 Cost"},{id:"impact",label:"⚠️ Casualties"},{id:"assets",label:"Drone Assets"},{id:"events",label:"Key Events"}],
-  iran:[{id:"overview",label:"🇮🇷 Overview"},{id:"hormuz",label:"🚢 Hormuz"},{id:"timeline",label:"📅 Timeline"},{id:"gaps",label:"⚠️ Gaps"}],
+  iran:[{id:"hormuz",label:"🚢 Hormuz"},{id:"overview",label:"🇮🇷 Overview"},{id:"timeline",label:"📅 Timeline"},{id:"gaps",label:"⚠️ Gaps"}],
   venezuela:[{id:"cuba",label:"🇨🇺 Cuba Blockade"},{id:"spear",label:"🚤 Southern Spear"},{id:"conflict",label:"🇻🇪 Venezuela"},{id:"mexico",label:"🇲🇽 Mexico"},{id:"haiti",label:"🇭🇹 Haiti"},{id:"colombia",label:"🇨🇴 Colombia"}],
   scs:[{id:"overview",label:"🗺️ Overview"},{id:"incidents",label:"⚠️ Incidents"},{id:"military",label:"⚔️ Military"},{id:"law",label:"⚖️ Law & Claims"},{id:"taiwan",label:"🌊 Taiwan Strait"}],
   gaza:[{id:"conflict",label:"⚔️ Gaza"},{id:"humanitarian",label:"🆘 Humanitarian"},{id:"governance",label:"🌐 Governance"},{id:"lebanon",label:"🇱🇧 Lebanon Front"},{id:"syria",label:"🇸🇾 Syria"}],
