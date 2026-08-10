@@ -31,6 +31,8 @@ const CONFLICTS=[
 ];
 
 const NEWS=[
+  {id:"b_iran_drops_both_legs_demand",confidence:"Reported",conflictId:"iran",severity:"major",icon:"🤝",headline:"Iran Drops ‘Both Legs’ Hormuz Demand, But NSC Lists Concrete Conditions Before Reopening",conflict:"Iran",conflictColor:"#8b5cf6",publishedAt:"Aug 9, 2026",bullets:["A senior Iranian source told Reuters that Tehran has dropped its original demand for control over shipping in both directions through the Strait of Hormuz — a real concession from earlier in the week — though the source said Iran is ‘unlikely to change its position’ further from here","Iran’s national security chief’s conditions for reopening are now concrete: ending the US naval blockade of Iranian ports, withdrawing military forces from the region, and permanently ending the war, all before the strait reopens; a US official told AP any deal won’t involve Iranian approval or charges for transit","Trump confirmed directly in a call with Axios that the US is deliberately ‘low-keying’ negotiations — ‘we are only semi-negotiating with them, we are just watching Iran with its huge inflation’ — while separately rejecting any Iranian toll-charging on shipping"],sources:["Reuters","AP","Axios"],impact:"A genuine concession on one front paired with a harder concrete-conditions list on another — the pattern of partial progress alongside persistent core disagreement continues",impactColor:"#f97316"},
+  {id:"b_caffa_ship_transfer_sweden",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"⚖️",headline:"Sweden’s Top Court Finalizes First-Ever Foreign Order to Hand Russian Shadow-Fleet Ship to Ukraine",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Aug 4, 2026",bullets:["Sweden’s Supreme Court dismissed the owner’s final appeal on Aug 4, finalizing lower-court rulings that the cargo vessel Caffa — detained off Trelleborg in March on suspicion of transporting grain stolen from Russian-occupied Ukrainian territory — must be transferred to Ukraine","Prosecutors allege the Caffa loaded roughly 3,000 tonnes of barley at occupied Sevastopol before unloading in Tartus, Syria; the ship was sailing under a false Guinean flag and had its classification withdrawn by Russia’s Maritime Register in 2025","Ukrainian FM Andrii Sybiha called it a ‘landmark decision,’ and reports describe it as the first time any foreign court has ordered the handover of a Russian-linked vessel tied to stolen Ukrainian grain — a new legal precedent beyond sanctions listings"],sources:["Kyiv Independent","Reuters","Euronews"],impact:"Opens a judicial avenue — not just executive sanctions — for accountability over Russia’s shadow-fleet operations and occupied-territory resource theft, with potential to be replicated in other European courts",impactColor:"#22c55e"},
   {id:"b_khamenei_video_aired_aug8",confidence:"Reported",conflictId:"iran",severity:"critical",icon:"📹",headline:"Iranian State Media Airs First Video of Supreme Leader Khamenei Since March Appointment",conflict:"Iran",conflictColor:"#8b5cf6",publishedAt:"Aug 8, 2026",bullets:["Iranian state-affiliated broadcaster IRIB aired an undated video of Supreme Leader Mojtaba Khamenei — the first footage released since his March appointment following the assassination of his father Ali Khamenei in the war’s opening strikes","The video is the first visual development since AP reported this week that two regional officials briefed on the Hormuz talks believe Khamenei was wounded in those same strikes, and follows President Pezeshkian’s own admission that contact with him has become ‘very difficult’","The footage carries no clear broadcast date or context, leaving real ambiguity about when it was actually recorded and his current condition — it should be read as a new data point rather than a resolution of the story"],sources:["CNN"],impact:"The first visual evidence of Iran’s supreme leader in five months, arriving as the Hormuz talks he must personally approve remain unresolved",impactColor:"#f97316"},
   {id:"b_brovary_strike_family_killed",confidence:"Confirmed",conflictId:"ukraine",severity:"critical",icon:"🥍",headline:"Russian Overnight Strike Kills Grandmother, Grandfather and 3-Year-Old Grandson in Kyiv Oblast",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Aug 8, 2026",bullets:["President Zelensky said the three people killed in an overnight strike on Brovary district, Kyiv Oblast, were a grandmother, grandfather and their three-year-old grandson","The strike was part of a wider overnight attack starting the evening of Aug 7 using six Iskander-M ballistic missiles and S-400 anti-aircraft guided missiles launched from Bryansk region, alongside 151 drones","Russian strikes also hit Dnipropetrovsk region nearly 50 times across five districts the same day (2 killed, 6 wounded) and Donetsk region (1 killed, 15 wounded), while Ukraine’s own campaigns continued — 218 Russian shadow-fleet vessels struck since Jul 6, and a confirmed strike on the Ilsky Oil Refinery in Krasnodar"],sources:["Kyiv Independent","Ukrinform"],impact:"Among the most personally devastating single strikes reported this week, killing three generations of one family",impactColor:"#dc2626"},
   {id:"b_khamenei_wounded_ap_report",confidence:"Reported",conflictId:"iran",severity:"critical",icon:"🩹",headline:"AP: Regional Officials Believe Khamenei Was Wounded in War’s Opening Strikes",conflict:"Iran",conflictColor:"#8b5cf6",publishedAt:"Aug 7, 2026",bullets:["Two regional officials briefed on the Hormuz negotiations told AP they believe Supreme Leader Mojtaba Khamenei was wounded in the war’s opening strikes — the first sourced, attributed explanation for why he has made no in-person public appearance in the five months since succeeding his father","The report follows President Pezeshkian’s own admission Wednesday that reaching Khamenei directly has become ‘very difficult,’ and an Iran International exclusive this week describing Pezeshkian’s only known meeting with a man presented as Khamenei as a few minutes in a dark, tinted-window car","Separately, two Axios sources say FM Araghchi agreed to Hormuz deal terms ‘in principle’ over the weekend, but still needs sign-off from Khamenei and Iran’s Supreme National Security Council — meaning the same access bottleneck now blocks a deal Iran has reportedly already agreed to in substance"],sources:["AP","Axios"],impact:"The first sourced explanation for Iran’s months-long leadership opacity, and a direct complication for the Hormuz talks given that both the wounded-Khamenei reporting and the deal’s final sign-off trace back to the same access problem",impactColor:"#dc2626"},
@@ -55,25 +57,22 @@ const NEWS=[
   {id:"b_iran_war_reescalates_egypt_jul30",confidence:"Confirmed",conflictId:"iran",severity:"critical",icon:"🔴",headline:"Iran War Reignites: US Launches \u2018Heavy Wave\u2019 of Strikes After Iranian Attack on Jordan Base, Egypt Hit for First Time",conflict:"Iran",conflictColor:"#8b5cf6",publishedAt:"Jul 30, 2026",bullets:["The five-night pause ended: Iran struck US forces at a base in Jordan Jul 28-29 (intercepted), and CENTCOM responded with a \u2018heavy wave\u2019 of strikes on dozens of IRGC targets across southern/coastal Iran, including military command centers and drone facilities. Iranian state media reported a couple and their 2-year-old child killed on Qeshm island; the US also sanctioned 10 entities and 8 tankers","A drone hit a US-owned LNG storage tanker at Egypt\u2019s Damietta port \u2014 initially reported with anonymous Iranian sources hinting at involvement, though Iran\u2019s Foreign Ministry has since officially denied any Iranian role","Saudi Arabia conducted joint strikes with the US against Iranian-backed militias in Iraq \u2014 its first acknowledged direct involvement in the war \u2014 while Jordan intercepted a separate Iranian missile attack. The IRGC says the Strait of Hormuz stays closed as long as US \u2018interference\u2019 continues"],sources:["Al Jazeera","CNN","Havana Times/Democracy Now"],impact:"The clearest evidence yet that the war is expanding geographically rather than winding down \u2014 Egypt and Saudi Arabia\u2019s direct involvement for the first time raises the number of states in active combat roles, a material shift for any regional escalation assessment",impactColor:"#dc2626"},
   {id:"b_ryazan_refinery_zelensky_trump_jul29",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"🟠",headline:"Zelensky Calls White House Meeting with Trump \u2018Good,\u2019 Then Ukraine Hits Russia\u2019s Ryazan Refinery",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Jul 29, 2026",bullets:["Zelensky met Trump at the White House Jul 28, describing the meeting as \u2018good\u2019 and covering Patriot production licenses and diplomacy, per his Fox News interview \u2014 \u2018the initiative is not in the hands of Putin,\u2019 he said afterward","Hours later, Ukraine\u2019s General Staff and SOF confirmed a strike on the Rosneft-owned Ryazan oil refinery (~17.1M tonnes/year, ~5% of Russian refining capacity) and an adjacent Wildberries logistics complex \u2014 the refinery had previously been forced offline for an extended period after a May 2026 strike","The same week also saw strikes reach a classified Rosrezerv strategic fuel reserve in Udmurtia (1,300km deep) and an export terminal in Rostov Oblast, continuing the sustained campaign against Russian fuel infrastructure"],sources:["Kyiv Independent","Washington Post"],impact:"A high-level US-Ukraine diplomatic reset paired with one of the deepest and most consequential strikes of the campaign \u2014 reinforcing that materiel/diplomatic support and battlefield pressure are moving together rather than as separate tracks",impactColor:"#f97316"},
     {id:"b_graham_act_advances_jul29",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"🟠",headline:"Senate Advances Graham Russia-Iran Sanctions Act in Tribute Vote Following Senator\u2019s Death",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Jul 29, 2026",bullets:["The Senate voted to advance the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026, named for the senator who died Jul 13 \u2014 a watered-down version of his original proposed measures, now also targeting Iran per Trump\u2019s demand","This directly supersedes the Jul 14 defense-bill blockage, which had cited the Iran war and Graham\u2019s death as complicating factors \u2014 the sanctions track has since moved forward even as broader appropriations remain contested"],sources:["Kyiv Independent"],impact:"Shows Congress finding a path forward on Russia/Iran sanctions even where broader defense appropriations remain gridlocked \u2014 a modest but concrete legislative data point for the dashboard\u2019s sanctions and political-calendar tracking",impactColor:"#f97316"},
-  {id:"b_crimea_tyumen_jul26",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"🟠",headline:"Ukraine Strikes Tyumen Refinery and Multiple Crimea Targets Overnight as Russia Preps New Push Toward Dobropillia",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Jul 27, 2026",bullets:["Ukraine's Defense Forces struck a Chornomornaftogaz facility, a drone relay station, a logistics bridge in Donetsk region, a drone storage site and a troop concentration area in Luhansk region overnight Jul 26, per Ukraine's General Staff","A separate strike hit the Tyumen oil refinery, confirmed by Ukrainian officials, extending the deep-strike campaign against Russian fuel infrastructure","Russian forces are reported preparing a new offensive push toward Dobropillia while diverting additional resources to protect military logistics from continuing Ukrainian strikes; despite increased security and repeated assaults, Russian troops have so far failed to achieve their objectives there"],sources:["RBC-Ukraine"],impact:"Continues the established pattern of sustained Ukrainian pressure on Russian logistics and fuel infrastructure even as Russia signals a fresh offensive push in Donetsk region",impactColor:"#f97316"},
-  {id:"b_uk_burnham_zelensky_jul27",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"🟠",headline:"UK PM Burnham Makes First Ukraine Visit, Pledges \u2018Stone Cloak\u2019 Electronic Warfare Tech License to Kyiv",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Jul 27, 2026",bullets:["New UK Prime Minister Burnham met Zelensky in his first visit to Ukraine as premier, per the Kyiv Independent, pledging to honor every commitment the UK has made to Ukraine in full","The visit included a licensing deal granting Ukraine production rights to the UK\u2019s \u2018Stone Cloak\u2019 electronic warfare systems \u2014 the kind of local-production materiel arrangement that has become the dominant form of Western support short of direct troop involvement","Comes as Russian strikes continue at high tempo (Kyiv, Chernihiv, Zaporizhzhia hit in the past 48 hours) and as Krymenergo reports Crimea-wide power restrictions following Ukrainian strikes on the peninsula"],sources:["Kyiv Independent"],impact:"A concrete continuity signal from a new UK government at a moment when sustained Western materiel support \u2014 not new diplomatic tracks \u2014 is what\u2019s actually moving the war",impactColor:"#f97316"},
-  {id:"b_donetsk_assault_repelled_jul22",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"🟠",headline:"Ukraine Repels One of Russia's Largest Assaults of the War in Donetsk Region",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Jul 26, 2026",bullets:["A four-hour assault on Jul 22 involved troops from three separate Russian formations and dozens of armored and military vehicles pushing into the Donetsk region — one of the largest single Russian assaults of the war to date","Ukrainian forces, including the Azov Corps, stopped the advancing columns using minefields, explosive barriers, drones and tactical aircraft, which also destroyed pontoon bridges Russian troops were using to move armor across; the assault ended with heavy Russian losses","Ukraine's General Staff and Security Service separately carried out a new wave of strikes Jul 24-25 against Russian command posts, ammunition depots, drone facilities, air defense and radar systems (including an S-400), plus an offshore oil platform and vessels allegedly moving military cargo between Iran and Russia"],sources:["RBC-Ukraine","Ukraine General Staff"],impact:"A rare clean tactical win worth flagging on its own terms — three-formation combined-arms assaults are exactly the kind of push Russia has struggled to sustain all war, and this one ended in heavy losses for the attackers rather than a breakthrough",impactColor:"#22c55e"},
     ];
 
 const LOSSES={ukraine:[
-  {id:1,category:"Personnel",total:"1,456,610",todayChange:"+1,190",color:"#ef4444",icon:"☠️",description:"Killed & wounded (est.)"},
-  {id:2,category:"Tanks",total:"12,246",todayChange:"+4",color:"#f97316",icon:"🪖",description:"Main battle tanks"},
-  {id:3,category:"Armoured Vehs",total:"25,087",todayChange:"+3",color:"#eab308",icon:"🚧",description:"APCs, IFVs, MRAPs"},
-  {id:4,category:"Artillery",total:"47,522",todayChange:"+67",color:"#84cc16",icon:"💥",description:"Guns, howitzers, mortars"},
-  {id:5,category:"MLRS",total:"2,006",todayChange:"+4",color:"#22c55e",icon:"🚀",description:"Multiple launch rockets"},
-  {id:6,category:"Air Defence",total:"1,547",todayChange:"+7",color:"#06b6d4",icon:"🛡️",description:"SAM & SHORAD systems"},
-  {id:7,category:"UAVs",total:"449,606",todayChange:"+1,751",color:"#5b8ec8",icon:"🛸",description:"Operational UAVs"},
+  {id:1,category:"Personnel",total:"1,457,740",todayChange:"+1,130",color:"#ef4444",icon:"☠️",description:"Killed & wounded (est.)"},
+  {id:2,category:"Tanks",total:"12,253",todayChange:"+7",color:"#f97316",icon:"🪖",description:"Main battle tanks"},
+  {id:3,category:"Armoured Vehs",total:"25,103",todayChange:"+16",color:"#eab308",icon:"🚧",description:"APCs, IFVs, MRAPs"},
+  {id:4,category:"Artillery",total:"47,621",todayChange:"+99",color:"#84cc16",icon:"💥",description:"Guns, howitzers, mortars"},
+  {id:5,category:"MLRS",total:"2,013",todayChange:"+7",color:"#22c55e",icon:"🚀",description:"Multiple launch rockets"},
+  {id:6,category:"Air Defence",total:"1,556",todayChange:"+9",color:"#06b6d4",icon:"🛡️",description:"SAM & SHORAD systems"},
+  {id:7,category:"UAVs",total:"451,248",todayChange:"+1,642",color:"#5b8ec8",icon:"🛸",description:"Operational UAVs"},
   {id:8,category:"Aircraft",total:"439",todayChange:"—",color:"#8b5cf6",icon:"✈️",description:"Fixed-wing aircraft"},
   {id:9,category:"Helicopters",total:"354",todayChange:"—",color:"#ec4899",icon:"🚁",description:"Rotary-wing aircraft"},
   {id:10,category:"Cruise Missiles",total:"5,007",todayChange:"—",color:"#14b8a6",icon:"🎯",description:"Destroyed in flight"},
-  {id:11,category:"Ships/Boats",total:"34",todayChange:"—",color:"#64748b",icon:"⛵",description:"Naval vessels"},
-  {id:12,category:"Vehicles",total:"130,682",todayChange:"+416",color:"#a78bfa",icon:"🚛",description:"Trucks & logistics"},
-  {id:13,category:"Ground Robots",total:"2,138",todayChange:"—",color:"#f43f5e",icon:"🤖",description:"UGV platforms"},
+  {id:11,category:"Ships/Boats",total:"35",todayChange:"+1",color:"#64748b",icon:"⛵",description:"Naval vessels"},
+  {id:12,category:"Vehicles",total:"131,775",todayChange:"+1,093",color:"#a78bfa",icon:"🚛",description:"Trucks & logistics"},
+  {id:13,category:"Ground Robots",total:"2,171",todayChange:"+33",color:"#f43f5e",icon:"🤖",description:"UGV platforms"},
   {id:14,category:"Special Equip",total:"4,496",todayChange:"+1",color:"#fb923c",icon:"🔧",description:"Engineering & EW"},
 ],gaza:[
   {id:15,category:"Total Killed",total:"73,066+",todayChange:null,color:"#f59e0b",icon:"☠️",description:"Total killed since Oct 2023"},
@@ -110,7 +109,7 @@ const STRIKES=[
   {id:17,date:"Jul 9",targetName:"Tver & Stavropol Oil Depots + Azov Tankers",region:"Tver/Stavropol/Rostov, Russia",distance:800,category:"Energy",icon:"🛢️",severity:"critical",result:"Fuel-chain day 500+km deep: SBU drones fired two oil depots (Tver, confirmed by the acting governor; Stavropol's Vyazniki reservoirs with apartment evacuations) while naval drones set two more tankers ablaze in the Sea of Azov. Russia's cumulative response measures — a diesel-export ban and Putin's call for Crimea fuel subsidies — mark the campaign's shift from attrition to economic coercion."},
   {id:16,date:"Jul 6",targetName:"Omsk Oil Refinery (ELOU-AVT-11 unit)",region:"Omsk Oblast, Russia",distance:2500,category:"Energy",icon:"🛢️",severity:"critical",result:"The deepest strike of the war: upgraded FP-1 drones flew roughly 3,000km to hit Russia's largest refinery for the first time — 10% of national refining capacity, and the last of Russia's 11 biggest gasoline producers to be successfully targeted. Satellite imagery confirmed 4 impacts on the ELOU-AVT-11 unit; the refinery suspended operations within 24 hours."},
 ];
-const CASUALTIES=[{date:"Jun 18",value:1370},{date:"Jun 19",value:1240},{date:"Jun 20",value:1290},{date:"Jun 21",value:1290},{date:"Jun 22",value:1390},{date:"Jun 23",value:1260},{date:"Jun 24",value:1270},{date:"Jun 25",value:1310},{date:"Jun 26",value:1350},{date:"Jun 27",value:1250},{date:"Jun 28",value:1230},{date:"Jun 29",value:1350},{date:"Jun 30",value:1210},{date:"Jul 1",value:1140},{date:"Jul 2",value:1250},{date:"Jul 3",value:1190},{date:"Jul 4",value:1290},{date:"Jul 5",value:1420},{date:"Jul 6",value:1200},{date:"Jul 7",value:1260},{date:"Jul 8",value:1310},{date:"Jul 9",value:1460},{date:"Jul 10",value:1490},{date:"Jul 11",value:1320},{date:"Jul 12",value:1600},{date:"Jul 13",value:1120},{date:"Jul 14",value:1470},{date:"Jul 15",value:1340},{date:"Jul 16",value:1370},{date:"Jul 17",value:1420},{date:"Jul 18",value:1520},{date:"Jul 19",value:1600},{date:"Jul 20",value:1370},{date:"Jul 21",value:1330},{date:"Jul 22",value:1460},{date:"Jul 23",value:1410},{date:"Jul 24",value:1450},{date:"Jul 25",value:1440},{date:"Jul 26",value:1590},{date:"Jul 27",value:1560},{date:"Jul 28",value:1310},{date:"Jul 29",value:1360},{date:"Jul 30",value:1340},{date:"Jul 31",value:1470},{date:"Aug 1",value:1500},{date:"Aug 2",value:1390},{date:"Aug 3",value:1240},{date:"Aug 4",value:1130},{date:"Aug 5",value:1330},{date:"Aug 6",value:1210},{date:"Aug 7",value:1190}];
+const CASUALTIES=[{date:"Jun 18",value:1370},{date:"Jun 19",value:1240},{date:"Jun 20",value:1290},{date:"Jun 21",value:1290},{date:"Jun 22",value:1390},{date:"Jun 23",value:1260},{date:"Jun 24",value:1270},{date:"Jun 25",value:1310},{date:"Jun 26",value:1350},{date:"Jun 27",value:1250},{date:"Jun 28",value:1230},{date:"Jun 29",value:1350},{date:"Jun 30",value:1210},{date:"Jul 1",value:1140},{date:"Jul 2",value:1250},{date:"Jul 3",value:1190},{date:"Jul 4",value:1290},{date:"Jul 5",value:1420},{date:"Jul 6",value:1200},{date:"Jul 7",value:1260},{date:"Jul 8",value:1310},{date:"Jul 9",value:1460},{date:"Jul 10",value:1490},{date:"Jul 11",value:1320},{date:"Jul 12",value:1600},{date:"Jul 13",value:1120},{date:"Jul 14",value:1470},{date:"Jul 15",value:1340},{date:"Jul 16",value:1370},{date:"Jul 17",value:1420},{date:"Jul 18",value:1520},{date:"Jul 19",value:1600},{date:"Jul 20",value:1370},{date:"Jul 21",value:1330},{date:"Jul 22",value:1460},{date:"Jul 23",value:1410},{date:"Jul 24",value:1450},{date:"Jul 25",value:1440},{date:"Jul 26",value:1590},{date:"Jul 27",value:1560},{date:"Jul 28",value:1310},{date:"Jul 29",value:1360},{date:"Jul 30",value:1340},{date:"Jul 31",value:1470},{date:"Aug 1",value:1500},{date:"Aug 2",value:1390},{date:"Aug 3",value:1240},{date:"Aug 4",value:1130},{date:"Aug 5",value:1330},{date:"Aug 6",value:1210},{date:"Aug 7",value:1190},{date:"Aug 8",value:1130}];
 const EVENTS={ukraine:[{id:1,date:"Jan 6, 2026",label:"Coalition of Willing — Paris",note:"35 nations at Elysée Palace. UK + France pledge troops post-ceasefire.",color:"#22c55e",isUpcoming:false},{id:2,date:"Feb 17, 2026",label:"Geneva trilateral talks",note:"Military track: constructive. Political track: stuck.",color:"#f97316",isUpcoming:false},{id:3,date:"May 9, 2026",label:"Trump 3-day ceasefire",note:"Expired. Full-scale combat resumed immediately.",color:"#f97316",isUpcoming:false},{id:4,date:"Jun 7, 2026",label:"Putin refuses direct talks",note:"Declines Zelensky face-to-face proposal.",color:"#ef4444",isUpcoming:false},{id:5,date:"Jun 23, 2026",label:"Rail bridge to Crimea destroyed",note:"Last intact rail link from north severed.",color:"#ef4444",isUpcoming:false},{id:6,date:"Jun 25, 2026",label:"Belarus halts Shahed relay",note:"Partial compliance with Ukraine ultimatum.",color:"#22c55e",isUpcoming:false},{id:7,date:"Jun 27, 2026",label:"Putin-Lukashenko Valdai summit",note:"2-day secret talks at Putin's private residence. WSJ: Russia pressuring Belarus to open second front. No communiqué issued.",color:"#ef4444",isUpcoming:false},{id:8,date:"Jun 27, 2026",label:"Serbia's Vucic announces resignation",note:"Snap elections coming. Pro-Russia Balkan president destabilised. Serbia has warm ties with Moscow — election outcome uncertain.",color:"#f59e0b",isUpcoming:false},{id:10,date:"Jun 16-17, 2026",label:"Russia rejects Turkish ceasefire proposal",note:"Fidan proposed ceasefire in Moscow — Russia rejected, remained firm on Donbas demands. Turkey had hoped to bring both sides to NATO Ankara. Diplomatic track blocked.",color:"#ef4444",isUpcoming:false},{id:11,date:"Jun 28, 2026",label:"Putin United Russia congress — rejects diplomacy",note:"First public admission of fuel shortages. ISW: 'rejected diplomatic solutions.' United Russia formally claimed as Putin's party. Duma elections Sept 2026.",color:"#ef4444",isUpcoming:false},{id:9,date:"Jul 7, 2026",label:"NATO Ankara Summit",note:"Potential ceasefire deadline. Security guarantees on agenda. Slovakia refuses aid pledge. Turkey jet engine deal confirmed.",color:"#5b8ec8",isUpcoming:true}],iran:[
     {id:1,date:"Feb 28, 2026",label:"Operation Epic Fury",note:"US-led strikes on Iranian nuclear facilities at Natanz, Fordow, and Isfahan. Iran immediately closes Strait of Hormuz. ~6,000 total killed in strikes.",color:"#ef4444",isUpcoming:false},
     {id:2,date:"Mar\u2013May 2026",label:"Hormuz blockade \u2014 3.5 months",note:"Iran maintains full Hormuz blockade. IMO: 20,000+ seafarers stranded on ~2,000 vessels. Global oil prices spike. US naval blockade imposed in response.",color:"#f97316",isUpcoming:false},
@@ -143,9 +142,9 @@ const EVENTS={ukraine:[{id:1,date:"Jan 6, 2026",label:"Coalition of Willing — 
 {id:26,date:"Jul 30-31, 2026",label:"Retaliation widens; CENTCOM reviews Qeshm strike; Egypt denial",note:"Iran\u2019s retaliation for the Qeshm strike proved broader than first reported \u2014 IRGC claims hit US-linked targets across Kuwait, Jordan and Bahrain; Iraq\u2019s Iran-backed militias claim 20 killed, 32 wounded from US counter-strikes; more US troops wounded. CENTCOM says it is reviewing the Qeshm strike itself. Iran\u2019s Foreign Ministry has now officially denied any role in the Egypt tanker incident, walking back the earlier anonymous hints. Trump says he is \u2018losing faith\u2019 with Iran but has not ruled out a deal.",color:"#dc2626",isUpcoming:false},
     {id:27,date:"~Aug 16, 2026",label:"60-day MoU clock expires",note:"Window closes. Trump has said he could relaunch full military strikes if talks fail. If no deal, Iran could resume full enrichment and Hormuz re-closure.",color:"#ef4444",isUpcoming:true},
   ],taiwan:[{id:13,date:"Oct 1, 2025",label:"PLA median line crossings surge",note:"PLA aircraft and vessels crossing Taiwan Strait median line at record frequency — 200+ crossings in 2025.",color:"#eab308",isUpcoming:false},{id:14,date:"Feb 15, 2026",label:"Joint combat readiness patrol",note:"PLA Eastern Theater launched largest joint patrol exercise since 2023.",color:"#ef4444",isUpcoming:false},{id:15,date:"Jun 1, 2026",label:"CCG patrols east of Taiwan",note:"Japan-Philippines EEZ talks trigger PRC response beyond China own 10-dash line.",color:"#eab308",isUpcoming:false},{id:16,date:"Jun 18, 2026",label:"Taiwan defense budget raised",note:"Taiwan Legislature approved $19.7B defense budget — largest in history.",color:"#22c55e",isUpcoming:false},{id:161,date:"Jul 24, 2026",label:"China's first live-fire drill near Okinotori",note:"Directly contests a Japanese maritime claim, days after a Taiwan Strait live-fire exercise \u2014 widening friction to a second US treaty ally in the same week.",color:"#ef4444",isUpcoming:false}],"south-china-sea":[{id:17,date:"Jul 12, 2016",label:"UNCLOS Tribunal ruling",note:"PCA ruled China Nine-Dash Line has no legal basis. China rejected ruling as null and void.",color:"#22c55e",isUpcoming:false},{id:18,date:"Feb 1, 2021",label:"China Coast Guard Law enacted",note:"Authorizes CCG to use all necessary means including weapons against foreign vessels in claimed waters.",color:"#ef4444",isUpcoming:false},{id:19,date:"Mar 1, 2026",label:"EDCA sites expansion completed",note:"Philippines and US complete expansion to 9 EDCA military access sites.",color:"#5b8ec8",isUpcoming:false},{id:20,date:"Jun 3, 2026",label:"220 militia vessels — Whitsun Reef",note:"Largest maritime militia presence recorded at Whitsun Reef.",color:"#ef4444",isUpcoming:false},{id:21,date:"Jun 10, 2026",label:"Laser incident — Philippine helicopter",note:"Chinese vessel directed military-grade laser at PCG helicopter; pilot temporarily blinded.",color:"#ef4444",isUpcoming:false},{id:22,date:"Jun 24, 2026",label:"Water cannon attack — BRP Kalayaan",note:"CCG fired water cannons 18 minutes at Philippine supply boat. 2 sailors injured.",color:"#ef4444",isUpcoming:false},{id:23,date:"Jul 20, 2026",label:"CCG baton strike injures PH sailor — 2nd Thomas Shoal",note:"Chinese coast guard personnel struck a Philippine Navy sailor with a wooden baton during a confrontation near the BRP Sierra Madre. Rubio: US \u2018condemns China\u2019s dangerous and aggressive actions.\u2019",color:"#ef4444",isUpcoming:false},{id:24,date:"Jul 24, 2026",label:"3rd clash in a week — Scarborough Shoal",note:"CCG fired water cannon at Philippine vessels for the third confrontation in a single week. USS George Washington CSG transited the Luzon Strait Jul 22 in response; joint US-Philippines-Japan maritime drills followed.",color:"#ef4444",isUpcoming:false}],gaza:[{id:23,date:"Oct 10, 2025",label:"Ceasefire begins",note:"Fragile ceasefire following intensive international pressure. Hamas not disarming.",color:"#22c55e",isUpcoming:false},{id:24,date:"Jan 15, 2026",label:"1,000+ killed post-ceasefire",note:"UN: more than 1,000 Palestinians killed since the Oct 2025 ceasefire.",color:"#ef4444",isUpcoming:false},{id:25,date:"May 10, 2026",label:"ICJ orders aid corridor",note:"International Court of Justice orders Israel to open aid corridors. Only partial compliance.",color:"#f59e0b",isUpcoming:false},{id:26,date:"Jun 20, 2026",label:"UN flash appeal 13% funded",note:"$4B+ Gaza reconstruction appeal only 13% funded. Hospital system collapsed.",color:"#ef4444",isUpcoming:false},{id:52,date:"Jul 17, 2026",label:"Heaviest fire since ceasefire",note:"14+ killed in a single day including a funeral-procession strike; post-ceasefire toll passes 1,123. IDF cites control of ~65% of Gaza.",color:"#ef4444",isUpcoming:false},{id:53,date:"Jul 31, 2026",label:"Board of Peace disarmament agreement",note:"Trump announces Hamas agreed to disarm; Hamas says it won’t implement without Israeli withdrawal first. Israel hasn’t endorsed the plan.",color:"#eab308",isUpcoming:false},{id:54,date:"Aug 4, 2026",label:"Netanyahu hardens withdrawal line",note:"Netanyahu says Israel won’t withdraw ‘from current lines’ until Hamas is ‘completely disarmed.’ Al-Quds Brigades separately consented Aug 2; strikes intensified, 18 killed Aug 1 alone.",color:"#ef4444",isUpcoming:false}],venezuela:[{id:34,date:"Aug 2025",label:"Operation Southern Spear begins",note:"US Navy begins deploying warships and personnel to the Caribbean, citing the need to combat drug trafficking.",color:"#f97316",isUpcoming:false},{id:35,date:"Sep 2, 2025",label:"First lethal boat strike",note:"US strikes a vessel from Venezuela, killing all 11 aboard. Trump releases video; administration says operation will continue.",color:"#ef4444",isUpcoming:false},{id:36,date:"Nov 2025",label:"Secret Maduro-Trump contacts",note:"NYT reports Trump and Rubio spoke with Maduro by phone; a potential leaders' meeting reportedly discussed.",color:"#eab308",isUpcoming:false},{id:37,date:"Dec 2025",label:"Oil tanker seizures begin",note:"US seizures expand to sanctioned Venezuelan oil tankers as part of mounting pressure campaign.",color:"#f97316",isUpcoming:false},{id:38,date:"Jan 3, 2026",label:"Maduro captured — Operation Absolute Resolve",note:"~200 US special operations forces and 150 aircraft from 20 bases strike Caracas; Maduro and wife Cilia Flores captured and flown to New York to face narcoterrorism charges. Lasted ~2hrs 20min.",color:"#dc2626",isUpcoming:false},{id:39,date:"Jan 5, 2026",label:"Colombia's Petro threatens response",note:"Petro warns he would 'take up arms' if similar intervention occurred in Colombia. Thousands protest in Cúcuta near Venezuelan border.",color:"#f97316",isUpcoming:false},{id:40,date:"Jan 2026",label:"Rubio signals Cuba could be next",note:"Secretary of State Rubio: 'Cuban leaders should be concerned' — cites deep Cuban security/intelligence presence inside Venezuela's former government.",color:"#eab308",isUpcoming:false},{id:41,date:"Mar 6, 2026",label:"Strikes expand into Ecuador",note:"US strikes a target on the Colombia-Ecuador border, initially described as a FARC dissident compound; NYT later reports it was a dairy farm.",color:"#ef4444",isUpcoming:false},{id:42,date:"Jun 12, 2026",label:"Tren de Aragua leader killed",note:"US airstrike, conducted in coordination with Venezuelan authorities, kills Héctor 'Niño Guerrero' Guerrero Flores, leader of Tren de Aragua.",color:"#dc2626",isUpcoming:false},{id:43,date:"Jun 21, 2026",label:"221+ killed in boat strikes to date",note:"Wikipedia/AS-COA tracker: at least 221 people killed (17 missing presumed dead) across 64+ strikes on 65 vessels since Sept 2025 — UN data disputes the administration's underlying drug-trafficking-route claims.",color:"#ef4444",isUpcoming:false},{id:44,date:"Jan 29, 2026",label:"Executive Order 14380 — Cuba oil blockade",note:"Trump declares national emergency, authorizes tariffs on any country supplying oil to Cuba. NYT: first effective US blockade of Cuba since the 1962 Missile Crisis.",color:"#dc2626",isUpcoming:false},{id:45,date:"Dec 2025",label:"Venezuelan oil to Cuba cut off",note:"As part of the Venezuela intervention buildup, the US seizes tankers carrying Venezuelan oil bound for Cuba and declares a blockade on those exports — Cuba's main fuel lifeline severed a month before the broader blockade EO.",color:"#f97316",isUpcoming:false},{id:46,date:"Mar 13, 2026",label:"Díaz-Canel confirms talks with US",note:"Cuban First Secretary publicly confirms diplomatic talks aimed at addressing the oil/energy blockade. Cuba releases 51 political prisoners as part of the opening; 2,000+ more released by Apr 3.",color:"#eab308",isUpcoming:false},{id:47,date:"Mar 30, 2026",label:"Russian oil tanker defies blockade",note:"100,000-tonne Russian crude shipment arrives in Havana — described by CSIS as calculated blockade-running timed to avoid a showdown while the Iran war was still active. A reported second shipment later turned back.",color:"#f97316",isUpcoming:false},{id:48,date:"May 14, 2026",label:"Cuba: out of oil and diesel",note:"Cuban Ministry of Energy and Mines warns the country has run out of oil and diesel entirely.",color:"#ef4444",isUpcoming:false},{id:49,date:"May 21, 2026",label:"Raúl Castro indicted",note:"US indicts former Cuban leader (believed by some critics to still govern as an éminence grise) over the 1996 Brothers to the Rescue shootdown — a move analysts compare to the pre-capture indictment pattern used against Maduro.",color:"#dc2626",isUpcoming:false},{id:50,date:"Jun 2026",label:"OHCHR documents humanitarian collapse",note:"Infant mortality risen to 9.9/1,000 births, childhood cancer survival down to 65%, food production down 60%, medicine supplies at only 30% of normal levels — UN attributes the deterioration to the blockade.",color:"#dc2626",isUpcoming:false},{id:51,date:"Jul 8, 2026",label:"Cuba takes blockade to UN General Assembly",note:"FM Rodríguez: record $8B in damage Mar 2025–Feb 2026 (+7% YoY), excluding the fuel blockade's impact; talks with Washington have made 'no progress.' US Amb. Waltz: 'There is no American blockade.' Procedural vote passed 136-9-30 — but Germany and Canada abstained, signaling erosion of Cuba's traditional UN support under US lobbying.",color:"#f97316",isUpcoming:false},{id:52,date:"Aug 3, 2026",label:"Earthquake toll passes 6,125",note:"National Assembly President Jorge Rodríguez confirms 6,125 dead, 61,000 hospitalized, from the Jun 24 twin earthquakes — up nearly 600 from the Jul 25 count. World Bank estimates ~$20B in physical damage.",color:"#0ea5e9",isUpcoming:false}]};
-const BRIEFING={summaryShort:"Russian losses reached 1,456,610 (+1,190 on Aug 7). A Russian overnight strike killed a grandmother, grandfather and their 3-year-old grandson in Kyiv Oblast’s Brovary district. Iran: state media aired an undated video of Supreme Leader Khamenei — the first since his March appointment following his father’s assassination — as Iran and Oman say a Hormuz deal is ‘very close’ but Iran’s Supreme National Security Council secretary says the strait ‘will never fully reopen’ until the US ‘corrects its behavior.’ The UAE separately blamed Iran for targeting an ADNOC-linked ship. Ukraine’s naval interdiction campaign has now hit 218 Russian shadow-fleet vessels since Jul 6.",summary:"Russian combat losses reached 1,456,610 as of the Aug 8 General Staff report (+1,190 on Aug 7), within the sustained range. Overnight Russian strikes killed three civilians in Kyiv Oblast’s Brovary district — a grandmother, grandfather and their three-year-old grandson, per Zelensky — part of a wider attack using six Iskander-M ballistic missiles, S-400 munitions and 151 drones. On Iran, state media aired an undated video of Supreme Leader Mojtaba Khamenei, the first released since his March appointment following his father’s assassination in the war’s opening strikes — a direct development on last cycle’s reporting that he was wounded and had made no public appearance in five months. The video’s lack of a clear date leaves real questions about timing and current condition, but it is the first visual evidence of any kind. Separately, Iran and Oman both describe a Hormuz shipping deal as ‘very close,’ with Iranian lawmakers said to have largely landed on a framework pending final approval — but Supreme National Security Council secretary Mohammad Bagher Zolghadr said publicly that the strait ‘will never fully reopen’ until the US ‘corrects its behavior,’ a harder public line than the negotiating channel suggests. The UAE blamed Iran for targeting a ship used by the Abu Dhabi National Oil Company, and Oman’s foreign ministry issued a pointed statement urging against actions that could affect the ‘ongoing’ negotiations, condemning ‘repeated attacks’ on transiting ships without naming Iran directly. In Ukraine, the naval interdiction campaign continues to expand: Ukraine’s Unmanned Systems Forces have now struck 218 Russian shadow-fleet vessels since the campaign began Jul 6 (134 in the Sea of Azov, 84 in the Black Sea), with 12 more hit between Aug 1-8 alone. Ukraine’s Defense Intelligence also confirmed a strike on the Ilsky Oil Refinery in Russia’s Krasnodar region.",watch:"Whether the Khamenei video gets a broadcast date and further corroboration, or remains ambiguous; whether Iran’s Zolghadr’s hardened public line undercuts the ‘very close’ Hormuz framing from Tehran’s own negotiators; and whether the UAE-Iran tanker incident escalates into a wider Gulf shipping dispute alongside the main US-Iran talks.",generatedAt:new Date().toISOString()};
-const UKRAINE_BRIEFING={summaryShort:"Russian losses reached 1,456,610 as of the Aug 8 report (+1,190 on Aug 7, plus 1,751 UAVs destroyed). Overnight strikes killed a grandmother, grandfather and their 3-year-old grandson in Brovary, Kyiv Oblast, using six Iskander-M ballistic missiles, S-400 munitions and 151 drones. Ukraine’s naval interdiction campaign has now hit 218 Russian shadow-fleet vessels since Jul 6. Defense Intelligence confirmed a strike on the Ilsky Oil Refinery in Krasnodar.",summary:"Russian losses reached 1,456,610 as of the Aug 8 General Staff report (+1,190 on Aug 7, alongside 1,751 UAVs destroyed that day), within the sustained range. The worst single incident this cycle was an overnight strike on Brovary in Kyiv Oblast that killed a grandmother, grandfather and their three-year-old grandson, per Zelensky — part of a wider attack using six Iskander-M ballistic missiles, S-400 anti-aircraft munitions and 151 drones launched from Bryansk region. Elsewhere, Russian strikes on Dnipropetrovsk region hit five districts nearly 50 times in a single day, killing two and wounding six; a separate strike in Donetsk region killed one and wounded 15. Ukraine’s own campaigns continued on multiple fronts: the naval interdiction effort against Russian shadow-fleet vessels has now struck 218 ships since starting Jul 6 (134 in the Sea of Azov, 84 in the Black Sea), with 12 more hit between Aug 1-8 alone; Defense Intelligence confirmed a strike on the Ilsky Oil Refinery in Russia’s Krasnodar region; and Ukrainian forces continued hitting military targets in occupied Crimea, including an early-warning radar station, drone relay sites, and an attack-drone storage/launch facility. Separate reports describe an explosion and fire in the Russian city of Bryansk and a reported sea-drone attack on occupied Yalta that prompted gunfire and a beach evacuation. Zelensky, addressing the recent ballistic intercept shortfall, said Patriot interceptors and other air defense systems help protect people ‘when they’re in Ukraine, rather than sitting in warehouses’ — a pointed comment on the pace of Western deliveries.",assessment:[{cat:"Attrition",text:"Cumulative losses reached 1,456,610 as of Aug 8 (+1,190 on Aug 7), within the sustained 1,100–1,500/day range. Equipment losses that day included 1,751 UAVs."},{cat:"Civilian Toll — Brovary",text:"An overnight strike on Brovary, Kyiv Oblast, killed a grandmother, grandfather and their three-year-old grandson, per Zelensky — part of a wider attack with six Iskander-M ballistic missiles, S-400 munitions and 151 drones."},{cat:"Regional Strikes",text:"Dnipropetrovsk region was hit nearly 50 times across five districts in a single day (2 killed, 6 wounded); a separate Donetsk region strike killed one and wounded 15."},{cat:"Naval Interdiction",text:"Ukraine’s Unmanned Systems Forces have struck 218 Russian shadow-fleet vessels since the campaign began Jul 6 (134 Sea of Azov, 84 Black Sea), with 12 more hit Aug 1-8 alone — a sustained, expanding maritime pressure campaign."},{cat:"Deep Strikes",text:"Defense Intelligence confirmed a strike on the Ilsky Oil Refinery in Russia’s Krasnodar region, continuing the sustained campaign against Russian energy infrastructure alongside continued strikes on military targets in occupied Crimea."},{cat:"Air Defense",text:"Zelensky said Patriot interceptors and other systems help protect people ‘when they’re in Ukraine, rather than sitting in warehouses’ — a pointed remark amid the ongoing ballistic intercept shortfall tracked on this page."},{cat:"Political — Ambassador Vacancy",text:"No successor has been named to the Washington ambassadorship since Zelensky dismissed Olha Stefanishyna by decree Aug 3; a Ukrainian court has since set her bail at $130,000 amid the underlying anti-corruption probe."}],watch:"Whether the Brovary strike and similar civilian-toll incidents shift the pace of Western air-defense deliveries; whether the naval interdiction campaign’s pace against shadow-fleet vessels continues at its current rate; and whether the ballistic intercept rate shows any recovery as Zelensky publicly presses allies on delivery pace.",generatedAt:new Date().toISOString()};
-const IRAN_BRIEFING={summaryShort:"Iranian state media aired an undated video of Supreme Leader Khamenei — the first released since his March appointment following his father’s assassination in the war’s opening strikes, and the first visual development since last cycle’s reporting that he was wounded and unseen for five months. The video’s lack of a clear date leaves real ambiguity. Separately, Iran and Oman both call a Hormuz deal ‘very close,’ but SNSC secretary Zolghadr says the strait ‘will never fully reopen’ until the US ‘corrects its behavior’ — a harder public line than the negotiating channel suggests. The UAE blamed Iran for targeting an ADNOC-linked ship; Oman urged against actions threatening the talks. Roughly 8 days to Aug 16.",summary:"The most significant development this cycle follows directly from last week’s reporting: Iranian state media aired an undated video of Supreme Leader Mojtaba Khamenei, the first released since his March appointment following his father Ali Khamenei’s assassination in the war’s opening strikes. It is the first visual evidence of any kind since AP reported two regional officials believe Khamenei was wounded in those same strikes, and follows President Pezeshkian’s own admission that contact with him has become ‘very difficult’ and an Iran International report describing Pezeshkian’s only known meeting with a man presented as Khamenei as minutes in a dark car. The video’s lack of a clear broadcast date or context leaves real ambiguity about his current condition and when the footage was actually recorded — it should be read as a data point, not a resolution, of the story. On the Hormuz track itself, Iran and Oman have each signaled they are close to a deal on managing the waterway; Iranian state broadcaster IRIB reported lawmakers have ‘largely landed’ on a proposed framework with Oman pending ‘final approval.’ But Iran’s Supreme National Security Council secretary Mohammad Bagher Zolghadr said publicly Saturday that the strait ‘will never fully reopen’ until the United States ‘corrects its behavior’ — a considerably harder public line than the ‘very close’ framing coming from the negotiating channel, and a reminder that Iran’s public and private positions have diverged repeatedly throughout this process. Separately, the UAE blamed Iran for targeting a ship used by the Abu Dhabi National Oil Company, a new incident distinct from the main Hormuz negotiation. Oman’s foreign ministry issued a pointed statement, without naming Iran directly, urging against actions that could affect the ‘ongoing’ negotiations and condemning ‘repeated attacks’ on transiting ships — a sign Muscat is growing impatient with continued incidents undermining its mediating role. IRGC spokesperson Gen. Hossein Mohebbi also commented publicly on strait reopening conditions this week, continuing the pattern of Iranian military officials speaking alongside, and sometimes in tension with, the diplomatic track. None of the underlying substantive gaps — enrichment, missiles, formal Hormuz governance — have moved. The nominal 60-day Islamabad MoU window, signed Jun 17, closes around Aug 16 — roughly 8 days out.",assessment:[{cat:"Iran Domestic — First Khamenei Video",text:"State media aired an undated video of Khamenei, the first released since his March appointment — the first visual development since AP’s wounded-Khamenei reporting, but the lack of a clear date leaves real ambiguity about timing and current condition."},{cat:"Diplomacy — ‘Very Close’ But Diverging Signals",text:"Iran and Oman both call a Hormuz deal very close; IRIB reports lawmakers have largely landed on a framework pending final approval. But SNSC secretary Zolghadr says the strait won’t fully reopen until the US ‘corrects its behavior’ — a harder line than the negotiating channel suggests."},{cat:"New Incident — UAE-Iran Tanker Dispute",text:"The UAE blamed Iran for targeting a ship used by the Abu Dhabi National Oil Company, a fresh incident distinct from the main US-Iran-Oman talks that adds another aggrieved party to the Gulf shipping dispute."},{cat:"Oman’s Growing Impatience",text:"Oman’s foreign ministry urged against actions threatening the ‘ongoing’ negotiations and condemned ‘repeated attacks’ on transiting ships without naming Iran directly — a sign Muscat’s patience with continued incidents is wearing thin."},{cat:"Military Voices in Parallel",text:"IRGC spokesperson Gen. Hossein Mohebbi commented publicly on strait reopening conditions this week, continuing the recurring pattern of Iranian military officials speaking alongside — and sometimes complicating — the diplomatic track."},{cat:"MoU Clock",text:"Enrichment, the missile program, and formal Hormuz governance remain entirely unresolved regardless of any shipping-route framework. Roughly 8 days remain on the nominal 60-day MoU clock (window closes ~Aug 16)."}],watch:"Whether the Khamenei video receives an official broadcast date or further corroboration of when it was filmed; whether Zolghadr’s hardened public line signals a genuine internal split or is simply posturing ahead of a announcement; and whether the UAE-Iran tanker incident escalates into a separate diplomatic front alongside the main Hormuz talks.",generatedAt:new Date().toISOString()};
+const BRIEFING={summaryShort:"Russian losses hold at 1,457,740 (+1,130 on Aug 8) — no newer report yet. Iran walked back its ‘both legs’ Hormuz demand per Reuters, while its national security chief listed concrete conditions (end the naval blockade, withdraw forces, end the war) before reopening. Trump confirmed directly he’s ‘low-keying’ talks, watching Iran’s inflation. A new UAE tanker attack was reported burning; 15 ADNOC vessels have now been hit since the war began. Sweden’s Supreme Court finalized the first-ever foreign-court order handing a Russian shadow-fleet ship (carrying stolen Ukrainian grain) over to Kyiv.",summary:"Russian combat losses hold at 1,457,740 as of the Aug 9 General Staff report (+1,130 on Aug 8) — no newer figure has posted. Iran’s Hormuz position shifted in a real way: a senior Iranian source told Reuters that Tehran has dropped its original demand for control of both inbound and outbound shipping legs, though it’s ‘unlikely to change its position further.’ Iran’s national security chief separately listed concrete conditions for reopening the strait — ending the US naval blockade of Iranian ports, withdrawing military forces, and permanently ending the war. Trump confirmed directly, in a call with Axios, that the US is ‘low-keying’ negotiations: ‘We are only semi-negotiating with them. We are just watching Iran with its huge inflation and the fact they have no money.’ A new attack was reported on a UAE oil tanker, described as burning by Iran’s own IRGC-affiliated Sepah News; 15 ADNOC-linked vessels have now been attacked since the war began, killing one crew member and injuring 20. In Ukraine, Sweden’s Supreme Court finalized a landmark ruling Aug 4 ordering the Russian shadow-fleet vessel Caffa — detained since March over suspected stolen Ukrainian grain — handed over to Kyiv, the first time a foreign court has ordered such a transfer. UK Defence Secretary Wes Streeting met Zelensky in Kyiv, pledging continued support.",watch:"Whether Iran’s dropped both-legs demand converts into an actual signed framework, or the NSC’s harder conditions list stalls things regardless; whether the new UAE tanker attack escalates tensions further even as diplomatic language softens on one front; and whether the Caffa precedent leads to further shadow-fleet seizures by other European courts.",generatedAt:new Date().toISOString()};
+const UKRAINE_BRIEFING={summaryShort:"Russian losses hold at 1,457,740 as of the Aug 9 report (+1,130 on Aug 8) — no newer figure posted yet. Sweden’s Supreme Court finalized a landmark Aug 4 ruling ordering the shadow-fleet vessel Caffa, detained since March over suspected stolen Ukrainian grain, handed over to Kyiv — the first time a foreign court has ordered such a transfer. UK Defence Secretary Wes Streeting met Zelensky in Kyiv, pledging continued support. Naval interdiction (218+ shadow-fleet vessels since Jul 6) and the new Arsenal tab remain the week’s other Ukraine-specific developments.",summary:"Russian losses hold at 1,457,740 as of the Aug 9 General Staff report (+1,130 on Aug 8) — the next report hasn’t posted yet as of this update. The notable development this cycle is legal rather than battlefield: Sweden’s Supreme Court dismissed the owner’s final appeal on Aug 4, finalizing lower-court rulings that the seized cargo vessel Caffa — detained off Trelleborg in March on suspicion of transporting grain stolen from Russian-occupied Ukrainian territory, including a shipment from occupied Sevastopol later unloaded in Tartus, Syria — must be handed over to Ukraine for its war-crimes investigation. Ukrainian FM Andrii Sybiha called it a ‘landmark decision,’ and outlets report it’s the first time any foreign court has ordered the transfer of a Russian-linked vessel over stolen Ukrainian grain — a real precedent for the broader push to hold Russia’s shadow-fleet network accountable through third-country courts rather than just sanctions listings. Separately, UK Defence Secretary Wes Streeting met President Zelensky in Kyiv, pledging continued British support. Voice of America’s Ukrainian-language service, whose staff cuts were previously noted on this page, is set to resume broadcasting per an Aug 5 announcement. Ukraine’s naval interdiction campaign against Russian shadow-fleet vessels continues at its established pace — 218+ struck since the campaign began Jul 6 — and the new Arsenal tab (restored weapon-spec content from the retired Drone War section) remains this week’s other structural addition.",assessment:[{cat:"Attrition",text:"Cumulative losses hold at 1,457,740 as of Aug 9 (+1,130 on Aug 8) — no newer General Staff report has posted yet. Losses remain within the sustained 1,100–1,500/day range."},{cat:"Legal — Caffa Precedent",text:"Sweden’s Supreme Court finalized the order to hand the shadow-fleet vessel Caffa to Ukraine on Aug 4 — the first foreign-court-ordered transfer of a Russian ship linked to stolen Ukrainian grain, a real precedent beyond sanctions listings alone."},{cat:"Diplomacy — UK Support",text:"UK Defence Secretary Wes Streeting met Zelensky in Kyiv, pledging continued British support — part of the broader Western engagement pattern alongside the ongoing air-defense discussions noted last cycle."},{cat:"Naval Interdiction",text:"Ukraine’s Unmanned Systems Forces have struck 218+ Russian shadow-fleet vessels since the campaign began Jul 6 — the sustained maritime pressure campaign continues at pace."},{cat:"Political — Ambassador Vacancy",text:"No successor has been named to the Washington ambassadorship since Zelensky dismissed Olha Stefanishyna by decree Aug 3; a Ukrainian court has since set her bail at $130,000 amid the underlying anti-corruption probe."},{cat:"Covert War",text:"The Aug 1 Moscow restaurant bombing killing 3 and injuring 20+ remains unofficially linked, but not confirmed by either government, to Gen. Alexander Chayko, commander of Russia’s Aerospace Forces and a Bucha war-crimes suspect."}],watch:"Whether the Caffa precedent leads other European courts to order similar shadow-fleet seizures; how VOA’s Ukrainian-service relaunch affects information access; and whether the next General Staff report continues the sustained 1,100–1,500/day range.",generatedAt:new Date().toISOString()};
+const IRAN_BRIEFING={summaryShort:"Iran walked back its ‘both legs’ Hormuz demand, per a senior Iranian source cited by Reuters — though ‘unlikely to change its position further.’ Iran’s national security chief listed concrete conditions before reopening: end the US naval blockade, withdraw forces, permanently end the war. Trump confirmed directly (via Axios) the US is ‘low-keying’ talks, ‘just watching Iran with its huge inflation.’ A new UAE tanker attack was reported burning by Iran’s own IRGC-linked Sepah News; 15 ADNOC vessels hit since the war began, 1 killed, 20 injured. Rubio says Hormuz talks are separate from the ‘big deal’ on Iran’s nuclear program. The unverified Khamenei ‘critical condition’ claim from Saturday has not been corroborated. Roughly 6 days to Aug 16.",summary:"The Hormuz picture grew both more concrete and more complicated overnight. On the concessions side, a senior Iranian source told Reuters that Tehran has already dropped its original demand for full control over shipping in both directions — a real walk-back from the ‘both legs through Iranian waters’ position reported earlier in the week — though the source said Iran is ‘unlikely to change its position’ further from here. Iranian state media offered a different framing: Press TV reported talks have entered a ‘new phase’ aimed at a ‘middle corridor’ through the strait that would eventually replace the existing northern and southern routes while protecting what Tehran calls its rights as a coastal state. A US official told AP that any temporary arrangement would not involve Iranian approval for transit or charges, describing Washington’s goal as restoring a system where ‘no party controls the lanes.’ Secretary of State Rubio said the Hormuz talks are explicitly separate from ‘the big deal’ on Iran’s nuclear program. VP Vance said the US wants shipping volumes to return to pre-war levels and that any deal requires an Iranian commitment not to fire on commercial vessels. Trump, asked directly about the state of talks, rejected any toll-charging by Iran (‘I’m not going to let them charge — anybody’s going to charge, we’ll charge’) but also confirmed in a call with Axios that the US is deliberately ‘low-keying’ the negotiations: ‘We are only semi-negotiating with them. We are just watching Iran with its huge inflation and the fact they have no money.’ Iran confirmed messages are being exchanged through intermediaries but declined to call them negotiations. Iran’s national security chief’s Saturday conditions list is now more concrete: ending the US naval blockade of Iranian ports, withdrawing military forces from the region, and permanently ending the war — all before the strait reopens. Separately, a new attack was reported on a UAE oil tanker, described as currently burning by Iran’s own IRGC-affiliated Sepah News; 15 ADNOC-linked vessels have now been attacked since the war began, killing one crew member and injuring 20 others. On Iran’s opaque leadership situation, Saturday’s Times of Israel report citing unnamed opposition sources claiming Khamenei is in ‘critical condition’ has not received any independent corroboration since — it remains an unverified claim, distinct from the more credible AP reporting that he was wounded in the war’s opening strikes. None of the underlying substantive gaps — enrichment, missiles, formal Hormuz governance — have moved. The nominal 60-day Islamabad MoU window, signed Jun 17, closes around Aug 16 — roughly 6 days out.",assessment:[{cat:"Diplomacy — Iran Drops ‘Both Legs’ Demand",text:"A senior Iranian source told Reuters that Tehran has dropped its demand for control of both inbound and outbound shipping legs — a real concession — though ‘unlikely to change its position further.’ Press TV separately describes a ‘middle corridor’ proposal replacing both existing routes."},{cat:"US Position Reaffirmed",text:"A US official told AP any temporary deal won’t involve Iranian approval or charges for transit, aiming to restore a system where ‘no party controls the lanes.’ Trump: ‘I’m not going to let them charge.’ Rubio: Hormuz talks are separate from the nuclear ‘big deal.’"},{cat:"Trump Confirms ‘Low-Keying’ Directly",text:"In a call with Axios, Trump said the US is deliberately low-keying negotiations: ‘We are only semi-negotiating with them. We are just watching Iran with its huge inflation and the fact they have no money.’ Iran confirms message exchange via intermediaries, declines to call it negotiations."},{cat:"Iran NSC’s Concrete Conditions",text:"Iran’s national security chief’s conditions for reopening are now specific: end the US naval blockade of Iranian ports, withdraw military forces from the region, and permanently end the war — all before the strait reopens."},{cat:"New Incident — UAE Tanker Burning",text:"A UAE oil tanker attack was reported by Iran’s own IRGC-affiliated Sepah News, described as currently burning. 15 ADNOC-linked vessels have been attacked since the war began, killing 1 crew member and injuring 20."},{cat:"Khamenei — Still Unverified",text:"Saturday’s Times of Israel report citing opposition sources claiming Khamenei is in ‘critical condition’ has received no independent corroboration since. Remains an unverified claim distinct from AP’s more credible wounded-Khamenei reporting."},{cat:"MoU Clock",text:"Enrichment, the missile program and formal Hormuz governance remain entirely unresolved regardless of any shipping-route framework. Roughly 6 days remain on the nominal 60-day MoU clock (window closes ~Aug 16)."}],watch:"Whether Iran’s dropped both-legs demand actually converts into a signed framework given the NSC’s still-standing harder conditions; whether the new UAE tanker attack draws a wider response even as one diplomatic front eases; and whether Trump’s confirmed low-keying approach shifts back to urgency as the Aug 16 MoU deadline nears.",generatedAt:new Date().toISOString()};
 const ESCALATION_RISKS=[
   {theater:"Iran – US / Gulf",icon:"🇮🇷",level:"SEVERE",color:"#dc2626",text:"The only theater with sustained direct combat between a nuclear-armed power's forces and a state adversary. Hormuz blockade, a fortified nuclear-site target under explicit threat, and rising US/Iranian casualties push this to the top of the board."},
   {theater:"Russia – Ukraine / NATO",icon:"🇺🇦",level:"ELEVATED",color:"#f97316",text:"Deep NATO-member materiel and licensing involvement (Patriot co-production, intelligence-cued strikes) without direct NATO-Russia combat. Nuclear rhetoric remains coercive rather than operational per IC consensus — China's tacit red line is the main restraint on Moscow."},
@@ -273,16 +272,16 @@ function TrendTooltip({active,payload,label,t,color,unit}){
 function useCountdown(target){const[text,setText]=useState("");useEffect(()=>{const tick=()=>{const ms=target.getTime()-Date.now();if(ms<=0){setText("ELAPSED");return;}const d=Math.floor(ms/86400000),h=Math.floor((ms%86400000)/3600000),m=Math.floor((ms%3600000)/60000);setText(`D-${d} · ${h}h ${m}m`);};tick();const id=setInterval(tick,60000);return()=>clearInterval(id);},[target]);return text;}
 
 const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-const REPORT_NOW=new Date("2026-08-08T22:54:00Z");
-const BUILD_NUMBER=40;
+const REPORT_NOW=new Date("2026-08-10T01:55:00Z");
+const BUILD_NUMBER=47;
 function parseNewsDate(s){if(!s)return null;const m=s.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/);if(m)return new Date(Date.UTC(+m[3],MONTHS[m[1]],+m[2]));const m2=s.match(/([A-Z][a-z]{2})\s+(\d{4})/);if(m2)return new Date(Date.UTC(+m2[2],MONTHS[m2[1]],1));return null;}
 const NEWS_MAX_AGE_DAYS=14;
 // FIGURES — canonical values for numbers that recur across prose (briefings, chart
 // descriptions, news bullets). Prose can't self-update, so these exist as the single
 // source of truth to check prose against. Run scripts/check-figures.py each refresh.
 const FIGURES={
-  ruPersonnelTotal:"1,456,610",   // General Staff cumulative, as of REPORT_NOW
-  ruPersonnelDaily:"+1,190",      // most recent daily delta
+  ruPersonnelTotal:"1,457,740",   // General Staff cumulative, as of REPORT_NOW
+  ruPersonnelDaily:"+1,130",      // most recent daily delta
   ruJulyMonthlyRecord:"42,860",   // Jul 2026 monthly high (General Staff)
   mouDeadline:"Aug 16",           // Islamabad MoU 60-day window close
   venezuelaQuakeDead:"6,125",     // confirmed dead, Jun 24 twin quakes
@@ -419,11 +418,179 @@ function AirDefTab({t}){return <div>
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>Top layer — Patriot/SAMP-T</span> — The only counter to Iskander-M and Zircon-class threats. Stock is the war's binding constraint: US production ~500-650 PAC-3 MSE/yr against global demand, European GEM-T co-production (up to 1,000 missiles, DE/NL/RO/ES) the structural fix. Zelensky renewed interceptor appeals after the Kyiv strike.</div>
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>Middle layer — IRIS-T, NASAMS, F-16s</span> — Cruise-missile and heavy-drone attrition; Denmark-donated F-16s now fly regular intercept sorties. Effective but missile-hungry against saturation raids.</div>
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>Bottom layer — interceptor drones + mobile teams</span> — The 2026 revolution: $7.5k interceptor drones and gun trucks now take the bulk of Shahed/Gerbera kills, flipping the exchange ratio Ukraine's way and freeing missiles for what only missiles can stop. Sky Fortress acoustic net cues the layer.</div>
-        <div><span style={{color:t.text,fontWeight:700}}>The stress test</span> — Saturation raids mix decoys (Gerbera), jet drones (Geran-4), cruise and ballistic in one wave to exhaust the stack top-down. See Drone War → Saturation for the model; the Jul 1-2 raid is its worst-case validation.</div>
+        <div><span style={{color:t.text,fontWeight:700}}>The stress test</span> — Saturation raids mix decoys (Gerbera), jet drones (Geran-4), cruise and ballistic in one wave to exhaust the stack top-down. The Jul 1-2 raid is the worst-case validation of this pattern.</div>
       </div></div></Card>
           </div>;}
 
-function SouthernFrontTab({t}){const[sub,setSub]=useState("crimea");return <div><div style={{display:"flex",gap:6,marginBottom:12,flexWrap:"wrap"}}>{[{id:"crimea",label:"🏴 Crimea"},{id:"blacksea",label:"🌊 Black Sea"},].map(o=><button key={o.id} onClick={()=>setSub(o.id)} style={{padding:"4px 12px",fontSize:11,borderRadius:14,cursor:"pointer",fontFamily:FONT,fontWeight:700,background:sub===o.id?"#5b8ec8":"none",color:sub===o.id?"#fff":t.sub,border:`1px solid ${sub===o.id?"#5b8ec8":t.border}`}}>{o.label}</button>)}</div>{sub==="crimea"&&<CrimeaTab t={t}/>}{sub==="blacksea"&&<BlackSeaTab t={t}/>}</div>;}
+const UA_WEAPONS=[
+  { name:"Shahed-136 / Geran-2", side:"RU", cls:"Strike", role:"Loitering munition", status:"Primary RU strike drone",
+    range:"1,500-2,500 km", speed:"~185 km/h", warhead:"50-90 kg", cost:"$20-50k", ceiling:"~4,000 m",
+    engine:"Mado MD-550 piston (reverse-engineered German Limbach L550E), 2-blade pusher prop",
+    guidance:"GLONASS/GPS + inertial; Nasir anti-jam satnav; many now 2G/3G/4G + Starlink remote-control",
+    production:"~3,000/month; Alabuga capacity ceiling ~5,000/mo; 57,000+ deployed since 2022",
+    intercepted:"~91.7% (May '26)",
+    detail:"The defining weapon of the air war. Cropped delta-wing, ~3.5 m long, ~200 kg. Tiny radar cross-section (0.01-0.05 m2) and nap-of-earth flight make it hard to detect. Mass salvos are designed to saturate defenses, not to make each drone hit.",
+    facts:["Russia mastered Starlink remote control of Geran-2 by Jan 2026 \u2014 enabled a 3-drone hit on a moving passenger train near Kharkiv","Mixed swarms pair Shaheds with Gerbera/Italmas decoys; a typical wave is 30-40% decoys","Built almost entirely from Western/Chinese commercial chips \u2014 a live sanctions-evasion story","US fielded its own reverse-engineered clone (LUCAS) at ~$35k in late 2025"] },
+  { name:"Shahed MS-series (MS001)", side:"RU", cls:"Strike", role:"AI autonomous loitering munition", status:"Fielded 2025-26, expanding",
+    range:"~2,000 km", speed:"~185 km/h", warhead:"~50 kg", cost:"~$50k+", ceiling:"~4,000 m",
+    engine:"Piston pusher (Geran-2 airframe)",
+    guidance:"Nvidia Jetson Orin Nano (67 TOPS machine vision) + 4-element CRPA anti-jam antenna + Nasir 8-channel receiver",
+    production:"Subset of Geran-2 line; downed examples recovered in Sumy region June 2025+",
+    intercepted:"Harder \u2014 resists jamming",
+    detail:"A Ukrainian general called the downed MS001 a digital predator that thinks for itself. The Jetson Orin processes live camera imagery in flight, performs automatic target recognition, and can dynamically re-route without operator input. Far more resistant to GPS jamming than the base Shahed.",
+    facts:["Nvidia Jetson Orin Nano is a $249 commercial AI module \u2014 67 trillion ops/sec","Switched from Chinese BMTI chips to Xilinx (AMD) FPGA for signal processing","Carries infrared/night-vision camera for terminal guidance","Same Jetson Orin AI chip also found in Russia's V2U drone (per Ukraine DIU)"] },
+  { name:"Geran-2 Series E (MANPAD carrier)", side:"RU", cls:"Strike", role:"Anti-helicopter drone", status:"Experimental, early 2026",
+    range:"~1,500 km", speed:"~185 km/h", warhead:"18 kg 9K333 Verba MANPAD", cost:"n/a", ceiling:"~4,000 m",
+    engine:"Piston pusher", guidance:"Remote-piloted via Chinese camera",
+    production:"Experimental subcategory identified by Ukraine early 2026", intercepted:"n/a",
+    detail:"A Geran-2 carrying an 18-kg 9K333 Verba man-portable SAM on its back, designed to hunt helicopters \u2014 after Ukraine's commander-in-chief noted helicopters accounted for ~40% of Russian drone kills.",
+    facts:["Direct answer to Ukrainian helicopter air-defense success","Turns a one-way attack drone into an airborne SAM platform","Reconnaissance variant found carrying a Raspberry Pi 5 + Mini PC running Windows 11"] },
+  { name:"Geran-3 / Shahed-238 (jet)", side:"RU", cls:"Strike", role:"Jet loitering munition", status:"Limited, scaling toward 2027",
+    range:"~2,500 km", speed:"550-600 km/h", warhead:"~50 kg", cost:"~$80k est.", ceiling:"higher than piston Shahed",
+    engine:"Turbojet", guidance:"Satnav + inertial; nose-mounted camera for terminal guidance",
+    production:"Limited deployment; combined with China-produced Garpiya-3 for range", intercepted:"Much harder \u2014 3x faster than piston Shahed",
+    detail:"The turbojet evolution of the Shahed family. Roughly three times faster than the piston Geran-2, compressing Ukraine's intercept window dramatically. Expected to become a primary variant by 2027.",
+    facts:["Speed is the key threat \u2014 interceptor drones tuned for ~185 km/h Shaheds struggle against 550+ km/h","Nose camera enables terminal guidance against moving targets","Higher service ceiling complicates mobile-fire-group and MANPAD engagement"] },
+  { name:"Gerbera decoy", side:"RU", cls:"Decoy", role:"Decoy / radar saturation", status:"Mass-produced",
+    range:"~600 km", speed:"~150 km/h", warhead:"None or small", cost:"~$10-15k", ceiling:"low-medium",
+    engine:"Light piston / electric", guidance:"Basic satnav; sometimes radar reflectors to mimic Shahed signature",
+    production:"~24,000 planned for 2025 (Ukraine DIU estimate)", intercepted:"Often ignored once identified \u2014 but forces identification first",
+    detail:"A cheap plywood-and-foam decoy built to look like a Shahed on radar. Launched in mixed swarms to exhaust radar operators and soak up expensive interceptor missiles. A $10k decoy that draws a $1M NASAMS shot is a win for Russia even when it fails.",
+    facts:["Feb '26 example: ~280 Shaheds inside a ~420-drone wave \u2014 the rest decoys","Forces Ukraine to spend identification time and sometimes munitions on non-threats","Cheaper airframe makes the Russian volume numbers look larger than the true strike count"] },
+  { name:"Italmas (BM-35)", side:"RU", cls:"Decoy", role:"Light strike / decoy", status:"In service",
+    range:"~200-300 km", speed:"~150 km/h", warhead:"Small", cost:"~$15k", ceiling:"low",
+    engine:"Electric / light piston", guidance:"Satnav + inertial",
+    production:"Mixed into Shahed swarms alongside Gerbera", intercepted:"Variable",
+    detail:"A lighter, shorter-range drone used both as a decoy and for light strike. Appears repeatedly in mixed-type salvos alongside Shahed and Gerbera, each with distinct radar signatures, complicating Ukrainian classification.",
+    facts:["Part of Russia's deliberate signature-diversity strategy in swarms","Distinct flight profile from Shahed/Gerbera muddies the radar picture"] },
+  { name:"Kh-101 cruise missile", side:"RU", cls:"Missile", role:"Air-launched cruise missile", status:"Heavy use",
+    range:"~5,500 km", speed:"~720 km/h", warhead:"~450 kg", cost:"~$13M", ceiling:"low-altitude terrain-following",
+    engine:"Turbofan", guidance:"INS + GLONASS + terrain matching; modified 3+ times in 2026 to defeat UA AD",
+    production:"Launched from Tu-95MS / Tu-160 bombers", intercepted:"~53% (missiles, May '26)",
+    detail:"Russia's principal strategic air-launched cruise missile and the most problematic for Ukrainian defenses among the cruise category. Stealth profile and terrain-following flight. A single bomber volley costs more than a month of Shahed launches.",
+    facts:["3+ hardware/software revisions in 2026 specifically to beat UA intercept tactics","Cost asymmetry is stark \u2014 one Kh-101 ~ 370 Shaheds","Engels airbase (launch site) repeatedly struck by UA drones to suppress sortie rate"] },
+  { name:"Iskander-M / KN-23 ballistic", side:"RU", cls:"Missile", role:"Short-range ballistic missile", status:"Heavy use",
+    range:"500-900 km", speed:"Mach 6+", warhead:"~500 kg", cost:"~$3M", ceiling:"ballistic apogee",
+    engine:"Solid rocket", guidance:"INS + optical/terminal; quasi-ballistic maneuvering",
+    production:"Domestic (Iskander) + DPRK transfer (KN-23/24)", intercepted:"Sharply variable \u2014 as low as 0% on some nights in Aug '26; only Patriot PAC-3 is reliably effective",
+    detail:"The deadliest threat to Ukrainian civilians. Quasi-ballistic maneuvering defeats most interceptors, and only the scarce Patriot PAC-3 can reliably engage them. US PAC-3 stocks were depleted by the 2026 Iran war \u2014 see Ukraine \u2192 Overview for the current ballistic intercept-rate collapse.",
+    facts:["Russia's June 2 attack used 30 ballistic missile hits across 38 locations","Hypersonic Oreshnik also fielded in 2026 for strategic signaling","Patriot shortage is the single biggest gap in Ukraine's air defense \u2014 0 of 24 intercepted Aug 5, 1 of 27 Aug 1"] },
+  { name:"An-196 Liutyi", side:"UA", cls:"Strike", role:"Deep-strike one-way drone", status:"Primary UA deep-strike asset",
+    range:"~2,000 km", speed:"~200 km/h", warhead:"~50-75 kg", cost:"~$150k est.", ceiling:"medium",
+    engine:"Piston, pusher prop", guidance:"Satnav + inertial; terminal optical on some",
+    production:"Massively scaled since 2024; UA launched 9,418 drones in May '26 (per RU MoD)", intercepted:"Russia claims high; confirmed hits prove substantial leakage",
+    detail:"Ukraine's workhorse for striking refineries, oil terminals, airbases (Engels), and Moscow. Reaches essentially all of European Russia. The backbone of the campaign that hit the Gazprom Neft Moscow refinery twice in a week.",
+    facts:["Jun 18: ~555 launched in a single night \u2014 among the largest UA strikes of the war","Targets chosen to drain Russian oil-export revenue and erode air defenses","Ukraine generally does not disclose launch counts \u2014 figures come from Russian MoD"] },
+  { name:"FP-5 Flamingo", side:"UA", cls:"Missile", role:"Long-range cruise missile", status:"Fielded 2026, in active service",
+    range:"~3,000 km (claimed)", speed:"~700 km/h", warhead:"~1,000 kg (claimed)", cost:"~$500k est.", ceiling:"low-altitude",
+    engine:"Turbojet", guidance:"INS + satnav; precision terminal",
+    production:"Fire Point; scaling through 2026, first mass-produced missile from the maker", intercepted:"Limited data",
+    detail:"Ukraine's domestically developed heavy cruise missile \u2014 far higher speed, accuracy and warhead than a one-way UAV. Publicly revealed Aug 2025; Zelensky called it \u201cthe most successful missile we have.\u201d Used Jun 9 2026 to strike a Russian plant producing Shahed components.",
+    facts:["Same maker (Fire Point) is behind the FP-7X interceptor and FP-7/FP-9 ballistic missile programs","Large warhead enables single-shot destruction of hardened industrial targets","Jun 9: hit a Shahed-component factory \u2014 attacking Russia's drone supply chain at the source"] },
+  { name:"Batyar / Artemis ALM-20", side:"UA", cls:"Strike", role:"Shahed-class deep-strike analogs", status:"Fielded 2025-26",
+    range:"~1,000+ km", speed:"~180-200 km/h", warhead:"~30-50 kg", cost:"~$50-120k", ceiling:"medium",
+    engine:"Piston pusher", guidance:"Satnav + inertial",
+    production:"Batyar by DeepStrikeTech (May '25); Artemis ALM-20 American-European (Oct '25)", intercepted:"Variable",
+    detail:"Ukraine's own answer to the Shahed economic model. These cheaper analogs let Ukraine add volume to its deep-strike campaign without spending An-196 or Flamingo inventory.",
+    facts:["Mirrors Russia's own volume logic back at Russian territory","ALM-20 is a trans-Atlantic co-development \u2014 widens the supplier base","Lets Ukraine reserve premium munitions for the hardest targets"] },
+  { name:"Interceptor drones (Sting / Brave1)", side:"UA", cls:"Defense", role:"Drone-on-drone air defense", status:"Scaling fast \u2014 key 2026 shift",
+    range:"~50-100 km", speed:"~300-350 km/h", warhead:"Kinetic / small charge", cost:"$5-10k", ceiling:"matches Shahed band",
+    engine:"Electric / small turbine", guidance:"Operator target-select then autonomous terminal homing (Brave1: 95% automated)",
+    production:"Scaling under Brave1; share of Shahed kills doubled in 4 months", intercepted:"n/a (is the interceptor)",
+    detail:"The most important defensive development of 2026. Drone-on-drone interception at ~$7.5k beats a $35k Shahed on cost \u2014 finally flipping the economics that made Patriot-vs-Shahed unsustainable. Brave1 automates ~95% of the engagement.",
+    facts:["World first (April '26): a Sting interceptor launched from an unmanned seaborne vessel killed a Shahed","Interceptor-drone share of Shahed kills doubled in 4 months even as Russia raised launches ~35%/month","Autonomy breaks the one pilot = one intercept ceiling that Russia's saturation tactics exploit","Ukraine's stated goal: a stable 95% intercept rate of aerial targets"] },
+  { name:"PAC-3 / NASAMS (interceptor SAMs)", side:"UA", cls:"Defense", role:"Surface-to-air missile systems", status:"In service, supply-constrained",
+    range:"PAC-3 ~35 km / NASAMS ~25 km", speed:"supersonic", warhead:"Hit-to-kill / proximity", cost:"PAC-3 ~$3.5M / NASAMS ~$1M", ceiling:"high (PAC-3)",
+    engine:"Rocket", guidance:"Radar + active/semi-active homing",
+    production:"Western-supplied; PAC-3 critically scarce", intercepted:"PAC-3 is the only reliable counter to ballistic missiles",
+    detail:"The high-end backstop. PAC-3 is the only system that reliably stops Iskander/KN-23 ballistic missiles, but US stocks were drained by the 2026 Iran war and production is only ~48/month. NASAMS is wildly uneconomical against $35k Shaheds.",
+    facts:["PAC-3 vs Shahed = ~100x unfavorable cost ratio","Zelensky has repeatedly pressed the US for Patriot resupply, incl. Aug '26 requests for an emergency 300-interceptor package","NASAMS reserved for cruise missiles; drones handed to cheaper layers"] },
+  { name:"FP-7X interceptor / Freyja program", side:"UA", cls:"Defense", role:"Domestic anti-ballistic interceptor", status:"Integration phase \u2014 mass production targeted Aug\u2013Sep '26",
+    range:"~100 km (target)", speed:"1,500\u20132,000 m/s (supersonic)", warhead:"Kinetic", cost:"~$700k\u2013$1.2M est. (vs $3.8M PAC-3)", ceiling:"~25km reached in testing, Patriot-comparable",
+    engine:"Rocket", guidance:"Imaging infrared seeker (pending delivery from Germany's Diehl Defence) + partner-supplied radars & C2",
+    production:"Fire Point; target 3/day once seekers arrive; first successful intercept targeted mid-2027 per CEO Iryna Terekh", intercepted:"n/a",
+    detail:"Ukraine's bid for a domestic PAC-3 alternative, now the missile component of Freyja \u2014 a 10-nation European missile-defense program (Ukraine, France, Germany, Italy, UK, Denmark, Netherlands, Norway, Spain, Sweden) with Fire Point as prime contractor. Aug 5: Fire Point announced Freyja's \u2018first milestone complete,\u2019 with European partners Eurosam, Leonardo, Thales, Saab and Hensoldt now named; Norway's Kongsberg is building the command center. Mass production remains contingent on German infrared seekers from Diehl Defence.",
+    facts:["Not to be confused with the separate offensive FP-7 ballistic missile (non-X), which is undergoing MoD codification with first combat use expected this fall \u2014 same maker, different weapon","Fire Point is also developing a larger FP-9 ballistic missile, expected ready by late autumn 2026","Test flight reached ~25km altitude, comparable to Patriot's engagement envelope","Aims directly at the Patriot/PAC-3 dependency that has left Ukrainian cities exposed to ballistic strikes"] },
+];
+const UA_WEAPONS_PRODUCTION=[
+  { type:"FPV (fiber-optic)", icon:"\U0001F3AF", adv:"Ukraine", ua:"30,000-50,000/mo", uaNote:"Spring 2026. Unjammable within 5-10 km cable range.", ru:"Scaling rapidly", ruNote:"Russia plans 7.3M FPV + 7.8M warheads in 2026 (Syrskyi)." },
+  { type:"Interceptor drones", icon:"\U0001F6E1\uFE0F", adv:"Ukraine", ua:"1,000-1,500/day", uaNote:"Target 2,000/day. STING ~$2,500 vs $3M+ Patriot.", ru:"Limited", ruNote:"Ukraine far ahead in dedicated interceptor capability." },
+  { type:"Shahed / Geran loitering", icon:"\U0001F4A5", adv:"Russia", ua:"~0 (own design)", uaNote:"Ukraine builds long-range FP-5 Flamingo instead.", ru:"5,000-8,000/mo", ruNote:"Alabuga factory + Iranian supply. Mass raids on cities." },
+  { type:"Lancet (loitering munition)", icon:"\U0001F3AF", adv:"Russia", ua:"No equivalent at scale", uaNote:"Ukraine counters with EW + interceptors.", ru:"Tripled 2023; large scale", ruNote:"Primary precision tool vs UA artillery. ~80% claimed hit rate." },
+  { type:"Long-range strike drones", icon:"\U0001F681", adv:"Ukraine", ua:"Significant \u2014 FP-5 Flamingo", uaNote:"Struck St. Petersburg (1,450 km), Tyumen (2,800 km).", ru:"Shahed-type + cruise", ruNote:"Used against cities + infrastructure at scale." },
+  { type:"Ground UGVs", icon:"\U0001F916", adv:"Ukraine", ua:"7,000+/mo in 2026", uaNote:"15,000 deployed 2025; up from 2,000 in 2024.", ru:"Expanding", ruNote:"Both racing; Ukraine ahead on doctrine and scale." },
+];
+const UA_USF={targetsStruck:"800,000+",interceptorsDay:"1,000-1,500",usfPersonnel:"86,000+",models:"1,343",
+  facts:[
+    ["\U0001F465","86,000+ personnel","Unmanned Systems Forces \u2014 a separate branch from the regular army (Feb 2026). Had targeted 100,000 by April 2026; current headcount against that goal not independently re-verified."],
+    ["\U0001F30D","Operates globally, not just the front","Crimea SEAD campaign, Kerch Bridge strikes, Voronezh plant, Tyumen refinery (2,800 km) \u2014 all USF operations."],
+    ["\U0001F916","AI integration","TFL-1 auto-steer module ($118) takes over if the pilot loses contact \u2014 2-4x effectiveness."],
+    ["\U0001F4E1","Fiber-optic FPV","First deployed near Kharkiv, Feb 2025. Unjammable \u2014 EW cannot disrupt the cable signal."],
+    ["\U0001F6E0\uFE0F","1,343 drone models on Brave1","581 FPV, 434 fiber-optic. Ukraine exported drones for the first time in 2026."],
+    ["\U0001F3AF","Two-person crew record","23 Shaheds shot down in one engagement (STING interceptor drones, March 2026)."],
+  ],
+};
+function ArsenalTab({t}){
+  const[filter,setFilter]=useState("all");
+  const[selected,setSelected]=useState(null);
+  const dossierRef=useRef(null);
+  const btnA=(k,sel)=>({padding:"4px 12px",fontSize:11,borderRadius:14,cursor:"pointer",fontFamily:FONT,fontWeight:700,background:sel===k?"#5b8ec8":"none",color:sel===k?"#fff":t.sub,border:`1px solid ${sel===k?"#5b8ec8":t.border}`});
+  return <div>
+    <Hero t={t} style={{borderLeft:"4px solid #a855f7"}}><div style={{fontSize:11,fontWeight:800,letterSpacing:".12em",color:"#c4a3f5",marginBottom:6}}>\U0001F6F8 ARSENAL \u2014 THE WEAPONS DOING THE FIGHTING</div><div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>Restored from the retired Drone War tab and updated Aug '26 \u2014 spec dossiers for the drones, missiles and interceptors defining the air war on both sides. Recovered from a pre-deletion backup; most specs are evergreen (don't change week to week), but flagged where anything has moved since.</div></Hero>
+    <div style={{display:"flex",gap:6,marginBottom:14,flexWrap:"wrap"}}>
+      {[["all","All"],["RU","\uD83D\uDD34 Russian"],["UA","\uD83D\uDD35 Ukrainian"],["Strike","Strike"],["Decoy","Decoys"],["Missile","Missiles"],["Defense","Air Defense"]].map(([k,l])=>(<button key={k} style={btnA(k,filter)} onClick={()=>{setFilter(k);setSelected(null);}}>{l}</button>))}
+    </div>
+    {selected!=null && (()=>{
+      const d=UA_WEAPONS[selected]; const accent=d.side==="RU"?"#ef4444":"#5b8ec8";
+      return <div ref={dossierRef}><Card t={t} style={{borderLeft:`4px solid ${accent}`}}><div style={{padding:"14px 16px"}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:12,flexWrap:"wrap",gap:8}}>
+          <div><div style={{display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}><span style={{color:accent,fontWeight:900,fontSize:16}}>{d.side==="RU"?"\uD83D\uDD34":"\uD83D\uDD35"} {d.name}</span><span style={{background:t.isDark?"rgba(255,255,255,.06)":"rgba(0,0,0,.05)",color:t.sub,borderRadius:4,padding:"2px 9px",fontSize:11,fontWeight:700}}>{d.cls}</span></div>
+            <div style={{color:t.sub,fontSize:12,marginTop:4}}>{d.role} \u00b7 <span style={{color:"#eab308"}}>{d.status}</span></div></div>
+          <button onClick={()=>setSelected(null)} style={{background:"transparent",color:t.sub,border:`1px solid ${t.border}`,borderRadius:6,padding:"4px 12px",cursor:"pointer",fontSize:12,fontFamily:FONT}}>\u2715 Close</button>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(130px,1fr))",gap:8,marginBottom:14}}>
+          {[["Range",d.range],["Speed",d.speed],["Warhead",d.warhead],["Est. cost",d.cost],["Ceiling",d.ceiling],["Intercept",d.intercepted]].map(([k,v])=>(<div key={k} style={{background:t.isDark?"rgba(255,255,255,.04)":"rgba(0,0,0,.03)",borderRadius:8,padding:"8px 10px"}}><div style={{color:t.sub,fontSize:10,textTransform:"uppercase",letterSpacing:.6}}>{k}</div><div style={{color:t.text,fontSize:13,fontWeight:700}}>{v}</div></div>))}
+        </div>
+        <div style={{display:"flex",flexDirection:"column",gap:8,marginBottom:14}}>
+          {[["\u2699\uFE0F Engine",d.engine],["\uD83C\uDFAF Guidance",d.guidance],["\uD83C\uDFED Production",d.production]].map(([k,v])=>(<div key={k} style={{fontSize:12,lineHeight:1.5}}><span style={{color:accent,fontWeight:700}}>{k}: </span><span style={{color:t.text}}>{v}</span></div>))}
+        </div>
+        <div style={{color:t.text,fontSize:13,lineHeight:1.7,marginBottom:14,paddingTop:12,borderTop:`1px solid ${t.border}`}}>{d.detail}</div>
+        <div style={{color:accent,fontWeight:700,fontSize:12,marginBottom:8}}>KEY INTELLIGENCE</div>
+        <div style={{display:"flex",flexDirection:"column",gap:7}}>{d.facts.map((f,j)=>(<div key={j} style={{display:"flex",gap:8,fontSize:12,lineHeight:1.5,color:t.sub}}><span style={{color:accent,flexShrink:0}}>\u2022</span><span>{f}</span></div>))}</div>
+      </div></Card></div>;
+    })()}
+    <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(250px,1fr))",gap:12,marginBottom:14}}>
+      {UA_WEAPONS.map((d,i)=>{
+        if(filter!=="all"&&d.side!==filter&&d.cls!==filter) return null;
+        const accent=d.side==="RU"?"#ef4444":"#5b8ec8"; const isSel=selected===i;
+        return <div key={i} onClick={()=>setSelected(isSel?null:i)} style={{background:isSel?(t.isDark?"rgba(255,255,255,.04)":"rgba(0,0,0,.03)"):t.card,border:`1px solid ${isSel?accent:t.border}`,borderRadius:10,padding:"14px 16px",cursor:"pointer"}}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:8,gap:6}}><div style={{color:accent,fontWeight:800,fontSize:14,lineHeight:1.25}}>{d.side==="RU"?"\uD83D\uDD34":"\uD83D\uDD35"} {d.name}</div><span style={{background:t.isDark?"rgba(255,255,255,.06)":"rgba(0,0,0,.05)",color:t.sub,borderRadius:4,padding:"2px 7px",fontSize:10,fontWeight:700,flexShrink:0}}>{d.cls}</span></div>
+          <div style={{color:t.sub,fontSize:11,marginBottom:10}}>{d.role}</div>
+          <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:10}}>{[["Range",d.range],["Speed",d.speed],["Cost",d.cost]].map(([k,v])=>(<span key={k} style={{background:t.isDark?"rgba(255,255,255,.04)":"rgba(0,0,0,.03)",borderRadius:5,padding:"3px 7px",fontSize:10}}><span style={{color:t.sub}}>{k} </span><span style={{color:t.text,fontWeight:600}}>{v}</span></span>))}</div>
+          <div style={{color:t.sub,fontSize:11.5,lineHeight:1.5,display:"-webkit-box",WebkitLineClamp:3,WebkitBoxOrient:"vertical",overflow:"hidden"}}>{d.detail}</div>
+          <div style={{color:accent,fontSize:11,fontWeight:700,marginTop:10}}>{isSel?"\u25BE Showing full dossier above":"\u25B8 Tap for full dossier"}</div>
+        </div>;
+      })}
+    </div>
+    <ST t={t} color="#a855f7">\u2699\uFE0F Drone Production \u2014 Ukraine vs Russia</ST>
+    <Card t={t}><div style={{padding:"12px 14px"}}>
+      {UA_WEAPONS_PRODUCTION.map((r,i)=>{const advCol=r.adv==="Ukraine"?"#5b8ec8":"#ef4444";return <div key={i} style={{marginBottom:i<UA_WEAPONS_PRODUCTION.length-1?12:0}}>
+        <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}><span style={{fontSize:16}}>{r.icon}</span><span style={{color:t.text,fontWeight:700,fontSize:13,flex:1}}>{r.type}</span><span style={{background:`${advCol}22`,border:`1px solid ${advCol}44`,color:advCol,borderRadius:4,padding:"2px 8px",fontSize:10,fontWeight:800}}>{r.adv} leads</span></div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
+          <div style={{background:t.isDark?"rgba(91,142,200,.08)":"rgba(91,142,200,.06)",borderRadius:8,padding:"8px 10px"}}><div style={{color:"#5b8ec8",fontSize:10,fontWeight:700,marginBottom:2}}>\uD83C\uDDFA\uD83C\uDDE6 Ukraine</div><div style={{color:t.text,fontSize:12,fontWeight:700}}>{r.ua}</div><div style={{color:t.sub,fontSize:10,marginTop:2,lineHeight:1.4}}>{r.uaNote}</div></div>
+          <div style={{background:t.isDark?"rgba(239,68,68,.08)":"rgba(239,68,68,.06)",borderRadius:8,padding:"8px 10px"}}><div style={{color:"#ef4444",fontSize:10,fontWeight:700,marginBottom:2}}>\uD83C\uDDF7\uD83C\uDDFA Russia</div><div style={{color:t.text,fontSize:12,fontWeight:700}}>{r.ru}</div><div style={{color:t.sub,fontSize:10,marginTop:2,lineHeight:1.4}}>{r.ruNote}</div></div>
+        </div>
+      </div>;})}
+    </div></Card>
+    <ST t={t} color="#a855f7">\uD83C\uDF96\uFE0F Unmanned Systems Forces & Ecosystem</ST>
+    <Card t={t}><div style={{padding:"12px 14px"}}>
+      <div style={{display:"flex",flexDirection:"column",gap:10}}>
+        {UA_USF.facts.map((f,i)=>(<div key={i} style={{display:"flex",gap:10}}><span style={{fontSize:16,flexShrink:0}}>{f[0]}</span><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}><strong style={{color:t.text}}>{f[1]}</strong> \u2014 {f[2]}</div></div>))}
+      </div>
+    </div></Card>
+  </div>;
+}
+function SouthernFrontTab({t}){const[sub,setSub]=useState("crimea");return <div><div style={{display:"flex",gap:6,marginBottom:12,flexWrap:"wrap"}}>{[{id:"crimea",label:"\U0001F3F4 Crimea"},{id:"blacksea",label:"\U0001F30A Black Sea"},].map(o=><button key={o.id} onClick={()=>setSub(o.id)} style={{padding:"4px 12px",fontSize:11,borderRadius:14,cursor:"pointer",fontFamily:FONT,fontWeight:700,background:sub===o.id?"#5b8ec8":"none",color:sub===o.id?"#fff":t.sub,border:`1px solid ${sub===o.id?"#5b8ec8":t.border}`}}>{o.label}</button>)}</div>{sub==="crimea"&&<CrimeaTab t={t}/>}{sub==="blacksea"&&<BlackSeaTab t={t}/>}</div>;}
 
 function StrikeWarTab({t}){const[sub,setSub]=useState("strikes");return <div><div style={{display:"flex",gap:6,marginBottom:12,flexWrap:"wrap"}}>{[{id:"strikes",label:"💥 Deep Strikes"},{id:"airdef",label:"🛡️ Air Defense"},].map(o=><button key={o.id} onClick={()=>setSub(o.id)} style={{padding:"4px 12px",fontSize:11,borderRadius:14,cursor:"pointer",fontFamily:FONT,fontWeight:700,background:sub===o.id?"#5b8ec8":"none",color:sub===o.id?"#fff":t.sub,border:`1px solid ${sub===o.id?"#5b8ec8":t.border}`}}>{o.label}</button>)}</div>{sub==="strikes"&&<StrikesTab t={t}/>}{sub==="airdef"&&<AirDefTab t={t}/>}</div>;}
 
@@ -431,7 +598,7 @@ function DiploAlliesTab({t}){const[sub,setSub]=useState("diplomacy");return <div
 
 function DiplomacyTab({t}){const[open,setOpen]=useState(null);const TRACKS=[{label:"🇹🇷 Turkish ceasefire push",status:"BLOCKED",color:"#ef4444",text:"Rejected by Moscow outright pre-summit, freezing the only comprehensive-ceasefire track."},{label:"🇺🇸 Trump-Zelensky channel",status:"ACTIVE",color:"#22c55e",text:"Zelensky said Aug 5 Ukraine is in 'daily contact' with Trump's team and ready for meetings 'in any format,' expecting Witkoff and Kushner to step up involvement through August — a step up from the Jul 28 White House meeting, after which Ukraine struck the Ryazan refinery hours later, underscoring materiel/battlefield alignment over political breakthroughs so far."},{label:"🇺🇸🇷🇺 Rubio-Lavrov Manila channel",status:"OPENED",color:"#eab308",text:"35-minute Jul 23 meeting produced no breakthrough but marked the first substantive direct US-Russia contact on Ukraine in months; Bloomberg reports Putin has since dropped territorial-concession offers entirely."},{label:"🔄 Prisoner swaps",status:"DELIVERING",color:"#22c55e",text:"Istanbul-framework exchanges keep working through backlogs — the only track with an unbroken 2026 record."},{label:"💰 Sanctions-relief sequencing",status:"UNTESTED",color:"#eab308",text:"West ties relief to verified withdrawal; Russia demands relief first — no mechanism agreed. EU adopted its 21st sanctions package Jul 23, freezing the oil price cap through Jul 2027."},{label:"🇷🇺 Moscow's posture",status:"MAXIMALIST",color:"#ef4444",text:"Territorial recognition plus NATO renunciation remain preconditions; Kremlin now treats the Anchorage understandings as void."}];return <div><Hero t={t} style={{borderLeft:"4px solid #8b5cf6"}}><div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>🗣️ Peace Talks — Current Status</div><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,marginBottom:12}}><div><div style={{fontSize:11,color:"rgba(255,255,255,.4)"}}>Overall status</div><div style={{fontSize:20,fontWeight:800,color:"#ef4444"}}>STALLED</div></div><div><div style={{fontSize:11,color:"rgba(255,255,255,.4)"}}>Most recent contact</div><div style={{fontSize:13,fontWeight:700,color:"#5b8ec8",lineHeight:1.3}}>Daily contact, per Zelensky (Aug 5)</div></div><div><div style={{fontSize:11,color:"rgba(255,255,255,.4)"}}>Military track</div><div style={{fontSize:13,fontWeight:700,color:"#22c55e"}}>Constructive</div></div><div><div style={{fontSize:11,color:"rgba(255,255,255,.4)"}}>Political track</div><div style={{fontSize:13,fontWeight:700,color:"#ef4444"}}>STUCK</div></div></div></Hero><ST color="#22c55e" t={t}>📋 Track Status Board</ST><Card t={t}><div style={{padding:"11px 14px"}}>{TRACKS.map((tr,i,a)=><div key={i} style={{marginBottom:i<a.length-1?8:0,paddingBottom:i<a.length-1?8:0,borderBottom:i<a.length-1?`.5px solid ${t.sep}`:0}}><div style={{display:"flex",justifyContent:"space-between",marginBottom:2}}><span style={{fontSize:12.5,fontWeight:700,color:t.text}}>{tr.label}</span><span style={{fontSize:10,fontWeight:800,color:tr.color}}>{tr.status}</span></div><div style={{fontSize:11.5,color:t.sub,lineHeight:1.5}}>{tr.text}</div></div>)}</div></Card><ST color="#8b5cf6" t={t}>⚖️ Negotiating Positions</ST>{TALKS.map(pos=><Card key={pos.label} t={t} style={{borderLeft:`4px solid ${pos.color}`,marginBottom:10}}><div style={{padding:"13px 14px",cursor:"pointer"}} onClick={()=>setOpen(open===pos.label?null:pos.label)}><div style={{display:"flex",alignItems:"center",gap:8}}><span style={{fontSize:22}}>{pos.flag}</span><span style={{fontSize:14,fontWeight:800,color:t.text,flex:1}}>{pos.label}</span><span style={{fontSize:14,color:t.sub}}>{open===pos.label?"▲":"▼"}</span></div></div>{open===pos.label&&<div style={{padding:"0 14px 14px"}}>{pos.points.map((pt,i)=><div key={i} style={{display:"flex",gap:8,marginBottom:6,fontSize:12.5,color:t.sub,lineHeight:1.5}}><span style={{color:pos.color,fontWeight:700,flexShrink:0}}>▸</span>{pt}</div>)}<div style={{fontSize:11.5,color:t.sub,background:`${pos.color}09`,border:`1px solid ${pos.color}18`,borderRadius:6,padding:"8px 10px",lineHeight:1.5,marginTop:8,fontStyle:"italic"}}>{pos.assessment}</div></div>}</Card>)}<EventsTimeline t={t} events={EVENTS.ukraine} label="Diplomatic Timeline"/></div>;}
 
-function CrimeaTab({t}){return <div><Hero t={t} style={{borderLeft:"4px solid #ef4444"}}><div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>🏴 OPERATION LOGISTICS LOCKDOWN — SIEGE OF CRIMEA</div><Grid2 t={t} items={[{val:"BANNED",label:"Civilian fuel sales",sub:"All sales suspended Jun 21",color:"#ef4444"},{val:"↓71%",label:"R-280 highway traffic",sub:"vs 14 days ago",color:"#ef4444"},{val:"80% cancelled",label:"Jun 2026 tourism",sub:"Summer season collapsed",color:"#f97316",vs:16},{val:"~25%",label:"BSF battle space",sub:"Down from 60% pre-war",color:"#f97316"},{val:"DECLARED",label:"Crimea state of emergency",sub:"Fuel · water · power failures Jun 27",color:"#ef4444"}]}/></Hero><ST color="#ef4444" t={t}>🗺️ Supply Routes Status</ST>{CRIMEA_ROUTES.map(r=><Card key={r.name} t={t} style={{borderLeft:`4px solid ${r.color}`}}><div style={{padding:"12px 14px"}}><div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:5}}><div style={{fontSize:13,fontWeight:700,color:t.text}}>{r.name}</div><Pill label={r.statusLabel} color={r.color}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{r.detail}</div></div></Card>)}</div>;}
+function CrimeaTab({t}){return <div><Hero t={t} style={{borderLeft:"4px solid #ef4444"}}><div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>🏴 OPERATION LOGISTICS LOCKDOWN — SIEGE OF CRIMEA</div><Grid2 t={t} items={[{val:"BANNED",label:"Civilian fuel sales",sub:"Suspended since Jun 21, still in effect",color:"#ef4444"},{val:"↓71%",label:"R-280 highway traffic",sub:"vs pre-blockade baseline (Jun 21)",color:"#ef4444"},{val:"80% cancelled",label:"Jun 2026 tourism",sub:"Summer season collapsed",color:"#f97316",vs:16},{val:"~25%",label:"BSF battle space",sub:"Down from 60% pre-war",color:"#f97316"},{val:"DECLARED",label:"Crimea state of emergency",sub:"Fuel · water · power failures since Jun 27",color:"#ef4444"}]}/></Hero><ST color="#ef4444" t={t}>🗺️ Supply Routes Status</ST>{CRIMEA_ROUTES.map(r=><Card key={r.name} t={t} style={{borderLeft:`4px solid ${r.color}`}}><div style={{padding:"12px 14px"}}><div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:5}}><div style={{fontSize:13,fontWeight:700,color:t.text}}>{r.name}</div><Pill label={r.statusLabel} color={r.color}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{r.detail}</div></div></Card>)}<ST color="#ef4444" t={t}>🔀 Adapting Under Pressure</ST><Card t={t} style={{borderLeft:"4px solid #f97316"}}><div style={{padding:"12px 14px"}}><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>Russian forces are restructuring fuel logistics rather than accepting the blockade at face value, per the Atesh partisan network: convoys are now routed by rail from more remote Russian regions to avoid the refineries and depots Ukraine has been hitting — a longer, costlier supply chain that raises fuel prices at Crimean stations even as it partially evades interdiction. Russia has also avoided forming large fuel stockpiles on the peninsula given the standing threat of further strikes, per the same reporting.</div></div></Card></div>;}
 
 function StrikesTab({t}){const cats=["All","Energy","Military","Military-Industrial","Infrastructure"];const[cat,setCat]=useState("All");const filtered=cat==="All"?STRIKES:STRIKES.filter(s=>s.category===cat);return <div><Hero t={t}><div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>🎯 Ukrainian Deep-Strike Campaign — Jun–Jul 2026</div><Grid2 t={t} items={[{val:`${STRIKES.length}`,label:"Targets struck",color:"#ef4444"},{val:`${STRIKES.filter(s=>s.severity==="critical").length}`,label:"Critical hits",color:"#f97316"},{val:"2,800km",label:"Max range strike",sub:"Tyumen, Siberia",color:"#fbbf24"},{val:"1,343",label:"UA drone models",sub:"Brave1 platform",color:"#5b8ec8"}]}/></Hero><Card t={t} style={{borderLeft:"4px solid #5b8ec8",marginBottom:12}}><div style={{padding:"11px 14px"}}><div style={{fontSize:11,fontWeight:800,color:"#5b8ec8",textTransform:"uppercase",letterSpacing:".06em",marginBottom:4}}>📊 The full campaign, since Feb 2022</div><div style={{fontSize:20,fontWeight:800,color:t.text,marginBottom:4}}>305+ strikes on Russian oil facilities</div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>Per a Jun 25, 2026 CNN analysis: just 3 strikes in year one, 13 more in year two — then the campaign took off, reaching 108 hits by year three, 246 by year four, and 305+ through late June. The list below shows named strikes from the current Jun–Jul phase; monthly strike-count tallies vary too widely by source and methodology (from ~30/month in narrow trackers to 170+/month in broader ones) to responsibly chart as a single trend line.</div></div></Card><Card t={t} style={{borderLeft:"4px solid #06b6d4",marginBottom:12}}><div style={{padding:"11px 14px"}}><div style={{fontSize:11,fontWeight:800,color:"#06b6d4",textTransform:"uppercase",letterSpacing:".06em",marginBottom:4}}>🚤 Separate campaign: Operation MoLoChKa</div><div style={{fontSize:20,fontWeight:800,color:t.text,marginBottom:4}}>180+ Russian vessels struck near Crimea</div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>Ukraine's Unmanned Systems Forces launched this naval interdiction campaign Jul 6, targeting shadow-fleet tankers and logistics ships supplying occupied Crimea via the Sea of Azov and Black Sea — 13 vessels in a single night (Jul 10) alone, mostly sanctioned tankers. A distinct domain from the land-based strikes above: naval drones hitting shipping near the peninsula, not long-range strikes into Russia's interior. See Crimea Blockade for the supply-line impact.</div></div></Card><div style={{display:"flex",gap:5,flexWrap:"wrap",marginBottom:12}}>{cats.map(c=><button key={c} onClick={()=>setCat(c)} style={{padding:"4px 10px",fontSize:11,borderRadius:16,cursor:"pointer",fontFamily:FONT,fontWeight:600,background:cat===c?"#5b8ec8":"none",color:cat===c?"#fff":t.sub,border:`1px solid ${cat===c?"#5b8ec8":t.border}`}}>{c}</button>)}</div>{filtered.map(s=><Card key={s.id} t={t} style={{borderLeft:`4px solid ${sevColor(s.severity)}`}}><div style={{padding:"12px 14px"}}><div style={{display:"flex",alignItems:"flex-start",gap:8}}><span style={{fontSize:18,flexShrink:0}}>{s.icon}</span><div style={{flex:1}}><div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap",marginBottom:3}}><Pill label={s.severity.toUpperCase()} color={sevColor(s.severity)}/><Pill label={s.category} color="#5b8ec8"/><span style={{fontSize:10,color:t.sub}}>{s.date} · {s.region}</span>{s.distance&&<span style={{fontSize:10,color:t.sub}}>{s.distance.toLocaleString()}km</span>}</div><div style={{fontSize:13,fontWeight:700,color:t.text,marginBottom:4}}>{s.targetName}</div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{s.result}</div></div></div></div></Card>)}</div>;}
 
@@ -525,7 +692,7 @@ function ManpowerTab({t}){
     {icon:"🚨",label:"Fall mobilization wave",val:"Warned",change:"Zelensky citing intelligence, Jul 25",color:"#dc2626",desc:"Kyiv says it has clear intelligence that Russia is preparing a significant new mobilization wave for the autumn, with Putin ‘preparing the conditions for expanding mobilization’. Analysts have floated a one-off drive of roughly 200,000 as an alternative to the contract model. An anonymous Russian general quoted Jul 21 put the requirement to finish taking Donbas at 55,000–60,000 replacements every month — far beyond what the current system delivers."},
     {icon:"🩹",label:"H1 2026 loss breakdown",val:"196.7K",change:"115.3K irrecoverable",color:"#ef4444",desc:"SZRU’s first-half accounting: approximately 196,700 total personnel losses, comprising 115,300 irrecoverable, 80,400 medical casualties and about 1,000 prisoners of war. Medical and functional fitness requirements have been lowered to widen the recruitment pool."},
     {icon:"🤖",label:"Unmanned Systems Forces",val:"8K / 34.4K",change:"~23% of planned strength",color:"#eab308",desc:"Russia’s new drone branch (VBS) had trained roughly 8,000 specialists by mid-2026 against an expected 34,400, per CIT — a shortfall that matters more than raw headcount, since it is the arm Russia needs most to contest Ukraine’s drone advantage."},
-    {icon:"🏭",label:"Labour shortage",val:"Critical",change:"2.8M+ removed from workforce",color:"#ef4444",desc:"700K+ killed or wounded plus 1.3M+ emigrated = 2.8M+ removed from the workforce. CBR: the labour shortage is the primary constraint on economic growth in 2026. Regional spending on recruiter bonuses more than doubled in 2026, from 358M to 802M rubles monthly."},
+    {icon:"🏭",label:"Labour shortage",val:"Critical",change:"2.8M+ removed from workforce",color:"#ef4444",desc:"700K+ killed or wounded plus 1.3M+ emigrated = 2.8M+ removed from the workforce. CBR: the labour shortage is the primary constraint on economic growth in 2026. Regional spending on recruiter bonuses more than doubled in 2026, from 358M to 802M rubles monthly — and by August, 56 Russian regions had introduced recruitment cash rewards (some up to 1M rubles/$22,200 per recruit), up from just 31 regions a year earlier, per Moscow Times analysis. Separately, legislation signed in late 2025 lets reservists be sent into combat without declaring nationwide mobilization — a mechanism ISW says expands the Kremlin's options short of a formal call-up."},
   ];
   const UA=[
     {icon:"⚔️",label:"UA casualties (est.)",val:"~194K",change:"Dead or missing (UALosses Jun 21)",color:"#5b8ec8",desc:"UALosses project verified by BBC, Mediazona: 96,821 killed + 97,938 missing as of Jun 21, 2026. Excludes wounded. GCHQ estimate: nearly 500,000 Russian killed."},
@@ -550,7 +717,7 @@ function ManpowerTab({t}){
   </div>;
 }
 
-const UKRAINE_TABS=[{id:"overview",label:"📊 Overview"},{id:"losses",label:"⚖️ Losses"},{id:"manpower",label:"👥 Manpower"},{id:"frontline",label:"🎯 Frontline"},{id:"southernfront",label:"🌊 Southern Front"},{id:"strikewar",label:"💥 Strike War"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"analysts",label:"📺 Analysts"},{id:"belarus",label:"🇧🇾 Belarus Axis"}];
+const UKRAINE_TABS=[{id:"overview",label:"📊 Overview"},{id:"losses",label:"⚖️ Losses"},{id:"manpower",label:"👥 Manpower"},{id:"frontline",label:"🎯 Frontline"},{id:"southernfront",label:"🌊 Southern Front"},{id:"strikewar",label:"💥 Strike War"},{id:"arsenal",label:"🛸 Arsenal"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"analysts",label:"📺 Analysts"},{id:"belarus",label:"🇧🇾 Belarus Axis"}];
 const WEEK_UPDATES=NEWS.filter(n=>n.conflictId==="ukraine").slice(0,5).map(n=>`${n.icon} ${n.publishedAt}: ${n.headline}`);
 
 function UkraineSection({t,initialTab}){const[tab,setTab]=useState(initialTab??"overview");const[briefExpanded,setBriefExpanded]=useState(false);useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);return <div><div style={{display:"flex",gap:4,flexWrap:"wrap",marginBottom:12}}>{UKRAINE_TABS.map(tb=><button key={tb.id} onClick={()=>setTab(tb.id)} style={{padding:"5px 10px",fontSize:11,borderRadius:16,cursor:"pointer",fontFamily:FONT,fontWeight:600,background:tab===tb.id?"#5b8ec8":"none",color:tab===tb.id?"#fff":t.sub,border:`1px solid ${tab===tb.id?"#5b8ec8":t.border}`}}>{tb.label}</button>)}</div>{tab==="belarus"&&<div><div style={{fontSize:11,color:t.sub,lineHeight:1.6,marginBottom:12,paddingLeft:9,borderLeft:`3px solid #f97316`}}>Belarus is treated here as the northern axis of the Russia-Ukraine war — a co-belligerent supplying territory, basing and nuclear hosting rather than troops. Consolidated from its former standalone section.</div><BelarusSection t={t}/></div>}{tab==="overview"&&<div>
@@ -603,8 +770,8 @@ function UkraineSection({t,initialTab}){const[tab,setTab]=useState(initialTab??"
       </div>;})}
       <div style={{fontSize:11,color:t.sub,lineHeight:1.5,marginTop:8}}>Ballistic intercept performance collapsed from 26% in June to zero for most of mid-July as PAC-3 stocks ran out, briefly recovered late-month (Jul 13–19 and Jul 20–26 both show a real rebound, 50% and 56%, and the Jul 25–26 Kyiv strike downed 5 of 7 — 71%, the best single-night rate since the shortage began) — then reversed hard in early August: just 1 of 27 intercepted in the Aug 1 Kyiv attack (9 killed, per Zelensky), and 0 of 24 nationwide on Aug 5. Zelensky says allies have supplied only a third of 2026's planned air-defense missiles compared with 2025. The drone intercept rate has stayed near 90% throughout — this remains specifically an interceptor-inventory story, not a skill or targeting one. Mixed granularity by necessity: June is a monthly figure (CSIS), weekly rows sum only nights with a confirmed ballistic-specific breakdown, and the most recent nights are single engagements (UA Air Force) — a gap between rows (e.g. Aug 2–4) reflects no confirmed large-scale ballistic barrage found for those nights specifically, not a verified pause; heavy drone attacks continued throughout (635 Shaheds intercepted the night of Aug 1–2 alone). Sources noted per row.</div>
     </Card>
-      <Note t={t} color="#06b6d4">Intercept rates: UA Air Force nightly reports (via Militarnyi/Ukrinform); economics per interceptor-drone program disclosures. Cross-reference: Strike War → Air Defense for the full layered-system breakdown, Drone War → Intercept & AD Systems, Great Powers → Defense Industry (PAC-3 production).</Note>
-</div>}{tab==="losses"&&<LossesTab t={t}/>}{tab==="frontline"&&<FrontlineTab t={t}/>}{tab==="diploallies"&&<DiploAlliesTab t={t}/>}{tab==="southernfront"&&<SouthernFrontTab t={t}/>}{tab==="strikewar"&&<StrikeWarTab t={t}/>}{tab==="economy"&&<EconomyTab t={t}/>}{tab==="manpower"&&<ManpowerTab t={t}/>}{tab==="intel"&&<IntelTab t={t}/>}
+      <Note t={t} color="#06b6d4">Intercept rates: UA Air Force nightly reports (via Militarnyi/Ukrinform); economics per interceptor-drone program disclosures. Cross-reference: Strike War → Air Defense for the full layered-system breakdown, Great Powers → Defense Industry (PAC-3 production).</Note>
+</div>}{tab==="losses"&&<LossesTab t={t}/>}{tab==="frontline"&&<FrontlineTab t={t}/>}{tab==="diploallies"&&<DiploAlliesTab t={t}/>}{tab==="southernfront"&&<SouthernFrontTab t={t}/>}{tab==="strikewar"&&<StrikeWarTab t={t}/>}{tab==="arsenal"&&<ArsenalTab t={t}/>}{tab==="economy"&&<EconomyTab t={t}/>}{tab==="manpower"&&<ManpowerTab t={t}/>}{tab==="intel"&&<IntelTab t={t}/>}
     {tab==="uaindustry"&&<div>
       <Hero t={t} color="#eab308"><div style={{fontSize:11,fontWeight:800,letterSpacing:".12em",color:"#fde68a",marginBottom:6}}>🏭 UKRAINE'S DEFENSE INDUSTRY</div><div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>From aid recipient to arsenal: roughly half of Ukraine's ammunition is now domestically made, its drone ecosystem out-produces both NATO and Russia in unit terms, and Kyiv has begun exporting — including to the countries that arm it.</div></Hero>
       <Grid2 t={t} items={[
@@ -620,7 +787,7 @@ function UkraineSection({t,initialTab}){const[tab,setTab]=useState(initialTab??"
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>The export turn</span> — Denmark-model contracts (frozen-asset profits funding UA production for UA use), propellant JV with D&M in the US (production from mid-2026), and EW systems like Sky Fortress marketed at a fraction of Western cost. RUSI's read: Ukraine's industry is Europe's fastest path to closing its own production gap.</div>
         <div><span style={{color:t.text,fontWeight:700}}>Constraints</span> — Funding (capacity exceeds contracts), Russian strikes on plants (a propellant facility lost early-war), and energetics inputs shared with the West's own bottleneck (see Great Powers → Critical Minerals).</div>
       </div></div></Card>
-      <Note t={t} color="#eab308">Figures: RUSI, Militarnyi, UA GenStaff and program disclosures; production rates are announced capacities, not audited output. Cross-reference: Great Powers → Defense Industry & Arms Flow, Drone War → Cost.</Note>
+      <Note t={t} color="#eab308">Figures: RUSI, Militarnyi, UA GenStaff and program disclosures; production rates are announced capacities, not audited output. Cross-reference: Great Powers → Defense Industry & Arms Flow.</Note>
     </div>}
     {tab==="analysts"&&<AnalystsTab t={t}/>}</div>;}
 
@@ -749,7 +916,7 @@ function TheatersOverview({t,conflicts,onSelectConflict}){const STATUS_ORDER={"E
   <div style={{fontSize:10,fontWeight:700,color:t.sub,textTransform:"uppercase",letterSpacing:".1em",margin:"20px 0 14px"}}>🧭 Cross-Theater Sections — Tap to Deep Dive</div>
   <div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?12:0}}>
   {[
-    {id:"dronewar",name:"Drone War Dashboard",icon:"🛸",status:"WEEKLY TRACKER",statusColor:"#22c55e",region:"Ukraine / Russia",s1l:"RU launch rate",s1v:"~5k/mo",s2l:"UA output",s2v:"100k+/mo",summary:"Nightly launch/intercept data, saturation model, strike log, cost race, AD systems, and drone asset library. Current through Jul 8."},
+    
     {id:"usmil",name:"Great Powers",icon:"⚔️",status:"REFERENCE",statusColor:"#5b8ec8",region:"US / China / Russia",s1l:"Tabs",s1v:"19",s2l:"Focus",s2v:"Escalation risk",summary:"Escalation risk assessment and power comparison lead, then rankings, naval pipeline, 5th-gen fighters, space & counterspace, critical minerals, arms flow, Arctic, defense-industrial production, nuclear arsenals and delivery systems, treaty architecture, and Cyber & Hybrid warfare."},
     ].map((c,ci)=><button key={c.id} className="theater-card" onPointerDown={e=>{const r=e.currentTarget.getBoundingClientRect();e.currentTarget.style.setProperty("--px",`${((e.clientX-r.left)/r.width*100)}%`);e.currentTarget.style.setProperty("--py",`${((e.clientY-r.top)/r.height*100)}%`);}} onClick={()=>onSelectConflict(c.id)} style={{display:"block",width:"100%",background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`4px solid ${c.statusColor}`,borderRadius:14,padding:"16px 18px",marginBottom:12,cursor:"pointer",fontFamily:FONT,textAlign:"left",animation:`riseIn .3s ease-out ${ci*0.05}s both`}}><div style={{display:"flex",alignItems:"flex-start",gap:12,marginBottom:10}}><span style={{fontSize:28,flexShrink:0,lineHeight:1}}>{c.icon}</span><div style={{flex:1,minWidth:0}}><div style={{fontSize:15,fontWeight:800,color:t.text,lineHeight:1.2,marginBottom:4}}>{c.name}</div><div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}}><span style={{background:c.statusColor+"22",border:`1px solid ${c.statusColor}55`,borderRadius:20,padding:"2px 10px",fontSize:10,fontWeight:700,color:c.statusColor,textTransform:"uppercase"}}>{c.status}</span><span style={{fontSize:11,color:t.sub}}>{c.region}</span></div></div><span style={{fontSize:16,color:t.sub,flexShrink:0,marginTop:4}}>→</span></div><div style={{display:"flex",gap:20,marginBottom:10}}><div><div style={{fontSize:10,color:t.sub,marginBottom:1}}>{c.s1l}</div><div style={{fontSize:13,fontWeight:700,color:c.statusColor}}>{c.s1v}</div></div><div><div style={{fontSize:10,color:t.sub,marginBottom:1}}>{c.s2l}</div><div style={{fontSize:13,fontWeight:700,color:t.text}}>{c.s2v}</div></div></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6,background:t.isDark?"rgba(255,255,255,.03)":"rgba(0,0,0,.03)",borderRadius:8,padding:"9px 11px"}}>{c.summary}</div><div style={{marginTop:10,fontSize:11,color:"#5b8ec8",fontWeight:600}}>Open Deep Dive →</div></button>)}
   </div></div>;}
@@ -862,7 +1029,7 @@ function TodayView({t}){const fresh=NEWS.filter(isFreshNews);const critical=fres
     <div style={{background:t.isDark?"rgba(220,38,38,.07)":"rgba(220,38,38,.05)",border:"1px solid rgba(220,38,38,.18)",borderRadius:12,padding:"12px 16px",marginBottom:20,display:"flex",alignItems:"center",gap:12,flexWrap:"wrap"}}><span style={{width:8,height:8,borderRadius:"50%",background:"#dc2626",display:"inline-block",animation:"blink 1s ease-in-out infinite",flexShrink:0}}/><span style={{fontSize:12,fontWeight:700,color:"#dc2626"}}>{shownCritical} critical · {shownMajor} major · {shownWatch} watch</span><span style={{marginLeft:"auto",fontSize:11,color:t.sub}}>War Day {getWarDay()} · {REPORT_NOW.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</span></div><CollapsibleSection t={t} title="01 · Breaking" defaultOpen={true}><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{shown.map((story,si)=>{const sc=sevColor(story.severity);const isCrit=story.severity==="critical";return <div key={story.id} style={{position:"relative",overflow:"hidden",background:t.isDark?"linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0) 40%),"+t.card:t.card,borderTop:t.isDark?"1px solid rgba(255,255,255,.08)":`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${sc}`,borderRadius:12,padding:"14px 16px",marginBottom:10,boxShadow:t.isDark?"0 3px 12px rgba(0,0,0,.38)":"0 2px 8px rgba(59,130,246,.10)",animation:`riseIn .32s ease-out ${si*0.05}s both${isCrit?", criticalPulse 2.2s ease-in-out "+(si*0.05+0.4)+"s infinite":""}`}}>{isCrit&&<div style={{position:"absolute",inset:0,background:"linear-gradient(180deg,rgba(220,38,38,.10),transparent 30%)",animation:"edgeSheen 2.6s ease-in-out infinite",pointerEvents:"none"}}/>}{isCrit&&<div className="stamp">Priority</div>}<div style={{display:"flex",alignItems:"flex-start",gap:10,marginBottom:6}}><span style={{fontSize:18,flexShrink:0,marginTop:1}}>{story.icon}</span><div style={{flex:1,minWidth:0}}><div style={{fontSize:13,fontWeight:700,color:t.text,lineHeight:1.4,marginBottom:5}}>{story.headline}</div><div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}><span style={{background:story.conflictColor+"22",border:`1px solid ${story.conflictColor}55`,borderRadius:20,padding:"2px 8px",fontSize:10,fontWeight:700,color:story.conflictColor}}>{story.conflict}</span><span style={{fontSize:10,color:t.sub}}>{story.publishedAt}</span><Freshness t={t} date={story.publishedAt}/><ConfidenceTag level={story.confidence}/></div></div></div><div style={{fontSize:11,fontWeight:600,color:story.impactColor}}>{story.impact}</div></div>;})}</div></CollapsibleSection><CollapsibleSection t={t} title="02 · Global Energy Disruption"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{ENERGY_DISRUPTIONS.map((e,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${e.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3}}><span style={{fontSize:16}}>{e.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text}}>{e.label}</div></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{e.text}</div></div>)}<TrendChart t={t} data={HISTORICAL.oilPriceBrent} color="#f97316" label="Brent Crude" unit="$ per barrel" area desc="From $61 in January to a $118 peak in March after the Feb 28 US-Israel strikes on Iran shut most Hormuz traffic — the largest inflation-adjusted quarterly jump on record (EIA). Eased to $85 by June as Hormuz reopened, per EIA's realized monthly average. July isn't plotted yet — daily spot prices swung wildly ($72 to $93) as the Iran crisis reignited late-month, and EIA won't publish a realized July average until its Aug 11 STEO release. Ties together every energy story on this dashboard — Ukraine's refinery campaign, Hormuz, and the Cuba/Venezuela fuel crisis all move this one number." /></div></CollapsibleSection><CollapsibleSection t={t} title="03 · Sanctions Tracker"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{SANCTIONS_TRACKER.map((s,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${s.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3,flexWrap:"wrap"}}><span style={{fontSize:16}}>{s.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{s.label}</div><span style={{fontSize:9,fontWeight:700,color:s.color,background:s.color+"18",borderRadius:10,padding:"1px 7px"}}>{s.theater}</span></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{s.text}</div></div>)}</div></CollapsibleSection><CollapsibleSection t={t} title="04 · Political Calendar"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{POLITICAL_CALENDAR.map((p,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${p.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8,display:"flex",gap:12}}><div style={{minWidth:78,fontSize:10,fontWeight:700,color:p.color,flexShrink:0,paddingTop:1}}>{p.date}</div><div><div style={{fontSize:13,fontWeight:700,color:t.text,marginBottom:2}}>{p.label}</div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{p.note}</div></div></div>)}</div></CollapsibleSection><CollapsibleSection t={t} title="05 · Legal & Accountability Tracker"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{LEGAL_TRACKER.map((l,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${l.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3,flexWrap:"wrap"}}><span style={{fontSize:16}}>{l.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{l.label}</div><span style={{background:l.color+"22",border:`1px solid ${l.color}55`,borderRadius:20,padding:"1px 8px",fontSize:9,fontWeight:700,color:l.color,textTransform:"uppercase"}}>{l.theater}</span></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{l.text}</div></div>)}</div></CollapsibleSection><CollapsibleSection t={t} title="06 · Upcoming Deadlines"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{DEADLINES.map((d,i)=><DeadlineCard key={i} d={d} t={t}/>)}</div></CollapsibleSection><CollapsibleSection t={t} title="🕵️ Cyber & Hybrid Warfare"><div style={{display:t.isLandscape?"grid":"block",gridTemplateColumns:t.isLandscape?"1fr 1fr":undefined,gap:t.isLandscape?10:0}}>{CYBER_HYBRID.map((c,i)=><div key={i} style={{background:t.card,borderTop:`1px solid ${t.border}`,borderRight:`1px solid ${t.border}`,borderBottom:`1px solid ${t.border}`,borderLeft:`3px solid ${c.color}`,borderRadius:12,padding:"12px 14px",marginBottom:8}}><div style={{display:"flex",gap:8,alignItems:"center",marginBottom:3,flexWrap:"wrap"}}><span style={{fontSize:16}}>{c.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{c.label}</div><ConfidenceTag level={c.confidence}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{c.text}</div></div>)}</div><div style={{fontSize:10.5,color:t.sub,fontStyle:"italic",padding:"6px 2px 0"}}>See full Cyber section → Deep Dive. Attribution in cyber/hybrid incidents is frequently contested — treat sourcing as preliminary unless independently confirmed.</div></CollapsibleSection></div>;}
 
 // ── Deep Dive View ─────────────────────────────────────────────────────────────────
-const CONFLICT_SECTIONS=[{id:"iran",label:"🇮🇷 Iran",conflictId:"iran"},{id:"ukraine",label:"🇺🇦 Ukraine",conflictId:"ukraine"},{id:"dronewar",label:"🛸 Drone War",conflictId:"dronewar"},{id:"usmil",label:"⚔️ Great Powers",conflictId:"usmil"},{id:"gaza",label:"🌍 Israel & Levant",conflictId:"gaza"},{id:"scs",label:"🏝️ S. China Sea & Taiwan",conflictId:"south-china-sea"},{id:"venezuela",label:"🌎 Americas",conflictId:"venezuela"},{id:"africa",label:"🌍 Africa",conflictId:"sudan"},{id:"southasia",label:"🌏 South Asia",conflictId:"indopak"}];
+const CONFLICT_SECTIONS=[{id:"iran",label:"🇮🇷 Iran",conflictId:"iran"},{id:"ukraine",label:"🇺🇦 Ukraine",conflictId:"ukraine"},{id:"usmil",label:"⚔️ Great Powers",conflictId:"usmil"},{id:"gaza",label:"🌍 Israel & Levant",conflictId:"gaza"},{id:"scs",label:"🏝️ S. China Sea & Taiwan",conflictId:"south-china-sea"},{id:"venezuela",label:"🌎 Americas",conflictId:"venezuela"},{id:"africa",label:"🌍 Africa",conflictId:"sudan"},{id:"southasia",label:"🌏 South Asia",conflictId:"indopak"}];
 
 function GazaSection({t,initialTab}){
   const[tab,setTab]=useState(initialTab??"conflict");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
@@ -1821,20 +1988,20 @@ function IranSection({t,initialTab}){
       <ConflictOverviewCard conflict={conflict} t={t}/>
       <Hero t={t} style={{borderLeft:"4px solid #8b5cf6"}}>
         <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:10}}>🤝 Hormuz Talks Advance — Framework Awaits Khamenei’s Sign-Off</div>
-        <Grid2 t={t} items={[{val:"Final drafting",label:"Iran-Oman framework",sub:"Route coordinates agreed; joint statement pending",color:"#8b5cf6"},{val:"Awaiting Khamenei",label:"Final approval",sub:"Draft reportedly complete, sign-off still pending",color:"#f97316"},{val:"Both legs",label:"Iran’s ask",sub:"Inbound + outbound via Iranian waters — US resists",color:"#dc2626"},{val:"8 days",label:"MoU clock (nominal)",sub:"Hormuz talks now the live front of the MoU",color:"#8b5cf6"}]}/>
+        <Grid2 t={t} items={[{val:"Dropped",label:"Iran’s ‘both legs’ demand",sub:"Walked back per Reuters; NSC still lists other conditions",color:"#22c55e"},{val:"Low-keying",label:"Trump’s own words",sub:"‘Semi-negotiating’ — watching Iran’s inflation, per Axios",color:"#f97316"},{val:"4 demands",label:"Iran NSC conditions",sub:"End blockade, withdraw forces, end war, before reopening",color:"#dc2626"},{val:"6 days",label:"MoU clock (nominal)",sub:"Hormuz talks now the live front of the MoU",color:"#8b5cf6"}]}/>
       </Hero>
       {news.map(item=><Card key={item.id} t={t} style={{borderLeft:`4px solid ${item.impactColor}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:6,marginBottom:6,flexWrap:"wrap"}}><Pill label={item.conflict} color={item.conflictColor}/><span style={{fontSize:10,color:t.sub}}>{item.publishedAt}</span><ConfidenceTag level={item.confidence}/><Freshness t={t} date={item.publishedAt}/></div><div style={{fontSize:13,fontWeight:700,color:t.text,marginBottom:6}}>{item.headline}</div>{item.bullets.map((b,i)=><div key={i} style={{display:"flex",gap:6,fontSize:12,color:t.sub,marginBottom:4,lineHeight:1.5}}><span style={{color:item.impactColor,flexShrink:0}}>▸</span>{b}</div>)}<div style={{fontSize:11,color:item.impactColor,fontWeight:600,marginTop:6}}>{item.impact}</div></div></Card>)}
     </div>}
     {tab==="timeline"&&<div>
       <Hero t={t} style={{borderLeft:"4px solid #8b5cf6"}}>
         <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>📅 US-Iran War 2026 — Full Timeline</div>
-        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>From Operation Epic Fury (Feb 28) through the Islamabad MoU and the 8-day countdown to Aug 16.</div>
+        <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>From Operation Epic Fury (Feb 28) through the Islamabad MoU and the 6-day countdown to Aug 16.</div>
       </Hero>
       <EventsTimeline t={t} events={events} label="US-Iran War Timeline"/>
     </div>}
     {tab==="gaps"&&<div>
       <Hero t={t} style={{borderLeft:"4px solid #ef4444"}}>
-        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>⚠️ Unresolved Gaps — 8 Days Remain</div>
+        <div style={{fontSize:11,color:"rgba(255,255,255,.4)",textTransform:"uppercase",letterSpacing:".08em",marginBottom:8}}>⚠️ Unresolved Gaps — 6 Days Remain</div>
         <div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>Six fundamental disagreements remain unbridged. The sixth — who controls Hormuz — has moved from missiles to a negotiating table, but the core dispute (Iran wants control, the US won't accept it) is unchanged.</div>
       </Hero>
       {GAPS.map((g,i)=><Card key={i} t={t} style={{borderLeft:`4px solid ${g.color}`}}><div style={{padding:"11px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}><span style={{fontSize:18}}>{g.icon}</span><div style={{fontSize:13,fontWeight:700,color:t.text,flex:1}}>{g.label}</div><Pill label={g.status} color={g.color}/></div><div style={{fontSize:12,color:t.sub,lineHeight:1.55}}>{g.text}</div></div></Card>)}
@@ -1854,7 +2021,7 @@ function IranSection({t,initialTab}){
         {icon:"📉",label:"Daily strait crossings",val:"8 (Tuesday)",sub:"~29 total this week vs ~130/day pre-war average (Kpler)",color:"#dc2626"},
         {icon:"🚨",label:"Blockade effective",val:"Jul 14",sub:"20:00 GMT — all flags, entire Iranian coastline",color:"#dc2626"},
         {icon:"🎯",label:"Confirmed enforcement strikes",val:"2",sub:"M/T Belma (Jul 15) + a second vessel (Jul 16) — both disabled, not sunk",color:"#f97316"},
-        {icon:"⏳",label:"MoU deadline",val:"Aug 16 (8 days)",sub:"60-day Islamabad window — Hormuz talks now its live front",color:"#8b5cf6"},
+        {icon:"⏳",label:"MoU deadline",val:"Aug 16 (6 days)",sub:"60-day Islamabad window — Hormuz talks now its live front",color:"#8b5cf6"},
       ]}/>
       <ST t={t} color="#0e7490">📋 Status Board — Blockade Era</ST>
       <div style={{display:"flex",justifyContent:"flex-end",marginBottom:6}}>
@@ -2020,7 +2187,7 @@ function USMilSection({t,initialTab}){
   const VECTORS=[
     {flag:"🇷🇺",name:"Russia — Strategic Signalling",status:"ACTIVE",color:"#ef4444",text:"Largest arsenal on earth. Putin has repeatedly invoked nuclear rhetoric. IC consensus (Jun 2026): threats are coercive, not operational — any use would forfeit Chinese support, Putin's true red line."},
     {flag:"🇧🇾",name:"Belarus — Forward-Based Tac-Nukes",status:"DEPLOYED",color:"#f97316",text:"Hosts Russian tactical nuclear weapons since 2023 — first deployment outside Russia since the USSR. Russia has now started building a forward-operating base in Belarus for its dual-capable Oreshnik IRBM (SIPRI); Oreshnik has already struck Ukraine with conventional warheads, most recently May 2026. Separately, Russia claims a 2025 successful 14,000km test of the nuclear-powered Burevestnik cruise missile after repeated failures."},
-    {flag:"🇮🇷",name:"Iran — Nuclear Clock",status:"8 DAYS",color:"#8b5cf6",text:"Islamabad MoU 60-day window closes ~Aug 16. IAEA inspector access disputed. Enrichment red lines unresolved — Pezeshkian: 'we will never back down from the right to enrich uranium.'"},
+    {flag:"🇮🇷",name:"Iran — Nuclear Clock",status:"6 DAYS",color:"#8b5cf6",text:"Islamabad MoU 60-day window closes ~Aug 16. IAEA inspector access disputed. Enrichment red lines unresolved — Pezeshkian: 'we will never back down from the right to enrich uranium.'"},
     {flag:"🇺🇦",name:"Ukraine — Deterrence Shift",status:"WATCH",color:"#22c55e",text:"Fire Point's FP-9 (850km, Moscow-capable) and the Freyja ABM system mark a move toward sovereign strategic deterrence outside the US approval cycle — a structural change in the strike balance."},
   ];
 
@@ -2250,7 +2417,7 @@ function USMilSection({t,initialTab}){
       <div style={{fontSize:10.5,color:t.sub,fontStyle:"italic",margin:"-6px 2px 10px"}}>In-service F-35/F-22/J-20/J-35/Su-57 only — programs still in development (India's AMCA, France's SCAF/FCAS, Türkiye's Kaan) show 0 until aircraft actually reach squadrons. See 5th-Gen Fighters tab for per-aircraft detail.</div>
       <ST t={t} color="#22c55e">🛸 Unmanned Aircraft (All Classes)</ST>
       <RankBar t={t} data={GLOBAL_MIL_RANKINGS} field="drones" max={RANK_MAX.drones} color="#22c55e" accent="#4ade80"/>
-      <div style={{fontSize:10.5,color:t.sub,fontStyle:"italic",margin:"-6px 2px 10px"}}>Small/tactical/strategic UAVs combined — dominated by low-cost tactical drones, not high-end strike platforms. Türkiye's fleet size varies widely by source (1,400-3,000+); shown figure is a rough midpoint. Cross-reference: Drone War section for Ukraine/Russia's much larger wartime-consumption fleets, off this global peacetime comparison.</div>
+      <div style={{fontSize:10.5,color:t.sub,fontStyle:"italic",margin:"-6px 2px 10px"}}>Small/tactical/strategic UAVs combined — dominated by low-cost tactical drones, not high-end strike platforms. Türkiye's fleet size varies widely by source (1,400-3,000+); shown figure is a rough midpoint. Ukraine and Russia's wartime-consumption fleets run far larger than this global peacetime comparison reflects.</div>
       <ST t={t} color="#5b8ec8">⚓ Navy Vessels</ST>
       <RankBar t={t} data={GLOBAL_MIL_RANKINGS} field="navy" max={RANK_MAX.navy} color="#5b8ec8" accent="#22c55e"/>
       <ST t={t} color="#ef4444">🛡️ Tank Fleet</ST>
@@ -2444,7 +2611,7 @@ function USMilSection({t,initialTab}){
         <div style={{marginBottom:6}}><span style={{color:t.text,fontWeight:700}}>Drones</span> — The inverted race: Russia ~60k long-range strike drones/yr (Geran lines at Alabuga, jet-powered Geran-4 now in use); NATO produces nothing analogous cheap; Ukraine's 120+ company ecosystem out-innovates both at 100k+/mo including interceptor drones at $7.5k.</div>
         <div><span style={{color:t.text,fontWeight:700}}>The bottleneck layer</span> — Explosives and propellant, not steel: one major TNT plant in Poland carried Europe for years; France/Sweden powder capacity 10× expansions land 2026; nitrocellulose still partly China-sourced (see Critical Minerals tab). Whoever fixes energetics first wins the ramp.</div>
       </div></div></Card>
-      <Note t={t} color="#f97316">Figures: RFE/RL-CIT production analysis, RUSI, Pentagon industrial-base reports, Rheinmetall/BAE statements, NATO SG remarks. Production numbers are estimates with wide bands (esp. Russian refurb vs new-build). Cross-reference: NATO & Allies tab (arms flow), Drone War → Cost, Ukraine → RU Economy.</Note>
+      <Note t={t} color="#f97316">Figures: RFE/RL-CIT production analysis, RUSI, Pentagon industrial-base reports, Rheinmetall/BAE statements, NATO SG remarks. Production numbers are estimates with wide bands (esp. Russian refurb vs new-build). Cross-reference: NATO & Allies tab (arms flow), Ukraine → RU Economy.</Note>
     </div>}
 
     {tab==="dprk"&&<div>
@@ -2788,1234 +2955,6 @@ function VenezuelaSection({t,initialTab}){
 
 
 
-// ════════════════════════════════════════════════════════════════════════════
-// DRONE WAR SECTION — integrated drone-strike dashboard (re-themed to slate)
-// ════════════════════════════════════════════════════════════════════════════
-const DWC = {
-  bg:"#0b1220", card:"#101d30", card2:"#0a1628", border:"#1e3a5f",
-  text:"#c8d8ed", muted:"#607898", gold:"#eab308", goldLt:"#fde68a",
-  ru:"#ef4444", ruDk:"#7f1d1d", ruLt:"#fca5a5",
-  ua:"#5b8ec8", uaDk:"#1e3a5f", uaLt:"#bcd3ec",
-  green:"#22c55e", orange:"#f97316", purple:"#a855f7", teal:"#14b8a6",
-};
-
-const DW_DAILY = [
-  { date:"Jun 1",  ru_d:245,ru_m:6,  ru_int:224,ru_thru:27, ua_d:285,ua_int:255,ua_thru:30, alert_h:7.2, pw_gwh:0.38, confirmed:false, note:null },
-  { date:"Jun 2",  ru_d:656,ru_m:73, ru_int:642,ru_thru:87, ua_d:148,ua_int:148,ua_thru:0,  alert_h:14.1,pw_gwh:2.10,
-    confirmed:true, targets:"Kyiv, Zaporizhzhia, Kharkiv, Dnipro, Poltava, Khmelnytskyi, Sumy",
-    note:"🔴 Russia largest June attack: 656 drones + 73 missiles. 38 sites hit. Kyiv: 4 killed, 58 wounded; 140k homes lost power. National toll: 22 killed, 130+ injured." },
-  { date:"Jun 3",  ru_d:215,ru_m:6,  ru_int:193,ru_thru:28, ua_d:354,ua_int:295,ua_thru:59, alert_h:9.3, pw_gwh:0.55,
-    confirmed:true, targets:"St. Petersburg, Russian-occupied Donetsk, multiple regions",
-    note:"🔵 Ukraine retaliatory wave: ~354 drones. St. Petersburg oil terminal hit (fire, Kirovsky district). Bus in Russian-controlled Donetsk struck. Russia claimed all 354 intercepted; fires contradict claim." },
-  { date:"Jun 4",  ru_d:185,ru_m:5,  ru_int:169,ru_thru:21, ua_d:270,ua_int:240,ua_thru:30, alert_h:6.8, pw_gwh:0.31, confirmed:false, note:null },
-  { date:"Jun 5",  ru_d:222,ru_m:7,  ru_int:203,ru_thru:26, ua_d:305,ua_int:272,ua_thru:33, alert_h:7.1, pw_gwh:0.35, confirmed:false, note:null },
-  { date:"Jun 6",  ru_d:198,ru_m:6,  ru_int:181,ru_thru:23, ua_d:292,ua_int:260,ua_thru:32, alert_h:6.9, pw_gwh:0.33, confirmed:false, note:null },
-  { date:"Jun 7",  ru_d:235,ru_m:7,  ru_int:215,ru_thru:27, ua_d:322,ua_int:287,ua_thru:35, alert_h:7.4, pw_gwh:0.37, confirmed:false, note:null },
-  { date:"Jun 8",  ru_d:258,ru_m:8,  ru_int:237,ru_thru:29, ua_d:338,ua_int:300,ua_thru:38, alert_h:7.8, pw_gwh:0.40,
-    confirmed:true, targets:"Occupied Crimea (military logistics train), Russian rear areas",
-    note:"🔵 Ukrainian strike drone hit a military logistics train in occupied Crimea in the early hours of Jun 8 — part of the logistical lockdown campaign. Russia began slashing nighttime Crimea train schedules in response." },
-  { date:"Jun 9",  ru_d:239,ru_m:7,  ru_int:220,ru_thru:26, ua_d:380,ua_int:318,ua_thru:62, alert_h:8.2, pw_gwh:0.44,
-    confirmed:true, targets:"Russian drone component factory, Russian oil infrastructure, occupied Ukraine",
-    note:"🔵 Ukraine FP-5 Flamingo cruise missile strikes Russian plant producing Shahed drone components. Russia fired 7 ballistic missiles + 239 drones at Ukraine; Ukraine downed 216 combined." },
-  { date:"Jun 10", ru_d:212,ru_m:6,  ru_int:194,ru_thru:24, ua_d:288,ua_int:256,ua_thru:32, alert_h:6.8, pw_gwh:0.33,
-    confirmed:true, targets:"Sevastopol (Crimea), occupied Mariupol port, Samara/Novokuibyshevsk refineries",
-    note:"🔵 Ukrainian drones struck the Mariupol port (blackout), damaged the historic Sevastopol panorama museum, and the Kuibyshev refinery in Samara burned after 29+ drones. Crimea fuel rationing began." },
-  { date:"Jun 11", ru_d:248,ru_m:7,  ru_int:226,ru_thru:29, ua_d:450,ua_int:378,ua_thru:72, alert_h:7.9, pw_gwh:0.41,
-    confirmed:true, targets:"Moscow (Gazprom Neft refinery), multiple Russian regions",
-    note:"🔵 Ukraine strikes Gazprom Neft Moscow oil refinery for the first time. Confirmed fires across SE Moscow. Part of systematic campaign targeting Russian energy revenue." },
-  { date:"Jun 12", ru_d:226,ru_m:7,  ru_int:207,ru_thru:26, ua_d:296,ua_int:263,ua_thru:33, alert_h:7.0, pw_gwh:0.34, confirmed:false, note:null },
-  { date:"Jun 13", ru_d:272,ru_m:9,  ru_int:249,ru_thru:32, ua_d:312,ua_int:278,ua_thru:34, alert_h:7.5, pw_gwh:0.38, confirmed:false, note:null },
-  { date:"Jun 14", ru_d:202,ru_m:6,  ru_int:185,ru_thru:23, ua_d:276,ua_int:245,ua_thru:31, alert_h:6.7, pw_gwh:0.32, confirmed:false, note:null },
-  { date:"Jun 15", ru_d:188,ru_m:5,  ru_int:172,ru_thru:21, ua_d:262,ua_int:232,ua_thru:30, alert_h:6.5, pw_gwh:0.30,
-    confirmed:true, targets:"Kharkiv region, Chernihiv region, Dnipropetrovsk, Kherson",
-    note:"🟡 ACLED confirms: week of Jun 9–15, Russia attacked 14+ petrol stations in front-line regions. Jun 9 alone: 3 stations in Kharkiv region. Chernihiv: 2 stations." },
-  { date:"Jun 16", ru_d:222,ru_m:7,  ru_int:203,ru_thru:26, ua_d:430,ua_int:360,ua_thru:70, alert_h:7.5, pw_gwh:0.38,
-    confirmed:true, targets:"Moscow Oil Refinery (Gazprom Neft), multiple Russian regions",
-    note:"🔵 Ukraine struck the Moscow Oil Refinery overnight — Russian industry sources cited by Reuters said the strike shut down operations. First of two Moscow refinery hits in a single week." },
-  { date:"Jun 17", ru_d:246,ru_m:8,  ru_int:226,ru_thru:28, ua_d:342,ua_int:304,ua_thru:38, alert_h:7.6, pw_gwh:0.39, confirmed:false, note:null },
-  { date:"Jun 18", ru_d:239,ru_m:7,  ru_int:219,ru_thru:27, ua_d:555,ua_int:375,ua_thru:180,alert_h:11.2,pw_gwh:1.20,
-    confirmed:true, targets:"Moscow Oil Refinery (2nd hit/week), Gukovo oil depot (Rostov), 13+ regions",
-    note:"🔵 Ukraine's largest attack on Moscow of the war: ~555 drones nationwide, with ~194 downed on approach to Moscow. Moscow Oil Refinery hit for the 2nd time in a week — the facility halted operations. Aeroflot/Rossiya cancelled 170+ flights." },
-  { date:"Jun 19", ru_d:192,ru_m:5,  ru_int:175,ru_thru:22, ua_d:298,ua_int:265,ua_thru:33, alert_h:6.8, pw_gwh:0.33, confirmed:false, note:null },
-  { date:"Jun 20", ru_d:216,ru_m:6,  ru_int:198,ru_thru:24, ua_d:282,ua_int:251,ua_thru:31, alert_h:6.9, pw_gwh:0.34,
-    confirmed:true, targets:"Crimea supply highways, Chonhar bridge approaches, Russian fuel convoys",
-    note:"🟡 CNN/ISW detail Ukraine's logistical lockdown: mid-range roving drones now control 3 coastal highways to Crimea. Freight over the Chonhar bridge fell 71% in two weeks." },
-  { date:"Jun 21", ru_d:232,ru_m:7,  ru_int:212,ru_thru:27, ua_d:540,ua_int:301,ua_thru:239,alert_h:8.4, pw_gwh:0.55,
-    confirmed:true, targets:"Kerch fuel terminal & oil depot, Port Kavkaz (Krasnodar), Kerch Strait ferry, AD/radar sites",
-    note:"🔵 Major Kerch Strait operation ~300 km from the front. Ukraine hit a Kerch fuel terminal and oil depot, the Port Kavkaz logistics hub and the ferry Panagia. Crimea attacks killed 4, wounded 28." },
-  { date:"Jun 22", ru_d:206,ru_m:6,  ru_int:189,ru_thru:23, ua_d:272,ua_int:242,ua_thru:30, alert_h:6.7, pw_gwh:0.32, confirmed:false, note:null },
-  { date:"Jun 23", ru_d:215,ru_m:6,  ru_int:196,ru_thru:25, ua_d:300,ua_int:267,ua_thru:33, alert_h:7.0, pw_gwh:0.34, confirmed:false, note:null },
-  { date:"Jun 24", ru_d:220,ru_m:6,  ru_int:201,ru_thru:25, ua_d:380,ua_int:323,ua_thru:57, alert_h:7.2, pw_gwh:0.35,
-    confirmed:true, targets:"Orenburg Gazprom gas/helium plant, Balaklava CHP (Sevastopol), Crimea coastal radar sites",
-    note:"🔵 Ukraine struck Russia's only helium plant in Orenburg (1,500km deep) — fires and airport shutdowns reported. Balaklava thermal power plant in Sevastopol also hit; roughly half of occupied Crimea lost power. Russia claims 323 Ukrainian drones intercepted overnight." },
-  { date:"Jun 25", ru_d:210,ru_m:6,  ru_int:192,ru_thru:24, ua_d:310,ua_int:276,ua_thru:34, alert_h:6.9, pw_gwh:0.33, confirmed:false, note:null },
-  { date:"Jun 26", ru_d:189,ru_m:7,  ru_int:174,ru_thru:19, ua_d:700,ua_int:660,ua_thru:40, alert_h:9.5, pw_gwh:0.50,
-    confirmed:true, targets:"12 Russian regions, Crimea, Black Sea — Kerch naval vessels, Novomoskovsk chemical/hydro plant",
-    note:"🔵 One of Ukraine's biggest drone assaults since 2022 — 660+ drones per Russian MoD claim, hitting 12 regions plus Crimea. SBU struck Russian navy vessels (Volga, Vyatka) and a ferry at Kerch; Novomoskovsk chemical/hydro plant also hit. Zelensky ordered a '40-day influence operation' escalating strikes. 🔴 Same night: Russia launched 189 drones + 7 Iskander-M missiles at Ukraine; 4 missiles penetrated." },
-  { date:"Jun 27", ru_d:205,ru_m:6,  ru_int:188,ru_thru:23, ua_d:290,ua_int:258,ua_thru:32, alert_h:6.8, pw_gwh:0.32, confirmed:false, note:null },
-  { date:"Jun 28", ru_d:200,ru_m:6,  ru_int:183,ru_thru:23, ua_d:295,ua_int:263,ua_thru:32, alert_h:6.7, pw_gwh:0.32, confirmed:false, note:null },
-  { date:"Jun 29", ru_d:155,ru_m:8,  ru_int:138,ru_thru:25, ua_d:460,ua_int:419,ua_thru:41, alert_h:8.0, pw_gwh:0.40,
-    confirmed:true, targets:"Dnipro, Zaporizhzhia, Sumy, Odesa, Chernihiv, Kherson, Kharkiv regions (RU strikes); Dubna Space Communications Center 2nd strike (UA)",
-    note:"🔴 Russian missile/drone strikes killed 13, injured 109 across Ukraine — Dnipro (5 killed) and Zaporizhzhia (3 killed) hit hardest; Sumy, Odesa, Chernihiv, Kherson also struck. Ukraine's Air Force shot down 138 incoming targets. 🔵 Same period: Zelensky confirmed a second Ukrainian strike on Russia's Dubna Space Communications Center (Moscow Oblast) — used for Russian intelligence and coordination of occupying forces. Russia claims 419+ Ukrainian drones intercepted since Monday evening." },
-  { date:"Jun 30", ru_d:195,ru_m:6,  ru_int:178,ru_thru:23, ua_d:460,ua_int:419,ua_thru:41, alert_h:7.5, pw_gwh:0.36,
-    confirmed:true, targets:"Dubna Satellite Communications Center (2nd strike), Moscow region, 18 Russian regions incl. Crimea",
-    note:"🔵 Ukraine struck the Dubna Satellite Communications Center north of Moscow for the second time in just over a week — used for Russian ISR and coordinating occupying forces. Russia's MoD claimed 419 drones intercepted across 18 regions; Moscow's mayor reported 61 shot down approaching the capital, briefly disrupting Domodedovo and Zhukovsky airports. A 6-month-old died when drone debris hit a home in Yegoryevsk." },
-  { date:"Jul 1",  ru_d:496,ru_m:74, ru_int:524,ru_thru:46, ua_d:390,ua_int:318,ua_thru:72, alert_h:9.6, pw_gwh:1.30,
-    confirmed:true, targets:"Kyiv (30+ locations), Ufa refinery, Penza NIIFI sensor plant, Nizhny Novgorod refinery, Luhansk rail bridge",
-    note:"🔴 Russia's deadliest strike on Kyiv in months: ~74 missiles (28 ballistic, incl. a Zircon hypersonic) plus ~496 drones, mostly aimed at the capital. Ukraine's Air Force intercepted 48 missiles and 476 drones; still, 25-30 killed and 90+ injured across 30+ Kyiv locations, a 64-apartment building destroyed. 🔵 Same period: Ukraine struck the Ufa refinery (~1,300km deep) and the Penza NIIFI sensor plant, plus a Nizhny Novgorod refinery and a Luhansk rail bridge used for Russian logistics." },
-  { date:"Jul 2",  ru_d:105,ru_m:2,  ru_int:83, ru_thru:24, ua_d:260,ua_int:215,ua_thru:45, alert_h:6.2, pw_gwh:0.28,
-    confirmed:true, targets:"Saky airbase (occupied Crimea, 2nd strike this week, 7 aircraft hit), Crimea approaches (2 waves)",
-    note:"🔵 SBU struck Saky airbase in occupied Crimea for the second time in a week, hitting seven Russian aircraft (Su-30SM/Su-30/Su-24) in hangars — sustained campaign against Crimean airpower. 🔴 Russia's overnight barrage was comparatively light after Jul 1's mass strike: 2 Kh-59/69 missiles and 105 drones, with Ukraine's Air Force intercepting or suppressing 83 of them." },
-  { date:"Jul 3",  ru_d:86, ru_m:2,  ru_int:69, ru_thru:17, ua_d:500,ua_int:0,ua_thru:0, alert_h:5.9, pw_gwh:0.24,
-    confirmed:true, targets:"St. Petersburg Oil Terminal, Kronstadt Naval Base (Baltic Fleet HQ)",
-    note:"🔵 Ukraine's deepest Baltic strike yet: ~500 long-range drones (per Russian MoD; ~200 at Moscow) hit the St. Petersburg Oil Terminal — one of the Baltic's largest transshipment hubs — and the Kronstadt Naval Base, both catching fire. UA GenStaff: Russian refining now at 42.47% of design capacity. 🔴 Russia's night was light: 86 drones + 2 missiles (Iskander-M, Kh-59/69); 69 drones downed, 17 through at 16 locations." },
-  { date:"Jul 4",  ru_d:129,ru_m:0,  ru_int:115,ru_thru:14, ua_d:null,ua_int:0,ua_thru:0, alert_h:6.1, pw_gwh:0.20,
-    confirmed:true, targets:"Kharkiv (gas station, Kyivskyi district), Izium missile strike, Zaporizhzhia (7 injured), Chernihiv",
-    note:"🔴 129 drones launched overnight; 115 neutralized (~89%). Daytime Jul 5 follow-ons: jet-drone hit a Kharkiv gas station (2 injured), missile strike on Izium, 7 injured in Zaporizhzhia with an architectural landmark destroyed. 🔴 Russia claimed the capture of Kostiantynivka; Zelensky publicly refuted it — 'Putin decided to lie' — and ISW notes no confirmation of full control." },
-  { date:"Jul 5",  ru_d:351,ru_m:68, ru_int:363,ru_thru:47, ua_d:625,ua_int:613,ua_thru:12, alert_h:9.2, pw_gwh:0.55,
-    confirmed:true, targets:"Kyiv (Obolonskyi, Holosiivskyi, Podilskyi, Darnytskyi districts), Vyshneve (Ukroboronprom ammunition depot)",
-    note:"🔴 Russia's 2nd mass strike on Kyiv in 5 days: 68 missiles (23 ballistic, 39 cruise, 6 Zircon hypersonic) + 351 drones. 363 intercepted (37 missiles + 326 drones), but ZERO ballistic missiles stopped — 29 hit at 34 locations alongside 18 drones. Vyshneve ammunition depot detonation forced 600+ evacuations. Death toll rose to 26 across Kyiv/Oblast as rescue work continued. Zelensky: 'insufficient supply of interceptor missiles.' 🔵 Ukraine's answer the same night: 625 drones at Russia (RU MoD claim), 613 downed — the largest UA raid to that point." },
-  { date:"Jul 6",  ru_d:123,ru_m:0,  ru_int:108,ru_thru:12, ua_d:430,ua_int:0,ua_thru:0, alert_h:4.6, pw_gwh:0.16,
-    confirmed:true, targets:"Nationwide drone-only barrage, north/south/center/east",
-    note:"🔵 Quieter night — 123 drones, no missiles; 108 neutralized (~88%), 12 hit at 10 locations. 🔵 Ukraine's deepest strike of the war: FP-1 drones (3,000km) hit the Omsk refinery — Russia's largest, 10% of national refining capacity, first-ever strike on the plant — forcing it offline within 24 hours. That night Ukraine flew 430+ drones at Moscow and the surrounding region — its biggest strike on the capital area in two years (RU MoD claim; Ukraine does not disclose launch totals)." },
-  { date:"Jul 7",  ru_d:169,ru_m:7,  ru_int:139,ru_thru:25, ua_d:null,ua_int:0,ua_thru:0, alert_h:6.4, pw_gwh:0.28,
-    confirmed:true, targets:"Kyiv (Vyshneve depot follow-on, Desnianskyi/Sviatoshynskyi districts)",
-    note:"🔴 5 Iskander-M/S-400 ballistic + 2 Kh-31P anti-radar missiles + 169 drones (evening start). 139 drones neutralized; 5 missiles hit 4 locations, 20 drones hit 11 locations, 2 Kh-31P failed to reach targets on their own. 3-4 killed, 15+ injured in Kyiv — the third ballistic strike on the capital in six days, landing during the NATO Ankara summit." },
-  { date:"Jul 8",  ru_d:94, ru_m:2,  ru_int:72, ru_thru:21, ua_d:null,ua_int:73,ua_thru:0, alert_h:4.0, pw_gwh:0.14,
-    confirmed:true, targets:"Odesa (civilian infrastructure)",
-    note:"🔴 2 Iskander-M ballistic missiles + 94 drones (Shahed incl. jet-powered, Gerbera, Italmas, Parodiya decoys). 72 drones neutralized; both missiles hit along with 19 drones. 4 killed, 6-7 injured in Odesa — infrastructure and vehicles damaged. 🔵 Russian MoD claimed 73 Ukrainian drones downed overnight; Ukraine disclosed no launch total (charted as a gap, not a zero)." },
-  { date:"Jul 9",  ru_d:88, ru_m:0,  ru_int:78, ru_thru:10, ua_d:null,ua_int:0,ua_thru:0, alert_h:3.8, pw_gwh:0.12,
-    confirmed:true, targets:"Deep-strike day: Tver & Stavropol oil depots, Sea of Azov tankers",
-    note:"🔵 Ukraine's fuel-chain day — Tver and Stavropol oil depots hit 500+km deep (evacuations near Vyazniki reservoirs), two tankers ablaze in the Sea of Azov. Moscow banned diesel exports through month-end; Putin called for Crimea fuel subsidies. Overnight into Ukraine: ~88 drones, no missiles; 78 neutralized." },
-  { date:"Jul 10", ru_d:121,ru_m:12, ru_int:113,ru_thru:20, ua_d:178,ua_int:0,ua_thru:0, alert_h:6.7, pw_gwh:0.30,
-    confirmed:true, targets:"Kyiv (Solomianskyi, Darnytskyi, Dniprovskyi), Sumy glide bombs",
-    note:"🔴 12 missiles (6 Iskander-M/S-400 ballistic, 4 Kh-59/69, 2 Kh-31) + 121 drones. Air defense downed 2 missiles + 111 drones — but ZERO of 6 ballistic stopped; hits at 11 locations. 6 killed incl. a child, 29 wounded (Sumy glide-bomb strike on a crowd killed 4). 🔵 Russia claimed 178 UA drones downed; Ukraine struck 21 more Azov tankers + tugboats and suspended Azov-Don Canal traffic." },
-  { date:"Jul 11", ru_d:115,ru_m:13, ru_int:102,ru_thru:23, ua_d:null,ua_int:0,ua_thru:0, alert_h:6.3, pw_gwh:0.27,
-    confirmed:true, targets:"Kharkiv, Dnipro, Kryvyi Rih (struck twice)",
-    note:"🔴 13 missiles (9 Kh-59/69 + 4 Kh-31 anti-radar) + 115 drones. Air defense downed 7 Kh-59/69 + 95 drones; the 4 Kh-31s failed to reach targets independently. 2 missiles + 19 drones hit 12 locations, debris at 12 more. Kryvyi Rih hit twice — 2 killed in the first strike; Kharkiv and Dnipro also struck with casualties." },
-  { date:"Jul 12", ru_d:134,ru_m:3, ru_int:126,ru_thru:11, ua_d:null,ua_int:0,ua_thru:0, alert_h:5.8, pw_gwh:0.22,
-    confirmed:true, targets:"Scattered strike-drone hits, 5 locations",
-    note:"🔴 3 Kh-59/69 + 134 drones — Russia's largest single-night drone count since the Jun 2 mass strike (656). Air defense achieved ~92% efficiency, downing all 3 missiles + 123 drones; 6 strike-drone hits recorded at 5 locations." },
-  { date:"Jul 13", ru_d:135,ru_m:10, ru_int:115,ru_thru:26, ua_d:288,ua_int:0,ua_thru:0, alert_h:7.1, pw_gwh:0.34,
-    confirmed:true, targets:"Kyiv (Darnytskyi, Holosiivskyi — warehouses + a school)",
-    note:"🔴 8 Iskander-M/S-400 ballistic + 2 Kh-59/69 + 135 drones. Air defense downed 5 of 8 ballistic missiles — the first confirmed ballistic intercepts in nearly two weeks, likely PAC-3 — plus both Kh-59/69 and 108 drones (~85%). 1 ballistic + 25 drones still hit 17 locations; 2 more ballistic missiles unconfirmed. 🔵 Same night: Ukraine's navy struck 4 shadow-fleet tankers + a patrol boat in the Sea of Azov, and hit the Salavat oil refinery in Bashkortostan — 1,400km deep, one of the furthest strikes of the war. Russia claimed 288 Ukrainian drones intercepted." },
-  { date:"Jul 14", ru_d:122,ru_m:2, ru_int:103,ru_thru:20, ua_d:null,ua_int:0,ua_thru:0, alert_h:6.0, pw_gwh:0.25,
-    confirmed:true, targets:"Sumy, Odesa (5th consecutive night), Zaporizhzhia, Dnipropetrovsk, Chernihiv",
-    note:"🔴 2 Kh-59/69 + 122 drones. Air defense downed both missiles + 101 drones; 18 drones hit 19 locations, debris at 7 more. Casualties spread across five oblasts: 3 killed/20 injured in Sumy, 3 killed/8 injured in Odesa (its 5th straight night under attack), 1 killed in Zaporizhzhia, 1 killed/2 injured in Dnipropetrovsk (Kryvyi Rih), 1 killed in Chernihiv." },
-  { date:"Jul 15", ru_d:122,ru_m:2, ru_int:101,ru_thru:20, ua_d:null,ua_int:0,ua_thru:0, alert_h:5.6, pw_gwh:0.24,
-    confirmed:true, targets:"Nationwide, no single focal city reported",
-    note:"🔴 2 missiles + 122 drones. Air defense downed/suppressed 101 drones; both missiles and 18 drones hit their targets. Same day, satellite imagery confirmed Ukraine's Jul 14 Salavat refinery strike damaged the AVT-4/AVT-6 processing units." },
-  { date:"Jul 16", ru_d:146,ru_m:13, ru_int:132,ru_thru:22, ua_d:null,ua_int:0,ua_thru:0, alert_h:7.4, pw_gwh:0.31,
-    confirmed:true, targets:"Kyiv (ballistic hit), nationwide drone dispersal",
-    note:"🔴 13 missiles (8 Iskander-M/S-400, 4 Kh-22/32, 1 Kh-31P) + 146 drones (incl. 5 loitering munitions) — 159 total. Air defense downed/jammed 132; 5 ballistic + 1 Kh-31P + 16 drones hit 15 locations, debris at 7 more; the 4 Kh-22/32 cruise missiles failed to reach targets. 2 killed in a Kyiv ballistic strike. 🔵 Same window: SBU confirmed a Jul 14-15 drone strike on Engels-2 airbase (Saratov) tore the tail off a Tu-95 bomber; General Staff confirmed a fire at the Slavneft-YANOS refinery in Yaroslavl (a re-strike on the Jun 28 target)." },
-  { date:"Jul 17", ru_d:130,ru_m:8, ru_int:120,ru_thru:18, ua_d:null,ua_int:0,ua_thru:0, alert_h:6.1, pw_gwh:0.26,
-    confirmed:true, targets:"Dispersed, no single focal city reported",
-    note:"🔴 8 missiles (1 Kh-31P + 7 Kh-59/69) + 130 drones (Shahed/Gerbera/Italmas + decoys). Air defense downed/suppressed 5 missiles + 115 drones. 🔵 Ministry of Defence said Ukrainian drone units have struck over 1 million verified targets since the start of 2026, including ~193,500 Russian soldiers killed/wounded by drone strikes alone; UAH 333.6B ($7.5B) in drone contracts signed for H1 2026, double the prior year." },
-  { date:"Jul 18", ru_d:90,ru_m:7, ru_int:70,ru_thru:27, ua_d:null,ua_int:0,ua_thru:0, alert_h:5.3, pw_gwh:0.20,
-    confirmed:true, targets:"Odesa Oblast (main target)",
-    note:"🔴 7 missiles (2 Iskander-M, 2 Oniks anti-ship, 3 Kh-59/69) + 90 drones. Air defense downed/jammed 1 Kh-59/69 + 69 drones; hits recorded at 19 locations. 🔵 Ukraine struck inside Moscow region itself: an oil depot in Noginsk, a warehouse at the 1st Center of Unmanned Systems Forces in Elektrostal (destroyed by fire), and a large fire at a Wildberries logistics center in Moscow. Moscow's mayor said 1,892 Ukrainian drones were detected heading toward the region between Jul 11-18." },
-  { date:"Jul 19", ru_d:125,ru_m:41, ru_int:126,ru_thru:40, ua_d:null,ua_int:0,ua_thru:0, alert_h:8.9, pw_gwh:0.38,
-    confirmed:true, targets:"Kyiv (main target, 5 districts hit)",
-    note:"🔴 41 missiles (25 ballistic) + 125 drones — one of the largest ballistic barrages on Kyiv of the war. Air defense intercepted/suppressed 18 missiles + 108 drones. 1 killed, 16 wounded; fires across five Kyiv districts hit residential buildings, offices, industrial sites, a dormitory and vehicles. Zelensky said most missiles targeted the capital." },
-  { date:"Jul 20", ru_d:94,ru_m:2, ru_int:82,ru_thru:14, ua_d:null,ua_int:0,ua_thru:0, alert_h:5.8, pw_gwh:0.24,
-    confirmed:true, targets:"Dispersed, no single focal city reported",
-    note:"🔴 2 Kh-59/69 missiles + 94 drones. Air defense downed/suppressed 81 drones; 1 missile failed to reach its target. 🔵 SBU/Unmanned Systems Forces struck 13 electrical substations in Crimea and 4 shadow-fleet vessels overnight, per commander Brovdi (\\'Madyar\\')." },
-  { date:"Jul 21", ru_d:58,ru_m:0, ru_int:46,ru_thru:8, ua_d:null,ua_int:0,ua_thru:0, alert_h:3.9, pw_gwh:0.15,
-    confirmed:true, targets:"Kursk/Orel/Millerovo-directed drones, dispersed impact",
-    note:"🔴 One of the lighter nights of the week: 58 Shahed-type/Gerbera/Italmas drones, no missiles. Air defense downed/suppressed 46; 8 drones hit 7 locations." },
-  { date:"Jul 22", ru_d:216,ru_m:4, ru_int:207,ru_thru:13, ua_d:null,ua_int:0,ua_thru:0, alert_h:7.2, pw_gwh:0.29,
-    confirmed:true, targets:"Nationwide dispersal; Bucha and Kharkiv hit",
-    note:"🔴 1 Iskander-M + 3 Kh-59/69 + 216 drones — 220 total, among the largest drone volumes of the week. Air defense downed/suppressed 204 drones + all 3 Kh-59/69; the Iskander-M and 12 drones hit 12 locations, debris fell at 7 more. A Bucha-district house was hit (5 injured, incl. 3 children); Kharkiv's gas station was struck for a second time same day. 🔵 Ukraine re-struck the Saratov oil refinery, per the General Staff." },
-  { date:"Jul 23", ru_d:168,ru_m:6, ru_int:156,ru_thru:11, ua_d:null,ua_int:0,ua_thru:0, alert_h:6.4, pw_gwh:0.22,
-    confirmed:true, targets:"Odesa (near-continuous overnight), Zaporizhzhia",
-    note:"🔴 1 Iskander-M + 5 Kh-59/69 + 168 drones — 174 total. Air defense downed/suppressed 2 missiles + 154 drones; hits by the ballistic missile, 3 guided missiles and 7 drones recorded at 9 locations. 1 killed in Zaporizhzhia; Odesa took near-continuous fire overnight, damaging infrastructure, an office building, cars and homes. 🔵 Ukraine struck the NS-Oil refinery in Ulyanovsk Oblast, the Subkhankulovo pipeline dispatching station in Bashkortostan, and a Wildberries logistics hub in Voronezh for a second straight night; Russia's MoD claims 223 Ukrainian drones intercepted over 19 regions." },
-  { date:"Jul 24", ru_d:180,ru_m:5, ru_int:164,ru_thru:21, ua_d:null,ua_int:0,ua_thru:0, alert_h:6.6, pw_gwh:0.29,
-    confirmed:true, targets:"Kyiv region (missile strike), nationwide drone dispersal",
-    note:"🔴 5 Kh-59/69 + 180 drones. Air defense downed/suppressed 4 missiles + 160 drones; 1 missile + 14 drones hit 9 locations, debris at 8 more. A missile strike on Kyiv region killed 10 and injured roughly 100 — one of the deadliest single strikes on the region this month." },
-  { date:"Jul 25", ru_d:157,ru_m:2, ru_int:128,ru_thru:31, ua_d:null,ua_int:0,ua_thru:0, alert_h:5.4, pw_gwh:0.21,
-    confirmed:true, targets:"Zaporizhzhia (shopping mall), Poltava (gas stations), Sumy",
-    note:"🔴 2 Kh-59/69 + 157 drones. Air defense downed 1 missile + 127 drones; 26 drones hit 9 locations, debris at 4 more. A Zaporizhzhia shopping mall was set ablaze with casualties; four Poltava gas stations were damaged; a Sumy drone strike left further fatalities." },
-  { date:"Jul 26", ru_d:136,ru_m:8, ru_int:110,ru_thru:34, ua_d:null,ua_int:0,ua_thru:0, alert_h:7.0, pw_gwh:0.30,
-    confirmed:true, targets:"Nationwide — 7 Iskander-M/S-400 ballistic the main story",
-    note:"🔴 1 Kh-59/69 + 7 Iskander-M/S-400 ballistic + 136 drones. Air defense downed the Kh-59/69, 5 of 7 ballistic missiles, and 104 drones — Ukraine's best single-night ballistic-intercept rate (71%) since the mid-July PAC-3 shortage began. 2 ballistic + 27 drones still hit 18 locations. 🔵 Ukraine separately struck Russian-flagged vessels carrying Iranian military cargo across the Caspian Sea." },
-  { date:"Jul 27", ru_d:147,ru_m:0, ru_int:123,ru_thru:24, ua_d:null,ua_int:0,ua_thru:0, alert_h:4.8, pw_gwh:0.18,
-    confirmed:true, targets:"Nationwide dispersal, drone-only",
-    note:"🔴 Drone-only night: 147 Shahed/Gerbera/Italmas + Parodiya decoys. Air defense downed/suppressed 123; 21 drones hit 10 locations. Air Force spokesman Ihnat separately flagged a rise in ballistic-missile use over the preceding week (~50 launched) alongside factory-fresh missile markings, suggesting Russian production is keeping pace with expenditure." },
-  { date:"Jul 28", ru_d:123,ru_m:0, ru_int:107,ru_thru:16, ua_d:null,ua_int:0,ua_thru:0, alert_h:4.5, pw_gwh:0.17,
-    confirmed:true, targets:"Nationwide dispersal, drone-only",
-    note:"🔴 Second consecutive drone-only night: air defense downed/suppressed 107 of an estimated 123 attack drones; 16 hit 9 locations. The two-night pause in ballistic and cruise missile use lines up with the broader lull in the parallel Iran war, both consistent with a period of interceptor/munition conservation rather than de-escalation." },
-  { date:"Aug 1", ru_d:109,ru_m:null, ru_int:109,ru_thru:24, ua_d:null,ua_int:0,ua_thru:0, alert_h:null, pw_gwh:null,
-    confirmed:true, targets:"19 locations struck, debris in 3 more \u2014 133 drones total (incl. Shahed-type), 109 intercepted",
-    note:"Missile breakdown, alert-hours and power-outage figures not sourced for this night \u2014 left blank rather than estimated. Air Force-confirmed drone intercept count only." },
-  { date:"Jul 29", ru_d:284,ru_m:74, ru_int:320,ru_thru:38, ua_d:null,ua_int:0,ua_thru:0, alert_h:8.9, pw_gwh:0.41,
-    confirmed:true, targets:"Kyiv, Kryvyi Rih, Lviv, Poland spillover — deadliest night in weeks",
-    note:"🔴 The largest combined strike since the mid-July shortage began: 61 Kh-101/Kalibr cruise + 9 Iskander-M/S-400/KN-23 ballistic + 4 Zircon/Onyx anti-ship missiles (74 total) plus 284 drones. Air defense downed/suppressed 55 missiles (only 1 of 9 ballistic) + 265 drones; 3 anti-ship + 6 ballistic + 2 cruise + 17 drones hit 20 locations, debris at 13 more. An Iskander-M strike killed 6 members of one family (incl. 3 children) near Kryvyi Rih; Lviv had two high-rises hit and a school plus two kindergartens damaged; at least 8-10 killed and 50+ injured nationwide. A missile/debris crossed into Poland's Lublin region — believed a Russian Kh-101 — prompting Polish and NATO jets to scramble, the most serious NATO-airspace incident since the Sep 2025 drone incursions." },
-];
-
-const DW_MONTHLY = [
-  { month:"Jan '25", yr:2025, ru:3800, ua:1500, ruRate:76, uaRate:9,  civ:85,  inj:390, alert_h:5.8, pw_gwh:1.6,  ru_cost:133, ua_cost:96,  adDrone:18, adSam:52, adMfg:24, adEw:6, c:false },
-  { month:"Feb '25", yr:2025, ru:4100, ua:1800, ruRate:77, uaRate:9,  civ:90,  inj:420, alert_h:6.1, pw_gwh:1.8,  ru_cost:144, ua_cost:102, adDrone:20, adSam:50, adMfg:23, adEw:7, c:false },
-  { month:"Mar '25", yr:2025, ru:4300, ua:2200, ruRate:78, uaRate:10, civ:110, inj:510, alert_h:6.3, pw_gwh:1.9,  ru_cost:151, ua_cost:108, adDrone:22, adSam:48, adMfg:23, adEw:7, c:false },
-  { month:"Apr '25", yr:2025, ru:4400, ua:2500, ruRate:79, uaRate:10, civ:130, inj:580, alert_h:6.5, pw_gwh:2.0,  ru_cost:154, ua_cost:112, adDrone:25, adSam:46, adMfg:22, adEw:7, c:false },
-  { month:"May '25", yr:2025, ru:4600, ua:2800, ruRate:80, uaRate:11, civ:130, inj:590, alert_h:6.7, pw_gwh:2.1,  ru_cost:161, ua_cost:118, adDrone:27, adSam:44, adMfg:22, adEw:7, c:false },
-  { month:"Jun '25", yr:2025, ru:5000, ua:3200, ruRate:81, uaRate:12, civ:232, inj:880, alert_h:7.2, pw_gwh:2.4,  ru_cost:175, ua_cost:128, adDrone:29, adSam:42, adMfg:22, adEw:7, c:true,  src:"UN HRMMU: 232 civilians killed Jun 2025" },
-  { month:"Jul '25", yr:2025, ru:6200, ua:3000, ruRate:82, uaRate:12, civ:286, inj:980, alert_h:8.1, pw_gwh:3.0,  ru_cost:217, ua_cost:150, adDrone:31, adSam:40, adMfg:22, adEw:7, c:true,  src:"ISIS: 203 UAVs/day in Jul '25. UN HRMMU: 286 killed Jul 2025." },
-  { month:"Aug '25", yr:2025, ru:6500, ua:3500, ruRate:83, uaRate:13, civ:58,  inj:260, alert_h:8.3, pw_gwh:3.2,  ru_cost:228, ua_cost:158, adDrone:33, adSam:38, adMfg:21, adEw:8, c:true,  src:"UN HRMMU: 58 killed Aug 2025." },
-  { month:"Sep '25", yr:2025, ru:6800, ua:4200, ruRate:84, uaRate:13, civ:214, inj:1000,alert_h:8.6, pw_gwh:3.4,  ru_cost:238, ua_cost:164, adDrone:35, adSam:36, adMfg:21, adEw:8, c:true,  src:"UN HRMMU: 214 killed, ~1000 injured Sep 2025." },
-  { month:"Oct '25", yr:2025, ru:7200, ua:5000, ruRate:85, uaRate:14, civ:180, inj:750, alert_h:9.0, pw_gwh:3.6,  ru_cost:252, ua_cost:176, adDrone:36, adSam:35, adMfg:21, adEw:8, c:false },
-  { month:"Nov '25", yr:2025, ru:6900, ua:5500, ruRate:86, uaRate:15, civ:155, inj:640, alert_h:8.8, pw_gwh:3.5,  ru_cost:242, ua_cost:170, adDrone:37, adSam:34, adMfg:21, adEw:8, c:false },
-  { month:"Dec '25", yr:2025, ru:7100, ua:6000, ruRate:87, uaRate:15, civ:145, inj:600, alert_h:9.2, pw_gwh:3.6,  ru_cost:249, ua_cost:176, adDrone:38, adSam:33, adMfg:21, adEw:8, c:false },
-  { month:"Jan '26", yr:2026, ru:6200, ua:7200, ruRate:88, uaRate:14, civ:140, inj:570, alert_h:9.5, pw_gwh:3.8,  ru_cost:217, ua_cost:165, adDrone:40, adSam:30, adMfg:22, adEw:8, c:true,  src:"4,600+ Shahed-type UAVs in first 1.5 months of 2026 (Kyiv Independent)." },
-  { month:"Feb '26", yr:2026, ru:5100, ua:7100, ruRate:88, uaRate:15, civ:95,  inj:390, alert_h:8.8, pw_gwh:3.1,  ru_cost:179, ua_cost:142, adDrone:41, adSam:29, adMfg:22, adEw:8, c:true,  src:"ISIS: 181 UAVs/day average Feb 2026 (5,068 total)." },
-  { month:"Mar '26", yr:2026, ru:6462, ua:7000, ruRate:90, uaRate:16, civ:180, inj:720, alert_h:9.8, pw_gwh:3.9,  ru_cost:226, ua_cost:174, adDrone:42, adSam:28, adMfg:22, adEw:8, c:true,  src:"ISIS: 6,462 UAVs confirmed Mar 2026 (208/day, new peak)." },
-  { month:"Apr '26", yr:2026, ru:6700, ua:8200, ruRate:90, uaRate:16, civ:160, inj:650, alert_h:9.5, pw_gwh:3.8,  ru_cost:235, ua_cost:178, adDrone:43, adSam:27, adMfg:22, adEw:8, c:true,  src:"UA MoD: ~6,700 enemy aerial assets in April 2026." },
-  { month:"May '26", yr:2026, ru:8150, ua:9418, ruRate:92, uaRate:17, civ:210, inj:820, alert_h:11.2,pw_gwh:4.6,  ru_cost:285, ua_cost:210, adDrone:44, adSam:26, adMfg:22, adEw:8, c:true,  src:"UA Air Force: 8,150 drones + 211 missiles. 91.73% drone intercept. RU MoD: 9,418 UA drones (record)." },
-  { month:"Jun '26", yr:2026, ru:7535, ua:9795, ruRate:91, uaRate:18, civ:98,  inj:449, alert_h:8.3, pw_gwh:3.7,  ru_cost:264, ua_cost:238, adDrone:45, adSam:25, adMfg:22, adEw:8, c:true,  src:"Full 30-day total. Confirmed: Jun 2 mass attack (22 killed), Jun 18 Moscow refinery hit x2, Jun 24 Orenburg helium plant strike, Jun 26 one of UA's largest drone assaults (660+, RU MoD claim), Jun 29 RU strikes killed 13/injured 109, Jun 30 Dubna comms center struck for the 2nd time." },
-];
-
-const DW_WEAPONS = [
-  { name:"Shahed/Geran-2", side:"RU", cost:35000,  qty_may26:8150, notes:"Mass-produced at Alabuga. ~20-50k range; $35k midpoint per CSIS. 50-90 kg warhead." },
-  { name:"Kh-101 Cruise Missile", side:"RU", cost:13000000, qty_may26:60,   notes:"Air-launched, stealth. Modified 3+ times to evade Ukrainian AD. ~53% intercepted." },
-  { name:"KN-23/24 (DPRK)", side:"RU", cost:3000000,  qty_may26:40,   notes:"North Korean ballistic missiles. <53% intercept rate; Patriot shortage makes these lethal." },
-  { name:"Iskander-M", side:"RU", cost:3000000,  qty_may26:30,   notes:"Ground-launched ballistic. 89.9% reach target. Extremely difficult to intercept without PAC-3." },
-  { name:"Kh-22 / AS-4", side:"RU", cost:1000000,  qty_may26:20,   notes:"Air-launched. 94.6% reach target — most effective per CSIS cost-exchange analysis." },
-  { name:"Gerbera / Italmas decoys", side:"RU", cost:15000,   qty_may26:400,  notes:"Deployed to saturate/confuse UA air defense. Absorb expensive interceptors." },
-  { name:"An-196 Liutyi (deep strike)", side:"UA", cost:150000,  qty_may26:9418, notes:"Primary UA one-way deep-strike drone. Hits Russian energy, refineries, AD systems." },
-  { name:"FP-5 Flamingo (cruise missile)", side:"UA", cost:500000,  qty_may26:12,   notes:"New Ukrainian cruise missile. Jun 9: used to strike Russian drone component factory." },
-  { name:"Interceptor UAV (defensive)", side:"UA", cost:7500,    qty_may26:3000, notes:"40%+ of Shahed kills in May 2026. Massive cost advantage vs. SAM missiles." },
-  { name:"PAC-3 (Patriot interceptor)", side:"UA", cost:3500000, qty_may26:55,   notes:"Only effective ballistic missile interceptor. Severe shortage. US produces 48/month." },
-  { name:"NASAMS (AIM-9X)", side:"UA", cost:1000000,  qty_may26:140,  notes:"Cost-effective vs cruise missiles. NOT cost-effective vs. Shaheds ($35k drone vs $1M missile)." },
-];
-
-const DW_AD_METHODS = DW_MONTHLY.map((m) => ({
-  month: m.month,
-  "Interceptor Drones": m.adDrone, "SAM Systems": m.adSam,
-  "Mobile Fire Groups": m.adMfg, "EW / Jamming": m.adEw,
-}));
-
-const DW_ORIGINS = [
-  { region:"Krasnodar / Primorsko-Akhtarsk", pct:34, note:"Primary Shahed launch corridor. Low-altitude flight path over Black Sea." },
-  { region:"Kursk / Bryansk border", pct:24, note:"Northern launch corridor. Shaheds routed through Belarus airspace toward Kyiv approach." },
-  { region:"Crimea (Kerch, Saky)", pct:18, note:"Southern approach. Targets Kherson, Mykolaiv, Odesa. Ukraine hits launch sites regularly." },
-  { region:"Engels Airbase (Saratov)", pct:10, note:"Strategic bomber base for Kh-101 cruise missile launches. UA drones have hit it multiple times." },
-  { region:"Voronezh / Belgorod", pct:8,  note:"Artillery + short-range drone corridor for Kharkiv, Sumy. Front-line saturation." },
-  { region:"Other Russian territory", pct:6,  note:"Caspian Sea naval launches, Murmansk, Black Sea Fleet." },
-];
-
-const DW_TARGETS_RU = [
-  { cat:"Energy Infrastructure", pct:38, col:"#ef4444", note:"Power plants, transformer stations, substations. Goal: collapse Ukrainian grid." },
-  { cat:"Residential / Civilian", pct:26, col:"#f97316", note:"Direct targeting of apartment blocks, markets, transit — documented by UN." },
-  { cat:"Military / Industrial",  pct:18, col:"#dc2626", note:"Defense factories, ammunition depots, military bases." },
-  { cat:"Transport Nodes",        pct:11, col:"#eab308", note:"Railway junctions, bridges, fuel depots. Attrition of logistics." },
-  { cat:"Government / Admin",     pct:7,  col:"#fbbf24", note:"Administrative buildings, communication infrastructure." },
-];
-const DW_TARGETS_UA = [
-  { cat:"Oil Refineries / Depots", pct:42, col:"#5b8ec8", note:"Systematic campaign against Russian energy export revenue. Moscow refinery hit twice in one week." },
-  { cat:"Air Defense Systems",     pct:22, col:"#2563eb", note:"23 Russian AD systems destroyed, 109 damaged Jan-May 2026 (UA killboard)." },
-  { cat:"Military / Industrial",   pct:18, col:"#1d4ed8", note:"Drone factories (Alabuga), missile component plants, ammunition facilities." },
-  { cat:"Transport / Railways",    pct:11, col:"#60a5fa", note:"Fuel supply lines, rail hubs in Voronezh, Kursk, Rostov regions." },
-  { cat:"Political Symbolism",     pct:7,  col:"#93c5fd", note:"Moscow area: signals capability, undermines Kremlin domestic narrative." },
-];
-
-const DW_INTERCEPT_WEAPON = [
-  { weapon:"Shahed / attack drones", rate:90, col:"#22c55e", note:"Mar 2026: 5,833 of 6,463 intercepted (90.25%)." },
-  { weapon:"Cruise missiles", rate:74, col:"#22c55e", note:"Mar 2026: 102 of 138 intercepted." },
-  { weapon:"Ballistic missiles", rate:27, col:"#ef4444", note:"Russia produces ~120/mo; US Patriot supplies ~60 interceptors/mo." },
-];
-
-const DW_PRODUCTION = [
-  { type:"FPV (fiber-optic)", icon:"🎯", adv:"Ukraine", ua:"30,000-50,000/mo", uaNote:"Spring 2026. Unjammable within 5-10 km cable range.", ru:"Scaling rapidly", ruNote:"Russia plans 7.3M FPV + 7.8M warheads in 2026 (Syrskyi)." },
-  { type:"Interceptor drones", icon:"🛡️", adv:"Ukraine", ua:"1,000-1,500/day", uaNote:"Target 2,000/day. STING ~$2,500 vs $3M+ Patriot.", ru:"Limited", ruNote:"Ukraine far ahead in dedicated interceptor capability." },
-  { type:"Shahed / Geran loitering", icon:"💥", adv:"Russia", ua:"~0 (own design)", uaNote:"Ukraine builds long-range FP-5 Flamingo instead.", ru:"5,000-8,000/mo", ruNote:"Alabuga factory + Iranian supply. Mass raids on cities." },
-  { type:"Lancet (loitering munition)", icon:"🎯", adv:"Russia", ua:"No equivalent at scale", uaNote:"Ukraine counters with EW + interceptors.", ru:"Tripled 2023; large scale", ruNote:"Primary precision tool vs UA artillery. ~80% claimed hit rate." },
-  { type:"Long-range strike drones", icon:"🚁", adv:"Ukraine", ua:"Significant — FP-5 Flamingo", uaNote:"Struck St. Petersburg (1,450 km), Tyumen (2,800 km).", ru:"Shahed-type + cruise", ruNote:"Used against cities + infrastructure at scale." },
-  { type:"Ground UGVs", icon:"🤖", adv:"Ukraine", ua:"7,000+/mo in 2026", uaNote:"15,000 deployed 2025; up from 2,000 in 2024.", ru:"Expanding", ruNote:"Both racing; Ukraine ahead on doctrine and scale." },
-];
-
-const DW_UA_FORCE = {
-  targetsStruck:"800,000+", interceptorsDay:"1,000-1,500", usfPersonnel:"86,000+", models:"1,343",
-  facts:[
-    ["👥","86,000+ personnel","Unmanned Systems Forces — a separate branch from the regular army (Feb 2026). Target: 100,000 by April."],
-    ["🌍","Operates globally, not just the front","Crimea SEAD campaign, Kerch Bridge strikes, Voronezh plant, Tyumen refinery (2,800 km) — all USF operations."],
-    ["🤖","AI integration","TFL-1 auto-steer module ($118) takes over if the pilot loses contact — 2-4x effectiveness."],
-    ["📡","Fiber-optic FPV","First deployed near Kharkiv, Feb 2025. Unjammable — EW cannot disrupt the cable signal."],
-    ["🛠️","1,343 drone models on Brave1","581 FPV, 434 fiber-optic. Ukraine exported drones for the first time in 2026."],
-    ["🎯","Two-person crew record","23 Shaheds shot down in one engagement (STING interceptor drones, March 2026)."],
-  ],
-};
-
-const dwFmt = n => n >= 1000 ? (n/1000).toFixed(n >= 10000 ? 0 : 1)+"k" : n;
-const dwPct = (a,b) => b ? Math.round(100*a/b) : 0;
-
-const DWTooltip2 = ({ active, payload, label }) => {
-  if (!active || !payload?.length) return null;
-  return (
-    <div style={{ background:DWC.bg, border:`1px solid ${DWC.border}`, borderRadius:8, padding:"10px 14px", maxWidth:300, fontSize:12 }}>
-      <div style={{ color:DWC.gold, fontWeight:700, marginBottom:6 }}>{label}</div>
-      {payload.map((p,i) => (
-        <div key={i} style={{ color:p.color||DWC.text, marginBottom:2 }}>
-          <span style={{ opacity:.7 }}>{p.name}: </span>
-          <span style={{ fontWeight:600 }}>{typeof p.value === "number" && p.value > 100 ? dwFmt(p.value) : p.value}{p.unit||""}</span>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-const DWCard = ({ children, style }) => (
-  <div style={{ background:DWC.card, border:`1px solid ${DWC.border}`, borderRadius:12, padding:16, ...style }}>{children}</div>
-);
-
-const DWStatPill = ({ label, val, sub, col }) => (
-  <div style={{ background:DWC.card2, border:`1px solid ${DWC.border}`, borderRadius:10, padding:"12px 14px", flex:1, minWidth:0 }}>
-    <div style={{ color:DWC.muted, fontSize:10, textTransform:"uppercase", letterSpacing:.8 }}>{label}</div>
-    <div style={{ color:col||DWC.text, fontSize:22, fontWeight:900, fontFamily:FONT, lineHeight:1.1, marginTop:3 }}>{val}</div>
-    {sub && <div style={{ color:DWC.muted, fontSize:11, marginTop:3 }}>{sub}</div>}
-  </div>
-);
-
-const DWPieRing = ({ data, size=120 }) => {
-  let acc = 0;
-  const cx = size/2, cy = size/2, r = size*0.42, ir = size*0.22;
-  const segs = data.map(d => { const s=acc; acc+=d.pct; return {...d, s, e:acc}; });
-  const arc = (s,e,radius) => {
-    const a1=(s/100)*2*Math.PI-Math.PI/2, a2=(e/100)*2*Math.PI-Math.PI/2;
-    const x1=cx+radius*Math.cos(a1), y1=cy+radius*Math.sin(a1);
-    const x2=cx+radius*Math.cos(a2), y2=cy+radius*Math.sin(a2);
-    return `M${cx} ${cy} L${x1} ${y1} A${radius} ${radius} 0 ${e-s>50?1:0} 1 ${x2} ${y2}Z`;
-  };
-  return (
-    <svg width={size} height={size} style={{ flexShrink:0 }}>
-      {segs.map((s,i)=><path key={i} d={arc(s.s,s.e,r)} fill={s.col||s.color} stroke={DWC.bg} strokeWidth={1.5}/>)}
-      <circle cx={cx} cy={cy} r={ir} fill={DWC.card}/>
-    </svg>
-  );
-};
-
-const DWSectionHead = ({ color, icon, title, sub }) => (
-  <div style={{ marginBottom:14 }}>
-    <h2 style={{ color, fontWeight:900, fontSize:15, display:"inline", margin:0 }}>{icon} {title}</h2>
-    {sub && <span style={{ color:DWC.muted, fontSize:12, marginLeft:10 }}>{sub}</span>}
-  </div>
-);
-
-const DW_SAT_SUSTAINABLE = 350;
-const DW_SAT_SURGE = 750;
-const dwSatZone = (load) =>
-  load < 70  ? { label:"NOMINAL",   col:"#22c55e" } :
-  load < 100 ? { label:"ELEVATED",  col:"#eab308" } :
-  load < 150 ? { label:"SATURATED", col:"#f97316" } :
-               { label:"CRITICAL",  col:"#ef4444" };
-
-const DWGauge = ({ load, size=200, label, sublabel }) => {
-  const z = dwSatZone(load);
-  const cx = size/2, cy = size/2, r = size*0.4, sw = size*0.09;
-  const sweep = 270, start = 135;
-  const frac = Math.min(load/180, 1);
-  const polar = (deg) => { const a = (deg-90) * Math.PI/180; return [cx + r*Math.cos(a), cy + r*Math.sin(a)]; };
-  const arcPath = (fromDeg, toDeg) => {
-    const [x1,y1] = polar(fromDeg), [x2,y2] = polar(toDeg);
-    const large = (toDeg-fromDeg) > 180 ? 1 : 0;
-    return `M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}`;
-  };
-  return (
-    <svg width={size} height={size} style={{ flexShrink:0 }}>
-      <path d={arcPath(start, start+sweep)} fill="none" stroke="#0a1628" strokeWidth={sw} strokeLinecap="round"/>
-      {[70,100,150].map((m,i)=>{ const d = start + sweep*(m/180); const [tx,ty] = polar(d); return <circle key={i} cx={tx} cy={ty} r={2.5} fill="#334155"/>; })}
-      <path d={arcPath(start, start+sweep*frac)} fill="none" stroke={z.col} strokeWidth={sw} strokeLinecap="round"/>
-      <text x={cx} y={cy-6} textAnchor="middle" fill={z.col} fontSize={size*0.2} fontWeight="900" fontFamily={FONT}>{Math.round(load)}%</text>
-      <text x={cx} y={cy+size*0.13} textAnchor="middle" fill={z.col} fontSize={size*0.075} fontWeight="700" letterSpacing="1.5">{z.label}</text>
-      {label && <text x={cx} y={cy+size*0.27} textAnchor="middle" fill="#607898" fontSize={size*0.062}>{label}</text>}
-      {sublabel && <text x={cx} y={cy+size*0.35} textAnchor="middle" fill="#475569" fontSize={size*0.052}>{sublabel}</text>}
-    </svg>
-  );
-};
-const DW_ASSETS = [
-  { name:"Shahed-136 / Geran-2", side:"RU", cls:"Strike", role:"Loitering munition", status:"Primary RU strike drone",
-    range:"1,500-2,500 km", speed:"~185 km/h", warhead:"50-90 kg", cost:"$20-50k", ceiling:"~4,000 m",
-    engine:"Mado MD-550 piston (reverse-engineered German Limbach L550E), 2-blade pusher prop",
-    guidance:"GLONASS/GPS + inertial; Nasir anti-jam satnav; many now 2G/3G/4G + Starlink remote-control",
-    production:"~3,000/month; Alabuga capacity ceiling ~5,000/mo; 57,000+ deployed since 2022",
-    intercepted:"~91.7% (May '26)",
-    detail:"The defining weapon of the air war. Cropped delta-wing, ~3.5 m long, ~200 kg. Tiny radar cross-section (0.01-0.05 m2) and nap-of-earth flight make it hard to detect. Mass salvos are designed to saturate defenses, not to make each drone hit.",
-    facts:["Russia mastered Starlink remote control of Geran-2 by Jan 2026 — enabled a 3-drone hit on a moving passenger train near Kharkiv","Mixed swarms pair Shaheds with Gerbera/Italmas decoys; a typical wave is 30-40% decoys","Built almost entirely from Western/Chinese commercial chips — a live sanctions-evasion story","US fielded its own reverse-engineered clone (LUCAS) at ~$35k in late 2025"] },
-  { name:"Shahed MS-series (MS001)", side:"RU", cls:"Strike", role:"AI autonomous loitering munition", status:"Fielded 2025-26, expanding",
-    range:"~2,000 km", speed:"~185 km/h", warhead:"~50 kg", cost:"~$50k+", ceiling:"~4,000 m",
-    engine:"Piston pusher (Geran-2 airframe)",
-    guidance:"Nvidia Jetson Orin Nano (67 TOPS machine vision) + 4-element CRPA anti-jam antenna + Nasir 8-channel receiver",
-    production:"Subset of Geran-2 line; downed examples recovered in Sumy region June 2025+",
-    intercepted:"Harder — resists jamming",
-    detail:"A Ukrainian general called the downed MS001 a digital predator that thinks for itself. The Jetson Orin processes live camera imagery in flight, performs automatic target recognition, and can dynamically re-route without operator input. Far more resistant to GPS jamming than the base Shahed.",
-    facts:["Nvidia Jetson Orin Nano is a $249 commercial AI module — 67 trillion ops/sec","Switched from Chinese BMTI chips to Xilinx (AMD) FPGA for signal processing","Carries infrared/night-vision camera for terminal guidance","Same Jetson Orin AI chip also found in Russia's V2U drone (per Ukraine DIU)"] },
-  { name:"Geran-2 Series E (MANPAD carrier)", side:"RU", cls:"Strike", role:"Anti-helicopter drone", status:"Experimental, early 2026",
-    range:"~1,500 km", speed:"~185 km/h", warhead:"18 kg 9K333 Verba MANPAD", cost:"n/a", ceiling:"~4,000 m",
-    engine:"Piston pusher", guidance:"Remote-piloted via Chinese camera",
-    production:"Experimental subcategory identified by Ukraine early 2026", intercepted:"n/a",
-    detail:"A Geran-2 carrying an 18-kg 9K333 Verba man-portable SAM on its back, designed to hunt helicopters — after Ukraine's commander-in-chief noted helicopters accounted for ~40% of Russian drone kills.",
-    facts:["Direct answer to Ukrainian helicopter air-defense success","Turns a one-way attack drone into an airborne SAM platform","Reconnaissance variant found carrying a Raspberry Pi 5 + Mini PC running Windows 11"] },
-  { name:"Geran-3 / Shahed-238 (jet)", side:"RU", cls:"Strike", role:"Jet loitering munition", status:"Limited, scaling toward 2027",
-    range:"~2,500 km", speed:"550-600 km/h", warhead:"~50 kg", cost:"~$80k est.", ceiling:"higher than piston Shahed",
-    engine:"Turbojet", guidance:"Satnav + inertial; nose-mounted camera for terminal guidance",
-    production:"Limited deployment; combined with China-produced Garpiya-3 for range", intercepted:"Much harder — 3x faster than piston Shahed",
-    detail:"The turbojet evolution of the Shahed family. Roughly three times faster than the piston Geran-2, compressing Ukraine's intercept window dramatically. Expected to become a primary variant by 2027.",
-    facts:["Speed is the key threat — interceptor drones tuned for ~185 km/h Shaheds struggle against 550+ km/h","Nose camera enables terminal guidance against moving targets","Higher service ceiling complicates mobile-fire-group and MANPAD engagement"] },
-  { name:"Gerbera decoy", side:"RU", cls:"Decoy", role:"Decoy / radar saturation", status:"Mass-produced",
-    range:"~600 km", speed:"~150 km/h", warhead:"None or small", cost:"~$10-15k", ceiling:"low-medium",
-    engine:"Light piston / electric", guidance:"Basic satnav; sometimes radar reflectors to mimic Shahed signature",
-    production:"~24,000 planned for 2025 (Ukraine DIU estimate)", intercepted:"Often ignored once identified — but forces identification first",
-    detail:"A cheap plywood-and-foam decoy built to look like a Shahed on radar. Launched in mixed swarms to exhaust radar operators and soak up expensive interceptor missiles. A $10k decoy that draws a $1M NASAMS shot is a win for Russia even when it fails.",
-    facts:["Feb 26 example: ~280 Shaheds inside a ~420-drone wave — the rest decoys","Forces Ukraine to spend identification time and sometimes munitions on non-threats","Cheaper airframe makes the Russian volume numbers look larger than the true strike count"] },
-  { name:"Italmas (BM-35)", side:"RU", cls:"Decoy", role:"Light strike / decoy", status:"In service",
-    range:"~200-300 km", speed:"~150 km/h", warhead:"Small", cost:"~$15k", ceiling:"low",
-    engine:"Electric / light piston", guidance:"Satnav + inertial",
-    production:"Mixed into Shahed swarms alongside Gerbera", intercepted:"Variable",
-    detail:"A lighter, shorter-range drone used both as a decoy and for light strike. Appears repeatedly in mixed-type salvos alongside Shahed and Gerbera, each with distinct radar signatures, complicating Ukrainian classification.",
-    facts:["Part of Russia's deliberate signature-diversity strategy in swarms","Distinct flight profile from Shahed/Gerbera muddies the radar picture"] },
-  { name:"Kh-101 cruise missile", side:"RU", cls:"Missile", role:"Air-launched cruise missile", status:"Heavy use",
-    range:"~5,500 km", speed:"~720 km/h", warhead:"~450 kg", cost:"~$13M", ceiling:"low-altitude terrain-following",
-    engine:"Turbofan", guidance:"INS + GLONASS + terrain matching; modified 3+ times in 2026 to defeat UA AD",
-    production:"Launched from Tu-95MS / Tu-160 bombers", intercepted:"~53% (missiles, May '26)",
-    detail:"Russia's principal strategic air-launched cruise missile and the most problematic for Ukrainian defenses among the cruise category. Stealth profile and terrain-following flight. A single bomber volley costs more than a month of Shahed launches.",
-    facts:["3+ hardware/software revisions in 2026 specifically to beat UA intercept tactics","Cost asymmetry is stark — one Kh-101 ~ 370 Shaheds","Engels airbase (launch site) repeatedly struck by UA drones to suppress sortie rate"] },
-  { name:"Iskander-M / KN-23 ballistic", side:"RU", cls:"Missile", role:"Short-range ballistic missile", status:"Heavy use",
-    range:"500-900 km", speed:"Mach 6+", warhead:"~500 kg", cost:"~$3M", ceiling:"ballistic apogee",
-    engine:"Solid rocket", guidance:"INS + optical/terminal; quasi-ballistic maneuvering",
-    production:"Domestic (Iskander) + DPRK transfer (KN-23/24)", intercepted:"<53% — only Patriot PAC-3 is effective",
-    detail:"The deadliest threat to Ukrainian civilians. Quasi-ballistic maneuvering defeats most interceptors, and only the scarce Patriot PAC-3 can reliably engage them. US PAC-3 stocks were depleted by the 2026 Iran war.",
-    facts:["Russia's June 2 attack used 30 ballistic missile hits across 38 locations","Hypersonic Oreshnik also fielded in 2026 for strategic signaling","Patriot shortage is the single biggest gap in Ukraine's air defense"] },
-  { name:"An-196 Liutyi", side:"UA", cls:"Strike", role:"Deep-strike one-way drone", status:"Primary UA deep-strike asset",
-    range:"~2,000 km", speed:"~200 km/h", warhead:"~50-75 kg", cost:"~$150k est.", ceiling:"medium",
-    engine:"Piston, pusher prop", guidance:"Satnav + inertial; terminal optical on some",
-    production:"Massively scaled since 2024; UA launched 9,418 drones in May '26 (per RU MoD)", intercepted:"Russia claims high; confirmed hits prove substantial leakage",
-    detail:"Ukraine's workhorse for striking refineries, oil terminals, airbases (Engels), and Moscow. Reaches essentially all of European Russia. The backbone of the campaign that hit the Gazprom Neft Moscow refinery twice in a week.",
-    facts:["Jun 18: ~555 launched in a single night — among the largest UA strikes of the war","Targets chosen to drain Russian oil-export revenue and erode air defenses","Ukraine generally does not disclose launch counts — figures come from Russian MoD"] },
-  { name:"FP-5 Flamingo", side:"UA", cls:"Missile", role:"Long-range cruise missile", status:"Fielded 2026",
-    range:"~3,000 km (claimed)", speed:"~700 km/h", warhead:"~1,000 kg (claimed)", cost:"~$500k est.", ceiling:"low-altitude",
-    engine:"Turbojet", guidance:"INS + satnav; precision terminal",
-    production:"Fire Point; scaling through 2026", intercepted:"Limited data",
-    detail:"Ukraine's domestically developed heavy cruise missile — far higher speed, accuracy and warhead than a one-way UAV. Used June 9 2026 to strike a Russian plant producing Shahed components.",
-    facts:["Same maker (Fire Point) is behind the FP-7.x interceptor program","Large warhead enables single-shot destruction of hardened industrial targets","Jun 9: hit a Shahed-component factory — attacking Russia's drone supply chain at the source"] },
-  { name:"Batyar / Artemis ALM-20", side:"UA", cls:"Strike", role:"Shahed-class deep-strike analogs", status:"Fielded 2025-26",
-    range:"~1,000+ km", speed:"~180-200 km/h", warhead:"~30-50 kg", cost:"~$50-120k", ceiling:"medium",
-    engine:"Piston pusher", guidance:"Satnav + inertial",
-    production:"Batyar by DeepStrikeTech (May '25); Artemis ALM-20 American-European (Oct '25)", intercepted:"Variable",
-    detail:"Ukraine's own answer to the Shahed economic model. These cheaper analogs let Ukraine add volume to its deep-strike campaign without spending An-196 or Flamingo inventory.",
-    facts:["Mirrors Russia's own volume logic back at Russian territory","ALM-20 is a trans-Atlantic co-development — widens the supplier base","Lets Ukraine reserve premium munitions for the hardest targets"] },
-  { name:"Interceptor drones (Sting / Brave1)", side:"UA", cls:"Defense", role:"Drone-on-drone air defense", status:"Scaling fast — key 2026 shift",
-    range:"~50-100 km", speed:"~300-350 km/h", warhead:"Kinetic / small charge", cost:"$5-10k", ceiling:"matches Shahed band",
-    engine:"Electric / small turbine", guidance:"Operator target-select then autonomous terminal homing (Brave1: 95% automated)",
-    production:"Scaling under Brave1; share of Shahed kills doubled in 4 months", intercepted:"n/a (is the interceptor)",
-    detail:"The most important defensive development of 2026. Drone-on-drone interception at ~$7.5k beats a $35k Shahed on cost — finally flipping the economics that made Patriot-vs-Shahed unsustainable. Brave1 automates ~95% of the engagement.",
-    facts:["World first (April '26): a Sting interceptor launched from an unmanned seaborne vessel killed a Shahed","Interceptor-drone share of Shahed kills doubled in 4 months even as Russia raised launches ~35%/month","Autonomy breaks the one pilot = one intercept ceiling that Russia's saturation tactics exploit","Ukraine's stated goal: a stable 95% intercept rate of aerial targets"] },
-  { name:"PAC-3 / NASAMS (interceptor SAMs)", side:"UA", cls:"Defense", role:"Surface-to-air missile systems", status:"In service, supply-constrained",
-    range:"PAC-3 ~35 km / NASAMS ~25 km", speed:"supersonic", warhead:"Hit-to-kill / proximity", cost:"PAC-3 ~$3.5M / NASAMS ~$1M", ceiling:"high (PAC-3)",
-    engine:"Rocket", guidance:"Radar + active/semi-active homing",
-    production:"Western-supplied; PAC-3 critically scarce", intercepted:"PAC-3 is the only reliable counter to ballistic missiles",
-    detail:"The high-end backstop. PAC-3 is the only system that reliably stops Iskander/KN-23 ballistic missiles, but US stocks were drained by the 2026 Iran war and production is only ~48/month. NASAMS is wildly uneconomical against $35k Shaheds.",
-    facts:["PAC-3 vs Shahed = ~100x unfavorable cost ratio","Zelenskyy's repeated June appeals to the US center on Patriot resupply","NASAMS reserved for cruise missiles; drones handed to cheaper layers"] },
-  { name:"FP-7.x interceptor (in development)", side:"UA", cls:"Defense", role:"Domestic anti-ballistic interceptor", status:"Testing — mass production targeted Aug '26",
-    range:"~100 km (target)", speed:"supersonic", warhead:"Kinetic", cost:"TBD (much less than PAC-3)", ceiling:"high (target)",
-    engine:"Rocket", guidance:"Radar + terminal homing; partner-supplied radars & C2",
-    production:"Fire Point; first test Jun '26 pretty successful; completed systems by 2027", intercepted:"n/a",
-    detail:"Ukraine's bid for a domestic PAC-3 alternative to close the ballistic-missile gap. The Fire Point CEO described the first June 2026 test flight as pretty successful, with mass production targeted for August 2026.",
-    facts:["Aims directly at the Patriot dependency that leaves cities exposed","Same manufacturer as the FP-5 Flamingo cruise missile","Domestic production would free Ukraine from US PAC-3 supply constraints"] },
-];
-
-const DW_STRIKE_LOG = [
-  { date:"Aug 2", targets:[
-      {name:"Saratov Oil Refinery + Engels-2 Strategic Bomber Base",region:"Saratov Oblast, Russia",dist:600,cat:"Energy/Airbase",icon:"\ud83d\udca3",severity:"critical",
-       result:"Zelensky personally confirmed the strike: two strategic facilities hit simultaneously more than 600km from the front line. The Saratov refinery (~7M tonnes/year, Rosneft) caught fire, reportedly hitting its ELOU-AVT-6 crude distillation unit. Engels-2, 17km away, hosts Tu-95MS and Tu-160 strategic bombers used for missile strikes on Ukraine \u2014 a fire was confirmed there too, though Ukraine has not specified exactly what was hit."},
-      {name:"Lyudinovskaya Oil Depot + Bryansk Drone-Prep Site",region:"Kaluga / Bryansk Oblasts, Russia",dist:450,cat:"Energy/Logistics",icon:"\ud83d\udee2\ufe0f",severity:"high",
-       result:"Same night: a fuel depot in Kaluga Oblast and a site near Navlya, Bryansk Oblast used to store, prepare and launch Russian strike drones were both hit, per Zelensky and the General Staff."} ]},
-  { date:"Aug 1", targets:[
-      {name:"Crimea Rail Bridges + Naval Drone Depot + Black Sea Fleet SIGINT",region:"Crimea / Kherson Oblast",dist:200,cat:"Logistics/Naval",icon:"\ud83c\udf09",severity:"high",
-       result:"A coordinated multi-target night: the Sivash railway bridge (Chonhar) and a second rail bridge near Vladyslavivka \u2014 both key logistics links between Crimea and Russian-held southern Ukraine \u2014 were struck, alongside a naval-drone storage depot near Chornomorske, a Black Sea Fleet electronic-reconnaissance unit in Sevastopol, and a repair base at Pervomaiske. Separately, HUR drones destroyed a Pantsir-S1 air defense system (~$15M) and a Sargan patrol boat (~$6M)."} ]},
-  { date:"Jul 29", targets:[
-      {name:"Ryazan Oil Refinery (Rosneft) + Wildberries Logistics Warehouse",region:"Ryazan Oblast, Russia",dist:360,cat:"Energy/Logistics",icon:"🛢️",severity:"critical",
-       result:"A major drone attack hit the Rosneft-owned Ryazan refinery — ~17.1M tonnes/year capacity, roughly 5% of all Russian refining output — sparking a large fire, alongside a Wildberries warehouse complex in the same city. The refinery was previously forced offline for an extended period after a May 2026 strike. Confirmed by both Zelensky and Ukraine's General Staff, hours after Zelensky's Jul 28 White House meeting with Trump."},
-      {name:"Lukoil-Permnefteorgsintez Refinery, Perm",region:"Perm Krai, Russia",dist:1800,cat:"Energy",icon:"\ud83c\udfed",severity:"critical",
-       result:"Ukraine's General Staff confirmed a strike on one of Russia's largest refineries, processing over 13M tonnes of crude annually and producing gasoline, diesel, jet fuel and lubricants. Perm Krai governor Dmitry Makhonin confirmed an industrial facility was hit, saying several drones were intercepted on approach. Footage circulated on Russian social media from around 10am local time."} ]},
-  { date:"Jul 28", targets:[
-      {name:"Prioritet State Reserve Fuel Depot (Rosrezerv) + Ichki Crimea Depot + Chervonopopivka UAV Storage",region:"Udmurt Republic / Crimea / Luhansk, Russia & occupied Ukraine",dist:1300,cat:"Energy/Military-Industrial",icon:"🎯",severity:"critical",
-       result:"Ukraine's deepest strike of this cycle: the Prioritet plant in Borok, Udmurt Republic — part of Russia's classified strategic state reserve system, ~1,300km from Ukraine — was hit and set ablaze. Same 48 hours: a logistics and fuel/lubricants depot near Ichki (occupied Crimea), a Russian UAV storage facility near Chervonopopivka (Luhansk Oblast), and a Moscow Oblast steel plant were also struck; occupied Crimea reported a blackout."} ]},
-  { date:"Jul 27", targets:[
-      {name:"Rostov Oblast Export Terminal + Yaroslavl Oil Facility",region:"Rostov & Yaroslavl Oblasts, Russia",dist:700,cat:"Energy/Logistics",icon:"🛢️",severity:"major",
-       result:"Zelensky confirmed a strike on an export terminal in Rostov Oblast overnight Jul 26-27, with parallel deep-strike hits reaching oil facilities in Yaroslavl region — continuing the sustained campaign against Russian fuel export and refining infrastructure."} ]},
-  { date:"Jul 26", targets:[
-      {name:"Russian-Flagged Vessels Carrying Iranian Military Cargo",region:"Caspian Sea",dist:null,cat:"Military/Interdiction",icon:"🚢",severity:"major",
-       result:"Ukraine struck Russian-flagged vessels transporting Iranian military cargo across the Caspian Sea — a rarer maritime interdiction target tying together the Russia-Iran materiel relationship the dashboard tracks separately in the Iran theater."} ]},
-  { date:"Jul 23", targets:[
-      {name:"NS-Oil Refinery (Ulyanovsk) + Subkhankulovo Pipeline Station (Bashkortostan) + Voronezh Wildberries Hub",region:"Ulyanovsk/Bashkortostan/Voronezh, Russia",dist:650,cat:"Energy/Logistics",icon:"🛢️",severity:"major",
-       result:"A three-target night ~650km inside Russia: the NS-Oil refinery in Novospasskoye caught fire, the Subkhankulovo pipeline dispatching station near Tuymazy was struck, and a Voronezh Wildberries hub was hit for a second straight night. Russia claimed 223 Ukrainian drones intercepted across 19 regions."} ]},
-  { date:"Jul 22", targets:[
-      {name:"Russian MiG-29 Fighter Jet, Kursk Airbase",region:"Kursk Oblast, Russia",dist:120,cat:"Military",icon:"✈️",severity:"critical",
-       result:"A rare confirmed kill of a crewed Russian fixed-wing combat aircraft, destroyed on the ground at its Kursk airbase; Ukraine also re-struck the Saratov oil refinery the same cycle."} ]},
-  { date:"Jul 18", targets:[
-      {name:"Moscow Region: Noginsk oil depot + Elektrostal USF warehouse + Wildberries logistics fire",region:"Moscow Oblast, Russia",dist:450,cat:"Energy/Military-Industrial",icon:"🎯",severity:"critical",
-       result:"Strikes landed inside Moscow region itself: an oil depot hit in Noginsk, a warehouse at the 1st Center of Unmanned Systems Forces destroyed by fire in Elektrostal, and a large fire at Wildberries' second-largest logistics center in Moscow. Moscow's mayor reported 1,892 Ukrainian drones detected heading toward the region Jul 11-18."} ]},
-  { date:"Jul 14", targets:[
-      {name:"Russian oil refinery + 10 tankers + 4 ferries, Sea of Azov",region:"Sea of Azov / S. Russia",dist:400,cat:"Naval",icon:"🚢",severity:"critical",
-       result:"The isolation campaign's tempo holds: Ukraine's General Staff reported strikes on a Russian oil refinery plus 10 tankers and 4 ferries in the Sea of Azov — the third multi-vessel Azov operation in four days (21 vessels Jul 11, 15 vessels Jul 13). Details on the refinery and vessel damage were not broken out in the initial report."} ]},
-  { date:"Jul 13", targets:[
-      {name:"Salavat Oil Refinery (Bashkortostan) + Sea of Azov naval strike",region:"Bashkortostan, Russia / Sea of Azov",dist:1400,cat:"Energy/Naval",icon:"🎯",severity:"critical",
-       result:"One of the deepest strikes of the war — the Salavat oil refinery in Bashkortostan, ~1,400km from the border; the regional governor confirmed an industrial-area strike without naming the target. Same night, Ukraine's navy struck 4 shadow-fleet tankers and a patrol boat in the Sea of Azov. Zelensky separately said Ukraine has now struck 105 Russian vessels in the Azov since Jul 6."} ]},
-  { date:"Jul 13", targets:[
-      {name:"Sea of Azov shadow fleet — 15 vessels",region:"Sea of Azov",dist:400,cat:"Naval",icon:"🚢",severity:"critical",
-       result:"Ukraine's Unmanned Systems Forces struck 15 vessels in a single operation: 7 oil tankers, 5 cargo ships, 1 ferry and 2 tugboats, alongside Russian energy infrastructure in occupied territory and enemy air defense systems. ATESH partisan reporting says the campaign has produced a severe fuel shortage in Kherson and Crimea — Russian commanders are now rationing fuel for mobile fire groups and air defense units."} ]},
-  { date:"Jul 11", targets:[
-      {name:"Sea of Azov — 21 Tankers + Support Vessels",region:"Sea of Azov / Rostov Oblast",dist:400,cat:"Naval",icon:"🚢",severity:"critical",
-       result:"Ukraine's largest single-night strike on the Azov shadow fleet: 21 oil/petroleum tankers plus 4 tugboats, 2 cargo ships and a dredger damaged. Russia suspended navigation on the Azov-Don Canal in response. Satellite tracking (Cyberboroshno/Planet Labs) shows the shadow fleet north of the Kerch Bridge collapsing from ~100 vessels around Jul 1 to ~20 by Jul 8 — a fivefold reduction in eight nights."} ]},
-  { date:"Jul 10", targets:[
-      {name:"Yevpatoriia substation, Crimea power grid, + 3 Azov/Black Sea oil facilities",region:"Crimea / Russia (multi-region)",dist:300,cat:"Energy",icon:"⚡",severity:"major",
-       result:"Fifth straight night of the isolation campaign: a key substation strike cut power to occupied Yevpatoriia, Krymenergo announced further restrictions in Crimea's Southern/Central districts, and Voda Kryma reported partial water-supply loss tied to the grid damage. Simultaneously, at least 3 oil facilities were struck in Russian regions bordering the Azov and Black Seas. 12 more Azov vessels hit in the preceding 24 hours per Ukrainian drone forces; Russia claimed 376 drones intercepted overnight without breaking out how many were over Crimea specifically."} ]},
-  { date:"Jul 9", targets:[
-      {name:"Tver & Stavropol oil depots + Sea of Azov tankers",region:"Tver / Stavropol / Rostov, Russia",dist:800,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Coordinated fuel-chain day: SBU drones struck two oil depots 500+km deep (Tver depot fire confirmed by acting Gov. Korolyov; Vyazniki reservoirs in Stavropol ablaze with apartment evacuations per Gov. Vladimirov), while naval drones set two more tankers on fire in the Sea of Azov (Rostov Gov. Slusar). The cumulative campaign has produced a national fuel crisis — Moscow banned diesel exports through month-end."} ]},
-  { date:"Jul 6", targets:[
-      {name:"Omsk Oil Refinery (ELOU-AVT-11 unit)",region:"Omsk Oblast, Russia",dist:2500,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Deepest strike of the war: upgraded long-range FP-1 drones (~3,000km flight) hit Russia's largest refinery for the first time — 10% of national refining capacity, the last of Russia's 11 largest gasoline producers to be successfully targeted. Satellite imagery confirmed 4 impacts on the ELOU-AVT-11 unit (~38-40% of plant capacity); the refinery suspended operations within 24 hours."} ]},
-  { date:"Jul 2", targets:[
-      {name:"Saky Airbase (2nd strike this week)",region:"Occupied Crimea",dist:220,cat:"Military",icon:"✈️",severity:"critical",
-       result:"SBU struck Saky airbase for the second time in a week, hitting seven Russian aircraft (Su-30SM, Su-30, Su-24) sheltered in hangars — part of a sustained campaign to degrade Russian airpower on the peninsula."} ]},
-  { date:"Jul 1", targets:[
-      {name:"Ufa Refinery",region:"Bashkortostan",dist:1300,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Struck one of Russia's largest lubricant-producing refineries, ~1,300km from the border — among the deepest strikes of the campaign. Zelensky called it 'an entirely just response.'"},
-      {name:"Penza NIIFI Sensor Plant",region:"Penza Oblast",dist:730,cat:"Military-Industrial",icon:"🏭",severity:"critical",
-       result:"Hit a facility producing sensors for Russian cruise and ballistic missiles and satellite components — a direct strike on precision-strike supply chain infrastructure."},
-      {name:"Nizhny Novgorod Oil Refinery",region:"Nizhny Novgorod Oblast",dist:920,cat:"Energy",icon:"🛢️",severity:"major",
-       result:"Ukraine's General Staff confirmed a strike on one of Russia's largest refineries east of Moscow, starting a fire, hours after Russia's mass overnight attack on Kyiv."},
-      {name:"Siverskyi Donets Rail Bridge",region:"Occupied Luhansk Oblast",dist:60,cat:"Logistics",icon:"🌉",severity:"major",
-       result:"Struck a railway bridge near Stanytsia Luhanska used by Russian forces to move troops, weapons, and equipment to the front."} ]},
-  { date:"Jun 30", targets:[
-      {name:"Dubna Space Communications Center (2nd strike)",region:"Moscow Oblast",dist:1080,cat:"Military",icon:"📡",severity:"critical",
-       result:"Zelensky confirmed a second Ukrainian strike on Russia's Dubna Space Communications Center, used for intelligence gathering and coordinating occupying forces in Ukraine — part of what Zelensky called Ukraine's 'plan of long-range sanctions' against Russia."} ]},
-  { date:"Jun 26", targets:[
-      {name:"Kerch naval vessels (Volga, Vyatka) + ferry Petropavlovsk",region:"Kerch, Crimea",dist:300,cat:"Naval",icon:"🚢",severity:"critical",
-       result:"SBU struck two Russian reconnaissance/minelaying ships and a cargo-passenger ferry at Kerch port, reportedly starting a large fire — claim not independently verified. Part of a 12-region, 660+ drone overnight campaign, among Ukraine's largest since 2022."},
-      {name:"Novomoskovsk chemical & hydroelectric plant",region:"Tula Oblast",dist:450,cat:"Military-Industrial",icon:"🏭",severity:"major",
-       result:"Independent Russian outlet Astra reported a chemical plant and hydroelectric facility in Novomoskovsk were struck and caught fire during the same overnight operation."} ]},
-  { date:"Jun 24", targets:[
-      {name:"Orenburg Gazprom Gas Processing & Helium Plant",region:"Orenburg Oblast",dist:1500,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Russia's only helium production plant and a key KazRosGaz gas-purification facility — fires and airport shutdowns reported. ~1,500km from the Ukrainian border, among the deepest strikes of the campaign. Confirmed by Ukraine's General Staff."},
-      {name:"Balaklava Thermal Power Plant + coastal radar sites",region:"Sevastopol, Crimea",dist:290,cat:"Energy",icon:"⚡",severity:"critical",
-       result:"Balaklava CHP struck along with radar sites near Bakhchysarai, Kerch, and Mount Ai-Petri. Roughly half of occupied Crimea lost power — part of the continuing energy-siege campaign."} ]},
-  { date:"Jun 23", targets:[
-      {name:"Voronezh missile electronics plant",region:"Voronezh Oblast",dist:640,cat:"Military-Industrial",icon:"🏭",severity:"critical",
-       result:"CONFIRMED HIT — Ukrainian missile strike on plant manufacturing electronics for Iskander tactical missiles and Kh-101 cruise missiles. Direct attack on Russia's primary precision-strike production capability."},
-      {name:"Kerch thermal power plant + railway facilities (Crimea)",region:"Crimea",dist:310,cat:"Energy",icon:"⚡",severity:"critical",
-       result:"Fire at Kerch thermal power plant confirmed Jun 23 following overnight drone strikes. Completes Crimea energy siege: oil terminals, gas compressors, power plant all hit within 72 hours."} ]},
-  { date:"Jun 22", targets:[
-      {name:"Crimea power plant (occupied territory)",region:"Crimea",dist:280,cat:"Energy",icon:"⚡",severity:"critical",
-       result:"Ukrainian drones struck a power plant in Russian-occupied Crimea overnight — the latest in a systematic campaign targeting all energy infrastructure on the peninsula. Continues the Logistics Lockdown operation."},
-      {name:"Moscow Oblast targets",region:"Moscow Oblast",dist:1080,cat:"Military-Industrial",icon:"🏭",severity:"major",
-       result:"Additional strikes reported on targets in Moscow Oblast overnight. Second consecutive week of strikes in the capital region following the Kapotnya refinery shutdown Jun 18."} ]},
-  { date:"Jun 21", targets:[
-      {name:"TES-Terminal-1 oil facility, Kerch + Port Kavkaz, Krasnodar",region:"Crimea / Krasnodar",dist:310,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"FIRE confirmed on both sides of Kerch Strait. TES-Terminal-1 is key storage for fuels supplying Russian occupation forces. SBU Alpha unit + Unmanned Systems Forces coordinated. Crimea governor bans all civilian fuel sales. 4 killed, 28 wounded."},
-      {name:"4x S-400 radar stations + 2 Pantsir systems near Crimean Bridge",region:"Crimea",dist:300,cat:"Military",icon:"📡",severity:"critical",
-       result:"Four S-400 radar stations and two Pantsir-S air defense complexes struck near the Crimean Bridge. Continues systematic SEAD campaign that began January 2026."},
-      {name:"Railway bridges: N. Crimean Canal, Sivash (Chonhar), Zaporizhzhia",region:"Crimea / Zaporizhzhia",dist:250,cat:"Infrastructure",icon:"🌉",severity:"major",
-       result:"Three railway bridges struck simultaneously — all used by Russian forces for military transport. Compounds previous Chonhar and North Crimean Canal bridge damage."},
-      {name:"UAV command posts (Belgorod, Zaporizhzhia, Donetsk, Bryansk)",region:"Multiple",dist:120,cat:"Military",icon:"⚔️",severity:"major",
-       result:"UAV command post near Pochaiv (Belgorod) struck by SBU. Additional drone control nodes hit near Myrne, Komar (Donetsk), Horky (Bryansk, Russia)."} ]},
-  { date:"Jun 20", targets:[
-      {name:"Tyumen Antipinsky Oil Refinery",region:"Tyumen Oblast, Siberia",dist:2800,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Ukrainian drones struck the Antipinsky refinery in Tyumen — processing 7.5-9M metric tons of crude oil per year. Confirmed by General Staff. Among the deepest Ukrainian strikes of the war."},
-      {name:"4 gas compressors + Hlibivka underground gas storage, Crimea",region:"Crimea",dist:280,cat:"Energy",icon:"⚡",severity:"critical",
-       result:"Four gas compressors struck across occupied Crimea. Hlibivka underground gas storage facility hit. Bridge across Henichesk Strait also struck. 13 additional military facilities hit."} ]},
-  { date:"Jun 19", targets:[
-      {name:"5 coastal radar stations + Osa SAM + drone workshop",region:"Crimea",dist:290,cat:"Military",icon:"📡",severity:"critical",
-       result:"All five coastal radar stations struck by Unmanned Systems Forces overnight. Osa surface-to-air missile system destroyed. Drone production workshop struck — systematic degradation of Crimea air defenses."},
-      {name:"Russian shadow fleet tanker (Black Sea)",region:"Black Sea",dist:0,cat:"Naval",icon:"🚢",severity:"major",
-       result:"Shadow fleet tanker confirmed hit by Ukrainian General Staff. Part of ongoing campaign against Russian vessels sustaining the naval blockade and fuel supply."} ]},
-  { date:"Jun 18", targets:[
-      {name:"Moscow Oil Refinery (Kapotnya, Gazprom Neft)",region:"Moscow",dist:1070,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"SHUT DOWN INDEFINITELY — General Staff confirmed damage to combined oil processing unit and storage tanks. Second strike in one week. Largest drone attack on Moscow since Feb 2022. All 4 Moscow airports temporarily closed; 500+ flights cancelled."},
-      {name:"Railway bridge over N. Crimean Canal + Rostov oil depot",region:"Occupied Kherson / Rostov",dist:300,cat:"Infrastructure",icon:"🌉",severity:"major",
-       result:"Railway bridge over North Crimean Canal struck — disrupting military transport to southern front. Rostov region oil depot struck; 1 killed, 2 injured."} ]},
-  { date:"Jun 15", targets:[
-      {name:"Chonhar Bridge",region:"Kherson Oblast / Crimea border",dist:250,cat:"Infrastructure",icon:"🌉",severity:"critical",
-       result:"BRIDGE DAMAGED — only short land route between mainland occupied Ukraine and Crimea. Russian authorities suspended traffic; Dzhankoi checkpoint closed. Ukraine working to isolate the peninsula entirely."} ]},
-  { date:"Jun 12", targets:[
-      {name:"VNIIR-Progress defence factory",region:"Cheboksary, Chuvashia",dist:1100,cat:"Military-Industrial",icon:"🏭",severity:"critical",
-       result:"Second attack in 5 weeks via FP-5 Flamingo cruise missiles. Plant produces Kometa-M navigation modules for Shahed drones, guided aerial bombs, and cruise missiles — critical to Russia's entire strike arsenal."},
-      {name:"Kuibyshev Oil Refinery",region:"Samara Oblast",dist:1200,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Part of coordinated energy attack. Fuel disruptions forced gasoline purchase restrictions across 20+ Russian regions and occupied territories."},
-      {name:"Vtorovo + Lobkovo pipeline pumping stations",region:"Vladimir Oblast",dist:920,cat:"Energy",icon:"⚡",severity:"major",
-       result:"Two oil pumping stations struck by SBU Alpha-unit drones. Disrupts pipeline transit toward central Russia. Contributed to nationwide fuel shortage."} ]},
-  { date:"Jun 11", targets:[
-      {name:"St. Petersburg Kirishi Oil Terminal",region:"Leningrad Oblast",dist:1450,cat:"Energy",icon:"⛽",severity:"critical",
-       result:"Russia's largest Baltic Sea oil terminal struck by FP-5 Flamingo cruise missile (~1,100km+ range strike). Simultaneous corvette strike at Baltiisk Naval Base."},
-      {name:"Afipsky Oil Refinery",region:"Krasnodar Krai",dist:560,cat:"Energy",icon:"🛢️",severity:"major",
-       result:"Fire reported. Capacity ~6M tons/year. Part of large-scale overnight energy operation."} ]},
-  { date:"Jun 10", targets:[
-      {name:"Mariupol Port (energy, radar, repair infrastructure)",region:"Mariupol, Donetsk Oblast",dist:110,cat:"Military",icon:"⚓",severity:"critical",
-       result:"1st Azov Corps operation: electrical substations, radar equipment, control tower, fuel storage tanks struck. Port blackout confirmed. Significantly limited Mariupol's capacity as a logistics hub."},
-      {name:"Panorama of the Defence of Sevastopol museum",region:"Sevastopol, Crimea",dist:270,cat:"Military",icon:"🎯",severity:"major",
-       result:"Drone struck the historic Panorama museum building — Russian-installed governor confirmed roof on fire. Area used for Russian military coordination. Nighttime train schedules cut across Crimea following the operation."} ]},
-  { date:"Jun 7", targets:[
-      {name:"Semikolodyansk oil depot + Feodosia marine oil terminal",region:"Eastern Crimea",dist:210,cat:"Energy",icon:"🛢️",severity:"major",
-       result:"Semikolodyansk depot used as transshipment for fuel oil, diesel, bitumen. Feodosia terminal: 7 fuel storage tanks — emergency fuel supply for Crimea. Both struck by Special Operations Forces."} ]},
-  { date:"Jun 2", targets:[
-      {name:"Dzhankoi railway station, Crimea",region:"Crimea",dist:220,cat:"Infrastructure",icon:"🚂",severity:"major",
-       result:"Drone attack caused fire and damaged administrative building. Russian occupation authorities closed Dzhankoi Station to passengers — major delays across Crimea rail network. Footage geolocated by ISW."} ]},
-  { date:"May 31", targets:[
-      {name:"Slavneft-YANOS Oil Refinery (4th strike in month)",region:"Yaroslavl Oblast",dist:700,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Fourth confirmed Ukrainian strike on Slavneft-YANOS in May — one of Russia's five largest refineries (15M tons/year). Zelensky confirmed: 10 Russian oil refineries struck in May, six forced to shut down. Nearly 40% of Russia's primary refining capacity offline."},
-      {name:"Kinef Refinery (full production halt)",region:"Kirishi, Leningrad Oblast",dist:1100,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Kinef struck in late March and again in early May — fully stopped production. Strikes triggered 50-litre fuel caps in St. Petersburg, 20-litre rationing in occupied Luhansk and Crimea."} ]},
-  { date:"May 22-23", targets:[
-      {name:"Metafrax Chemicals plant, Perm Krai",region:"Perm Krai, Urals",dist:1700,cat:"Military-Industrial",icon:"🏭",severity:"critical",
-       result:"PRODUCTION HALTED — Zelensky confirmed strike forced facility to stop. Metafrax supplies dozens of Russian military manufacturers including aviation equipment, drone components, missile engines, and explosives. ~1,700km from the border."},
-      {name:"Sheskharis oil terminal + Grushova depot, Novorossiysk",region:"Krasnodar, Black Sea",dist:340,cat:"Energy",icon:"⛽",severity:"critical",
-       result:"Sheskharis is the export terminus for Russia's main Transneft pipelines — throughput up to 75M tons/year. Both struck, fires confirmed. One of Russia's most strategically important oil export facilities."},
-      {name:"Russian corvette + Admiral Essen frigate at Novorossiysk",region:"Novorossiysk",dist:340,cat:"Naval",icon:"🚢",severity:"critical",
-       result:"Project 1239 guided-missile corvette and Kalibr-equipped frigate Admiral Essen both struck. Fleet had been moved there from Sevastopol to avoid Ukrainian attacks — Ukraine followed."},
-      {name:"Slavneft-YANOS Refinery (2nd + 3rd May strikes) + Rubikon HQ",region:"Yaroslavl / Starobilsk",dist:700,cat:"Energy",icon:"🛢️",severity:"major",
-       result:"Yaroslavl refinery struck twice overnight. General Staff also confirmed strike on HQ of Russia's elite Rubikon drone unit in Starobilsk — Rubikon coordinates advanced drone operations against Ukraine."} ]},
-  { date:"May 21", targets:[
-      {name:"Syzran Oil Refinery + Lukoil-Nizhegorodnefteorgsintez (Kstovo)",region:"Samara / Nizhny Novgorod",dist:900,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"Syzran refinery struck by drone — fire broke out. Lukoil Kstovo refinery struck the previous morning. Nearly all central Russian oil refineries forced to shut down or cut production — combined capacity >83M tons/year, ~25% of Russia's diesel and 30% of its gasoline."} ]},
-  { date:"May 8", targets:[
-      {name:"Slavneft-YANOS Oil Refinery (1st May strike)",region:"Yaroslavl Oblast",dist:700,cat:"Energy",icon:"🛢️",severity:"critical",
-       result:"First of four May strikes on Slavneft-YANOS. Fire confirmed by General Staff. Zelensky: facility of great importance for financing Russia's war. 230km northeast of Moscow."},
-      {name:"Drone storage facility + Air Navigation HQ, Rostov-on-Don",region:"Rostov Oblast",dist:230,cat:"Military",icon:"⚔️",severity:"major",
-       result:"Drone storage facility struck and fire broke out. Administrative building of the Southern Russia Air Navigation branch struck — regional air traffic control temporarily suspended. Tor-M2 SAM destroyed near Mykhailivka."} ]},
-];
-function DroneWarSection({ t, initialTab }) {
-  const [tab, setTab]   = useState(initialTab ?? "overview");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
-  const [range, setRange] = useState("14d");
-  const [yrView, setYrView] = useState("launches");
-  const [costView, setCostView] = useState("daily");
-  const [selectedDrone, setSelectedDrone] = useState(null);
-  const strikeRegionRows=useMemo(()=>{const counts={};DW_STRIKE_LOG.forEach(d=>d.targets.forEach(tg=>{counts[tg.region]=(counts[tg.region]||0)+1;}));return Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,8);},[]);
-  const dossierRef = useRef(null);
-  useEffect(() => { if (selectedDrone != null && dossierRef.current) { dossierRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); } }, [selectedDrone]);
-  const [droneFilter, setDroneFilter] = useState("all");
-  const [logFilter, setLogFilter] = useState("all");
-
-  const dailySlice = useMemo(() => {
-    const n = range==="7d"?7 : range==="14d"?14 : DW_DAILY.length;
-    return DW_DAILY.slice(-n);
-  }, [range]);
-
-  const dailyStats = useMemo(() => {
-    const d = dailySlice;
-    const ruL = d.reduce((s,r)=>s+r.ru_d+r.ru_m,0);
-    const ruI = d.reduce((s,r)=>s+r.ru_int,0);
-    const ruT = d.reduce((s,r)=>s+r.ru_thru,0);
-    const alertH = d.reduce((s,r)=>s+r.alert_h,0).toFixed(0);
-    const pwGwh  = d.reduce((s,r)=>s+r.pw_gwh,0).toFixed(1);
-    return { ruL,ruI,ruT,alertH,pwGwh, ruRate:dwPct(ruI,ruL) };
-  }, [dailySlice]);
-
-  const chartDaily = dailySlice.map(d => ({
-    name:d.date, "RU Drones":d.ru_d, "RU Missiles":d.ru_m,
-    "RU Intercepted":d.ru_int, "RU Reached":d.ru_thru,
-    "UA Intercept %": dwPct(d.ru_int, d.ru_d+d.ru_m),
-    "Alert Hours":d.alert_h, "Power Offline (GWh)":d.pw_gwh, confirmed:d.confirmed, note:d.note,
-  }));
-
-  const chartCostDaily = dailySlice.map(d => {
-    const ruAtk = (d.ru_d*35000 + d.ru_m*4500000)/1e6;
-    const uaDef = (d.ru_int * (0.44*7500 + 0.26*1000 + 0.22*600000 + 0.08*50000))/1e6;
-    return { name:d.date, "RU Attack Cost ($M)":+ruAtk.toFixed(1), "UA Defense Cost ($M)":+uaDef.toFixed(1) };
-  });
-
-  const satDaily = useMemo(() => dailySlice.map(d => {
-    const launched = d.ru_d + d.ru_m;
-    const rate = dwPct(d.ru_int, launched);
-    const load = +(launched / DW_SAT_SUSTAINABLE * 100).toFixed(0);
-    return { name:d.date, launched, rate, leaked:d.ru_thru, load,
-      "Load %":load, "Intercept %":rate, "Leaked":d.ru_thru,
-      zone:dwSatZone(load).label, col:dwSatZone(load).col, confirmed:d.confirmed };
-  }), [dailySlice]);
-
-  const satScatter = useMemo(() => DW_DAILY.map(d => {
-    const launched = d.ru_d + d.ru_m;
-    return { x:launched, y:dwPct(d.ru_int, launched), name:d.date, leaked:d.ru_thru, confirmed:d.confirmed };
-  }), []);
-
-  const latestNight = satDaily[satDaily.length-1] || {};
-  const peakNight = useMemo(() => satDaily.reduce((mx,d)=> d.load>(mx.load||0)?d:mx, {}), [satDaily]);
-  const avgLoad = satDaily.length ? Math.round(satDaily.reduce((s,d)=>s+d.load,0)/satDaily.length) : 0;
-  const nightsOverCap = satDaily.filter(d=>d.load>=100).length;
-
-  const chartMonthly = DW_MONTHLY.map(m => ({
-    name:m.month, yr:m.yr, "RU Launches":m.ru, "UA Launches":m.ua,
-    "UA Intercept Rate":m.ruRate, "UA Strike Success":m.uaRate,
-    "Civilians Killed":m.civ, "Civilians Injured":m.inj,
-    "Alert Hrs/Day":m.alert_h, "Power Offline (GWh)":m.pw_gwh,
-    "RU Attack Cost ($M)":m.ru_cost, "UA Defense Cost ($M)":m.ua_cost, confirmed:m.c, src:m.src||null,
-  }));
-  const yr25 = DW_MONTHLY.filter(m=>m.yr===2025);
-  const yr26 = DW_MONTHLY.filter(m=>m.yr===2026);
-
-  const TABS = [
-    ["overview","Overview"],["saturation","🌡 Saturation"],["strikelog","📋 Strike Log"],["yearly","📅 Yearly"],["intercept","Intercept"],
-    ["cost","💰 Cost"],["impact","⚠️ Casualties"],["assets","Drone Assets"],["events","Key Events"],
-  ];
-  const tbS = (k) => ({ background:tab===k?DWC.ua:"none", color:tab===k?"#fff":DWC.muted,
-    border:`1px solid ${tab===k?DWC.ua:DWC.border}`, borderRadius:20,
-    padding:"6px 12px", cursor:"pointer", fontFamily:FONT, fontSize:12, fontWeight:tab===k?700:400, whiteSpace:"nowrap" });
-  const btnS = (k,sel) => ({ background:sel===k?"#1e3a5f":"transparent", color:sel===k?DWC.text:DWC.muted,
-    border:`1px solid ${sel===k?"#5b8ec8":DWC.border}`, borderRadius:6, padding:"4px 11px", cursor:"pointer", fontSize:12, fontFamily:FONT });
-
-  return (
-    <div style={{ background:DWC.bg, color:DWC.text, fontFamily:FONT, borderRadius:12, padding:"14px 12px", marginTop:4 }}>
-      <div style={{ marginBottom:16 }}>
-        <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
-          <span style={{ fontSize:20 }}>🛸</span>
-          <h2 style={{ margin:0, fontSize:19, fontWeight:900, letterSpacing:-.5 }}>DRONE WAR</h2>
-          <span style={{ background:"#1e3a5f", color:DWC.uaLt, borderRadius:4, padding:"2px 8px", fontSize:11, fontWeight:700 }}>RUSSIA-UKRAINE · UPDATED {DW_DAILY[DW_DAILY.length-1].date.toUpperCase()} '26</span>
-        </div>
-        <p style={{ margin:"5px 0 0", color:DWC.muted, fontSize:11 }}>
-          Data: Ukrainian Air Force · Russian MoD · ISW · ACLED · ISIS Reports · UN HRMMU · CSIS · ABC News
-          {" "}<span style={{ color:DWC.gold }}>★ = sourced figure</span> · <span>Est = monthly-average extrapolation</span>
-        </p>
-      </div>
-
-      <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:18 }}>
-        {TABS.map(([k,l])=><button key={k} className="pill-tab" style={tbS(k)} onClick={()=>setTab(k)}>{l}</button>)}
-      </div>
-
-      {tab==="overview" && <>
-        <div style={{ display:"flex", gap:6, marginBottom:14, flexWrap:"wrap" }}>
-          {[["7d","7 Days"],["14d","14 Days"],["22d","Full June"]].map(([k,l])=>(<button key={k} style={btnS(k,range)} onClick={()=>setRange(k)}>{l}</button>))}
-          <span style={{ marginLeft:"auto", color:DWC.muted, fontSize:11, alignSelf:"center" }}>{dailySlice.length} days · through {DW_DAILY[DW_DAILY.length-1].date}</span>
-        </div>
-        <div style={{ display:"flex", gap:8, marginBottom:14, flexWrap:"wrap" }}>
-          <DWStatPill label="RU Launched" val={dwFmt(dailyStats.ruL)} sub="drones + missiles" col={DWC.ru}/>
-          <DWStatPill label="UA Intercept Rate" val={dailyStats.ruRate+"%"} sub="of all RU munitions" col={DWC.green}/>
-          <DWStatPill label="RU Reached Target" val={dwFmt(dailyStats.ruT)} sub="penetrated defenses" col={DWC.orange}/>
-          <DWStatPill label="Alert Hours" val={dailyStats.alertH+"h"} sub="total under air raid" col={DWC.purple}/>
-        </div>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.ru} icon="🔴" title="RUSSIA → UKRAINE" sub="launched vs. intercepted vs. reached"/>
-          <ResponsiveContainer width="100%" height={210}>
-            <ComposedChart data={chartDaily} margin={{top:0,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <YAxis tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <Tooltip content={<DWTooltip2/>}/>
-              <Legend wrapperStyle={{fontSize:11,color:DWC.muted}}/>
-              <Bar dataKey="RU Drones" stackId="a" fill={DWC.ru}/>
-              <Bar dataKey="RU Missiles" stackId="a" fill={DWC.ruDk} radius={[2,2,0,0]}/>
-              <Bar dataKey="RU Intercepted" stackId="b" fill={DWC.green} opacity={.75} radius={[2,2,0,0]}/>
-              <Line dataKey="RU Reached" stroke={DWC.gold} strokeWidth={2.5} dot={{r:3,fill:DWC.gold}} type="monotone"/>
-            </ComposedChart>
-          </ResponsiveContainer>
-        </DWCard>
-
-        <DWCard>
-          <div style={{fontSize:11,fontWeight:800,color:DWC.uaLt,letterSpacing:".08em",marginBottom:10}}>🔒 CRIMEA "LOGISTICS LOCKDOWN" — THE ISOLATION CAMPAIGN</div>
-          <div style={{fontSize:12,color:DWC.text,lineHeight:1.65,marginBottom:10}}>Launched late May 2026 by Ukraine's Unmanned Systems Forces (commander Robert Brovdi), this is a named campaign, not scattered strikes — the explicit goal is severing both Russian supply routes into Crimea using "Middle Strike" class drones (~200km range).</div>
-          <div style={{display:"flex",gap:8,marginBottom:12,flexWrap:"wrap"}}>
-            <DWStatPill label="Shadow fleet, Jul 1" val="~100" sub="tankers north of Kerch Bridge" col={DWC.ru}/>
-            <DWStatPill label="Shadow fleet, Jul 8" val="~20" sub="satellite-confirmed collapse" col={DWC.green}/>
-            <DWStatPill label="Vessels hit, 24hrs" val="12+" sub="Jul 9-10, Sea of Azov" col={DWC.orange}/>
-            <DWStatPill label="Bridges eliminated" val="1st" sub="N. Crimean Canal rail bridge, Jun 23" col={DWC.gold}/>
-          </div>
-          <div style={{fontSize:12,color:DWC.muted,lineHeight:1.65}}>
-            <div style={{marginBottom:6}}><span style={{color:DWC.text,fontWeight:700}}>Two routes, both under fire</span> — the land corridor (Donetsk/Zaporizhzhia/Kherson rail and road junctions) and the Kerch Bridge/ferry crossing. Jun 21: simultaneous strikes hit the Kerch fuel terminal and Russia's Port Kavkaz on the opposite shore, plus the ferry Panagia — Kerch-Kavkaz ferry service was suspended. Jun 23: the North Crimean Canal rail bridge was destroyed outright, the first bridge eliminated in the campaign.</div>
-            <div style={{marginBottom:6}}><span style={{color:DWC.text,fontWeight:700}}>Forcing a real defensive tradeoff</span> — Zelensky confirmed Russia relocated hundreds of S-400/S-500/Pantsir launchers to defend Moscow and the Kerch Bridge specifically, thinning air defense everywhere else: "in all other regions of Russia, there are only a few launchers each."</div>
-            <div><span style={{color:DWC.text,fontWeight:700}}>Consequences on the ground</span> — Sevastopol fuel rationed to 20L/week for private buyers; Yevpatoriia lost power Jul 10; Voda Kryma reports partial water-supply loss tied to grid damage. Full Azov strike detail: Strike Log tab.
-            </div>
-          </div>
-        </DWCard>
-      </>}
-
-      {tab==="saturation" && <>
-        <div style={{ display:"flex", gap:6, marginBottom:14, flexWrap:"wrap" }}>
-          {[["7d","7 Days"],["14d","14 Days"],["22d","Full June"]].map(([k,l])=>(<button key={k} style={btnS(k,range)} onClick={()=>setRange(k)}>{l}</button>))}
-          <span style={{ marginLeft:"auto", color:DWC.muted, fontSize:11, alignSelf:"center" }}>Model: {DW_SAT_SUSTAINABLE} munitions/night sustainable</span>
-        </div>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.orange} icon="🌡" title="Air Defense Saturation" sub="how close each night came to overwhelming Ukrainian air defenses"/>
-          <div style={{ display:"flex", gap:20, flexWrap:"wrap", alignItems:"center", justifyContent:"space-around" }}>
-            <div style={{ textAlign:"center" }}><DWGauge load={latestNight.load||0} size={190} label={`${latestNight.name||""} — latest`} sublabel={`${latestNight.launched||0} munitions · ${latestNight.rate||0}% stopped`}/></div>
-            <div style={{ textAlign:"center" }}><DWGauge load={peakNight.load||0} size={190} label={`${peakNight.name||""} — peak stress`} sublabel={`${peakNight.launched||0} munitions · ${peakNight.rate||0}% stopped`}/></div>
-            <div style={{ flex:1, minWidth:200 }}>
-              <div style={{ marginBottom:10 }}>
-                <div style={{ color:DWC.muted, fontSize:10, textTransform:"uppercase", letterSpacing:.8 }}>Range avg load</div>
-                <div style={{ color:dwSatZone(avgLoad).col, fontSize:32, fontWeight:900, fontFamily:FONT }}>{avgLoad}%</div>
-                <div style={{ color:DWC.muted, fontSize:11 }}>of sustainable capacity</div>
-              </div>
-              <div style={{ marginBottom:10 }}>
-                <div style={{ color:DWC.muted, fontSize:10, textTransform:"uppercase", letterSpacing:.8 }}>Nights over capacity</div>
-                <div style={{ color: nightsOverCap?DWC.ru:DWC.green, fontSize:32, fontWeight:900, fontFamily:FONT }}>{nightsOverCap}<span style={{fontSize:16,color:DWC.muted}}> / {satDaily.length}</span></div>
-                <div style={{ color:DWC.muted, fontSize:11 }}>load ≥ 100% (oversubscribed)</div>
-              </div>
-              <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginTop:6 }}>
-                {[["NOMINAL","#22c55e","<70%"],["ELEVATED","#eab308","70-100%"],["SATURATED","#f97316","100-150%"],["CRITICAL","#ef4444",">150%"]].map(([l,col,r])=>(
-                  <span key={l} style={{ fontSize:10, color:col }}>● {l} <span style={{color:DWC.muted}}>{r}</span></span>))}
-              </div>
-            </div>
-          </div>
-        </DWCard>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.text} icon="📊" title="Nightly Defensive Load" sub="% of sustainable capacity — bars over 100% = oversaturated"/>
-          <ResponsiveContainer width="100%" height={220}>
-            <ComposedChart data={satDaily} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <YAxis tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="%"/>
-              <Tooltip content={<DWTooltip2/>}/>
-              <ReferenceLine y={100} stroke={DWC.ru} strokeDasharray="5 3" label={{value:"capacity",fill:DWC.ru,fontSize:10,position:"insideTopRight"}}/>
-              <ReferenceLine y={70} stroke="#eab308" strokeDasharray="3 2"/>
-              <Bar dataKey="Load %" radius={[3,3,0,0]}>{satDaily.map((d,i)=><Cell key={i} fill={d.col}/>)}</Bar>
-            </ComposedChart>
-          </ResponsiveContainer>
-          <div style={{ color:DWC.muted, fontSize:11, marginTop:8 }}>Bar color = saturation zone. The <strong style={{color:DWC.ru}}>Jun 2</strong> mass attack (729 munitions) drove load to ~208% — more than double sustainable capacity — which is why 87 munitions leaked through to 38 sites.</div>
-        </DWCard>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.teal} icon="📉" title="The Saturation Curve" sub="every night plotted: launch volume vs. intercept rate"/>
-          <ResponsiveContainer width="100%" height={280}>
-            <ScatterChart margin={{top:10,right:12,left:-10,bottom:10}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis type="number" dataKey="x" name="Launched" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} label={{value:"Munitions launched →",fill:DWC.muted,fontSize:11,position:"insideBottom",dy:12}}/>
-              <YAxis type="number" dataKey="y" name="Intercept %" domain={[75,100]} tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="%"/>
-              <ZAxis type="number" dataKey="leaked" range={[40,400]} name="Leaked"/>
-              <ReferenceArea x1={DW_SAT_SUSTAINABLE} x2={2000} fill={DWC.ru} fillOpacity={0.06}/>
-              <ReferenceLine x={DW_SAT_SUSTAINABLE} stroke={DWC.ru} strokeDasharray="5 3"/>
-              <Tooltip content={<DWTooltip2/>} cursor={{strokeDasharray:"3 3"}}/>
-              <Scatter data={satScatter} fill={DWC.teal}>{satScatter.map((d,i)=>(<Cell key={i} fill={d.confirmed?DWC.gold:DWC.teal} fillOpacity={d.confirmed?0.95:0.55}/>))}</Scatter>
-            </ScatterChart>
-          </ResponsiveContainer>
-          <div style={{ color:DWC.muted, fontSize:11, marginTop:8, lineHeight:1.6 }}>Bubble size = munitions leaked through. <span style={{color:DWC.gold}}>●</span> gold = confirmed nights, <span style={{color:DWC.teal}}>●</span> teal = estimated. Past ~{DW_SAT_SUSTAINABLE} munitions/night, each added drone is more likely to get through — the core dynamic behind Russia's volume strategy.</div>
-        </DWCard>
-        <DWCard>
-          <div style={{ fontWeight:700, marginBottom:8, fontSize:13 }}>🔬 How the saturation index is computed</div>
-          <ul style={{ margin:0, paddingLeft:18, color:DWC.muted, fontSize:12, lineHeight:1.9 }}>
-            <li><strong style={{color:DWC.text}}>Sustainable capacity ({DW_SAT_SUSTAINABLE}/night)</strong>: volume Ukraine engages while holding ~92% efficiency. Derived from May '26 (~263/night at 91.73%, plus headroom).</li>
-            <li><strong style={{color:DWC.text}}>Load %</strong> = munitions launched ÷ sustainable capacity. Above 100%, defenses are oversubscribed and leak rate climbs.</li>
-            <li><strong style={{color:DWC.text}}>Surge ceiling (~{DW_SAT_SURGE}/night)</strong>: absolute max engaged in a single night (≈ Jun 2). Beyond this, efficiency collapses.</li>
-            <li>This is an <strong style={{color:DWC.gold}}>analytical model</strong>, not an official metric — a transparent way to read the volume-vs-efficiency tradeoff.</li>
-          </ul>
-        </DWCard>
-      </>}
-
-      {tab==="strikelog" && <>
-        <div style={{background:DWC.card,border:`1px solid ${DWC.border}`,borderRadius:12,padding:"12px 14px",marginBottom:14}}>
-          <div style={{fontSize:11,fontWeight:800,color:DWC.uaLt,letterSpacing:".08em",marginBottom:10}}>📍 UA STRIKES BY RUSSIAN REGION (logged)</div>
-          {(()=>{const rows=strikeRegionRows;const max=rows.length?rows[0][1]:1;return rows.map(([rg,n],i)=><div key={rg} style={{marginBottom:i===rows.length-1?0:8}}><div style={{display:"flex",justifyContent:"space-between",marginBottom:2}}><span style={{fontSize:11,fontWeight:600,color:DWC.text}}>{rg}</span><span style={{fontSize:11,fontWeight:700,color:DWC.ua}}>{n}</span></div><div style={{height:6,borderRadius:3,background:"rgba(91,142,196,.12)",overflow:"hidden"}}><div style={{height:"100%",width:`${Math.max(4,n/max*100)}%`,borderRadius:3,background:`linear-gradient(90deg,${DWC.ua}88,${DWC.ua})`,transformOrigin:"left",animation:`barGrow .6s cubic-bezier(.22,1,.36,1) ${i*0.05}s both`}}/></div></div>);})()}
-          <div style={{fontSize:9.5,color:DWC.muted,marginTop:8,fontStyle:"italic"}}>Derived live from the strike log below — counts of logged target entries per region, top 8. Linear scale. The log is curated, not exhaustive.</div>
-        </div>
-        <div style={{ display:"flex", gap:8, marginBottom:14, flexWrap:"wrap" }}>
-          <DWStatPill label="UA Targets Struck '26" val={DW_UA_FORCE.targetsStruck} sub="verified RU targets (UNITED24)" col={DWC.ua}/>
-          <DWStatPill label="Interceptors / Day" val={DW_UA_FORCE.interceptorsDay} sub="STING ~$2,500 each" col={DWC.green}/>
-          <DWStatPill label="Unmanned Systems Forces" val={DW_UA_FORCE.usfPersonnel} sub="separate branch (Feb '26)" col={DWC.ua}/>
-          <DWStatPill label="Drone Models on Brave1" val={DW_UA_FORCE.models} sub="581 FPV · 434 fiber-optic" col={DWC.teal}/>
-        </div>
-        <div style={{ display:"flex", gap:6, marginBottom:14, flexWrap:"wrap" }}>
-          {[["all","All"],["Energy","🛢️ Energy"],["Military","⚔️ Military/AD"],["Military-Industrial","🏭 Industrial"],["Infrastructure","🌉 Infra"],["Naval","🚢 Naval"]].map(([k,l])=>(<button key={k} style={btnS(k,logFilter)} onClick={()=>setLogFilter(k)}>{l}</button>))}
-        </div>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.ua} icon="📋" title="Ukrainian Deep-Strike Drone Log" sub={"confirmed long-range strikes · May 8 – "+DW_STRIKE_LOG[0].date+", 2026"}/>
-          {DW_STRIKE_LOG.map((day,di)=>{
-            const targets = day.targets.filter(t2=>logFilter==="all" || t2.cat===logFilter);
-            if (!targets.length) return null;
-            return (
-              <div key={di} style={{ marginBottom:16 }}>
-                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8 }}>
-                  <span style={{ background:DWC.ua, color:"#fff", borderRadius:5, padding:"2px 10px", fontSize:12, fontWeight:800 }}>{day.date}</span>
-                  <div style={{ flex:1, height:1, background:DWC.border }}/>
-                  <span style={{ color:DWC.muted, fontSize:10 }}>{targets.length} target{targets.length>1?"s":""}</span>
-                </div>
-                <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-                  {targets.map((t2,ti)=>{
-                    const sevCol = t2.severity==="critical"?DWC.ru : t2.severity==="major"?DWC.orange : DWC.gold;
-                    return (
-                      <div key={ti} style={{ background:DWC.card2, borderRadius:8, borderLeft:`3px solid ${sevCol}`, padding:"10px 12px" }}>
-                        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:8, marginBottom:4 }}>
-                          <span style={{ color:DWC.text, fontWeight:700, fontSize:13, lineHeight:1.3 }}>{t2.icon} {t2.name}</span>
-                          <span style={{ color:sevCol, fontSize:9, fontWeight:800, textTransform:"uppercase", flexShrink:0, marginTop:2 }}>{t2.severity}</span>
-                        </div>
-                        <div style={{ display:"flex", gap:10, marginBottom:6, flexWrap:"wrap" }}>
-                          <span style={{ color:DWC.gold, fontSize:10 }}>📍 {t2.region}</span>
-                          {t2.dist>0 && <span style={{ color:DWC.muted, fontSize:10 }}>📏 {t2.dist.toLocaleString()} km from border</span>}
-                          <span style={{ color:DWC.teal, fontSize:10 }}>{t2.cat}</span>
-                        </div>
-                        <div style={{ color:DWC.muted, fontSize:11.5, lineHeight:1.55 }}>{t2.result}</div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-          <div style={{ padding:"8px 10px", background:DWC.card2, borderRadius:6, fontSize:11, color:DWC.muted, lineHeight:1.6, marginTop:4 }}>
-            Distances are km from the Ukrainian border. <strong style={{color:DWC.text}}>Tyumen (2,800 km)</strong> and <strong style={{color:DWC.text}}>St. Petersburg Kirishi (1,450 km)</strong> rank among the deepest strikes of the war.
-          </div>
-        </DWCard>
-      </>}
-      {tab==="yearly" && <>
-        <div style={{ display:"flex", gap:6, marginBottom:14, flexWrap:"wrap" }}>
-          {[["launches","Launch Volumes"],["rates","Intercept Rates"],["casualties","Casualties"],["cost","Cost Trend"],["yoy","2025 vs 2026"]].map(([k,l])=>(<button key={k} style={btnS(k,yrView)} onClick={()=>setYrView(k)}>{l}</button>))}
-        </div>
-        {yrView==="launches" && <DWCard>
-          <DWSectionHead color={DWC.text} icon="📊" title="Monthly Launch Volumes — Jan 2025 to Jun 2026" sub="18 months of aerial campaign data"/>
-          <ResponsiveContainer width="100%" height={280}>
-            <ComposedChart data={chartMonthly} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:9}} tickLine={false} axisLine={{stroke:DWC.border}} interval={1}/>
-              <YAxis tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <Bar dataKey="RU Launches" fill={DWC.ru} radius={[2,2,0,0]} opacity={.9}/>
-              <Bar dataKey="UA Launches" fill={DWC.ua} radius={[2,2,0,0]} opacity={.9}/>
-            </ComposedChart>
-          </ResponsiveContainer>
-          <div style={{ display:"flex", gap:10, marginTop:14, flexWrap:"wrap" }}>
-            {[{ label:"May '26 RU Record", val:"★ 8,150", col:DWC.ru, note:"Drones launched. +24% vs Apr" },{ label:"May '26 UA Record", val:"★ 9,418", col:DWC.ua, note:"Per RU MoD (claimed intercepts)" },{ label:"First 3,000-drone month", val:"★ Jul '25", col:DWC.ua, note:"UA milestone vs Russia" },{ label:"First 7,000-drone month", val:"★ Mar '26", col:DWC.ua, note:"3x in 9 months" }].map((s,i)=>(
-              <div key={i} style={{ background:DWC.card2, borderRadius:8, padding:"10px 12px", flex:1, minWidth:150 }}>
-                <div style={{ color:DWC.muted, fontSize:10, textTransform:"uppercase" }}>{s.label}</div>
-                <div style={{ color:s.col, fontSize:20, fontWeight:900, fontFamily:FONT }}>{s.val}</div>
-                <div style={{ color:DWC.muted, fontSize:11 }}>{s.note}</div>
-              </div>))}
-          </div>
-        </DWCard>}
-        {yrView==="rates" && <DWCard>
-          <DWSectionHead color={DWC.text} icon="📈" title="Interception Rate Trends — 18-Month View"/>
-          <ResponsiveContainer width="100%" height={260}>
-            <LineChart data={chartMonthly} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:9}} tickLine={false} axisLine={{stroke:DWC.border}} interval={1}/>
-              <YAxis domain={[0,100]} tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="%"/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <ReferenceLine y={91.7} stroke={DWC.green} strokeDasharray="4 2" label={{value:"91.7% May '26",fill:DWC.green,fontSize:10}}/>
-              <Line dataKey="UA Intercept Rate" stroke={DWC.green} strokeWidth={2.5} dot={{r:3}} type="monotone" name="UA intercepts RU drones (%)"/>
-              <Line dataKey="UA Strike Success" stroke={DWC.ua} strokeWidth={2.5} dot={{r:3}} type="monotone" name="UA drones reach Russia (%)"/>
-            </LineChart>
-          </ResponsiveContainer>
-          <div style={{ color:DWC.muted, fontSize:11, marginTop:10 }}><strong style={{color:DWC.text}}>Key narrative:</strong> Ukraine's intercept rate climbed from ~76% (Jan '25) to 91.7% (May '26) despite Russia increasing launches by 115% — driven by interceptor drone adoption. UA penetration of Russian airspace rose from ~9% to ~18%.</div>
-        </DWCard>}
-        {yrView==="casualties" && <DWCard>
-          <DWSectionHead color={DWC.ru} icon="⚠️" title="Monthly Civilian Casualties — Ukraine" sub="Source: UN HRMMU (confirmed months marked ★)"/>
-          <ResponsiveContainer width="100%" height={250}>
-            <ComposedChart data={chartMonthly} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:9}} tickLine={false} axisLine={{stroke:DWC.border}} interval={1}/>
-              <YAxis tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <Bar dataKey="Civilians Killed" fill={DWC.ru} radius={[2,2,0,0]} opacity={.9}/>
-              <Bar dataKey="Civilians Injured" fill={DWC.orange} radius={[2,2,0,0]} opacity={.6}/>
-            </ComposedChart>
-          </ResponsiveContainer>
-        </DWCard>}
-        {yrView==="cost" && <DWCard>
-          <DWSectionHead color={DWC.gold} icon="💰" title="Monthly Estimated Attack & Defense Costs" sub="$M per month"/>
-          <ResponsiveContainer width="100%" height={250}>
-            <AreaChart data={chartMonthly} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:9}} tickLine={false} axisLine={{stroke:DWC.border}} interval={1}/>
-              <YAxis tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="M"/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <Area dataKey="RU Attack Cost ($M)" stroke={DWC.ru} fill={DWC.ru} fillOpacity={.2} strokeWidth={2} type="monotone"/>
-              <Area dataKey="UA Defense Cost ($M)" stroke={DWC.ua} fill={DWC.ua} fillOpacity={.2} strokeWidth={2} type="monotone"/>
-            </AreaChart>
-          </ResponsiveContainer>
-          <div style={{ color:DWC.muted, fontSize:11, marginTop:10 }}>Russia has spent an estimated <strong style={{color:DWC.ru}}>~$3.3B</strong> on Shahed/missile attacks in this 18-month window.</div>
-        </DWCard>}
-        {yrView==="yoy" && <DWCard>
-          <DWSectionHead color={DWC.text} icon="📅" title="2025 vs 2026 — Year-Over-Year" sub="Monthly averages by year"/>
-          <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
-            {[{ label:"RU avg launches/mo", v25: Math.round(yr25.reduce((s,m)=>s+m.ru,0)/yr25.length), v26: Math.round(yr26.reduce((s,m)=>s+m.ru,0)/yr26.length), col:DWC.ru },{ label:"UA avg launches/mo", v25: Math.round(yr25.reduce((s,m)=>s+m.ua,0)/yr25.length), v26: Math.round(yr26.reduce((s,m)=>s+m.ua,0)/yr26.length), col:DWC.ua },{ label:"UA intercept rate avg", v25: Math.round(yr25.reduce((s,m)=>s+m.ruRate,0)/yr25.length)+"%", v26: Math.round(yr26.reduce((s,m)=>s+m.ruRate,0)/yr26.length)+"%", col:DWC.green },{ label:"Civilians killed/mo", v25: Math.round(yr25.reduce((s,m)=>s+m.civ,0)/yr25.length), v26: Math.round(yr26.reduce((s,m)=>s+m.civ,0)/yr26.length), col:DWC.orange },{ label:"RU cost/mo ($M)", v25: Math.round(yr25.reduce((s,m)=>s+m.ru_cost,0)/yr25.length), v26: Math.round(yr26.reduce((s,m)=>s+m.ru_cost,0)/yr26.length), col:DWC.gold },{ label:"Alert hours/day avg",  v25: (yr25.reduce((s,m)=>s+m.alert_h,0)/yr25.length).toFixed(1), v26: (yr26.reduce((s,m)=>s+m.alert_h,0)/yr26.length).toFixed(1), col:DWC.purple }].map((s,i) => {
-              const n25 = parseFloat(String(s.v25).replace(/[^0-9.]/g,"")); const n26 = parseFloat(String(s.v26).replace(/[^0-9.]/g,""));
-              const chg = n25>0 ? Math.round((n26-n25)/n25*100) : 0;
-              return (
-                <div key={i} style={{ background:DWC.card2, border:`1px solid ${DWC.border}`, borderRadius:10, padding:"12px 14px", flex:1, minWidth:150 }}>
-                  <div style={{ color:DWC.muted, fontSize:10, textTransform:"uppercase", marginBottom:6 }}>{s.label}</div>
-                  <div style={{ display:"flex", gap:10, alignItems:"flex-end" }}>
-                    <div><div style={{ color:DWC.muted, fontSize:10 }}>2025</div><div style={{ color:DWC.text, fontSize:18, fontWeight:800, fontFamily:FONT }}>{s.v25}</div></div>
-                    <div style={{ color:chg>0?"#f87171":"#4ade80", fontSize:12, fontWeight:700, marginBottom:2 }}>{chg>0?"▲":"▼"}{Math.abs(chg)}%</div>
-                    <div><div style={{ color:DWC.muted, fontSize:10 }}>2026</div><div style={{ color:s.col, fontSize:18, fontWeight:800, fontFamily:FONT }}>{s.v26}</div></div>
-                  </div>
-                </div>);
-            })}
-          </div>
-          <div style={{ marginTop:14, padding:"12px 14px", background:DWC.card2, borderRadius:8, fontSize:12, color:DWC.muted, lineHeight:1.7 }}><strong style={{color:DWC.text}}>Strategic summary:</strong> Russia increased drone launches ~52% YoY, yet Ukraine's intercept rate improved ~11 points. Ukraine's own offensive grew ~220%+ since 2025. Russia is compensating for declining per-drone effectiveness with raw volume — spending ~40% more per month for diminishing returns.</div>
-        </DWCard>}
-      </>}
-
-      {tab==="intercept" && <>
-        <div style={{ display:"flex", gap:6, marginBottom:14 }}>{[["7d","7 Days"],["14d","14 Days"],["22d","Full June"]].map(([k,l])=>(<button key={k} style={btnS(k,range)} onClick={()=>setRange(k)}>{l}</button>))}</div>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.text} icon="📈" title="Daily Intercept Rate — Russian Munitions"/>
-          <ResponsiveContainer width="100%" height={240}>
-            <LineChart data={chartDaily} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <YAxis domain={[0,100]} tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="%"/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <ReferenceLine y={91.7} stroke={DWC.green} strokeDasharray="5 3"/>
-              <Line dataKey="UA Intercept %" stroke={DWC.green} strokeWidth={2.5} dot={{r:3}} type="monotone" name="UA intercepts RU (%)"/>
-            </LineChart>
-          </ResponsiveContainer>
-        </DWCard>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.green} icon="🛡️" title="Intercept Rate by Weapon Type" sub="Mar 2026"/>
-          {DW_INTERCEPT_WEAPON.map((w,i)=>(
-            <div key={i} style={{ marginBottom:12 }}>
-              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:4 }}>
-                <span style={{ color:DWC.text, fontSize:12.5, fontWeight:600 }}>{w.weapon}</span>
-                <span style={{ color:w.col, fontSize:16, fontWeight:800, fontFamily:FONT }}>{w.rate}%</span>
-              </div>
-              <div style={{ height:7, background:"#0a1628", borderRadius:4, overflow:"hidden", marginBottom:4 }}><div style={{ height:"100%", width:`${w.rate}%`, background:w.col, borderRadius:4 }}/></div>
-              <div style={{ color:DWC.muted, fontSize:11 }}>{w.note}</div>
-            </div>))}
-          <div style={{ background:"#1a0e0e", border:`1px solid ${DWC.ru}33`, borderRadius:8, padding:"8px 10px", fontSize:11.5, color:DWC.muted, lineHeight:1.55, marginTop:4 }}>Interceptor drones accounted for <strong style={{color:DWC.text}}>40%+ of Shahed kills</strong> in the largest May 2026 attacks. The ballistic gap (27%) is the critical weakness — only scarce Patriot PAC-3 can engage them.</div>
-        </DWCard>
-      </>}
-
-      {tab==="strikelog" && <>
-        <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:14 }}>
-          <DWCard style={{ flex:1, minWidth:260 }}>
-            <DWSectionHead color={DWC.ru} icon="🔴" title="Russia → Ukraine Targets"/>
-            <div style={{ display:"flex", alignItems:"center", gap:16, marginBottom:12 }}>
-              <DWPieRing data={DW_TARGETS_RU} size={120}/>
-              <div style={{ flex:1 }}>{DW_TARGETS_RU.map((t2,i)=>(<div key={i} style={{ display:"flex", justifyContent:"space-between", marginBottom:7 }}><span style={{ fontSize:12 }}><span style={{color:t2.col}}>■</span> {t2.cat}</span><span style={{ color:t2.col, fontWeight:700, fontSize:13, fontFamily:FONT }}>{t2.pct}%</span></div>))}</div>
-            </div>
-            {DW_TARGETS_RU.map((t2,i)=>(<div key={i} style={{ borderTop:`1px solid ${DWC.card2}`, padding:"6px 0", fontSize:11, color:DWC.muted }}><span style={{ color:t2.col, fontWeight:600 }}>{t2.cat}:</span> {t2.note}</div>))}
-          </DWCard>
-          <DWCard style={{ flex:1, minWidth:260 }}>
-            <DWSectionHead color={DWC.ua} icon="🔵" title="Ukraine → Russia Targets"/>
-            <div style={{ display:"flex", alignItems:"center", gap:16, marginBottom:12 }}>
-              <DWPieRing data={DW_TARGETS_UA} size={120}/>
-              <div style={{ flex:1 }}>{DW_TARGETS_UA.map((t2,i)=>(<div key={i} style={{ display:"flex", justifyContent:"space-between", marginBottom:7 }}><span style={{ fontSize:12 }}><span style={{color:t2.col}}>■</span> {t2.cat}</span><span style={{ color:t2.col, fontWeight:700, fontSize:13, fontFamily:FONT }}>{t2.pct}%</span></div>))}</div>
-            </div>
-            {DW_TARGETS_UA.map((t2,i)=>(<div key={i} style={{ borderTop:`1px solid ${DWC.card2}`, padding:"6px 0", fontSize:11, color:DWC.muted }}><span style={{ color:t2.col, fontWeight:600 }}>{t2.cat}:</span> {t2.note}</div>))}
-          </DWCard>
-        </div>
-        <DWCard>
-          <DWSectionHead color={DWC.orange} icon="📍" title="Russian Launch Origin Regions" sub="Estimated % of Shahed launches by source area"/>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))", gap:10 }}>
-            {DW_ORIGINS.map((o,i)=>(
-              <div key={i} style={{ background:DWC.card2, borderRadius:8, padding:"10px 12px" }}>
-                <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}><span style={{ color:DWC.text, fontWeight:700, fontSize:13 }}>{o.region}</span><span style={{ color:DWC.ru, fontWeight:900, fontSize:16, fontFamily:FONT }}>{o.pct}%</span></div>
-                <div style={{ background:DWC.border, borderRadius:3, height:4, marginBottom:8 }}><div style={{ background:DWC.ru, height:4, borderRadius:3, width:`${o.pct*2.5}%` }}/></div>
-                <div style={{ color:DWC.muted, fontSize:11 }}>{o.note}</div>
-              </div>))}
-          </div>
-        </DWCard>
-      </>}
-
-      {tab==="cost" && <>
-        <div style={{ display:"flex", gap:6, marginBottom:14 }}>{[["daily","Daily June"],["monthly","Monthly Trend"],["perunit","Per-Unit"]].map(([k,l])=>(<button key={k} style={btnS(k,costView)} onClick={()=>setCostView(k)}>{l}</button>))}</div>
-        {costView==="daily" && <>
-          <div style={{ display:"flex", gap:8, marginBottom:14, flexWrap:"wrap" }}>
-            <DWStatPill label="Jun 2 RU Attack Cost" val="~$616M" sub="one night" col={DWC.ru}/>
-            <DWStatPill label="Avg Nightly RU Cost" val="~$56M" sub="270 Shaheds + ~7 missiles" col={DWC.orange}/>
-            <DWStatPill label="Avg UA Defense Cost" val="~$49M" sub="per intercept night" col={DWC.ua}/>
-            <DWStatPill label="UA Interceptor Ratio" val="4.7x" sub="cheaper than Shahed" col={DWC.green}/>
-          </div>
-          <DWCard>
-            <DWSectionHead color={DWC.gold} icon="💰" title="Daily Attack & Defense Expenditure — June 2026" sub="Estimated $M"/>
-            <ResponsiveContainer width="100%" height={240}>
-              <ComposedChart data={chartCostDaily} margin={{top:5,right:8,left:-15,bottom:0}}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-                <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-                <YAxis tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="M"/>
-                <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-                <Bar dataKey="RU Attack Cost ($M)" fill={DWC.ru} radius={[2,2,0,0]}/>
-                <Bar dataKey="UA Defense Cost ($M)" fill={DWC.ua} radius={[2,2,0,0]}/>
-              </ComposedChart>
-            </ResponsiveContainer>
-          </DWCard>
-        </>}
-        {costView==="monthly" && <DWCard>
-          <DWSectionHead color={DWC.gold} icon="📉" title="18-Month Cost Escalation — Both Sides"/>
-          <ResponsiveContainer width="100%" height={260}>
-            <AreaChart data={chartMonthly} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:9}} tickLine={false} axisLine={{stroke:DWC.border}} interval={1}/>
-              <YAxis tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="M"/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <Area dataKey="RU Attack Cost ($M)" stroke={DWC.ru} fill={DWC.ru} fillOpacity={.15} strokeWidth={2} type="monotone"/>
-              <Area dataKey="UA Defense Cost ($M)" stroke={DWC.ua} fill={DWC.ua} fillOpacity={.15} strokeWidth={2} type="monotone"/>
-            </AreaChart>
-          </ResponsiveContainer>
-          <div style={{ fontSize:12, color:DWC.muted, marginTop:10, lineHeight:1.7 }}>18-month cumulative: <strong style={{color:DWC.ru}}>~$3.3B</strong> Russian attack · <strong style={{color:DWC.ua}}>~$2.6B</strong> Ukrainian defense. A single Kh-101 volley (~8 missiles = $104M) costs more than a month of Shahed launches.</div>
-        </DWCard>}
-        {costView==="perunit" && <DWCard>
-          <DWSectionHead color={DWC.gold} icon="⚖️" title="Cost-Exchange Analysis — Per Weapon"/>
-          <div style={{ overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12 }}>
-              <thead><tr style={{ borderBottom:`1px solid ${DWC.border}` }}>{["Weapon","Side","Unit Cost","Monthly Qty","Monthly $","Notes"].map(h=>(<th key={h} style={{ padding:"8px 10px", color:DWC.muted, textAlign:"left", fontWeight:600, fontSize:11 }}>{h}</th>))}</tr></thead>
-              <tbody>{DW_WEAPONS.map((w,i)=>{const tot = (w.cost * w.qty_may26 / 1e6).toFixed(0);return (
-                <tr key={i} style={{ borderBottom:`1px solid ${DWC.card2}`, background:i%2===0?DWC.card2:"transparent" }}>
-                  <td style={{ padding:"7px 10px", color:DWC.text, fontWeight:600 }}>{w.name}</td>
-                  <td style={{ padding:"7px 10px", color: w.side==="RU"?DWC.ru:DWC.ua, fontWeight:700 }}>{w.side}</td>
-                  <td style={{ padding:"7px 10px", color:DWC.gold, fontFamily:FONT }}>${(w.cost/1000).toFixed(0)}k</td>
-                  <td style={{ padding:"7px 10px", color:DWC.text, fontFamily:FONT }}>{w.qty_may26.toLocaleString()}</td>
-                  <td style={{ padding:"7px 10px", color:DWC.orange, fontFamily:FONT }}>${tot}M</td>
-                  <td style={{ padding:"7px 10px", color:DWC.muted, maxWidth:200 }}>{w.notes.substring(0,70)}...</td>
-                </tr>);})}</tbody>
-            </table>
-          </div>
-          <div style={{ marginTop:14, padding:"10px 12px", background:DWC.card2, borderRadius:8, fontSize:11, color:DWC.muted, lineHeight:1.7 }}><strong style={{color:DWC.gold}}>CSIS key finding:</strong> Russia spends ~$350k per target struck (Shahed). Ukraine's <strong style={{color:DWC.green}}>interceptor drones</strong> at $7.5k vs. Shahed $35k = 4.7x favorable. PAC-3 ($3.5M) vs. Shahed = 100x unfavorable — why the Patriot shortage is strategically critical.</div>
-        </DWCard>}
-      </>}
-
-      {tab==="impact" && <>
-        <div style={{ display:"flex", gap:8, marginBottom:14, flexWrap:"wrap" }}>
-          <DWStatPill label="2025 Civilians Killed" val="1,884" sub="est. annual (UA)" col={DWC.ru}/>
-          <DWStatPill label="Jun 2 Alone" val="★ 22" sub="killed, 130+ injured" col={DWC.ru}/>
-          <DWStatPill label="Jun Power Offline" val={dailyStats.pwGwh+" GWh"} sub={`${dailySlice.length}-day period`} col={DWC.orange}/>
-          <DWStatPill label="2025 Nights Attacked" val="★ 357/365" sub="only 8 attack-free nights" col={DWC.gold}/>
-        </div>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.ru} icon="⚠️" title="Daily Alert Hours + Power Impact — June 2026"/>
-          <ResponsiveContainer width="100%" height={220}>
-            <ComposedChart data={chartDaily} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="name" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <YAxis yAxisId="left" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <YAxis yAxisId="right" orientation="right" tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}}/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <Bar yAxisId="left" dataKey="Alert Hours" fill={DWC.purple} opacity={.7} radius={[2,2,0,0]}/>
-              <Line yAxisId="right" dataKey="Power Offline (GWh)" stroke={DWC.orange} strokeWidth={2.5} dot={{r:3}} type="monotone"/>
-            </ComposedChart>
-          </ResponsiveContainer>
-        </DWCard>
-        <DWCard>
-          <DWSectionHead color={DWC.muted} icon="🔍" title="Civilian Casualty Context — Sourced Months"/>
-          {DW_MONTHLY.filter(m=>m.c&&m.src).map((m,i)=>(
-            <div key={i} style={{ borderBottom:`1px solid ${DWC.card2}`, padding:"10px 0", display:"flex", gap:16, alignItems:"flex-start" }}>
-              <div style={{ minWidth:70 }}><div style={{ color:DWC.gold, fontWeight:700, fontSize:13 }}>{m.month}</div><div style={{ color:DWC.ru, fontSize:20, fontWeight:900, fontFamily:FONT }}>{m.civ}</div><div style={{ color:DWC.muted, fontSize:10 }}>killed</div></div>
-              <div style={{ flex:1, color:DWC.muted, fontSize:12, lineHeight:1.6, paddingTop:2 }}>{m.src}</div>
-            </div>))}
-        </DWCard>
-      </>}
-
-      {tab==="intercept" && <>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.teal} icon="🛡" title="Ukrainian AD Kill Method — 18-Month Shift" sub="% of Russian drones downed by each method"/>
-          <ResponsiveContainer width="100%" height={260}>
-            <AreaChart data={DW_AD_METHODS} margin={{top:5,right:8,left:-15,bottom:0}}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#0a1628"/>
-              <XAxis dataKey="month" tick={{fill:DWC.muted,fontSize:9}} tickLine={false} axisLine={{stroke:DWC.border}} interval={2}/>
-              <YAxis domain={[0,100]} tick={{fill:DWC.muted,fontSize:10}} tickLine={false} axisLine={{stroke:DWC.border}} unit="%"/>
-              <Tooltip content={<DWTooltip2/>}/><Legend wrapperStyle={{fontSize:11}}/>
-              <Area dataKey="SAM Systems" stackId="a" stroke="#ef4444" fill="#ef4444" fillOpacity={.7} type="monotone"/>
-              <Area dataKey="Mobile Fire Groups" stackId="a" stroke="#f59e0b" fill="#f59e0b" fillOpacity={.7} type="monotone"/>
-              <Area dataKey="EW / Jamming" stackId="a" stroke="#8b5cf6" fill="#8b5cf6" fillOpacity={.7} type="monotone"/>
-              <Area dataKey="Interceptor Drones" stackId="a" stroke="#22c55e" fill="#22c55e" fillOpacity={.8} type="monotone"/>
-            </AreaChart>
-          </ResponsiveContainer>
-          <div style={{ fontSize:11, color:DWC.muted, marginTop:8 }}>★ May 2026: interceptor drones accounted for 40%+ of Shahed kills during large attacks. SAM usage declining as interceptor drones fill the gap at far lower cost.</div>
-        </DWCard>
-        <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
-          <DWCard style={{ flex:1, minWidth:260 }}>
-            <DWSectionHead color={DWC.green} icon="🟢" title="Ukraine AD — Key Developments 2026"/>
-            {[{ t:"Interceptor UAV dominance", d:"40%+ of Shahed kills in large attacks (May '26). Autonomous AI intercept in testing." },{ t:"FP-7.x anti-missile interceptor", d:"First test flight Jun 2026. Mass production target: Aug 2026. Counters ballistic missiles at a fraction of PAC-3 cost." },{ t:"Freyja air defense system", d:"European partners supplying radars and C2 for Ukrainian-built Freyja AD." },{ t:"UA drones kill RU AD systems", d:"★ 23 Russian AD systems destroyed + 109 damaged, Jan-May 2026 (UA killboard)." }].map((s,i)=>(
-              <div key={i} style={{ borderTop:`1px solid ${DWC.card2}`, padding:"9px 0" }}><div style={{ color:DWC.green, fontWeight:700, fontSize:12, marginBottom:3 }}>{s.t}</div><div style={{ color:DWC.muted, fontSize:12, lineHeight:1.5 }}>{s.d}</div></div>))}
-          </DWCard>
-          <DWCard style={{ flex:1, minWidth:260 }}>
-            <DWSectionHead color={DWC.ru} icon="🔴" title="Russian AD Erosion"/>
-            {[{ t:"Pantsir-S1 medium-range", val:"★ ~48%", note:"of all Russian Pantsir systems destroyed by Apr 2026" },{ t:"S-300 / S-400 long-range", val:"★ ~25%", note:"of long-range systems destroyed by Apr 2026" },{ t:"Moscow area AD density", val:"100+ systems", note:"yet Jun 18 saw ~180 UA drones penetrate to hit the oil refinery" },{ t:"AD losses Jan-May '26", val:"★ 23/109", note:"destroyed/damaged per UA Unmanned Systems Forces killboard" }].map((s,i)=>(
-              <div key={i} style={{ borderTop:`1px solid ${DWC.card2}`, padding:"9px 0" }}><div style={{ display:"flex", justifyContent:"space-between", marginBottom:3 }}><span style={{ color:DWC.ru, fontWeight:700, fontSize:12 }}>{s.t}</span><span style={{ color:DWC.gold, fontWeight:900, fontSize:13, fontFamily:FONT }}>{s.val}</span></div><div style={{ color:DWC.muted, fontSize:12, lineHeight:1.5 }}>{s.note}</div></div>))}
-          </DWCard>
-        </div>
-      </>}
-
-      {tab==="assets" && <>
-        <div style={{ display:"flex", gap:6, marginBottom:14, flexWrap:"wrap" }}>
-          {[["all","All"],["RU","🔴 Russian"],["UA","🔵 Ukrainian"],["Strike","Strike"],["Decoy","Decoys"],["Missile","Missiles"],["Defense","Air Defense"]].map(([k,l])=>(<button key={k} style={btnS(k,droneFilter)} onClick={()=>{setDroneFilter(k);setSelectedDrone(null);}}>{l}</button>))}
-        </div>
-        {selectedDrone!=null && (()=>{
-          const d = DW_ASSETS[selectedDrone]; const accent = d.side==="RU"?DWC.ru:DWC.ua;
-          return (
-            <div ref={dossierRef}><DWCard style={{ marginBottom:16, borderColor:accent }}>
-              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:12, flexWrap:"wrap", gap:8 }}>
-                <div>
-                  <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}><span style={{ color:accent, fontWeight:900, fontSize:18 }}>{d.side==="RU"?"🔴":"🔵"} {d.name}</span><span style={{ background:DWC.card2, color:DWC.muted, borderRadius:4, padding:"2px 9px", fontSize:11, fontWeight:700 }}>{d.cls}</span></div>
-                  <div style={{ color:DWC.muted, fontSize:12, marginTop:4 }}>{d.role} · <span style={{color:DWC.gold}}>{d.status}</span></div>
-                </div>
-                <button onClick={()=>setSelectedDrone(null)} style={{ background:"transparent", color:DWC.muted, border:`1px solid ${DWC.border}`, borderRadius:6, padding:"4px 12px", cursor:"pointer", fontSize:12, fontFamily:FONT }}>✕ Close</button>
-              </div>
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(140px,1fr))", gap:8, marginBottom:14 }}>
-                {[["Range",d.range],["Speed",d.speed],["Warhead",d.warhead],["Est. cost",d.cost],["Ceiling",d.ceiling],["Intercept",d.intercepted]].map(([k,v])=>(<div key={k} style={{ background:DWC.card2, borderRadius:8, padding:"8px 10px" }}><div style={{ color:DWC.muted, fontSize:10, textTransform:"uppercase", letterSpacing:.6 }}>{k}</div><div style={{ color:DWC.text, fontSize:13, fontWeight:700, fontFamily:FONT }}>{v}</div></div>))}
-              </div>
-              <div style={{ display:"flex", flexDirection:"column", gap:8, marginBottom:14 }}>
-                {[["⚙️ Engine",d.engine],["🎯 Guidance",d.guidance],["🏭 Production",d.production]].map(([k,v])=>(<div key={k} style={{ fontSize:12, lineHeight:1.5 }}><span style={{ color:accent, fontWeight:700 }}>{k}: </span><span style={{ color:DWC.text }}>{v}</span></div>))}
-              </div>
-              <div style={{ color:DWC.text, fontSize:13, lineHeight:1.7, marginBottom:14, paddingTop:12, borderTop:`1px solid ${DWC.card2}` }}>{d.detail}</div>
-              <div style={{ color:accent, fontWeight:700, fontSize:12, marginBottom:8 }}>KEY INTELLIGENCE</div>
-              <div style={{ display:"flex", flexDirection:"column", gap:7 }}>{d.facts.map((f,j)=>(<div key={j} style={{ display:"flex", gap:8, fontSize:12, color:DWC.muted, lineHeight:1.5 }}><span style={{ color:accent, flexShrink:0 }}>▸</span><span>{f}</span></div>))}</div>
-            </DWCard></div>);
-        })()}
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))", gap:12 }}>
-          {DW_ASSETS.map((d,i)=>{
-            if (droneFilter!=="all" && d.side!==droneFilter && d.cls!==droneFilter) return null;
-            const accent = d.side==="RU"?DWC.ru:DWC.ua; const isSel = selectedDrone===i;
-            return (
-              <div key={i} onClick={()=>setSelectedDrone(isSel?null:i)} style={{ background:isSel?DWC.card2:DWC.card, border:`1px solid ${isSel?accent:DWC.border}`, borderRadius:10, padding:"14px 16px", cursor:"pointer" }}>
-                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:8, gap:6 }}><div style={{ color:accent, fontWeight:800, fontSize:14, lineHeight:1.25 }}>{d.side==="RU"?"🔴":"🔵"} {d.name}</div><span style={{ background:DWC.card2, color:DWC.muted, borderRadius:4, padding:"2px 7px", fontSize:10, fontWeight:700, flexShrink:0 }}>{d.cls}</span></div>
-                <div style={{ color:DWC.muted, fontSize:11, marginBottom:10 }}>{d.role}</div>
-                <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:10 }}>{[["Range",d.range],["Speed",d.speed],["Cost",d.cost]].map(([k,v])=>(<span key={k} style={{ background:DWC.card2, borderRadius:5, padding:"3px 7px", fontSize:10 }}><span style={{ color:DWC.muted }}>{k} </span><span style={{ color:DWC.text, fontWeight:600 }}>{v}</span></span>))}</div>
-                <div style={{ color:DWC.muted, fontSize:11.5, lineHeight:1.5, display:"-webkit-box", WebkitLineClamp:3, WebkitBoxOrient:"vertical", overflow:"hidden" }}>{d.detail}</div>
-                <div style={{ color:accent, fontSize:11, fontWeight:700, marginTop:10 }}>{isSel?"▾ Showing full dossier above":"▸ Tap for full dossier"}</div>
-              </div>);
-          })}
-        </div>
-        <DWCard style={{ marginTop:16, marginBottom:14 }}>
-          <DWSectionHead color={DWC.ua} icon="⚙️" title="Drone Production — Ukraine vs Russia" sub="monthly output and edge by category"/>
-          {DW_PRODUCTION.map((r,i)=>{const advCol = r.adv==="Ukraine"?DWC.ua:DWC.ru;return (
-            <div key={i} style={{ marginBottom:10 }}>
-              <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:6 }}><span style={{ fontSize:16 }}>{r.icon}</span><span style={{ color:DWC.text, fontWeight:700, fontSize:13, flex:1 }}>{r.type}</span><span style={{ background:`${advCol}22`, border:`1px solid ${advCol}44`, color:advCol, borderRadius:4, padding:"2px 8px", fontSize:10, fontWeight:800 }}>{r.adv} leads</span></div>
-              <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8 }}>
-                <div style={{ background:"#0d1a30", borderRadius:8, padding:"8px 10px" }}><div style={{ color:DWC.ua, fontSize:10, fontWeight:700, marginBottom:2 }}>🇺🇦 Ukraine</div><div style={{ color:DWC.text, fontSize:12, fontWeight:700 }}>{r.ua}</div><div style={{ color:DWC.muted, fontSize:10, marginTop:2, lineHeight:1.4 }}>{r.uaNote}</div></div>
-                <div style={{ background:"#1a0e0e", borderRadius:8, padding:"8px 10px" }}><div style={{ color:DWC.ru, fontSize:10, fontWeight:700, marginBottom:2 }}>🇷🇺 Russia</div><div style={{ color:DWC.text, fontSize:12, fontWeight:700 }}>{r.ru}</div><div style={{ color:DWC.muted, fontSize:10, marginTop:2, lineHeight:1.4 }}>{r.ruNote}</div></div>
-              </div>
-            </div>);})}
-        </DWCard>
-        <DWCard style={{ marginBottom:14 }}>
-          <DWSectionHead color={DWC.ua} icon="🎖️" title="Unmanned Systems Forces & Ecosystem" sub="Ukraine's dedicated drone branch"/>
-          <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
-            {DW_UA_FORCE.facts.map((f,i)=>(<div key={i} style={{ display:"flex", gap:10 }}><span style={{ fontSize:16, flexShrink:0 }}>{f[0]}</span><div style={{ fontSize:12, color:DWC.muted, lineHeight:1.55 }}><strong style={{ color:DWC.text }}>{f[1]}</strong> — {f[2]}</div></div>))}
-          </div>
-        </DWCard>
-      </>}
-
-      {tab==="events" && <>
-        <div style={{ position:"relative" }}>
-          {DW_DAILY.filter(d=>d.confirmed&&d.note).map((ev,i,arr)=>{
-            const isRU=ev.note?.startsWith("🔴"); const isUA=ev.note?.startsWith("🔵");
-            const col=isRU?DWC.ru:isUA?DWC.ua:DWC.gold;
-            return (
-              <div key={i} style={{ display:"flex", gap:16, marginBottom:24, position:"relative" }}>
-                {i<arr.length-1&&<div style={{ position:"absolute", left:20, top:44, bottom:-24, width:2, background:DWC.border }}/>}
-                <div style={{ width:40, height:40, borderRadius:"50%", background:isRU?"#450a0a":isUA?"#12233b":"#2d2400", border:`2px solid ${col}`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:15, flexShrink:0, zIndex:1 }}>{isRU?"🔴":isUA?"🔵":"🟡"}</div>
-                <div style={{ flex:1, background:DWC.card, border:`1px solid ${col}22`, borderRadius:10, padding:"12px 16px" }}>
-                  <div style={{ display:"flex", justifyContent:"space-between", marginBottom:6 }}><span style={{ color:col, fontWeight:800, fontSize:14 }}>{ev.date}</span><span style={{ color:DWC.muted, fontSize:11 }}>★ Confirmed</span></div>
-                  <p style={{ margin:"0 0 8px", color:DWC.text, fontSize:13, lineHeight:1.65 }}>{ev.note?.replace(/^[🔴🔵🟡]\s*/,"")}</p>
-                  {ev.targets&&<div style={{ fontSize:11, color:DWC.muted, marginBottom:8 }}>📍 <span style={{color:DWC.gold}}>Targets:</span> {ev.targets}</div>}
-                  <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-                    {isRU&&<><span style={{background:"#450a0a",color:DWC.ruLt,borderRadius:4,padding:"2px 8px",fontSize:11}}>RU drones: {ev.ru_d}</span><span style={{background:"#052e16",color:"#86efac",borderRadius:4,padding:"2px 8px",fontSize:11}}>Intercepted: {ev.ru_int}</span><span style={{background:"#431407",color:"#fed7aa",borderRadius:4,padding:"2px 8px",fontSize:11}}>Got through: ~{ev.ru_thru}</span></>}
-                    {isUA&&ev.ua_d!=null&&<><span style={{background:"#12233b",color:DWC.uaLt,borderRadius:4,padding:"2px 8px",fontSize:11}}>UA drones: {ev.ua_d}</span><span style={{background:"#052e16",color:"#86efac",borderRadius:4,padding:"2px 8px",fontSize:11}}>Confirmed through: ~{ev.ua_thru}</span></>}
-                  </div>
-                </div>
-              </div>);
-          })}
-        </div>
-        <DWCard style={{ marginTop:8 }}>
-          <div style={{ fontWeight:700, marginBottom:10 }}>⚠️ Data Transparency</div>
-          <ul style={{ margin:0, paddingLeft:18, color:DWC.muted, fontSize:12, lineHeight:1.9 }}>
-            <li><strong style={{color:DWC.text}}>Ukrainian Air Force</strong>: daily intercept counts via Telegram — widely cited, unverifiable independently.</li>
-            <li><strong style={{color:DWC.text}}>Russian MoD</strong>: publishes UA drone intercept claims; denies UA strikes. Contradicted by confirmed fires at Moscow refinery, St. Pete oil terminal.</li>
-            <li><strong style={{color:DWC.text}}>Non-confirmed days</strong>: extrapolated from May 2026 monthly averages (RU ~263/day; UA ~304/day).</li>
-            <li>ABC News: <em>Both sides may seek to exaggerate the effectiveness of their air defenses.</em></li>
-          </ul>
-        </DWCard>
-      </>}
-
-      <div style={{ marginTop:20, borderTop:`1px solid ${DWC.border}`, paddingTop:14, color:DWC.muted, fontSize:11, lineHeight:1.7 }}>
-        <strong style={{color:DWC.text}}>Sources:</strong> Ukrainian Air Force · Russian MoD · ISW · ACLED · ISIS Reports · UN HRMMU · CSIS · ABC News · NPR · Al Jazeera · The Kyiv Independent · UNITED24 · GIS Reports. Data current to <strong style={{color:DWC.text}}>June 30, 2026</strong>. Non-confirmed days use monthly-average extrapolation. Integrated into World Conflict Debrief.
-      </div>
-    </div>
-  );
-}
-
 function AfricaSection({t,initialTab,onFlash}){
   const[tab,setTab]=useState(initialTab??"sudan");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
   useEffect(()=>{onFlash&&onFlash(tab);},[tab]);
@@ -4158,14 +3097,13 @@ function SouthAsiaSection({t,initialTab,onFlash}){
   </div>;
 }
 
-function DeepDiveView({t,selectedConflict,setSelectedConflict,initialTab,onFlash}){useEffect(()=>{window.scrollTo({top:0,behavior:"instant"});},[selectedConflict]);const conflictId=selectedConflict==="scs"?"south-china-sea":(CONFLICT_SECTIONS.find(s=>s.id===selectedConflict)?.conflictId??selectedConflict);const conflict=CONFLICTS.find(c=>c.id===conflictId);return <div style={{animation:"fadeIn .25s ease-out",position:"relative"}}><SJMark size={22} style={{top:6,right:10,transform:"rotate(-10deg)"}}/><div onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onTouchEnd={e=>e.stopPropagation()} style={{background:t.card,borderBottom:`1px solid ${t.border}`,padding:"10px 14px",overflowX:"auto",scrollbarWidth:"none",display:"flex",gap:6}}>{CONFLICT_SECTIONS.map(sec=><button key={sec.id} className="pill-tab" onClick={()=>setSelectedConflict(sec.id)} style={{flexShrink:0,padding:"6px 12px",borderRadius:20,border:`1px solid ${selectedConflict===sec.id?"#5b8ec8":t.border}`,background:selectedConflict===sec.id?"#5b8ec8":"none",color:selectedConflict===sec.id?"#fff":t.sub,fontSize:12,fontWeight:selectedConflict===sec.id?700:400,cursor:"pointer",fontFamily:FONT,whiteSpace:"nowrap"}}>{sec.label}</button>)}</div><div key={selectedConflict} className="rise" style={{padding:"14px 16px 0"}}>{selectedConflict==="ukraine"&&<UkraineSection t={t} initialTab={initialTab}/>}{selectedConflict==="scs"&&<SCSSection t={t} initialTab={initialTab}/>}{selectedConflict==="gaza"&&<GazaSection t={t} initialTab={initialTab}/>}{selectedConflict==="iran"&&<IranSection t={t} initialTab={initialTab}/>}{selectedConflict==="usmil"&&<USMilSection t={t} initialTab={initialTab}/>}{selectedConflict==="venezuela"&&<VenezuelaSection t={t} initialTab={initialTab}/>}{selectedConflict==="dronewar"&&<DroneWarSection t={t} initialTab={initialTab}/>}{selectedConflict==="africa"&&<AfricaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{selectedConflict==="southasia"&&<SouthAsiaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{!["ukraine","scs","usmil","venezuela","dronewar","gaza","iran","africa","southasia"].includes(selectedConflict)&&<TheaterSection t={t} conflict={conflict}/>}</div></div>;}
+function DeepDiveView({t,selectedConflict,setSelectedConflict,initialTab,onFlash}){useEffect(()=>{window.scrollTo({top:0,behavior:"instant"});},[selectedConflict]);const conflictId=selectedConflict==="scs"?"south-china-sea":(CONFLICT_SECTIONS.find(s=>s.id===selectedConflict)?.conflictId??selectedConflict);const conflict=CONFLICTS.find(c=>c.id===conflictId);return <div style={{animation:"fadeIn .25s ease-out",position:"relative"}}><SJMark size={22} style={{top:6,right:10,transform:"rotate(-10deg)"}}/><div onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onTouchEnd={e=>e.stopPropagation()} style={{background:t.card,borderBottom:`1px solid ${t.border}`,padding:"10px 14px",overflowX:"auto",scrollbarWidth:"none",display:"flex",gap:6}}>{CONFLICT_SECTIONS.map(sec=><button key={sec.id} className="pill-tab" onClick={()=>setSelectedConflict(sec.id)} style={{flexShrink:0,padding:"6px 12px",borderRadius:20,border:`1px solid ${selectedConflict===sec.id?"#5b8ec8":t.border}`,background:selectedConflict===sec.id?"#5b8ec8":"none",color:selectedConflict===sec.id?"#fff":t.sub,fontSize:12,fontWeight:selectedConflict===sec.id?700:400,cursor:"pointer",fontFamily:FONT,whiteSpace:"nowrap"}}>{sec.label}</button>)}</div><div key={selectedConflict} className="rise" style={{padding:"14px 16px 0"}}>{selectedConflict==="ukraine"&&<UkraineSection t={t} initialTab={initialTab}/>}{selectedConflict==="scs"&&<SCSSection t={t} initialTab={initialTab}/>}{selectedConflict==="gaza"&&<GazaSection t={t} initialTab={initialTab}/>}{selectedConflict==="iran"&&<IranSection t={t} initialTab={initialTab}/>}{selectedConflict==="usmil"&&<USMilSection t={t} initialTab={initialTab}/>}{selectedConflict==="venezuela"&&<VenezuelaSection t={t} initialTab={initialTab}/>}{selectedConflict==="africa"&&<AfricaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{selectedConflict==="southasia"&&<SouthAsiaSection t={t} initialTab={initialTab} onFlash={onFlash}/>}{!["ukraine","scs","usmil","venezuela","gaza","iran","africa","southasia"].includes(selectedConflict)&&<TheaterSection t={t} conflict={conflict}/>}</div></div>;}
 
 // ── Main App ────────────────────────────────────────────────────────────────────────
 const VIEWS=[{id:"today",label:"Today",icon:"📡"},{id:"theaters",label:"Theaters",icon:"🌍"},{id:"deepdive",label:"Deep Dive",icon:"🔬"}];
 const SECTION_TAB_LISTS={
-  ukraine:[{id:"overview",label:"📊 Overview"},{id:"losses",label:"⚖️ Losses"},{id:"manpower",label:"👥 Manpower"},{id:"frontline",label:"🎯 Frontline"},{id:"southernfront",label:"🌊 Southern Front"},{id:"strikewar",label:"💥 Strike War"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"analysts",label:"📺 Analysts"},{id:"belarus",label:"🇧🇾 Belarus Axis"}],
+  ukraine:[{id:"overview",label:"📊 Overview"},{id:"losses",label:"⚖️ Losses"},{id:"manpower",label:"👥 Manpower"},{id:"frontline",label:"🎯 Frontline"},{id:"southernfront",label:"🌊 Southern Front"},{id:"strikewar",label:"💥 Strike War"},{id:"arsenal",label:"🛸 Arsenal"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"analysts",label:"📺 Analysts"},{id:"belarus",label:"🇧🇾 Belarus Axis"}],
   usmil:[{id:"escalation",label:"🌐 Escalation Risk"},{id:"cyber",label:"🌪️ Cyber & Hybrid"},{id:"china",label:"🇨🇳 China Deep Dive"},{id:"systems",label:"🚀 Systems"},{id:"posture",label:"🌍 Posture"},{id:"nato",label:"🤝 NATO & Allies"},{id:"rankings",label:"🌐 Global Rankings"},{id:"indopac",label:"🌏 Indo-Pacific Balance"},{id:"fighters5g",label:"✈️ 5th-Gen Fighters"},{id:"navypipe",label:"🚢 Naval Pipeline"},{id:"space",label:"🛰️ Space & Counterspace"},{id:"minerals",label:"⛏️ Critical Minerals"},{id:"arctic",label:"🧊 Arctic"},{id:"defindustry",label:"🏭 Defense Industry"},{id:"dprk",label:"🇰🇵 DPRK-Russia Axis"},{id:"vectors",label:"⚠️ Active Vectors"},{id:"arsenals",label:"🌐 Global Arsenals"},{id:"delivery",label:"🚀 Delivery Systems"},{id:"treaties",label:"📜 Treaties & Doctrine"}],
-  dronewar:[{id:"overview",label:"Overview"},{id:"saturation",label:"🌡 Saturation"},{id:"strikelog",label:"📋 Strike Log"},{id:"yearly",label:"📅 Yearly"},{id:"intercept",label:"Intercept"},{id:"cost",label:"💰 Cost"},{id:"impact",label:"⚠️ Casualties"},{id:"assets",label:"Drone Assets"},{id:"events",label:"Key Events"}],
   iran:[{id:"overview",label:"🇮🇷 Overview"},{id:"hormuz",label:"🚢 Hormuz"},{id:"timeline",label:"📅 Timeline"},{id:"gaps",label:"⚠️ Gaps"}],
   venezuela:[{id:"cuba",label:"🇨🇺 Cuba Blockade"},{id:"spear",label:"🚤 Southern Spear"},{id:"conflict",label:"🇻🇪 Venezuela"},{id:"mexico",label:"🇲🇽 Mexico"},{id:"haiti",label:"🇭🇹 Haiti"},{id:"colombia",label:"🇨🇴 Colombia"}],
   scs:[{id:"overview",label:"🗺️ Overview"},{id:"incidents",label:"⚠️ Incidents"},{id:"military",label:"⚔️ Military"},{id:"law",label:"⚖️ Law & Claims"},{id:"taiwan",label:"🌊 Taiwan Strait"}],
@@ -4266,7 +3204,6 @@ const CONFLICT_ANIM = {
   "south-china-sea":{icon:"\uD83C\uDF0A",a:"#06b6d4",b:"#0e7490",label:"S. CHINA SEA"},
   venezuela:{icon:"\uD83C\uDDFB\uD83C\uDDEA",a:"#ffcd00",b:"#cf142b",label:"VENEZUELA"},
   usmil:{icon:"\u2694\uFE0F",a:"#5b8ec8",b:"#8b5cf6",label:"GREAT POWER"},
-  dronewar:{icon:"\uD83D\uDEF8",a:"#22c55e",b:"#5b8ec8",label:"DRONE WAR"},
   cyber:{icon:"\uD83D\uDEF0\uFE0F",a:"#0ea5e9",b:"#8b5cf6",label:"CYBER & HYBRID"},
   sudan:{icon:"🇸🇩",a:"#D21034",b:"#007A3D",label:"SUDAN"},
   drc:{icon:"🇨🇩",a:"#007FFF",b:"#F7D618",label:"DR CONGO"},
