@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Will India and Pakistan Go to War Again? What the 2025 War Actually Changed | World Conflict Debrief";
+const TITLE = "Will India and Pakistan Go to War Again?";
 const DESCRIPTION =
-  "India and Pakistan fought a real four-day war in May 2025 \u2014 the most serious clash since Kargil. A year later, the ceasefire holds but nothing is resolved. What would actually trigger round two, and what's different this time.";
+  "The May 2025 four-day war was the worst clash since Kargil. The ceasefire holds but nothing is resolved: what would trigger round two.";
 const URL = "https://conflictdash.lovable.app/background/will-india-pakistan-go-to-war-again";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';

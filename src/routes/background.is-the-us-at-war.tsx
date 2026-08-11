@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Is the US at War Right Now? The Honest Answer for 2026 | World Conflict Debrief";
+const TITLE = "Is the US at War Right Now? 2026 Answer";
 const DESCRIPTION =
-  "No, Congress hasn't declared war since 1942 — and yes, the US is engaged in active combat right now. What's actually happening with Iran and in the Caribbean, and why the legal label matters less than what's really occurring.";
+  "Congress hasn't declared war since 1942, yet US forces are in active combat. What's happening with Iran and in the Caribbean, and why it matters.";
 const URL = "https://conflictdash.lovable.app/background/is-the-us-at-war";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
