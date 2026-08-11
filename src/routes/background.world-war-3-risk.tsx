@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Are We Heading Toward World War 3? Global Escalation Risk Assessment | World Conflict Debrief";
+const TITLE = "World War 3 Risk: 2026 Assessment";
 const DESCRIPTION =
-  "A sober, theater-by-theater assessment of global escalation risk in 2026 — Ukraine, Iran, Israel, Taiwan, and the Americas — and why no two nuclear powers are yet in direct combat.";
+  "A theater-by-theater read on global escalation risk in 2026: Ukraine, Iran, Israel, Taiwan and the Americas, and why nuclear powers avoid combat.";
 const URL = "https://conflictdash.lovable.app/background/world-war-3-risk";
 const SOCIAL_TITLE = "World War 3 Risk: 2026 Assessment";
 const SOCIAL_DESCRIPTION =

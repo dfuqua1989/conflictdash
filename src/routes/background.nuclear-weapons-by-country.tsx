@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "How Many Nuclear Weapons Does Each Country Have? (2026) | World Conflict Debrief";
+const TITLE = "Nuclear Weapons by Country (2026 Counts)";
 const DESCRIPTION =
-  "Nuclear warhead counts for all nine armed states in 2026, why the numbers are estimates rather than facts, and what changed when New START expired in February leaving the two largest arsenals uncapped for the first time since 1972.";
+  "Warhead counts for all nine nuclear-armed states in 2026, why the totals are estimates, and what changed when New START expired in February.";
 const URL = "https://conflictdash.lovable.app/background/nuclear-weapons-by-country";
 const SOCIAL_TITLE = "Nuclear Weapons by Country (2026)";
 const SOCIAL_DESCRIPTION =

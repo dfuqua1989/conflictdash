@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Why Did Pakistan Declare War on Afghanistan? The TTP Conflict Explained | World Conflict Debrief";
+const TITLE = "Pakistan vs Afghanistan: TTP Conflict Explained";
 const DESCRIPTION =
-  "In February 2026 Pakistan declared \u201copen war\u201d on Afghanistan's Taliban government. Why a decades-old militant group, not a border dispute, is the real cause \u2014 and why repeated Chinese-mediated truces keep collapsing.";
+  "Why Pakistan declared open war on Afghanistan's Taliban in 2026: a militant group, not a border dispute, and why mediated truces keep collapsing.";
 const URL = "https://conflictdash.lovable.app/background/pakistan-afghanistan-war-explained";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';

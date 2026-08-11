@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Hezbollah: Strategic Primer — Structure, Capabilities & Iran's 'Axis of Resistance' | World Conflict Debrief";
+const TITLE = "Hezbollah in 2026: Structure & Arsenal Primer";
 const DESCRIPTION =
-  "A background primer on Hezbollah's political-military structure, estimated force strength and arsenal, the 2024 command degradation, and its role as Iran's forward deterrent against Israel.";
+  "Hezbollah's command structure, force strength and rocket arsenal after the 2024 decapitation, and its role as Iran's forward deterrent.";
 const URL = "https://conflictdash.lovable.app/background/hezbollah-capabilities";
 const SOCIAL_TITLE = "Hezbollah in 2026: Structure & Arsenal";
 const SOCIAL_DESCRIPTION =

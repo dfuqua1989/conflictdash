@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Strait of Hormuz: Strategic Primer — Chokepoint, Oil Transit & Naval Flashpoints";
+const TITLE = "Strait of Hormuz: Oil Chokepoint Primer";
 const DESCRIPTION =
-  "Why the Strait of Hormuz is the world's most important oil chokepoint: transit volumes, geography, Iranian closure threats, and a history of US–Iran naval confrontations from the Tanker War to today.";
+  "Transit volumes, geography, Iranian closure threats and the history of US-Iran naval confrontations at the world's key oil chokepoint.";
 const URL = "https://conflictdash.lovable.app/background/strait-of-hormuz";
 const SOCIAL_TITLE = "Strait of Hormuz: Oil Chokepoint Primer";
 const SOCIAL_DESCRIPTION =

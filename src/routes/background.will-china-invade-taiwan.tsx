@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Will China Invade Taiwan? What the 2026 Indicators Actually Show | World Conflict Debrief";
+const TITLE = "Will China Invade Taiwan? 2026 Indicators";
 const DESCRIPTION =
-  "An assessment of Chinese military pressure on Taiwan in 2026 — why a blockade is more likely than an amphibious invasion, what the warning indicators would be, and why $1 trillion of global GDP rides on the answer.";
+  "Why a blockade is likelier than an invasion, the warning indicators to watch, and why $1 trillion of global GDP rides on the Taiwan Strait.";
 const URL = "https://conflictdash.lovable.app/background/will-china-invade-taiwan";
 const SOCIAL_TITLE = "Will China Invade Taiwan? 2026 Indicators";
 const SOCIAL_DESCRIPTION =

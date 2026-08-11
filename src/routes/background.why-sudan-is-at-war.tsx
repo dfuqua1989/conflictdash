@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Why Is Sudan at War? The World's Largest Displacement Crisis Explained | World Conflict Debrief";
+const TITLE = "Why Is Sudan at War? Conflict Explained";
 const DESCRIPTION =
-  "Sudan's civil war between the army and the RSF has displaced more people than any other conflict on Earth — 13.6 million and counting. What started it, why the El Fasher massacre matters, and why the world stopped paying attention.";
+  "Sudan's army-RSF war has displaced 13.6 million people. What started it, why the El Fasher massacre matters, and why the world stopped watching.";
 const URL = "https://conflictdash.lovable.app/background/why-sudan-is-at-war";
 
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';

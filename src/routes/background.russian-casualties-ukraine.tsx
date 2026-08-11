@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "How Many Russian Soldiers Have Died in Ukraine? | World Conflict Debrief";
+const TITLE = "Russian Casualties in Ukraine, Explained";
 const DESCRIPTION =
-  "Why casualty figures for the Russian army in Ukraine range from 250,000 to over 1.4 million — what each number actually counts, who produces it, and which one to trust.";
+  "Why Russian loss estimates range from 250,000 to 1.4 million: what each figure counts, who publishes it, and which one to trust.";
 const URL = "https://conflictdash.lovable.app/background/russian-casualties-ukraine";
 const SOCIAL_TITLE = "Russian Casualties in Ukraine, Explained";
 const SOCIAL_DESCRIPTION =
