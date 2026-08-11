@@ -2,132 +2,65 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
 const BASE_URL = "https://conflictdash.lovable.app";
-const LAST_UPDATED = "2026-07-31";
+
+// Update this date whenever you publish a meaningful dashboard or backgrounder refresh.
+// It drives <lastmod> for entries that don't have their own explicit date below.
+const LAST_UPDATED = "2026-08-11";
+
+interface SitemapEntry {
+  path: string;
+  changefreq: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+  priority: string;
+  // Set lastmod only when this specific page was meaningfully updated.
+  // Omit it for evergreen pages you don't touch.
+  lastmod?: string;
+}
+
+const ENTRIES: SitemapEntry[] = [
+  // Homepage — main dashboard
+  { path: "/", changefreq: "daily", priority: "1.0", lastmod: LAST_UPDATED },
+
+  // Background primers — evergreen explainers
+  { path: "/background/strait-of-hormuz", changefreq: "monthly", priority: "0.7" },
+  { path: "/background/hezbollah-capabilities", changefreq: "monthly", priority: "0.7" },
+  { path: "/background/world-war-3-risk", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/russian-casualties-ukraine", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/will-china-invade-taiwan", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/nuclear-weapons-by-country", changefreq: "monthly", priority: "0.7", lastmod: LAST_UPDATED },
+  { path: "/background/why-sudan-is-at-war", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/pakistan-afghanistan-war-explained", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/will-india-pakistan-go-to-war-again", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/is-the-us-at-war", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+
+  // Deep-dive live sections — refreshed with the dashboard
+  { path: "/deep-dive/ukraine", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/dronewar", changefreq: "daily", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/usmil", changefreq: "daily", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/iran", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/gaza", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/scs", changefreq: "daily", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/venezuela", changefreq: "daily", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/africa", changefreq: "daily", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/deep-dive/southasia", changefreq: "daily", priority: "0.8", lastmod: LAST_UPDATED },
+];
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
+        const urls = ENTRIES.map((e) => {
+          const lines = [`  <url>`, `    <loc>${BASE_URL}${e.path}</loc>`];
+          if (e.lastmod) lines.push(`    <lastmod>${e.lastmod}</lastmod>`);
+          lines.push(`    <changefreq>${e.changefreq}</changefreq>`);
+          lines.push(`    <priority>${e.priority}</priority>`);
+          lines.push(`  </url>`);
+          return lines.join("\n");
+        });
+
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,
           `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>1.0</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/strait-of-hormuz</loc>`,
-          `    <changefreq>monthly</changefreq>`,
-          `    <priority>0.7</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/hezbollah-capabilities</loc>`,
-          `    <changefreq>monthly</changefreq>`,
-          `    <priority>0.7</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/world-war-3-risk</loc>`,
-          `    <changefreq>weekly</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/russian-casualties-ukraine</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>weekly</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/will-china-invade-taiwan</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>weekly</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/nuclear-weapons-by-country</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>monthly</changefreq>`,
-          `    <priority>0.7</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/why-sudan-is-at-war</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>weekly</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/pakistan-afghanistan-war-explained</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>weekly</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/will-india-pakistan-go-to-war-again</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>weekly</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/background/is-the-us-at-war</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>weekly</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/ukraine</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.9</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/dronewar</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/usmil</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/iran</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.9</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/gaza</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.9</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/scs</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/venezuela</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/africa</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
-          `  <url>`,
-          `    <loc>${BASE_URL}/deep-dive/southasia</loc>`,
-          `    <lastmod>${LAST_UPDATED}</lastmod>`,
-          `    <changefreq>daily</changefreq>`,
-          `    <priority>0.8</priority>`,
-          `  </url>`,
+          ...urls,
           `</urlset>`,
         ].join("\n");
 
