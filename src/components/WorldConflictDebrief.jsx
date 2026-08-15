@@ -1743,6 +1743,8 @@ function RHRadarMap({t}){
       <defs>
         <linearGradient id="rhsweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stopColor={PHOSPHOR} stopOpacity=".26"/><stop offset="100%" stopColor={PHOSPHOR} stopOpacity="0"/></linearGradient>
         <filter id="rhglow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <radialGradient id="rhspot" cx="50%" cy="50%" r="50%"><stop offset="0%" stopColor={ICE} stopOpacity=".20"/><stop offset="55%" stopColor={ICE} stopOpacity=".07"/><stop offset="100%" stopColor={ICE} stopOpacity="0"/></radialGradient>
+        <linearGradient id="rhlane" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stopColor={ICE} stopOpacity=".05"/><stop offset="42%" stopColor={ICE} stopOpacity=".22"/><stop offset="100%" stopColor={ICE} stopOpacity=".05"/></linearGradient>
       </defs>
       <g>{Array.from({length:10},(_,k)=>44+k*2).map(lo=>{const a=rhPx(lo,40),b=rhPx(lo,22);return <line key={"v"+lo} x1={a[0]} y1={a[1]} x2={b[0]} y2={b[1]} stroke="rgba(120,190,205,.10)" strokeWidth=".5"/>;})}
       {Array.from({length:8},(_,k)=>24+k*2).map(la=>{const a=rhPx(43,la),b=rhPx(63,la);return <line key={"h"+la} x1={a[0]} y1={a[1]} x2={b[0]} y2={b[1]} stroke="rgba(120,190,205,.10)" strokeWidth=".5"/>;})}</g>
