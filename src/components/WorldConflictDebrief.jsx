@@ -1786,8 +1786,9 @@ function RHRadarMap({t}){
         return <g key={c.n} tabIndex={on?0:-1} role="button" aria-label={`${c.n} \u2014 ${RH_KIND[c.k].label}`} style={{cursor:"pointer",opacity:on?1:.12,pointerEvents:on?"auto":"none",transition:"opacity .3s"}} onClick={()=>setSel({kind:"contact",i:idx})} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSel({kind:"contact",i:idx});}}}>
           <circle cx={p[0]} cy={p[1]} r={9} fill="transparent"/>
           <circle ref={n=>{pingRefs.current[idx]=n;}} cx={p[0]} cy={p[1]} r={12} fill="none" stroke={col} strokeWidth="1.2" opacity="0"/>
-          <circle cx={p[0]} cy={p[1]} r={isSel?5.5:3.4} fill={col} filter="url(#rhglow)" style={{transition:"r .2s ease"}}/>
-          <text x={p[0]+8} y={p[1]-7} fontSize="8" letterSpacing=".08em" fill={PAPERDIM} opacity={isSel?1:0} style={{pointerEvents:"none"}}>{c.n.toUpperCase()}</text>
+          {isSel&&<path d={rhShape(c.k,p[0],p[1],7.6)} fill="none" stroke={col} strokeWidth="1" opacity=".45"/>}
+          <path d={rhShape(c.k,p[0],p[1],isSel?5.2:3.4)} fill={col} filter="url(#rhglow)" style={{transition:"d .2s ease"}}/>
+          <text x={p[0]>560?p[0]-9:p[0]+9} y={p[1]-8} textAnchor={p[0]>560?"end":"start"} fontSize="8" letterSpacing=".08em" fill={PAPER} opacity={isSel?1:0} style={{pointerEvents:"none",paintOrder:"stroke"}} stroke={INK} strokeWidth="2.5" strokeLinejoin="round">{c.n.toUpperCase()}</text>
         </g>;
       })}</g>
       <g>{RH_OFFSCOPE.map((o,i)=>{
@@ -1802,12 +1803,15 @@ function RHRadarMap({t}){
       })}</g>
     </svg>
     </div>
-    <div style={{padding:"8px 6px 0",display:"flex",gap:8,flexWrap:"wrap",fontSize:8.5,color:PAPERDIM}}>
-      <span style={{color:ALARM}}>Struck</span>
-      <span style={{color:MAGENTA}}>Nuclear site</span>
-      <span style={{color:AMBER}}>Energy/port</span>
-      <span style={{color:ICE}}>Allied base hit</span>
-      <span style={{color:PHOSPHOR}}>Blockade enforcement</span>
+    <div style={{padding:"8px 6px 0",display:"flex",gap:10,flexWrap:"wrap",fontSize:8.5,color:PAPERDIM,alignItems:"center"}}>
+      {[["kinetic","Struck"],["nuclear","Nuclear site"],["energy","Energy/port"],["allied","Allied base hit"],["sea","Blockade enforcement"]].map(([k,label])=>(
+        <span key={k} style={{display:"inline-flex",alignItems:"center",gap:4,color:RH_KIND[k].c}}>
+          <svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d={rhShape(k,5.5,5.5,3.4)} fill={RH_KIND[k].c}/></svg>{label}
+        </span>
+      ))}
+      <span style={{display:"inline-flex",alignItems:"center",gap:4,color:ICE}}>
+        <svg width="18" height="8" viewBox="0 0 18 8" aria-hidden="true"><line x1="0" y1="4" x2="18" y2="4" stroke={ICE} strokeWidth="1.5" strokeDasharray="5 4"/></svg>Hormuz shipping lane
+      </span>
     </div>
     <div style={{marginTop:10,padding:"11px 12px",background:INK,borderRadius:6,border:`1px solid ${LINE}`,minHeight:70}}>
       {!sel&&<div style={{fontSize:11,color:PAPERFAINT,fontStyle:"italic"}}>No contact selected. Tap a marker on the plot above.</div>}
