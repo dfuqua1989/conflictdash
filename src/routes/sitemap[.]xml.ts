@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { BRIEFINGS } from "@/data/briefings";
 
 const BASE_URL = "https://conflictdash.lovable.app";
 
@@ -31,6 +32,15 @@ const ENTRIES: SitemapEntry[] = [
   { path: "/background/pakistan-afghanistan-war-explained", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/will-india-pakistan-go-to-war-again", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/is-the-us-at-war", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+
+  // Daily briefing archive
+  { path: "/briefing", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },
+  ...BRIEFINGS.map((b) => ({
+    path: `/briefing/${b.date}`,
+    changefreq: "never" as const,
+    priority: "0.6",
+    lastmod: b.date,
+  })),
 
   // Deep-dive live sections — refreshed with the dashboard
   { path: "/deep-dive/ukraine", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },

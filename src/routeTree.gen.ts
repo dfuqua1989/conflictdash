@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BriefingIndexRouteImport } from './routes/briefing.index'
 import { Route as DeepDiveSectionRouteImport } from './routes/deep-dive.$section'
+import { Route as BriefingDateRouteImport } from './routes/briefing.$date'
 import { Route as BackgroundWorldWar3RiskRouteImport } from './routes/background.world-war-3-risk'
 import { Route as BackgroundWillIndiaPakistanGoToWarAgainRouteImport } from './routes/background.will-india-pakistan-go-to-war-again'
 import { Route as BackgroundWillChinaInvadeTaiwanRouteImport } from './routes/background.will-china-invade-taiwan'
@@ -42,9 +44,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BriefingIndexRoute = BriefingIndexRouteImport.update({
+  id: '/briefing/',
+  path: '/briefing/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeepDiveSectionRoute = DeepDiveSectionRouteImport.update({
   id: '/deep-dive/$section',
   path: '/deep-dive/$section',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BriefingDateRoute = BriefingDateRouteImport.update({
+  id: '/briefing/$date',
+  path: '/briefing/$date',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BackgroundWorldWar3RiskRoute = BackgroundWorldWar3RiskRouteImport.update({
@@ -140,7 +152,9 @@ export interface FileRoutesByFullPath {
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/will-india-pakistan-go-to-war-again': typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
+  '/briefing/$date': typeof BriefingDateRoute
   '/deep-dive/$section': typeof DeepDiveSectionRoute
+  '/briefing/': typeof BriefingIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesByTo {
@@ -159,7 +173,9 @@ export interface FileRoutesByTo {
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/will-india-pakistan-go-to-war-again': typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
+  '/briefing/$date': typeof BriefingDateRoute
   '/deep-dive/$section': typeof DeepDiveSectionRoute
+  '/briefing': typeof BriefingIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesById {
@@ -179,7 +195,9 @@ export interface FileRoutesById {
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
   '/background/will-india-pakistan-go-to-war-again': typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   '/background/world-war-3-risk': typeof BackgroundWorldWar3RiskRoute
+  '/briefing/$date': typeof BriefingDateRoute
   '/deep-dive/$section': typeof DeepDiveSectionRoute
+  '/briefing/': typeof BriefingIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRouteTypes {
@@ -200,7 +218,9 @@ export interface FileRouteTypes {
     | '/background/will-china-invade-taiwan'
     | '/background/will-india-pakistan-go-to-war-again'
     | '/background/world-war-3-risk'
+    | '/briefing/$date'
     | '/deep-dive/$section'
+    | '/briefing/'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -219,7 +239,9 @@ export interface FileRouteTypes {
     | '/background/will-china-invade-taiwan'
     | '/background/will-india-pakistan-go-to-war-again'
     | '/background/world-war-3-risk'
+    | '/briefing/$date'
     | '/deep-dive/$section'
+    | '/briefing'
     | '/.mcp/invoke-tool/$tool'
   id:
     | '__root__'
@@ -238,7 +260,9 @@ export interface FileRouteTypes {
     | '/background/will-china-invade-taiwan'
     | '/background/will-india-pakistan-go-to-war-again'
     | '/background/world-war-3-risk'
+    | '/briefing/$date'
     | '/deep-dive/$section'
+    | '/briefing/'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesById: FileRoutesById
 }
@@ -258,7 +282,9 @@ export interface RootRouteChildren {
   BackgroundWillChinaInvadeTaiwanRoute: typeof BackgroundWillChinaInvadeTaiwanRoute
   BackgroundWillIndiaPakistanGoToWarAgainRoute: typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   BackgroundWorldWar3RiskRoute: typeof BackgroundWorldWar3RiskRoute
+  BriefingDateRoute: typeof BriefingDateRoute
   DeepDiveSectionRoute: typeof DeepDiveSectionRoute
+  BriefingIndexRoute: typeof BriefingIndexRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
@@ -285,11 +311,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/briefing/': {
+      id: '/briefing/'
+      path: '/briefing'
+      fullPath: '/briefing/'
+      preLoaderRoute: typeof BriefingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/deep-dive/$section': {
       id: '/deep-dive/$section'
       path: '/deep-dive/$section'
       fullPath: '/deep-dive/$section'
       preLoaderRoute: typeof DeepDiveSectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/briefing/$date': {
+      id: '/briefing/$date'
+      path: '/briefing/$date'
+      fullPath: '/briefing/$date'
+      preLoaderRoute: typeof BriefingDateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/background/world-war-3-risk': {
@@ -407,7 +447,9 @@ const rootRouteChildren: RootRouteChildren = {
   BackgroundWillIndiaPakistanGoToWarAgainRoute:
     BackgroundWillIndiaPakistanGoToWarAgainRoute,
   BackgroundWorldWar3RiskRoute: BackgroundWorldWar3RiskRoute,
+  BriefingDateRoute: BriefingDateRoute,
   DeepDiveSectionRoute: DeepDiveSectionRoute,
+  BriefingIndexRoute: BriefingIndexRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
