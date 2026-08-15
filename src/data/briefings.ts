@@ -1,11 +1,12 @@
 // Daily briefing archive.
 //
-// HOW TO ADD A NEW DAY:
-//   1. Copy the BRIEFING object values out of src/components/WorldConflictDebrief.jsx
-//      (summaryShort -> lede, summary -> body, watch -> watch).
-//   2. Prepend a new entry to BRIEFINGS with the new ISO date (newest first).
-//   3. Bump LAST_UPDATED in src/routes/sitemap[.]xml.ts — /briefing pages are
-//      generated into the sitemap automatically from this array.
+// HOW A NEW DAY GETS ADDED (automated):
+//   After src/components/WorldConflictDebrief.jsx is replaced with the new build, run:
+//     node scripts/archive-briefing.mjs --title "Short headline for the day"
+//   That script reads REPORT_NOW + the BRIEFING object out of the dashboard,
+//   prepends the entry below, detects theaters, and bumps LAST_UPDATED in
+//   src/routes/sitemap[.]xml.ts. Add --force to replace an already-archived date.
+//   Omit --title and it auto-derives one from the lede (curated titles are better).
 
 export interface Briefing {
   /** ISO date, YYYY-MM-DD. Used as the URL segment: /briefing/2026-08-15 */
