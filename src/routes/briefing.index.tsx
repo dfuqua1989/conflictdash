@@ -67,6 +67,12 @@ function BriefingArchive() {
         <Link to="/" style={{ fontSize: 11, color: T.accent, textDecoration: "none", fontWeight: 700 }}>
           ← Back to the live conflict dashboard
         </Link>
+        <Link
+          to="/conflicts"
+          style={{ fontSize: 11, color: T.accent, textDecoration: "none", fontWeight: 700, marginLeft: 14 }}
+        >
+          All conflicts index →
+        </Link>
 
         <div
           style={{
