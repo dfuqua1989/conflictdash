@@ -21,6 +21,9 @@ const ENTRIES: SitemapEntry[] = [
   // Homepage — main dashboard
   { path: "/", changefreq: "daily", priority: "1.0", lastmod: LAST_UPDATED },
 
+  // All-conflicts hub
+  { path: "/conflicts", changefreq: "weekly", priority: "0.9", lastmod: LAST_UPDATED },
+
   // Background primers — evergreen explainers
   { path: "/background/strait-of-hormuz", changefreq: "monthly", priority: "0.7" },
   { path: "/background/hezbollah-capabilities", changefreq: "monthly", priority: "0.7" },
