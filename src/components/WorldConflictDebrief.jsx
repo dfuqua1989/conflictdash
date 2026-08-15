@@ -1653,6 +1653,20 @@ const RH_RNG_PX=360;
 const rhBearingOf=(lo,la)=>{const[x,y]=rhPx(lo,la);const dx=x-RH_CTR[0],dy=y-RH_CTR[1];return(Math.atan2(dy,dx)*180/Math.PI+360)%360;};
 const RH_BEARINGS=RH_CONTACTS.map(c=>rhBearingOf(c.lo,c.la));
 const rhEase=(t)=>1-(1-t)*(1-t);
+// --- Hormuz shipping-lane corridor (inbound/outbound traffic separation scheme) ---
+const RH_LANE_SPINE=[[59.6,23.9],[58.2,24.7],[57.3,25.5],[56.75,26.15],[56.32,26.45],[55.5,26.35],[54.2,26.2],[52.6,27.1],[51.2,28.2],[50.0,28.9]];
+const RH_LANE_INBOUND=RH_LANE_SPINE.map(([lo,la])=>[lo,la+0.16]);
+const RH_LANE_OUTBOUND=RH_LANE_SPINE.map(([lo,la])=>[lo,la-0.16]);
+const RH_STRAIT=rhPx(56.35,26.45);
+const RH_SHAPES={
+  kinetic:(x,y,r)=>`M${x-r} ${y}a${r} ${r} 0 1 0 ${r*2} 0a${r} ${r} 0 1 0 ${-r*2} 0Z`,
+  nuclear:(x,y,r)=>Array.from({length:6},(_,i)=>{const a=(i*60-90)*Math.PI/180;return`${i?"L":"M"}${(x+Math.cos(a)*r*1.15).toFixed(1)} ${(y+Math.sin(a)*r*1.15).toFixed(1)}`;}).join("")+"Z",
+  energy:(x,y,r)=>`M${x} ${y-r*1.25}L${x+r*1.15} ${y+r*0.85}L${x-r*1.15} ${y+r*0.85}Z`,
+  allied:(x,y,r)=>`M${x-r} ${y-r}H${x+r}V${y+r}H${x-r}Z`,
+  sea:(x,y,r)=>`M${x} ${y-r*1.3}L${x+r*1.15} ${y}L${x} ${y+r*1.3}L${x-r*1.15} ${y}Z`,
+  diplo:(x,y,r)=>`M${x-r} ${y-r}H${x+r}V${y+r}H${x-r}Z`
+};
+const rhShape=(k,x,y,r)=>(RH_SHAPES[k]||RH_SHAPES.kinetic)(x,y,r);
 
 
 function RHRadarMap({t}){
