@@ -1764,6 +1764,17 @@ function RHRadarMap({t}){
         <path d={rhOpenPath(RH_COAST_ARC)} fill="none" stroke={MAGENTA} strokeWidth="1.4" strokeDasharray="7 5" opacity=".85"/>
         {RH_DEPTHS.map((dp,i)=><path key={i} d={rhOpenPath(dp)} fill="none" stroke="rgba(121,198,216,.13)" strokeWidth=".75"/>)}
       </g>
+      <g aria-hidden="true">
+        <ellipse cx={RH_STRAIT[0]} cy={RH_STRAIT[1]} rx={132} ry={104} fill="url(#rhspot)"/>
+        <path d={rhOpenPath(RH_LANE_SPINE)} fill="none" stroke="url(#rhlane)" strokeWidth="17" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d={rhOpenPath(RH_LANE_INBOUND)} fill="none" stroke={ICE} strokeWidth="1.5" strokeDasharray="14 34" strokeLinecap="round" opacity=".85" style={{animation:"laneFlow 2.6s linear infinite"}}/>
+        <path d={rhOpenPath(RH_LANE_OUTBOUND)} fill="none" stroke={PHOSPHOR} strokeWidth="1.5" strokeDasharray="14 34" strokeLinecap="round" opacity=".7" style={{animation:"laneFlowRev 3.1s linear infinite"}}/>
+        <path d={rhOpenPath(RH_LANE_SPINE)} fill="none" stroke={ICE} strokeWidth=".6" strokeDasharray="2 6" opacity=".35"/>
+        {[[57.9,24.95,"in"],[52.4,27.35,"out"]].map(([lo,la,dir])=>{const q=rhPx(lo,la);const flip=dir==="out";return <g key={dir} transform={`translate(${q[0]},${q[1]}) rotate(${flip?-32:148})`}><path d="M0 -5 L9 0 L0 5 Z" fill={flip?PHOSPHOR:ICE} opacity=".85"/></g>;})}
+        <line x1={RH_STRAIT[0]} y1={RH_STRAIT[1]-16} x2={RH_STRAIT[0]+26} y2={RH_STRAIT[1]-42} stroke={ICE} strokeWidth=".7" opacity=".45"/>
+        <circle cx={RH_STRAIT[0]} cy={RH_STRAIT[1]} r={17} fill="none" stroke={ICE} strokeWidth=".8" strokeDasharray="3 4" opacity=".55"/>
+        <text x={RH_STRAIT[0]+29} y={RH_STRAIT[1]-44} fontSize="8" fontFamily="monospace" letterSpacing=".14em" fill={ICE} opacity=".8">CHOKEPOINT · 21 NM</text>
+      </g>
       <g>{RH_WATER.map(([n,lo,la])=>{const p=rhPx(lo,la);return <text key={n} x={p[0]} y={p[1]} fontStyle="italic" fontSize="11" fill={ICE} opacity=".62" letterSpacing=".09em" textAnchor="middle">{n}</text>;})}
       {RH_LANDS.map(([n,lo,la])=>{const p=rhPx(lo,la);return <text key={n} x={p[0]} y={p[1]} fontSize="12.5" fontWeight="600" fill={PAPERDIM} letterSpacing=".2em" opacity=".75" textAnchor="middle">{n.toUpperCase()}</text>;})}
       <text x={st[0]+10} y={st[1]+22} fontStyle="italic" fontSize="10" fill={ICE} opacity=".62">Strait of Hormuz</text></g>
