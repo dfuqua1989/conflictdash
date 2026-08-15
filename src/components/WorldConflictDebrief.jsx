@@ -1774,6 +1774,9 @@ function RHRadarMap({t}){
         <path d={rhToPath(RH_ARABIA)} fill="#111a17" stroke="#22302a" strokeWidth="1"/>
         <path d={rhToPath(RH_EAST)} fill="#111a17" stroke="#22302a" strokeWidth="1"/>
         <path d={rhToPath(RH_IRAN)} fill="#20301f" stroke="#4d6b4f" strokeWidth="1.3"/>
+        {RH_ISLANDS.map(is=><path key={is.n} d={rhToPath(is.p)} fill="#141d18" stroke="#2c3b32" strokeWidth=".8"/>)}
+        {RH_ISLETS.map(([n,lo,la])=>{const q=rhPx(lo,la);return <circle key={n} cx={q[0]} cy={q[1]} r="2.1" fill="#182219" stroke="#33473a" strokeWidth=".7"/>;})}
+        {RH_BORDERS.map((b,i)=><path key={"b"+i} d={rhOpenPath(b)} fill="none" stroke="rgba(150,175,150,.30)" strokeWidth=".8" strokeDasharray="5 4"/>)}
       </g>
       <g>{[120,240,360].map((r,i)=><g key={r}><circle cx={RH_CTR[0]} cy={RH_CTR[1]} r={r} fill="none" stroke="rgba(77,217,143,.16)" strokeWidth=".6"/><text x={RH_CTR[0]+4} y={RH_CTR[1]-r+11} fontSize="7.5" fill="rgba(77,217,143,.5)" letterSpacing=".1em" fontFamily="monospace">{(i+1)*300} KM</text></g>)}</g>
       <g ref={rotRef} style={{opacity:sweepOn?1:0,transition:"opacity .3s"}}>
@@ -1798,6 +1801,8 @@ function RHRadarMap({t}){
       </g>
       <g>{RH_WATER.map(([n,lo,la])=>{const p=rhPx(lo,la);return <text key={n} x={p[0]} y={p[1]} fontStyle="italic" fontSize="11" fill={ICE} opacity=".62" letterSpacing=".09em" textAnchor="middle">{n}</text>;})}
       {RH_LANDS.map(([n,lo,la])=>{const p=rhPx(lo,la);return <text key={n} x={p[0]} y={p[1]} fontSize="12.5" fontWeight="600" fill={PAPERDIM} letterSpacing=".2em" opacity=".75" textAnchor="middle">{n.toUpperCase()}</text>;})}
+      {RH_MINOR.map(([n,lo,la])=>{const p=rhPx(lo,la);return <text key={n} x={p[0]} y={p[1]} fontSize="8.5" fontWeight="600" fill={PAPERFAINT} letterSpacing=".16em" opacity=".85" textAnchor="middle">{n.toUpperCase()}</text>;})}
+      <line x1={rhPx(50.22,26.1)[0]} y1={rhPx(50.22,26.1)[1]} x2={rhPx(50.44,26.05)[0]} y2={rhPx(50.44,26.05)[1]} stroke={PAPERFAINT} strokeWidth=".6" opacity=".5"/>
       <text x={st[0]+10} y={st[1]+22} fontStyle="italic" fontSize="10" fill={ICE} opacity=".62">Strait of Hormuz</text></g>
       <g>{RH_CONTACTS.map((c,idx)=>{
         const p=rhPx(c.lo,c.la);
