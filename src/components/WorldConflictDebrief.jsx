@@ -1052,6 +1052,7 @@ function TodayView({t}){const fresh=NEWS.filter(isFreshNews);const critical=fres
 
 // ── Deep Dive View ─────────────────────────────────────────────────────────────────
 const CONFLICT_SECTIONS=[{id:"iran",label:"🇮🇷 Iran",conflictId:"iran"},{id:"ukraine",label:"🇺🇦 Ukraine",conflictId:"ukraine"},{id:"usmil",label:"⚔️ Great Powers",conflictId:"usmil"},{id:"gaza",label:"🌍 Israel & Levant",conflictId:"gaza"},{id:"scs",label:"🏝️ S. China Sea & Taiwan",conflictId:"south-china-sea"},{id:"venezuela",label:"🌎 Americas",conflictId:"venezuela"},{id:"africa",label:"🌍 Africa",conflictId:"sudan"},{id:"southasia",label:"🌏 South Asia",conflictId:"indopak"}];
+const DEEP_DIVE_HEADINGS={ukraine:"Ukraine War Deep Dive",dronewar:"Drone War Deep Dive",usmil:"Great Powers Deep Dive",iran:"Iran War Deep Dive",gaza:"Israel & Levant Deep Dive",scs:"South China Sea & Taiwan Deep Dive",venezuela:"Americas Deep Dive",africa:"Africa Deep Dive",southasia:"South Asia Deep Dive"};
 
 function GazaSection({t,initialTab}){
   const[tab,setTab]=useState(initialTab??"conflict");useEffect(()=>{if(initialTab)setTab(initialTab);},[initialTab]);
