@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import WorldConflictDebrief from "@/components/WorldConflictDebrief.jsx";
+import SiteLinkFooter from "@/components/SiteLinkFooter";
 
 const TITLE = "World Conflict Debrief — Global Flashpoints & Daily Intelligence";
 const DESCRIPTION =
@@ -90,8 +91,11 @@ export const Route = createFileRoute("/")({
     ],
   }),
   component: () => (
-    <main>
-      <WorldConflictDebrief />
-    </main>
+    <>
+      <main>
+        <WorldConflictDebrief />
+      </main>
+      <SiteLinkFooter />
+    </>
   ),
 });
