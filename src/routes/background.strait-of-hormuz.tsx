@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Strait of Hormuz: Oil Chokepoint Primer";
+const TITLE = "Strait of Hormuz: Oil Chokepoint Primer | World Conflict Debrief";
 const DESCRIPTION =
   "Transit volumes, geography, Iranian closure threats and the history of US-Iran naval confrontations at the world's key oil chokepoint.";
 const URL = "https://conflictdash.lovable.app/background/strait-of-hormuz";
-const SOCIAL_TITLE = "Strait of Hormuz: Oil Chokepoint Primer";
+const SOCIAL_TITLE = "Strait of Hormuz: Oil Chokepoint Primer | World Conflict Debrief";
 const SOCIAL_DESCRIPTION =
   "Transit volumes, geography, Iranian closure threats and the history of US–Iran naval confrontations at the world's key oil chokepoint.";
 const IMAGE = "https://conflictdash.lovable.app/og-strait-of-hormuz.jpg";

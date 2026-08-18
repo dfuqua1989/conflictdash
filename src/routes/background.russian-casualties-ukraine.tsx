@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Russian Casualties in Ukraine, Explained";
+const TITLE = "Russian Casualties in Ukraine, Explained | World Conflict Debrief";
 const DESCRIPTION =
   "Why Russian loss estimates range from 250,000 to 1.4 million: what each figure counts, who publishes it, and which one to trust.";
 const URL = "https://conflictdash.lovable.app/background/russian-casualties-ukraine";
-const SOCIAL_TITLE = "Russian Casualties in Ukraine, Explained";
+const SOCIAL_TITLE = "Russian Casualties in Ukraine, Explained | World Conflict Debrief";
 const SOCIAL_DESCRIPTION =
   "Why Russian loss estimates range from 250,000 to 1.4 million — what each figure counts, who publishes it, and which one to trust.";
 const IMAGE = "https://conflictdash.lovable.app/og-russian-casualties-ukraine.jpg";
