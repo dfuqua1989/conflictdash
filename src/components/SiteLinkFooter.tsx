@@ -12,6 +12,10 @@ const BACKGROUNDERS: { to: string; label: string }[] = [
   { to: "/background/why-sudan-is-at-war", label: "Why Sudan is at war" },
   { to: "/background/will-india-pakistan-go-to-war-again", label: "India vs Pakistan: next war?" },
   { to: "/background/pakistan-afghanistan-war-explained", label: "Pakistan–Afghanistan conflict" },
+  { to: "/background/venezuela-cuba-crisis-explained", label: "US intervention in Venezuela and Cuba" },
+  { to: "/background/is-the-gaza-ceasefire-holding", label: "Is the Gaza ceasefire holding?" },
+  { to: "/background/us-china-great-power-rivalry-explained", label: "US-China military rivalry" },
+  { to: "/background/drc-m23-conflict-explained", label: "The DRC-M23 conflict, explained" },
 ];
 
 const linkStyle: React.CSSProperties = {
