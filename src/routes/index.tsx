@@ -90,8 +90,11 @@ export const Route = createFileRoute("/")({
     ],
   }),
   component: () => (
-    <main>
-      <WorldConflictDebrief />
-    </main>
+    <>
+      <main>
+        <WorldConflictDebrief />
+      </main>
+      <SiteLinkFooter />
+    </>
   ),
 });
