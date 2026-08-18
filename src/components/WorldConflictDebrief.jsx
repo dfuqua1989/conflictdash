@@ -403,7 +403,7 @@ function BriefingPanel({t}){
     <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
       <span style={{width:8,height:8,borderRadius:"50%",background:"#22c55e",display:"inline-block",flexShrink:0}}/>
       <span style={{fontSize:10,fontWeight:800,color:"#5b8ec8",textTransform:"uppercase",letterSpacing:".1em"}}>Daily Briefing</span>
-      <span style={{fontSize:10,color:t.sub,marginLeft:"auto"}}>{new Date(briefing.generatedAt).toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})} UTC</span>
+      <span style={{fontSize:10,color:t.sub,marginLeft:"auto"}}>{REPORT_NOW.toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})} UTC</span>
       <ReadAloudButton text={`${briefing.summaryShort} 72 hour watch: ${briefing.watch}`} color="#5b8ec8" t={t}/>
     </div>
     <p style={{fontSize:12.5,color:t.text,lineHeight:1.6,margin:"0 0 10px"}}>{briefing.summaryShort}</p>
