@@ -1,6 +1,6 @@
-# World Conflict Debrief
+# World Conflict Debrief — Global Flashpoints & Daily Intelligence
 
-> Live briefing on active global conflicts — casualties, displacement, drone activity, and daily situation reports across Ukraine, Iran, Taiwan, Sudan, and other theaters.
+> Live, open-source intelligence on the world's active conflicts: Ukraine, Gaza, Iran, Taiwan, the South China Sea and the Americas. Updated twice daily.
 
 World Conflict Debrief is a live dashboard aggregating open-source intelligence from Ukrainian Air Force, Russian MoD, ISW, ACLED, UN HRMMU, CSIS, and major news outlets. It provides daily situation reports, trend analysis, and deep-dive theater assessments.
 
