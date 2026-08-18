@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "World War 3 Risk: 2026 Assessment";
+const TITLE = "World War 3 Risk: 2026 Assessment | World Conflict Debrief";
 const DESCRIPTION =
   "A theater-by-theater read on global escalation risk in 2026: Ukraine, Iran, Israel, Taiwan and the Americas, and why nuclear powers avoid combat.";
 const URL = "https://conflictdash.lovable.app/background/world-war-3-risk";
-const SOCIAL_TITLE = "World War 3 Risk: 2026 Assessment";
+const SOCIAL_TITLE = "World War 3 Risk: 2026 Assessment | World Conflict Debrief";
 const SOCIAL_DESCRIPTION =
   "A theater-by-theater read on global escalation risk in 2026 — Ukraine, Iran, Israel, Taiwan and the Americas — and why no nuclear powers are in direct combat.";
 const IMAGE = "https://conflictdash.lovable.app/og-world-war-3-risk.jpg";

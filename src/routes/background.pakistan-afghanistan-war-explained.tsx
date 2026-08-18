@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Pakistan vs Afghanistan: TTP Conflict Explained";
+const TITLE = "Pakistan vs Afghanistan: TTP Conflict Explained | World Conflict Debrief";
 const DESCRIPTION =
   "Why Pakistan declared open war on Afghanistan's Taliban in 2026: a militant group, not a border dispute, and why mediated truces keep collapsing.";
 const URL = "https://conflictdash.lovable.app/background/pakistan-afghanistan-war-explained";

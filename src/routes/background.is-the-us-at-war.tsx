@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Is the US at War Right Now? 2026 Answer";
+const TITLE = "Is the US at War Right Now? 2026 Answer | World Conflict Debrief";
 const DESCRIPTION =
   "Congress hasn't declared war since 1942, yet US forces are in active combat. What's happening with Iran and in the Caribbean, and why it matters.";
 const URL = "https://conflictdash.lovable.app/background/is-the-us-at-war";

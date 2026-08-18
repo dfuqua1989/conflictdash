@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const TITLE = "Will India and Pakistan Go to War Again?";
+const TITLE = "Will India and Pakistan Go to War Again? | World Conflict Debrief";
 const DESCRIPTION =
   "The May 2025 four-day war was the worst clash since Kargil. The ceasefire holds but nothing is resolved: what would trigger round two.";
 const URL = "https://conflictdash.lovable.app/background/will-india-pakistan-go-to-war-again";
