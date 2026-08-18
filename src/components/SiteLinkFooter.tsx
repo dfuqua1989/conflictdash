@@ -49,6 +49,7 @@ export default function SiteLinkFooter() {
 
   return (
     <nav
+      id="site-link-footer"
       aria-label="Site sections"
       style={{
         background: "#07090d",
@@ -58,6 +59,12 @@ export default function SiteLinkFooter() {
           "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace",
       }}
     >
+      <style>
+        {`body[data-active-view="theaters"] #site-link-footer,
+body[data-active-view="deepdive"] #site-link-footer {
+  display: none;
+}`}
+      </style>
       <div
         style={{
           maxWidth: 1100,
