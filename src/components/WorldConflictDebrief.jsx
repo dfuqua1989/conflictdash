@@ -374,7 +374,7 @@ function TrendTooltip({active,payload,label,t,color,unit}){
 function useCountdown(target){const[text,setText]=useState("");useEffect(()=>{const tick=()=>{const ms=target.getTime()-Date.now();if(ms<=0){setText("ELAPSED");return;}const d=Math.floor(ms/86400000),h=Math.floor((ms%86400000)/3600000),m=Math.floor((ms%3600000)/60000);setText(`D-${d} · ${h}h ${m}m`);};tick();const id=setInterval(tick,60000);return()=>clearInterval(id);},[target]);return text;}
 
 const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-const BUILD_NUMBER=108;
+const BUILD_NUMBER=109;
 function parseNewsDate(s){if(!s)return null;const m=s.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/);if(m)return new Date(Date.UTC(+m[3],MONTHS[m[1]],+m[2]));const m2=s.match(/([A-Z][a-z]{2})\s+(\d{4})/);if(m2)return new Date(Date.UTC(+m2[2],MONTHS[m2[1]],1));return null;}
 const NEWS_MAX_AGE_DAYS=14;
 // How many stories the Today view shows by default (lead + 2 secondary + the rest as
@@ -3414,6 +3414,7 @@ export default function Dashboard({initialView,initialSection,initialTab}={}){
   const isLandscape=useIsLandscape();
   const[dark,setDark]=useState(true);
   const[view,setView]=useState(initialView||"today");
+  useEffect(()=>{if(typeof document!=="undefined")document.body.setAttribute("data-active-view",view);},[view]);
   const[selectedConflict,setSelectedConflict]=useState(initialSection||"iran");
   const[paletteOpen,setPaletteOpen]=useState(false);const[pendingTab,setPendingTab]=useState(initialTab||null);
   const[faqOpen,setFaqOpen]=useState(false);
