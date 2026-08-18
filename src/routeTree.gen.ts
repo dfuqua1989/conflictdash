@@ -22,6 +22,7 @@ import { Route as BackgroundWillIndiaPakistanGoToWarAgainRouteImport } from './r
 import { Route as BackgroundWillChinaInvadeTaiwanRouteImport } from './routes/background.will-china-invade-taiwan'
 import { Route as BackgroundWhySudanIsAtWarRouteImport } from './routes/background.why-sudan-is-at-war'
 import { Route as BackgroundVenezuelaCubaCrisisExplainedRouteImport } from './routes/background.venezuela-cuba-crisis-explained'
+import { Route as BackgroundUsChinaGreatPowerRivalryExplainedRouteImport } from './routes/background.us-china-great-power-rivalry-explained'
 import { Route as BackgroundStraitOfHormuzRouteImport } from './routes/background.strait-of-hormuz'
 import { Route as BackgroundRussianCasualtiesUkraineRouteImport } from './routes/background.russian-casualties-ukraine'
 import { Route as BackgroundPakistanAfghanistanWarExplainedRouteImport } from './routes/background.pakistan-afghanistan-war-explained'
@@ -29,6 +30,7 @@ import { Route as BackgroundNuclearWeaponsByCountryRouteImport } from './routes/
 import { Route as BackgroundIsTheUsAtWarRouteImport } from './routes/background.is-the-us-at-war'
 import { Route as BackgroundIsTheGazaCeasefireHoldingRouteImport } from './routes/background.is-the-gaza-ceasefire-holding'
 import { Route as BackgroundHezbollahCapabilitiesRouteImport } from './routes/background.hezbollah-capabilities'
+import { Route as BackgroundDrcM23ConflictExplainedRouteImport } from './routes/background.drc-m23-conflict-explained'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
@@ -102,6 +104,12 @@ const BackgroundVenezuelaCubaCrisisExplainedRoute =
     path: '/background/venezuela-cuba-crisis-explained',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BackgroundUsChinaGreatPowerRivalryExplainedRoute =
+  BackgroundUsChinaGreatPowerRivalryExplainedRouteImport.update({
+    id: '/background/us-china-great-power-rivalry-explained',
+    path: '/background/us-china-great-power-rivalry-explained',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BackgroundStraitOfHormuzRoute =
   BackgroundStraitOfHormuzRouteImport.update({
     id: '/background/strait-of-hormuz',
@@ -143,6 +151,12 @@ const BackgroundHezbollahCapabilitiesRoute =
     path: '/background/hezbollah-capabilities',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BackgroundDrcM23ConflictExplainedRoute =
+  BackgroundDrcM23ConflictExplainedRouteImport.update({
+    id: '/background/drc-m23-conflict-explained',
+    path: '/background/drc-m23-conflict-explained',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const Char91DotwellKnownChar93OauthProtectedResourceRoute =
   Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
     id: '/.well-known/oauth-protected-resource',
@@ -170,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
   '/background/is-the-gaza-ceasefire-holding': typeof BackgroundIsTheGazaCeasefireHoldingRoute
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
@@ -177,6 +192,7 @@ export interface FileRoutesByFullPath {
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
+  '/background/us-china-great-power-rivalry-explained': typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
   '/background/venezuela-cuba-crisis-explained': typeof BackgroundVenezuelaCubaCrisisExplainedRoute
   '/background/why-sudan-is-at-war': typeof BackgroundWhySudanIsAtWarRoute
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
@@ -195,6 +211,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
   '/background/is-the-gaza-ceasefire-holding': typeof BackgroundIsTheGazaCeasefireHoldingRoute
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
@@ -202,6 +219,7 @@ export interface FileRoutesByTo {
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
+  '/background/us-china-great-power-rivalry-explained': typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
   '/background/venezuela-cuba-crisis-explained': typeof BackgroundVenezuelaCubaCrisisExplainedRoute
   '/background/why-sudan-is-at-war': typeof BackgroundWhySudanIsAtWarRoute
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
@@ -221,6 +239,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
   '/background/is-the-gaza-ceasefire-holding': typeof BackgroundIsTheGazaCeasefireHoldingRoute
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
@@ -228,6 +247,7 @@ export interface FileRoutesById {
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
+  '/background/us-china-great-power-rivalry-explained': typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
   '/background/venezuela-cuba-crisis-explained': typeof BackgroundVenezuelaCubaCrisisExplainedRoute
   '/background/why-sudan-is-at-war': typeof BackgroundWhySudanIsAtWarRoute
   '/background/will-china-invade-taiwan': typeof BackgroundWillChinaInvadeTaiwanRoute
@@ -248,6 +268,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/background/drc-m23-conflict-explained'
     | '/background/hezbollah-capabilities'
     | '/background/is-the-gaza-ceasefire-holding'
     | '/background/is-the-us-at-war'
@@ -255,6 +276,7 @@ export interface FileRouteTypes {
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
+    | '/background/us-china-great-power-rivalry-explained'
     | '/background/venezuela-cuba-crisis-explained'
     | '/background/why-sudan-is-at-war'
     | '/background/will-china-invade-taiwan'
@@ -273,6 +295,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/background/drc-m23-conflict-explained'
     | '/background/hezbollah-capabilities'
     | '/background/is-the-gaza-ceasefire-holding'
     | '/background/is-the-us-at-war'
@@ -280,6 +303,7 @@ export interface FileRouteTypes {
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
+    | '/background/us-china-great-power-rivalry-explained'
     | '/background/venezuela-cuba-crisis-explained'
     | '/background/why-sudan-is-at-war'
     | '/background/will-china-invade-taiwan'
@@ -298,6 +322,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/background/drc-m23-conflict-explained'
     | '/background/hezbollah-capabilities'
     | '/background/is-the-gaza-ceasefire-holding'
     | '/background/is-the-us-at-war'
@@ -305,6 +330,7 @@ export interface FileRouteTypes {
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
+    | '/background/us-china-great-power-rivalry-explained'
     | '/background/venezuela-cuba-crisis-explained'
     | '/background/why-sudan-is-at-war'
     | '/background/will-china-invade-taiwan'
@@ -324,6 +350,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  BackgroundDrcM23ConflictExplainedRoute: typeof BackgroundDrcM23ConflictExplainedRoute
   BackgroundHezbollahCapabilitiesRoute: typeof BackgroundHezbollahCapabilitiesRoute
   BackgroundIsTheGazaCeasefireHoldingRoute: typeof BackgroundIsTheGazaCeasefireHoldingRoute
   BackgroundIsTheUsAtWarRoute: typeof BackgroundIsTheUsAtWarRoute
@@ -331,6 +358,7 @@ export interface RootRouteChildren {
   BackgroundPakistanAfghanistanWarExplainedRoute: typeof BackgroundPakistanAfghanistanWarExplainedRoute
   BackgroundRussianCasualtiesUkraineRoute: typeof BackgroundRussianCasualtiesUkraineRoute
   BackgroundStraitOfHormuzRoute: typeof BackgroundStraitOfHormuzRoute
+  BackgroundUsChinaGreatPowerRivalryExplainedRoute: typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
   BackgroundVenezuelaCubaCrisisExplainedRoute: typeof BackgroundVenezuelaCubaCrisisExplainedRoute
   BackgroundWhySudanIsAtWarRoute: typeof BackgroundWhySudanIsAtWarRoute
   BackgroundWillChinaInvadeTaiwanRoute: typeof BackgroundWillChinaInvadeTaiwanRoute
@@ -435,6 +463,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackgroundVenezuelaCubaCrisisExplainedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/background/us-china-great-power-rivalry-explained': {
+      id: '/background/us-china-great-power-rivalry-explained'
+      path: '/background/us-china-great-power-rivalry-explained'
+      fullPath: '/background/us-china-great-power-rivalry-explained'
+      preLoaderRoute: typeof BackgroundUsChinaGreatPowerRivalryExplainedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/background/strait-of-hormuz': {
       id: '/background/strait-of-hormuz'
       path: '/background/strait-of-hormuz'
@@ -484,6 +519,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackgroundHezbollahCapabilitiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/background/drc-m23-conflict-explained': {
+      id: '/background/drc-m23-conflict-explained'
+      path: '/background/drc-m23-conflict-explained'
+      fullPath: '/background/drc-m23-conflict-explained'
+      preLoaderRoute: typeof BackgroundDrcM23ConflictExplainedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/.well-known/oauth-protected-resource': {
       id: '/.well-known/oauth-protected-resource'
       path: '/.well-known/oauth-protected-resource'
@@ -517,6 +559,8 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  BackgroundDrcM23ConflictExplainedRoute:
+    BackgroundDrcM23ConflictExplainedRoute,
   BackgroundHezbollahCapabilitiesRoute: BackgroundHezbollahCapabilitiesRoute,
   BackgroundIsTheGazaCeasefireHoldingRoute:
     BackgroundIsTheGazaCeasefireHoldingRoute,
@@ -528,6 +572,8 @@ const rootRouteChildren: RootRouteChildren = {
   BackgroundRussianCasualtiesUkraineRoute:
     BackgroundRussianCasualtiesUkraineRoute,
   BackgroundStraitOfHormuzRoute: BackgroundStraitOfHormuzRoute,
+  BackgroundUsChinaGreatPowerRivalryExplainedRoute:
+    BackgroundUsChinaGreatPowerRivalryExplainedRoute,
   BackgroundVenezuelaCubaCrisisExplainedRoute:
     BackgroundVenezuelaCubaCrisisExplainedRoute,
   BackgroundWhySudanIsAtWarRoute: BackgroundWhySudanIsAtWarRoute,

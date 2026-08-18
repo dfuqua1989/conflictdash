@@ -37,6 +37,8 @@ const ENTRIES: SitemapEntry[] = [
   { path: "/background/is-the-us-at-war", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/venezuela-cuba-crisis-explained", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/is-the-gaza-ceasefire-holding", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/us-china-great-power-rivalry-explained", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/drc-m23-conflict-explained", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
 
   // Daily briefing archive
   { path: "/briefing", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },
