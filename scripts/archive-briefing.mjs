@@ -48,7 +48,10 @@ for (let i = start; i < src.length; i++) {
   else if (c === "}") { depth--; if (depth === 0) { end = i + 1; break; } }
 }
 if (end < 0) throw new Error("Could not find end of BRIEFING object");
-const briefing = vm.runInNewContext(`(${src.slice(start, end)})`, { Date });
+const briefing = vm.runInNewContext(`(${src.slice(start, end)})`, {
+  Date,
+  REPORT_NOW: new Date(`${date}T00:00:00Z`),
+});
 
 const lede = String(briefing.summaryShort || "").trim();
 const body = String(briefing.summary || "").trim();
