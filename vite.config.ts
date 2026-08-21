@@ -6,6 +6,8 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/tanstack/vite";
+// @ts-expect-error - plain JS dev-only plugin
+import { autoArchivePlugin } from "./scripts/vite-auto-archive.mjs";
 
 export default defineConfig({
   tanstackStart: {
