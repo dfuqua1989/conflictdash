@@ -32,7 +32,7 @@ export function autoArchivePlugin() {
         const out = String(stdout || "").trim();
         if (err) {
           console.warn(`[auto-archive] failed (${reason}):`, String(stderr || err.message).trim());
-        } else if (out && !out.includes("already archived")) {
+        } else if (out) {
           console.log(`[auto-archive] ${out.split("\n")[0]}`);
         }
       },
