@@ -66,6 +66,50 @@ body[data-active-view="deepdive"] #site-link-footer {
   display: none;
 }`}
       </style>
+      <div style={{ maxWidth: 1100, margin: "0 auto 24px" }}>
+        <Link
+          to="/ukraine-war-map"
+          style={{
+            display: "block",
+            textDecoration: "none",
+            background: "linear-gradient(180deg,#101a26,#0b1119)",
+            border: "1px solid #24384d",
+            borderLeft: "3px solid #ffb84d",
+            borderRadius: 12,
+            padding: "14px 16px",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              fontSize: 10,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "#ffb84d",
+              fontWeight: 700,
+              marginBottom: 6,
+            }}
+          >
+            Theater reference
+          </span>
+          <span style={{ display: "block", color: "#e6edf3", fontSize: 15, fontWeight: 700 }}>
+            Ukraine War Map — where the frontline stands in 2026
+          </span>
+          <span
+            style={{
+              display: "block",
+              color: "#9fb0c2",
+              fontSize: 12.5,
+              lineHeight: 1.6,
+              marginTop: 6,
+            }}
+          >
+            Axis-by-axis frontline read, how to interpret live war maps, and answers to the
+            questions people actually ask about the war. →
+          </span>
+        </Link>
+      </div>
+
       <div
         style={{
           maxWidth: 1100,
