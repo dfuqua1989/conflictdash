@@ -24,6 +24,9 @@ const ENTRIES: SitemapEntry[] = [
   // All-conflicts hub
   { path: "/conflicts", changefreq: "weekly", priority: "0.9", lastmod: LAST_UPDATED },
 
+  // Theater reference pages
+  { path: "/ukraine-war-map", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },
+
   // Background primers — evergreen explainers
   { path: "/background/strait-of-hormuz", changefreq: "monthly", priority: "0.7" },
   { path: "/background/hezbollah-capabilities", changefreq: "monthly", priority: "0.7" },
