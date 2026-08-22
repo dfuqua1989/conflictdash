@@ -99,6 +99,8 @@ const FAQ = [
   },
 ];
 
+const LATEST_DATE = BRIEFINGS[0]?.date ?? "2026-08-22";
+
 export const Route = createFileRoute("/ukraine-war-map")({
   head: () => ({
     meta: [
@@ -132,6 +134,8 @@ export const Route = createFileRoute("/ukraine-war-map")({
           headline: "Ukraine War Map 2026: Live Frontline and Daily Briefing",
           description: DESCRIPTION,
           mainEntityOfPage: URL,
+          datePublished: LATEST_DATE,
+          dateModified: LATEST_DATE,
           image: IMAGE,
           author: { "@type": "Organization", name: "World Conflict Debrief" },
           publisher: { "@type": "Organization", name: "World Conflict Debrief" },
@@ -294,6 +298,10 @@ function UkraineWarMapPage() {
         <h1 style={{ fontSize: 28, lineHeight: 1.15, margin: "8px 0 10px", fontWeight: 800 }}>
           Ukraine War Map: Where the Frontline Stands in 2026
         </h1>
+        <p style={{ fontSize: 11, color: T.sub, margin: "0 0 10px" }}>
+          <time dateTime={LATEST_DATE}>Updated {LATEST_DATE}</time> · current through the latest
+          daily briefing
+        </p>
         <p style={{ fontSize: 14, lineHeight: 1.7, color: T.sub, margin: 0 }}>
           A schematic read of the Ukraine frontline — which axes are moving, which are frozen, and
           how to interpret the live maps published by open-source analysts. Updated alongside the
