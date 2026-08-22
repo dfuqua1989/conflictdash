@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UkraineWarMapRouteImport } from './routes/ukraine-war-map'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as FeedDotxmlRouteImport } from './routes/feed[.]xml'
@@ -35,6 +36,11 @@ import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } fr
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
+const UkraineWarMapRoute = UkraineWarMapRouteImport.update({
+  id: '/ukraine-war-map',
+  path: '/ukraine-war-map',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -182,6 +188,7 @@ export interface FileRoutesByFullPath {
   '/feed.xml': typeof FeedDotxmlRoute
   '/mcp': typeof McpRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ukraine-war-map': typeof UkraineWarMapRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
@@ -209,6 +216,7 @@ export interface FileRoutesByTo {
   '/feed.xml': typeof FeedDotxmlRoute
   '/mcp': typeof McpRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ukraine-war-map': typeof UkraineWarMapRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
@@ -237,6 +245,7 @@ export interface FileRoutesById {
   '/feed.xml': typeof FeedDotxmlRoute
   '/mcp': typeof McpRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ukraine-war-map': typeof UkraineWarMapRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
@@ -266,6 +275,7 @@ export interface FileRouteTypes {
     | '/feed.xml'
     | '/mcp'
     | '/sitemap.xml'
+    | '/ukraine-war-map'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/drc-m23-conflict-explained'
@@ -293,6 +303,7 @@ export interface FileRouteTypes {
     | '/feed.xml'
     | '/mcp'
     | '/sitemap.xml'
+    | '/ukraine-war-map'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/drc-m23-conflict-explained'
@@ -320,6 +331,7 @@ export interface FileRouteTypes {
     | '/feed.xml'
     | '/mcp'
     | '/sitemap.xml'
+    | '/ukraine-war-map'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/background/drc-m23-conflict-explained'
@@ -348,6 +360,7 @@ export interface RootRouteChildren {
   FeedDotxmlRoute: typeof FeedDotxmlRoute
   McpRoute: typeof McpRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  UkraineWarMapRoute: typeof UkraineWarMapRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BackgroundDrcM23ConflictExplainedRoute: typeof BackgroundDrcM23ConflictExplainedRoute
@@ -372,6 +385,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ukraine-war-map': {
+      id: '/ukraine-war-map'
+      path: '/ukraine-war-map'
+      fullPath: '/ukraine-war-map'
+      preLoaderRoute: typeof UkraineWarMapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -556,6 +576,7 @@ const rootRouteChildren: RootRouteChildren = {
   FeedDotxmlRoute: FeedDotxmlRoute,
   McpRoute: McpRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  UkraineWarMapRoute: UkraineWarMapRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
