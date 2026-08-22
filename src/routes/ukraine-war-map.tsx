@@ -99,6 +99,8 @@ const FAQ = [
   },
 ];
 
+const LATEST_DATE = BRIEFINGS[0]?.date ?? "2026-08-22";
+
 export const Route = createFileRoute("/ukraine-war-map")({
   head: () => ({
     meta: [
