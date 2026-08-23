@@ -4,6 +4,7 @@ import { BRIEFINGS } from "@/data/briefings";
 const BACKGROUNDERS: { to: string; label: string }[] = [
   { to: "/ukraine-war-map", label: "Ukraine war map: where the frontline stands" },
   { to: "/background/strait-of-hormuz", label: "Strait of Hormuz: why it matters" },
+  { to: "/background/red-sea-crisis", label: "The Red Sea crisis, explained" },
   { to: "/background/world-war-3-risk", label: "How close are we to World War 3?" },
   { to: "/background/russian-casualties-ukraine", label: "Russian casualties in Ukraine" },
   { to: "/background/will-china-invade-taiwan", label: "Will China invade Taiwan?" },

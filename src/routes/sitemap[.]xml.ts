@@ -29,6 +29,7 @@ const ENTRIES: SitemapEntry[] = [
 
   // Background primers — evergreen explainers
   { path: "/background/strait-of-hormuz", changefreq: "monthly", priority: "0.7" },
+  { path: "/background/red-sea-crisis", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/hezbollah-capabilities", changefreq: "monthly", priority: "0.7" },
   { path: "/background/world-war-3-risk", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/russian-casualties-ukraine", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },

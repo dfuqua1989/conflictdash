@@ -38,7 +38,10 @@ const THEATERS: Theater[] = [
     blurb:
       "The 2026 US-Iran war: the naval blockade, strike-and-counterstrike tempo, Hormuz transit volumes, oil prices, and the collapsed MoU track.",
     section: "iran",
-    backgrounders: [{ label: "Strait of Hormuz: a strategic primer", path: "/background/strait-of-hormuz" }],
+    backgrounders: [
+      { label: "Strait of Hormuz: a strategic primer", path: "/background/strait-of-hormuz" },
+      { label: "Red Sea crisis: global shipping impact", path: "/background/red-sea-crisis" },
+    ],
   },
   {
     name: "Gaza, Lebanon & the Levant",

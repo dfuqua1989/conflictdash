@@ -424,7 +424,7 @@ function TrendTooltip({active,payload,label,t,color,unit}){
 function useCountdown(target){const[text,setText]=useState("");useEffect(()=>{const tick=()=>{const ms=target.getTime()-Date.now();if(ms<=0){setText("ELAPSED");return;}const d=Math.floor(ms/86400000),h=Math.floor((ms%86400000)/3600000),m=Math.floor((ms%3600000)/60000);setText(`D-${d} · ${h}h ${m}m`);};tick();const id=setInterval(tick,60000);return()=>clearInterval(id);},[target]);return text;}
 
 const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-const BUILD_NUMBER=132;
+const BUILD_NUMBER=133;
 function parseNewsDate(s){if(!s)return null;const m=s.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/);if(m)return new Date(Date.UTC(+m[3],MONTHS[m[1]],+m[2]));const m2=s.match(/([A-Z][a-z]{2})\s+(\d{4})/);if(m2)return new Date(Date.UTC(+m2[2],MONTHS[m2[1]],1));return null;}
 const NEWS_MAX_AGE_DAYS=14;
 // How many stories the Today view shows by default (lead + 2 secondary + the rest as
@@ -2435,6 +2435,15 @@ function IranSection({t,initialTab}){
         <div style={{marginTop:6}}><span style={{color:t.text,fontWeight:700}}>Aug 5-6 — framework in final drafting, awaiting Khamenei</span> — Iran’s FM spokesman Baghaei says the route’s geographic coordinates are agreed and a joint statement is in final drafting; Iranian and Omani negotiators tell AP the draft awaits Khamenei’s personal sign-off. Deputy FM Gharibabadi says ships would transit Iranian waters on both inbound and outbound legs — a shift from earlier inbound-Iran/outbound-Oman reporting — which US officials say they will not accept if it leaves Iran in control. Iran’s Parliament separately drafts a bill barring US- and Israel-linked vessels outright. Traffic remains thin: only 29 ships crossed the strait this week, 8 on Tuesday alone, per Kpler.</div>
       </div></div></Card>
       <Note t={t} color="#0e7490">Transit counts and U-turn figures are tracking-data snapshots (MarineTraffic via CNN reporting), not audited totals — treat day-to-day numbers as directional. Cross-reference: Timeline tab for the full day-by-day record, Sanctions & Energy trackers on Today, and the Gaps tab for the Pickaxe Mountain/Natanz friction points.</Note>
+      <a href="/background/red-sea-crisis" style={{display:"block",textDecoration:"none"}}>
+        <Card t={t} style={{borderLeft:"4px solid #ef4444"}}>
+          <div style={{padding:"11px 14px"}}>
+            <div style={{fontSize:11,fontWeight:800,letterSpacing:".08em",color:"#ef4444",textTransform:"uppercase",marginBottom:6}}>🌊 Related chokepoint</div>
+            <div style={{fontSize:13,fontWeight:700,color:t.text,marginBottom:6}}>Red Sea crisis: Houthi attacks and the Bab el-Mandeb blockade</div>
+            <div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>Why the other major energy-shipping chokepoint is now in play, how it rerouted global trade, and how the Houthis merged it with the Hormuz crisis in 2026. →</div>
+          </div>
+        </Card>
+      </a>
     </div>}
   </div>;
 }
