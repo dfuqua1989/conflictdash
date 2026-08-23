@@ -26,6 +26,7 @@ import { Route as BackgroundVenezuelaCubaCrisisExplainedRouteImport } from './ro
 import { Route as BackgroundUsChinaGreatPowerRivalryExplainedRouteImport } from './routes/background.us-china-great-power-rivalry-explained'
 import { Route as BackgroundStraitOfHormuzRouteImport } from './routes/background.strait-of-hormuz'
 import { Route as BackgroundRussianCasualtiesUkraineRouteImport } from './routes/background.russian-casualties-ukraine'
+import { Route as BackgroundRedSeaCrisisRouteImport } from './routes/background.red-sea-crisis'
 import { Route as BackgroundPakistanAfghanistanWarExplainedRouteImport } from './routes/background.pakistan-afghanistan-war-explained'
 import { Route as BackgroundNuclearWeaponsByCountryRouteImport } from './routes/background.nuclear-weapons-by-country'
 import { Route as BackgroundIsTheUsAtWarRouteImport } from './routes/background.is-the-us-at-war'
@@ -128,6 +129,11 @@ const BackgroundRussianCasualtiesUkraineRoute =
     path: '/background/russian-casualties-ukraine',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BackgroundRedSeaCrisisRoute = BackgroundRedSeaCrisisRouteImport.update({
+  id: '/background/red-sea-crisis',
+  path: '/background/red-sea-crisis',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BackgroundPakistanAfghanistanWarExplainedRoute =
   BackgroundPakistanAfghanistanWarExplainedRouteImport.update({
     id: '/background/pakistan-afghanistan-war-explained',
@@ -197,6 +203,7 @@ export interface FileRoutesByFullPath {
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
+  '/background/red-sea-crisis': typeof BackgroundRedSeaCrisisRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
   '/background/us-china-great-power-rivalry-explained': typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
@@ -225,6 +232,7 @@ export interface FileRoutesByTo {
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
+  '/background/red-sea-crisis': typeof BackgroundRedSeaCrisisRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
   '/background/us-china-great-power-rivalry-explained': typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
@@ -254,6 +262,7 @@ export interface FileRoutesById {
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
+  '/background/red-sea-crisis': typeof BackgroundRedSeaCrisisRoute
   '/background/russian-casualties-ukraine': typeof BackgroundRussianCasualtiesUkraineRoute
   '/background/strait-of-hormuz': typeof BackgroundStraitOfHormuzRoute
   '/background/us-china-great-power-rivalry-explained': typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
@@ -284,6 +293,7 @@ export interface FileRouteTypes {
     | '/background/is-the-us-at-war'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
+    | '/background/red-sea-crisis'
     | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
     | '/background/us-china-great-power-rivalry-explained'
@@ -312,6 +322,7 @@ export interface FileRouteTypes {
     | '/background/is-the-us-at-war'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
+    | '/background/red-sea-crisis'
     | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
     | '/background/us-china-great-power-rivalry-explained'
@@ -340,6 +351,7 @@ export interface FileRouteTypes {
     | '/background/is-the-us-at-war'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
+    | '/background/red-sea-crisis'
     | '/background/russian-casualties-ukraine'
     | '/background/strait-of-hormuz'
     | '/background/us-china-great-power-rivalry-explained'
@@ -369,6 +381,7 @@ export interface RootRouteChildren {
   BackgroundIsTheUsAtWarRoute: typeof BackgroundIsTheUsAtWarRoute
   BackgroundNuclearWeaponsByCountryRoute: typeof BackgroundNuclearWeaponsByCountryRoute
   BackgroundPakistanAfghanistanWarExplainedRoute: typeof BackgroundPakistanAfghanistanWarExplainedRoute
+  BackgroundRedSeaCrisisRoute: typeof BackgroundRedSeaCrisisRoute
   BackgroundRussianCasualtiesUkraineRoute: typeof BackgroundRussianCasualtiesUkraineRoute
   BackgroundStraitOfHormuzRoute: typeof BackgroundStraitOfHormuzRoute
   BackgroundUsChinaGreatPowerRivalryExplainedRoute: typeof BackgroundUsChinaGreatPowerRivalryExplainedRoute
@@ -504,6 +517,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackgroundRussianCasualtiesUkraineRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/background/red-sea-crisis': {
+      id: '/background/red-sea-crisis'
+      path: '/background/red-sea-crisis'
+      fullPath: '/background/red-sea-crisis'
+      preLoaderRoute: typeof BackgroundRedSeaCrisisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/background/pakistan-afghanistan-war-explained': {
       id: '/background/pakistan-afghanistan-war-explained'
       path: '/background/pakistan-afghanistan-war-explained'
@@ -590,6 +610,7 @@ const rootRouteChildren: RootRouteChildren = {
     BackgroundNuclearWeaponsByCountryRoute,
   BackgroundPakistanAfghanistanWarExplainedRoute:
     BackgroundPakistanAfghanistanWarExplainedRoute,
+  BackgroundRedSeaCrisisRoute: BackgroundRedSeaCrisisRoute,
   BackgroundRussianCasualtiesUkraineRoute:
     BackgroundRussianCasualtiesUkraineRoute,
   BackgroundStraitOfHormuzRoute: BackgroundStraitOfHormuzRoute,
