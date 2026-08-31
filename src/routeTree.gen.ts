@@ -29,10 +29,13 @@ import { Route as BackgroundRussianCasualtiesUkraineRouteImport } from './routes
 import { Route as BackgroundRedSeaCrisisRouteImport } from './routes/background.red-sea-crisis'
 import { Route as BackgroundPakistanAfghanistanWarExplainedRouteImport } from './routes/background.pakistan-afghanistan-war-explained'
 import { Route as BackgroundNuclearWeaponsByCountryRouteImport } from './routes/background.nuclear-weapons-by-country'
+import { Route as BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport } from './routes/background.north-korea-russia-military-alliance'
 import { Route as BackgroundIsTheUsAtWarRouteImport } from './routes/background.is-the-us-at-war'
+import { Route as BackgroundIsTheLebanonCeasefireHoldingRouteImport } from './routes/background.is-the-lebanon-ceasefire-holding'
 import { Route as BackgroundIsTheGazaCeasefireHoldingRouteImport } from './routes/background.is-the-gaza-ceasefire-holding'
 import { Route as BackgroundHezbollahCapabilitiesRouteImport } from './routes/background.hezbollah-capabilities'
 import { Route as BackgroundDrcM23ConflictExplainedRouteImport } from './routes/background.drc-m23-conflict-explained'
+import { Route as BackgroundBelarusRoleRussiaUkraineWarRouteImport } from './routes/background.belarus-role-russia-ukraine-war'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
@@ -146,11 +149,23 @@ const BackgroundNuclearWeaponsByCountryRoute =
     path: '/background/nuclear-weapons-by-country',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BackgroundNorthKoreaRussiaMilitaryAllianceRoute =
+  BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport.update({
+    id: '/background/north-korea-russia-military-alliance',
+    path: '/background/north-korea-russia-military-alliance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BackgroundIsTheUsAtWarRoute = BackgroundIsTheUsAtWarRouteImport.update({
   id: '/background/is-the-us-at-war',
   path: '/background/is-the-us-at-war',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BackgroundIsTheLebanonCeasefireHoldingRoute =
+  BackgroundIsTheLebanonCeasefireHoldingRouteImport.update({
+    id: '/background/is-the-lebanon-ceasefire-holding',
+    path: '/background/is-the-lebanon-ceasefire-holding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BackgroundIsTheGazaCeasefireHoldingRoute =
   BackgroundIsTheGazaCeasefireHoldingRouteImport.update({
     id: '/background/is-the-gaza-ceasefire-holding',
@@ -167,6 +182,12 @@ const BackgroundDrcM23ConflictExplainedRoute =
   BackgroundDrcM23ConflictExplainedRouteImport.update({
     id: '/background/drc-m23-conflict-explained',
     path: '/background/drc-m23-conflict-explained',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BackgroundBelarusRoleRussiaUkraineWarRoute =
+  BackgroundBelarusRoleRussiaUkraineWarRouteImport.update({
+    id: '/background/belarus-role-russia-ukraine-war',
+    path: '/background/belarus-role-russia-ukraine-war',
     getParentRoute: () => rootRouteImport,
   } as any)
 const Char91DotwellKnownChar93OauthProtectedResourceRoute =
@@ -197,10 +218,13 @@ export interface FileRoutesByFullPath {
   '/ukraine-war-map': typeof UkraineWarMapRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/background/belarus-role-russia-ukraine-war': typeof BackgroundBelarusRoleRussiaUkraineWarRoute
   '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
   '/background/is-the-gaza-ceasefire-holding': typeof BackgroundIsTheGazaCeasefireHoldingRoute
+  '/background/is-the-lebanon-ceasefire-holding': typeof BackgroundIsTheLebanonCeasefireHoldingRoute
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
+  '/background/north-korea-russia-military-alliance': typeof BackgroundNorthKoreaRussiaMilitaryAllianceRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/red-sea-crisis': typeof BackgroundRedSeaCrisisRoute
@@ -226,10 +250,13 @@ export interface FileRoutesByTo {
   '/ukraine-war-map': typeof UkraineWarMapRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/background/belarus-role-russia-ukraine-war': typeof BackgroundBelarusRoleRussiaUkraineWarRoute
   '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
   '/background/is-the-gaza-ceasefire-holding': typeof BackgroundIsTheGazaCeasefireHoldingRoute
+  '/background/is-the-lebanon-ceasefire-holding': typeof BackgroundIsTheLebanonCeasefireHoldingRoute
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
+  '/background/north-korea-russia-military-alliance': typeof BackgroundNorthKoreaRussiaMilitaryAllianceRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/red-sea-crisis': typeof BackgroundRedSeaCrisisRoute
@@ -256,10 +283,13 @@ export interface FileRoutesById {
   '/ukraine-war-map': typeof UkraineWarMapRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/background/belarus-role-russia-ukraine-war': typeof BackgroundBelarusRoleRussiaUkraineWarRoute
   '/background/drc-m23-conflict-explained': typeof BackgroundDrcM23ConflictExplainedRoute
   '/background/hezbollah-capabilities': typeof BackgroundHezbollahCapabilitiesRoute
   '/background/is-the-gaza-ceasefire-holding': typeof BackgroundIsTheGazaCeasefireHoldingRoute
+  '/background/is-the-lebanon-ceasefire-holding': typeof BackgroundIsTheLebanonCeasefireHoldingRoute
   '/background/is-the-us-at-war': typeof BackgroundIsTheUsAtWarRoute
+  '/background/north-korea-russia-military-alliance': typeof BackgroundNorthKoreaRussiaMilitaryAllianceRoute
   '/background/nuclear-weapons-by-country': typeof BackgroundNuclearWeaponsByCountryRoute
   '/background/pakistan-afghanistan-war-explained': typeof BackgroundPakistanAfghanistanWarExplainedRoute
   '/background/red-sea-crisis': typeof BackgroundRedSeaCrisisRoute
@@ -287,10 +317,13 @@ export interface FileRouteTypes {
     | '/ukraine-war-map'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/background/belarus-role-russia-ukraine-war'
     | '/background/drc-m23-conflict-explained'
     | '/background/hezbollah-capabilities'
     | '/background/is-the-gaza-ceasefire-holding'
+    | '/background/is-the-lebanon-ceasefire-holding'
     | '/background/is-the-us-at-war'
+    | '/background/north-korea-russia-military-alliance'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/red-sea-crisis'
@@ -316,10 +349,13 @@ export interface FileRouteTypes {
     | '/ukraine-war-map'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/background/belarus-role-russia-ukraine-war'
     | '/background/drc-m23-conflict-explained'
     | '/background/hezbollah-capabilities'
     | '/background/is-the-gaza-ceasefire-holding'
+    | '/background/is-the-lebanon-ceasefire-holding'
     | '/background/is-the-us-at-war'
+    | '/background/north-korea-russia-military-alliance'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/red-sea-crisis'
@@ -345,10 +381,13 @@ export interface FileRouteTypes {
     | '/ukraine-war-map'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/background/belarus-role-russia-ukraine-war'
     | '/background/drc-m23-conflict-explained'
     | '/background/hezbollah-capabilities'
     | '/background/is-the-gaza-ceasefire-holding'
+    | '/background/is-the-lebanon-ceasefire-holding'
     | '/background/is-the-us-at-war'
+    | '/background/north-korea-russia-military-alliance'
     | '/background/nuclear-weapons-by-country'
     | '/background/pakistan-afghanistan-war-explained'
     | '/background/red-sea-crisis'
@@ -375,10 +414,13 @@ export interface RootRouteChildren {
   UkraineWarMapRoute: typeof UkraineWarMapRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  BackgroundBelarusRoleRussiaUkraineWarRoute: typeof BackgroundBelarusRoleRussiaUkraineWarRoute
   BackgroundDrcM23ConflictExplainedRoute: typeof BackgroundDrcM23ConflictExplainedRoute
   BackgroundHezbollahCapabilitiesRoute: typeof BackgroundHezbollahCapabilitiesRoute
   BackgroundIsTheGazaCeasefireHoldingRoute: typeof BackgroundIsTheGazaCeasefireHoldingRoute
+  BackgroundIsTheLebanonCeasefireHoldingRoute: typeof BackgroundIsTheLebanonCeasefireHoldingRoute
   BackgroundIsTheUsAtWarRoute: typeof BackgroundIsTheUsAtWarRoute
+  BackgroundNorthKoreaRussiaMilitaryAllianceRoute: typeof BackgroundNorthKoreaRussiaMilitaryAllianceRoute
   BackgroundNuclearWeaponsByCountryRoute: typeof BackgroundNuclearWeaponsByCountryRoute
   BackgroundPakistanAfghanistanWarExplainedRoute: typeof BackgroundPakistanAfghanistanWarExplainedRoute
   BackgroundRedSeaCrisisRoute: typeof BackgroundRedSeaCrisisRoute
@@ -538,11 +580,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackgroundNuclearWeaponsByCountryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/background/north-korea-russia-military-alliance': {
+      id: '/background/north-korea-russia-military-alliance'
+      path: '/background/north-korea-russia-military-alliance'
+      fullPath: '/background/north-korea-russia-military-alliance'
+      preLoaderRoute: typeof BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/background/is-the-us-at-war': {
       id: '/background/is-the-us-at-war'
       path: '/background/is-the-us-at-war'
       fullPath: '/background/is-the-us-at-war'
       preLoaderRoute: typeof BackgroundIsTheUsAtWarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/background/is-the-lebanon-ceasefire-holding': {
+      id: '/background/is-the-lebanon-ceasefire-holding'
+      path: '/background/is-the-lebanon-ceasefire-holding'
+      fullPath: '/background/is-the-lebanon-ceasefire-holding'
+      preLoaderRoute: typeof BackgroundIsTheLebanonCeasefireHoldingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/background/is-the-gaza-ceasefire-holding': {
@@ -564,6 +620,13 @@ declare module '@tanstack/react-router' {
       path: '/background/drc-m23-conflict-explained'
       fullPath: '/background/drc-m23-conflict-explained'
       preLoaderRoute: typeof BackgroundDrcM23ConflictExplainedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/background/belarus-role-russia-ukraine-war': {
+      id: '/background/belarus-role-russia-ukraine-war'
+      path: '/background/belarus-role-russia-ukraine-war'
+      fullPath: '/background/belarus-role-russia-ukraine-war'
+      preLoaderRoute: typeof BackgroundBelarusRoleRussiaUkraineWarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/.well-known/oauth-protected-resource': {
@@ -600,12 +663,18 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  BackgroundBelarusRoleRussiaUkraineWarRoute:
+    BackgroundBelarusRoleRussiaUkraineWarRoute,
   BackgroundDrcM23ConflictExplainedRoute:
     BackgroundDrcM23ConflictExplainedRoute,
   BackgroundHezbollahCapabilitiesRoute: BackgroundHezbollahCapabilitiesRoute,
   BackgroundIsTheGazaCeasefireHoldingRoute:
     BackgroundIsTheGazaCeasefireHoldingRoute,
+  BackgroundIsTheLebanonCeasefireHoldingRoute:
+    BackgroundIsTheLebanonCeasefireHoldingRoute,
   BackgroundIsTheUsAtWarRoute: BackgroundIsTheUsAtWarRoute,
+  BackgroundNorthKoreaRussiaMilitaryAllianceRoute:
+    BackgroundNorthKoreaRussiaMilitaryAllianceRoute,
   BackgroundNuclearWeaponsByCountryRoute:
     BackgroundNuclearWeaponsByCountryRoute,
   BackgroundPakistanAfghanistanWarExplainedRoute:
