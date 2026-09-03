@@ -6,7 +6,7 @@ const BASE_URL = "https://conflictdash.lovable.app";
 
 // Update this date whenever you publish a meaningful dashboard or backgrounder refresh.
 // It drives <lastmod> for entries that don't have their own explicit date below.
-const LAST_UPDATED = "2026-09-01";
+const LAST_UPDATED = "2026-09-02";
 
 interface SitemapEntry {
   path: string;
