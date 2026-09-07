@@ -61,8 +61,8 @@ const TIMELINE = [
   },
   {
     date: "2026",
-    title: "Blockade and reopening",
-    text: "During the 2026 US–Iran confrontation the strait was effectively blockaded before the Islamabad Memorandum lifted restrictions. The episode confirmed that even a short closure repriced global energy within days.",
+    title: "Sustained blockade and open military exchange",
+    text: "The 2026 US–Iran war has produced the longest sustained disruption to the strait since the 1980s: a naval blockade, repeated tanker strikes and seizures on both sides, and by September a direct exchange of fire between the IRGC and a US carrier group. Brief diplomatic openings (an Islamabad memorandum, a temporary Iran-Oman shipping-route agreement) have each collapsed within days of being announced.",
   },
 ];
 
@@ -76,8 +76,8 @@ const WHY = [
     p: "Inbound and outbound lanes hug Omani waters, but the entire strait sits within range of Iranian anti-ship cruise missiles, mines, midget submarines, and shore-based drones dispersed along a 1,000-mile coastline of coves and islands.",
   },
   {
-    h: "Closure is a threat, not a plan",
-    p: "Iran exports its own crude through the strait and depends on it for imports. Analysts generally treat full closure as self-harming and therefore reserved for regime-survival scenarios; harassment, seizures, and insurance-driven friction are the everyday instruments.",
+    h: "Formal closure is still rare — but 2026 shows attrition works almost as well",
+    p: "Iran exports its own crude through the strait and depends on it for imports, so a formally declared full closure remains reserved for regime-survival scenarios. But 2026 demonstrated a cheaper path to the same result: sustained mining threats, tanker strikes, and a running military exchange can make insurers and shipowners withdraw on their own, driving commercial traffic to a handful of vessels a day without Iran ever declaring the strait closed.",
   },
   {
     h: "The economic shock is global and immediate",
@@ -150,7 +150,7 @@ export const Route = createFileRoute("/background/strait-of-hormuz")({
               name: "Can Iran actually close the Strait of Hormuz?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Iran can disrupt traffic quickly using naval mines, anti-ship cruise missiles, drones, midget submarines and IRGC fast attack craft. Sustained closure against US and coalition naval power is far harder, and Iran depends on the strait for its own exports, so full closure is generally treated as a regime-survival option rather than routine policy.",
+                text: "Iran can disrupt traffic quickly using naval mines, anti-ship cruise missiles, drones, midget submarines and IRGC fast attack craft. A formally declared full closure is rare since Iran depends on the strait for its own exports, but the 2026 war showed sustained attrition can achieve nearly the same effect: by September 2026, commercial transits had fallen to roughly 6 vessels a day (versus ~85 pre-war) as war-risk insurance spiked and shipping companies withdrew on their own.",
               },
             },
             {
