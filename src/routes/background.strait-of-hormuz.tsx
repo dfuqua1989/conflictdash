@@ -61,8 +61,8 @@ const TIMELINE = [
   },
   {
     date: "2026",
-    title: "Blockade and reopening",
-    text: "During the 2026 US–Iran confrontation the strait was effectively blockaded before the Islamabad Memorandum lifted restrictions. The episode confirmed that even a short closure repriced global energy within days.",
+    title: "Sustained blockade and open military exchange",
+    text: "The 2026 US–Iran war has produced the longest sustained disruption to the strait since the 1980s: a naval blockade, repeated tanker strikes and seizures on both sides, and by September a direct exchange of fire between the IRGC and a US carrier group. Brief diplomatic openings (an Islamabad memorandum, a temporary Iran-Oman shipping-route agreement) have each collapsed within days of being announced.",
   },
 ];
 
@@ -76,14 +76,19 @@ const WHY = [
     p: "Inbound and outbound lanes hug Omani waters, but the entire strait sits within range of Iranian anti-ship cruise missiles, mines, midget submarines, and shore-based drones dispersed along a 1,000-mile coastline of coves and islands.",
   },
   {
-    h: "Closure is a threat, not a plan",
-    p: "Iran exports its own crude through the strait and depends on it for imports. Analysts generally treat full closure as self-harming and therefore reserved for regime-survival scenarios; harassment, seizures, and insurance-driven friction are the everyday instruments.",
+    h: "Formal closure is still rare — but 2026 shows attrition works almost as well",
+    p: "Iran exports its own crude through the strait and depends on it for imports, so a formally declared full closure remains reserved for regime-survival scenarios. But 2026 demonstrated a cheaper path to the same result: sustained mining threats, tanker strikes, and a running military exchange can make insurers and shipowners withdraw on their own, driving commercial traffic to a handful of vessels a day without Iran ever declaring the strait closed.",
   },
   {
     h: "The economic shock is global and immediate",
     p: "Even partial disruption raises war-risk insurance, lengthens voyages, and moves Brent by double digits within days. Asia absorbs the largest share — roughly three-quarters of Hormuz crude heads to China, India, Japan and South Korea.",
   },
 ];
+
+const CURRENT_STATUS = {
+  asOf: "Sep 6, 2026",
+  text: "As of this update, the strait is not just threatened — it is effectively closed to ordinary commercial shipping. Independent AIS tracking shows roughly 6 vessels transiting per day versus an ~85/day pre-war baseline, and war-risk insurance for a single supertanker's passage is pricing near 40x peacetime rates, with six protection-and-indemnity clubs having withdrawn coverage entirely. The exchange has moved well past mining threats: the IRGC has fired on a US aircraft carrier and destroyer, the US has destroyed or disabled multiple Iranian oil tankers in response, and Iran's own negotiators say they will no longer limit themselves to 'proportionate' retaliation. This is the most severe and sustained disruption to the strait since the 1980s Tanker War.",
+};
 
 export const Route = createFileRoute("/background/strait-of-hormuz")({
   head: () => ({
@@ -145,7 +150,7 @@ export const Route = createFileRoute("/background/strait-of-hormuz")({
               name: "Can Iran actually close the Strait of Hormuz?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Iran can disrupt traffic quickly using naval mines, anti-ship cruise missiles, drones, midget submarines and IRGC fast attack craft. Sustained closure against US and coalition naval power is far harder, and Iran depends on the strait for its own exports, so full closure is generally treated as a regime-survival option rather than routine policy.",
+                text: "Iran can disrupt traffic quickly using naval mines, anti-ship cruise missiles, drones, midget submarines and IRGC fast attack craft. A formally declared full closure is rare since Iran depends on the strait for its own exports, but the 2026 war showed sustained attrition can achieve nearly the same effect: by September 2026, commercial transits had fallen to roughly 6 vessels a day (versus ~85 pre-war) as war-risk insurance spiked and shipping companies withdrew on their own.",
               },
             },
             {
@@ -203,6 +208,33 @@ function HormuzPrimer() {
           primer explains the geography, the transit economics, and the four decades of naval
           confrontation that make Hormuz the default escalation lever in every US&ndash;Iran crisis.
         </p>
+
+        <div
+          style={{
+            marginTop: 20,
+            background: "linear-gradient(135deg,#1c0f0a,#241208)",
+            border: "1px solid rgba(249,115,22,0.35)",
+            borderLeft: "4px solid #f97316",
+            borderRadius: 12,
+            padding: "14px 16px",
+          }}
+        >
+          <div
+            style={{
+              fontSize: 10,
+              fontWeight: 800,
+              letterSpacing: ".1em",
+              textTransform: "uppercase",
+              color: "#f97316",
+              marginBottom: 6,
+            }}
+          >
+            ⚠️ Current Status — Updated {CURRENT_STATUS.asOf}
+          </div>
+          <p style={{ fontSize: 12.5, lineHeight: 1.7, color: T.sub, margin: 0 }}>
+            {CURRENT_STATUS.text}
+          </p>
+        </div>
 
         <h2 style={{ fontSize: 16, fontWeight: 800, margin: "30px 0 12px" }}>
           The chokepoint by the numbers
