@@ -209,6 +209,33 @@ function HormuzPrimer() {
           confrontation that make Hormuz the default escalation lever in every US&ndash;Iran crisis.
         </p>
 
+        <div
+          style={{
+            marginTop: 20,
+            background: "linear-gradient(135deg,#1c0f0a,#241208)",
+            border: "1px solid rgba(249,115,22,0.35)",
+            borderLeft: "4px solid #f97316",
+            borderRadius: 12,
+            padding: "14px 16px",
+          }}
+        >
+          <div
+            style={{
+              fontSize: 10,
+              fontWeight: 800,
+              letterSpacing: ".1em",
+              textTransform: "uppercase",
+              color: "#f97316",
+              marginBottom: 6,
+            }}
+          >
+            ⚠️ Current Status — Updated {CURRENT_STATUS.asOf}
+          </div>
+          <p style={{ fontSize: 12.5, lineHeight: 1.7, color: T.sub, margin: 0 }}>
+            {CURRENT_STATUS.text}
+          </p>
+        </div>
+
         <h2 style={{ fontSize: 16, fontWeight: 800, margin: "30px 0 12px" }}>
           The chokepoint by the numbers
         </h2>
