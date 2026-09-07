@@ -85,6 +85,11 @@ const WHY = [
   },
 ];
 
+const CURRENT_STATUS = {
+  asOf: "Sep 6, 2026",
+  text: "As of this update, the strait is not just threatened — it is effectively closed to ordinary commercial shipping. Independent AIS tracking shows roughly 6 vessels transiting per day versus an ~85/day pre-war baseline, and war-risk insurance for a single supertanker's passage is pricing near 40x peacetime rates, with six protection-and-indemnity clubs having withdrawn coverage entirely. The exchange has moved well past mining threats: the IRGC has fired on a US aircraft carrier and destroyer, the US has destroyed or disabled multiple Iranian oil tankers in response, and Iran's own negotiators say they will no longer limit themselves to 'proportionate' retaliation. This is the most severe and sustained disruption to the strait since the 1980s Tanker War.",
+};
+
 export const Route = createFileRoute("/background/strait-of-hormuz")({
   head: () => ({
     meta: [
