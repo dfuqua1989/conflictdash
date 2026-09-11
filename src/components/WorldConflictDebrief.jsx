@@ -411,8 +411,8 @@ export default function WorldConflictDebrief() {
       {/* Top unclassified bar */}
       <div className="border-b border-warm-border bg-ink py-1.5 text-center">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 text-[10px] font-bold uppercase tracking-[0.2em] text-parchment">
-          <span>Unclassified · OSINT</span>
-          <span>@FUQUAD08</span>
+          <span>Unclassified · OSINT · Build #{BUILD_NUMBER}</span>
+          <span>@FUQUAD08 · EnforcerOfficial</span>
         </div>
       </div>
 
