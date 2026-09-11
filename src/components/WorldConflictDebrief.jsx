@@ -224,7 +224,7 @@ function IntensityMetrics() {
               <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 10, fill: "#a8a29e" }} axisLine={false} tickLine={false} />
               <YAxis dataKey="name" type="category" width={90} tick={{ fontSize: 10, fill: "#44403c" }} axisLine={false} tickLine={false} />
               <Tooltip cursor={{ fill: "transparent" }} contentStyle={{ borderRadius: 8, border: "1px solid #e7e5e4", fontSize: 12 }} />
-              <Bar dataKey="intensity" radius={[0, 6, 6, 0]}>{CONFLICT_INTENSITY.map((e, i) => (<cell key={`cell-${i}`} fill={e.color} />))}</Bar>
+              <Bar dataKey="intensity" radius={[0, 6, 6, 0]}>{CONFLICT_INTENSITY.map((e, i) => (<Cell key={`cell-${i}`} fill={e.color} />))}</Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
