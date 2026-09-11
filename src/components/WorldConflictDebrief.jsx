@@ -513,22 +513,6 @@ export default function WorldConflictDebrief() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-warm-border bg-paper">
-        <div className="mx-auto max-w-7xl px-4 py-8">
-          <div className="flex flex-col items-center justify-between gap-4 lg:flex-row">
-            <div className="text-center lg:text-left">
-              <div className="font-display text-sm font-semibold text-ink">World Conflict Debrief</div>
-              <div className="font-body text-xs text-stone-sub">Curated by Dylan Fuqua · @FUQUAD08 · EnforcerOfficial</div>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-[10px] font-bold uppercase tracking-widest text-stone-sub">
-              <span>Unclassified · OSINT</span>
-              <span>Updated 2x Daily</span>
-              <span>Build #{BUILD_NUMBER}</span>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
