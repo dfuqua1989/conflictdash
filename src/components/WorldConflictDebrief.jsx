@@ -401,12 +401,6 @@ export default function WorldConflictDebrief() {
   const [selectedId, setSelectedId] = useState("iran");
   const selected = CONFLICTS.find((c) => c.id === selectedId);
 
-  useEffect(() => {
-    if (typeof document !== "undefined") {
-      document.body.style.background = "oklch(0.98 0.005 80)";
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-parchment font-body text-ink">
       <style>{`
