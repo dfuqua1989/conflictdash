@@ -599,19 +599,20 @@ function StrikeImpactMap({t,data}){
   const[sel,setSel]=useState(null);
   const selCity=sel?data.cities.find(c=>c.name===sel):null;
   return <div>
-  <div style={{borderRadius:12,overflow:"hidden",border:"1px solid rgba(59,130,246,0.2)",marginBottom:sel?0:8}}>
-    <svg viewBox="0 0 400 279" width="100%" style={{display:"block",background:"#0a1524"}}>
-      <path d={UA_LAND_PATH} fill="#1e3a5f" stroke="#2d5f99" strokeWidth="1.2"/>
-      <path d={UA_CRIMEA_PATH} fill="#1e3a5f" stroke="#2d5f99" strokeWidth="1.2"/>
-      <path d={UA_OCCUPIED_PATH} fill="#4a1111" stroke="#8b2222" strokeWidth="1" opacity="0.85"/>
-      {data.cities.map(c=><g key={c.name} style={{cursor:c.hit?"pointer":"default"}} onClick={()=>c.hit&&setSel(sel===c.name?null:c.name)}>
-        {c.hit&&<circle cx={c.x} cy={c.y} r="13" fill={sevColor(c.severity)} opacity="0.18" style={{transformOrigin:`${c.x}px ${c.y}px`,animation:"svgPulse 2.2s ease-in-out infinite"}}/>}
-        {c.hit&&sel===c.name&&<circle cx={c.x} cy={c.y} r="16" fill="none" stroke={sevColor(c.severity)} strokeWidth="1.5" opacity="0.9" strokeDasharray="3,2"/>}
-        <circle cx={c.x} cy={c.y} r={c.hit?7:3} fill={c.hit?sevColor(c.severity):"#60a5fa"} opacity={c.hit?1:0.6} stroke="#0c1829" strokeWidth={c.hit?1.5:1}/>
-        <text x={c.x+8} y={c.y+4} fontSize={c.hit?8:7} fill={c.hit?sevColor(c.severity):"#7a93b8"} fontWeight={c.hit?"bold":"normal"} opacity="0.9">{c.name}</text>
-      </g>)}
+  <div style={{borderRadius:12,overflow:"hidden",border:"1px solid rgba(59,130,246,0.2)",marginBottom:sel?0:8,position:"relative",background:"#0a1524"}}>
+    <img src={UA_SAT_URL} alt="Satellite map of Ukraine showing cities struck this week" width="100%" style={{width:"100%",display:"block"}} loading="lazy"/>
+    <svg viewBox="0 0 400 279" width="100%" style={{display:"block",position:"absolute",inset:0}}>
+      <path d={UA_OCCUPIED_GEO} fill="rgba(220,38,38,0.18)" stroke="#ef4444" strokeWidth="0.8" opacity="0.7"/>
+      <path d={UA_FRONTLINE_GEO} fill="none" stroke="#ff3b3b" strokeWidth="1.8" strokeDasharray="5,3" opacity="0.75"/>
+      {data.cities.map(c=>{const p=uaXY(c.x,c.y);return <g key={c.name} style={{cursor:c.hit?"pointer":"default"}} onClick={()=>c.hit&&setSel(sel===c.name?null:c.name)}>
+        {c.hit&&<circle cx={p.x} cy={p.y} r="13" fill={sevColor(c.severity)} opacity="0.2" style={{transformOrigin:`${p.x}px ${p.y}px`,animation:"svgPulse 2.2s ease-in-out infinite"}}/>}
+        {c.hit&&sel===c.name&&<circle cx={p.x} cy={p.y} r="16" fill="none" stroke={sevColor(c.severity)} strokeWidth="1.5" opacity="0.9" strokeDasharray="3,2"/>}
+        <circle cx={p.x} cy={p.y} r={c.hit?7:3} fill={c.hit?sevColor(c.severity):"#93c5fd"} opacity={c.hit?1:0.75} stroke="rgba(0,0,0,0.65)" strokeWidth={c.hit?1.5:1}/>
+        <text x={p.x+8} y={p.y+4} fontSize={c.hit?8:7} fill={c.hit?sevColor(c.severity):"#c9d6e8"} fontWeight={c.hit?"bold":"600"} style={{paintOrder:"stroke",stroke:"rgba(0,0,0,0.85)",strokeWidth:2.2}}>{c.name}</text>
+      </g>;})}
       <rect x="0" y="263" width="400" height="16" fill="rgba(0,0,0,0.65)"/>
       <text x="8" y="274" fontSize="8" fill="#94a3b8">Week of {data.weekLabel} — filled = confirmed strike, sized by severity, tap for detail</text>
+      <text x="394" y="274" fontSize="7" fill="#7a93b8" textAnchor="end">Imagery © Google</text>
     </svg>
   </div>
   {selCity&&<div style={{marginBottom:8,background:`${sevColor(selCity.severity)}12`,border:`1.5px solid ${sevColor(selCity.severity)}55`,borderRadius:10,padding:"12px 14px"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}><span style={{fontSize:13,fontWeight:800,color:t.text,flex:1}}>{selCity.name}</span><span style={{fontSize:9,fontWeight:700,color:sevColor(selCity.severity),background:sevColor(selCity.severity)+"22",borderRadius:10,padding:"1px 7px",textTransform:"uppercase"}}>{selCity.severity}</span><button onClick={()=>setSel(null)} aria-label="Close details" style={{background:"none",border:"none",color:t.sub,cursor:"pointer",fontSize:14,padding:"0 2px"}}>✕</button></div><div style={{fontSize:12,color:t.sub,lineHeight:1.6}}>{selCity.note}</div></div>}
