@@ -462,7 +462,7 @@ function TrendTooltip({active,payload,label,t,color,unit}){
 function useCountdown(target){const[text,setText]=useState("");useEffect(()=>{const tick=()=>{const ms=target.getTime()-Date.now();if(ms<=0){setText("ELAPSED");return;}const d=Math.floor(ms/86400000),h=Math.floor((ms%86400000)/3600000),m=Math.floor((ms%3600000)/60000);setText(`D-${d} · ${h}h ${m}m`);};tick();const id=setInterval(tick,60000);return()=>clearInterval(id);},[target]);return text;}
 
 const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-const BUILD_NUMBER=188;
+const BUILD_NUMBER=189;
 function parseNewsDate(s){if(!s)return null;const m=s.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/);if(m)return new Date(Date.UTC(+m[3],MONTHS[m[1]],+m[2]));const m2=s.match(/([A-Z][a-z]{2})\s+(\d{4})/);if(m2)return new Date(Date.UTC(+m2[2],MONTHS[m2[1]],1));return null;}
 const NEWS_MAX_AGE_DAYS=14;
 // How many stories the Today view shows by default (lead + 2 secondary + the rest as
@@ -739,6 +739,177 @@ const UA_USF={targetsStruck:"800,000+",interceptorsDay:"1,000-1,500",usfPersonne
     ["🎯","Two-person crew record","23 Shaheds shot down in one engagement (STING interceptor drones, March 2026)."],
   ],
 };
+const NAVAL_LOSSES=[
+{cls:"Moskva-class Guided Missile Cruiser",proj:"1164",ships:[
+  {n:"Moskva",note:"Lead ship of the Black Sea Fleet — confirmed sunk",dates:["14.04.2022"]},
+]},
+{cls:"Grigorovich-class Frigate",proj:"11356",ships:[
+  {n:"Admiral Grigorovich",dates:[]},
+  {n:"Admiral Essen",dates:["02.03.2026","06.04.2026","12.08.2026","09.09.2026"]},
+  {n:"Admiral Makarov",note:"Damaged, not sunk",dates:["29.10.2022","12.08.2026"]},
+]},
+{cls:"Burevestnik-class Guard Ship",proj:"1135 / 1135-M",ships:[
+  {n:"Ladny",dates:[]},
+  {n:"Pytlivyy",dates:[]},
+]},
+{cls:"Steregushchiy-class Corvette",proj:"20380",ships:[
+  {n:"Merkury",dates:[]},
+  {n:"Boikiy",note:"Baltic Fleet",dates:["03.06.2026"]},
+]},
+{cls:"Tapir-class Landing Ship",proj:"1171",ships:[
+  {n:"Saratov",note:"Confirmed sunk",dates:["24.03.2022"]},
+  {n:"Nikolay Filchenkov",dates:["18.04.2026","26.04.2026"]},
+  {n:"Orsk",dates:[]},
+  {n:"Pyotr Morgunov",note:"Northern Fleet",dates:["09.09.2026"]},
+]},
+{cls:"Ropucha-class Landing Ship",proj:"775",ships:[
+  {n:"Kaliningrad",note:"Baltic Fleet",dates:[]},
+  {n:"Georgiy Pobedonosets",note:"Northern Fleet",dates:[]},
+  {n:"Minsk",note:"Baltic Fleet",dates:["13.09.2023"]},
+  {n:"Korolev",note:"Baltic Fleet",dates:[]},
+  {n:"Olenegorskiy Gornyak",note:"Northern Fleet",dates:["04.08.2023"]},
+  {n:"Tsezar Kunikov",dates:["14.02.2024"]},
+  {n:"Novocherkassk",note:"Confirmed sunk",dates:["24.03.2023"]},
+  {n:"Yamal",dates:["23.03.2024","18.04.2026"]},
+  {n:"Azov",dates:["23.03.2024","18.04.2026"]},
+  {n:"Konstantin Olshansky",note:"Captured by Russia in 2014",dates:["23.03.2024","18.04.2026"]},
+]},
+{cls:"Patrol Ship",proj:"22160",ships:[
+  {n:"Vasily Bykov",dates:[]},
+  {n:"Dmitry Rogachev",dates:[]},
+  {n:"Pavel Derzhavin",dates:["12.10.2023"]},
+  {n:"Sergey Kotov",dates:["05.03.2024"]},
+  {n:"Viktor Velikiy",dates:[]},
+  {n:"Unidentified Patrol Ship",note:"Candidates per tracker: Vasily Bykov, Dmitry Rogachev, Pavel Derzhavin, or Viktor Velikiy",dates:["12.08.2026"]},
+  {n:"Mangust",dates:["09.09.2026"]},
+]},
+{cls:"Grisha-class Corvette",proj:"1124M / 1124",ships:[
+  {n:"Muromets",dates:[]},
+  {n:"Suzdalets",dates:[]},
+  {n:"Kasimov",dates:[]},
+  {n:"Yeysk",dates:[]},
+  {n:"Povorino",dates:[]},
+  {n:"Aleksandrovets",dates:[]},
+]},
+{cls:"Buyan-class Corvette",proj:"21631",ships:[
+  {n:"Vyshniy Volochek",dates:[]},
+  {n:"Orekhovo-Zuyevo",dates:[]},
+  {n:"Grayvoron",dates:[]},
+  {n:"Ingushetiya",dates:[]},
+]},
+{cls:"Bora-class Corvette",proj:"1239",ships:[
+  {n:"Bora",dates:["14.09.2023"]},
+  {n:"Samum",dates:["23.05.2026"]},
+  {n:"Unidentified Bora-class",note:"Candidates per tracker: Bora or Samum",dates:["09.09.2026"]},
+]},
+{cls:"Karakurt-class Corvette",proj:"22800",ships:[
+  {n:"Tsiklon",dates:["19.05.2024"]},
+  {n:"Askold",dates:["04.11.2023"]},
+  {n:"Tucha",dates:["07.05.2026"]},
+  {n:"Taifun",dates:[]},
+  {n:"Unidentified Karakurt-class",note:"Baltic Fleet. Candidates per tracker: Mytishchi, Sovetsk, Kozelsk, Okhotsk, Vikhr, or Burya",dates:["03.05.2026"]},
+]},
+{cls:"Natya-class Minesweeper",proj:"266-M / 266ME",ships:[
+  {n:"Ivan Golubets",dates:[]},
+  {n:"Kovrovets",dates:[]},
+  {n:"Valentin Pikul",dates:["02.03.2026"]},
+  {n:"Turbinist",dates:[]},
+  {n:"Vice-admiral Zakharin",dates:[]},
+  {n:"Unidentified Natya-class",note:"Candidates per tracker: Ivan Golubets, Kovrovets, or Turbinist",dates:["12.08.2026"]},
+]},
+{cls:"Alexandrit / Sonya / Gorya-class Minesweeper",proj:"12660 / 12700 / 1265",ships:[
+  {n:"Zheleznyakov",note:"Gorya-class, pr. 12660",dates:["09.09.2026"]},
+  {n:"Ivan Antonov",note:"Alexandrit-class, pr. 12700",dates:[]},
+  {n:"Mineralnye Vody",note:"Sonya-class, pr. 1265",dates:[]},
+  {n:"Georgy Kurbatov",note:"Alexandrit-class, pr. 12700",dates:[]},
+  {n:"Vladimir Emelyanov",note:"Alexandrit-class, pr. 12700",dates:[]},
+]},
+{cls:"Tarantul-class Corvette",proj:"1241",ships:[
+  {n:"Ivanovets",note:"Confirmed sunk",dates:["01.02.2024"]},
+  {n:"Naberezhnye Chelny",dates:[]},
+  {n:"R-60",dates:[]},
+]},
+{cls:"Grachonok-class Anti-Saboteur Ship",proj:"21980",ships:[
+  {n:"Kinel",dates:[]},
+  {n:"Pavel Silaev",dates:[]},
+  {n:"Kursant Kirovets",dates:[]},
+  {n:"Yunarmeets Kryma",dates:[]},
+  {n:"Suvorovets",dates:[]},
+  {n:"Kadet",dates:[]},
+  {n:"Unidentified Anti-Saboteur Boat",note:"pr. 21980U variant",dates:["30.04.2026"]},
+]},
+{cls:"Landing Craft",proj:"11770 / 1176 / 02510",ships:[
+  {n:"D-144",note:"Serna-class, pr. 11770",dates:["09.11.2023"]},
+  {n:"D-199",note:"Serna-class, pr. 11770",dates:["07.05.2022"]},
+  {n:"D-295",note:"Ondatra-class, pr. 1176",dates:["10.11.2023"]},
+  {n:"D-106",note:"Ondatra-class, pr. 1176",dates:[]},
+  {n:"D-296",note:"BK-16-class, pr. 02510",dates:["02.05.2022"]},
+  {n:"D-309",note:"BK-16-class, pr. 02510",dates:["13.02.2026"]},
+  {n:"D-310",note:"BK-16-class, pr. 02510",dates:["07.03.2026"]},
+]},
+{cls:"Kilo-class Submarine",proj:"877",ships:[
+  {n:"Alrosa",dates:[]},
+]},
+{cls:"Improved Kilo-class Submarine",proj:"636.3",ships:[
+  {n:"Rostov-na-Don",note:"Heavily damaged in dry dock, widely assessed as a probable loss",dates:["13.09.2023","03.08.2024"]},
+  {n:"Novorossiysk",dates:[]},
+  {n:"Staryy Oskol",dates:[]},
+  {n:"Krasnodar",dates:[]},
+  {n:"Velikiy Novgorod",dates:[]},
+  {n:"Kolpino",dates:[]},
+  {n:"Unidentified Kilo-class",dates:["14.12.2025"]},
+]},
+{cls:"Support & Auxiliary Vessels",proj:"mixed",ships:[
+  {n:"Slavutych",note:"Gofri-class Command Ship, pr. 1288.4 — captured by Russia in 2014",dates:["18.04.2026"]},
+  {n:"Kommuna",note:"Salvage ship (one of the oldest commissioned vessels in any navy)",dates:["21.04.2024"]},
+  {n:"Spasatel Iljin",note:"Salvage ship, pr. MPSV07",dates:["10.09.2025"]},
+  {n:"Ivan Khurs",note:"Yury Ivanov-class intelligence ship, pr. 18280",dates:["23.03.2024","26.04.2026"]},
+  {n:"Spasatel Vasily Bekh",note:"Sea tug, pr. 22870 — confirmed sunk",dates:["17.06.2022"]},
+  {n:"OS Viktor Cherokov",note:"Research vessel, pr. 20360",dates:["12.08.2026"]},
+]},
+];
+
+function shipIcon(color,size){return <svg viewBox="0 0 60 30" width={size} height={size*0.5} style={{display:"block"}}><path d="M2,22 L6,22 L9,26 L51,26 L54,22 L58,22 L52,14 L48,14 L48,6 L42,6 L42,3 L36,3 L36,10 L20,10 L20,14 L8,14 Z" fill={color}/></svg>;}
+function NavalLossesTab({t}){
+  const[sel,setSel]=useState(null);
+  const totalHulls=NAVAL_LOSSES.reduce((a,c)=>a+c.ships.length,0);
+  const struckHulls=NAVAL_LOSSES.reduce((a,c)=>a+c.ships.filter(s=>s.dates.length>0).length,0);
+  const totalStrikes=NAVAL_LOSSES.reduce((a,c)=>a+c.ships.reduce((a2,s)=>a2+s.dates.length,0),0);
+  const confirmedSunk=NAVAL_LOSSES.reduce((a,c)=>a+c.ships.filter(s=>s.note&&s.note.toLowerCase().includes("sunk")).length,0);
+  return <div>
+    <Hero t={t} color="#5b8ec8"><div style={{fontSize:11,fontWeight:800,letterSpacing:".12em",color:"#93c5fd",marginBottom:6}}>⚓ RUSSIAN NAVY — BLACK SEA FLEET & BEYOND</div><div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>Hulls struck, damaged, or sunk since Feb 2022, tracked across every major surface and subsurface class. Compiled from open-source Black Sea Fleet loss-tracking visualizations current through Sep 10, 2026 — dates and hull identifications reflect that public tracker's own reporting and have not been independently re-verified vessel-by-vessel against primary sources. Silhouettes shown without a strike date are sister ships of the same class included for order-of-battle context, not confirmed losses.</div></Hero>
+    <Grid2 t={t} items={[
+      {icon:"⚓",val:totalHulls,label:"Hulls tracked",sub:"Across 19 vessel classes",color:"#5b8ec8"},
+      {icon:"🔥",val:struckHulls,label:"Struck at least once",sub:`${Math.round(struckHulls/totalHulls*100)}% of tracked hulls`,color:"#f97316"},
+      {icon:"💥",val:totalStrikes,label:"Total strike events",sub:"Some hulls struck repeatedly",color:"#ef4444"},
+      {icon:"☠️",val:confirmedSunk,label:"Widely confirmed sunk",sub:"Moskva, Saratov, Ivanovets + others",color:"#dc2626"},
+    ]}/>
+    <ST t={t}>By Vessel Class — Tap a Hull for Detail</ST>
+    {NAVAL_LOSSES.map(group=>{
+      const groupStruck=group.ships.filter(s=>s.dates.length>0).length;
+      return <CollapsibleSection key={group.cls} t={t} title={`${group.cls} (pr. ${group.proj}) — ${groupStruck}/${group.ships.length} struck`}>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(72px,1fr))",gap:8,marginBottom:sel&&group.ships.some(s=>s.n===sel.n)?10:4}}>
+          {group.ships.map(ship=>{
+            const struck=ship.dates.length>0;
+            const isSel=sel&&sel.n===ship.n;
+            const color=struck?(ship.note&&ship.note.toLowerCase().includes("sunk")?"#dc2626":"#f97316"):"#4b5b70";
+            return <button key={ship.n} onClick={()=>setSel(isSel?null:{...ship,cls:group.cls,proj:group.proj})} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:3,background:isSel?`${color}22`:"transparent",border:`1px solid ${isSel?color:"transparent"}`,borderRadius:8,padding:"6px 4px",cursor:"pointer",fontFamily:FONT}}>
+              {shipIcon(color,30)}
+              <span style={{fontSize:8,color:t.isDark?"rgba(255,255,255,.65)":t.sub,textAlign:"center",lineHeight:1.2,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:68}}>{ship.n}</span>
+            </button>;
+          })}
+        </div>
+        {sel&&group.ships.some(s=>s.n===sel.n)&&<div style={{background:t.isDark?"rgba(255,255,255,0.04)":"rgba(20,40,70,0.05)",borderRadius:10,padding:"12px 14px",fontSize:12,color:t.text,lineHeight:1.6}}>
+          <div style={{fontWeight:800,fontSize:13,marginBottom:4}}>{sel.n}</div>
+          <div style={{fontSize:11,color:t.sub,marginBottom:6}}>{sel.note&&sel.note.includes("class")?sel.note.split("—")[0].trim():sel.cls} · Project {sel.proj}</div>
+          {sel.dates.length>0?<div style={{marginBottom:sel.note?6:0}}><span style={{fontWeight:700,color:"#f97316"}}>Struck: </span>{sel.dates.join(", ")}</div>:<div style={{color:t.sub,fontStyle:"italic",marginBottom:sel.note?6:0}}>Not reported struck — sister ship shown for class context</div>}
+          {sel.note&&<div style={{fontSize:11,color:t.sub}}>{sel.note}</div>}
+        </div>}
+      </CollapsibleSection>;
+    })}
+  </div>;
+}
+
 function ArsenalTab({t}){
   const[filter,setFilter]=useState("all");
   const[selected,setSelected]=useState(null);
@@ -980,7 +1151,7 @@ function UkraineSection({t,initialTab}){const TABS=SECTION_TAB_LISTS.ukraine;con
       <div style={{fontSize:11,color:t.sub,lineHeight:1.5,marginTop:8}}>Now tracked monthly. Ukraine's Air Force stopped publishing ballistic launch and intercept counts in its daily reports on Aug 8, 2026 — spokesperson Yurii Ihnat confirmed the change around Aug 13, saying official "28/0" figures were generating headlines that Russian media amplified. FT reported officials citing both security reasons and public morale, with Patriot launchers empty during the Aug 5 and Aug 8 Kyiv attacks. The decision drew criticism inside Ukraine, where transparency had been a point of contrast with Russian reporting. <strong style={{color:t.text}}>The monthly series continues:</strong> Ukraine's MoD published its July air-defence summary on Aug 7 — 29 of 195 ballistic missiles intercepted (15%), against 87% for drones and cruise missiles, after PAC-3 MSE stocks ran out on Jul 1. That monthly denominator is more complete than the nightly rows ever were, since those only counted nights with a confirmed ballistic-specific breakdown. An August summary would be expected in early September. The nightly rows below are retained as the historical record. Routine daily ballistic reporting ended Aug 8; the two later rows come from regional reports that still cited specific figures, and the Aug 12–13 Poltava row is a 2-missile engagement — too small a sample to read as recovery. Zelensky says allies have supplied only a third of 2026's planned air-defense missiles compared with 2025. The drone intercept rate has stayed near 90% throughout — this remains specifically an interceptor-inventory story, not a skill or targeting one. <strong style={{color:t.text}}>Since the cutoff:</strong> in the Aug 19–20 mass barrage on Kyiv — dozens of ballistic, cruise and hypersonic missiles plus 168 drones — the Air Force said its defenses were unable to bring down any missiles on ballistic trajectories, while 145 drones and most cruise missiles were intercepted. Ukraine's Unmanned Systems Forces commander separately warned Russia is building toward salvos of up to 200 missiles at once, from a current maximum of about 77. Sources noted per row.</div>
     </Card>
       <Note t={t} color="#06b6d4">Intercept rates: monthly figures from Ukraine MoD air-defence summaries and CSIS; historical nightly rows from UA Air Force reports (via Militarnyi/Ukrinform) through the Aug 8, 2026 cutoff; economics per interceptor-drone program disclosures. Cross-reference: Strike War → Air Defense for the full layered-system breakdown, Great Powers → Defense Industry (PAC-3 production).</Note>
-</div>}{tab==="losses"&&<LossesTab t={t}/>}{tab==="frontline"&&<FrontlineTab t={t}/>}{tab==="diploallies"&&<DiploAlliesTab t={t}/>}{tab==="southernfront"&&<SouthernFrontTab t={t}/>}{tab==="strikewar"&&<StrikeWarTab t={t}/>}{tab==="arsenal"&&<ArsenalTab t={t}/>}{tab==="economy"&&<EconomyTab t={t}/>}{tab==="manpower"&&<ManpowerTab t={t}/>}{tab==="intel"&&<IntelTab t={t}/>}
+</div>}{tab==="losses"&&<LossesTab t={t}/>}{tab==="frontline"&&<FrontlineTab t={t}/>}{tab==="diploallies"&&<DiploAlliesTab t={t}/>}{tab==="southernfront"&&<SouthernFrontTab t={t}/>}{tab==="strikewar"&&<StrikeWarTab t={t}/>}{tab==="arsenal"&&<ArsenalTab t={t}/>}{tab==="navallosses"&&<NavalLossesTab t={t}/>}{tab==="economy"&&<EconomyTab t={t}/>}{tab==="manpower"&&<ManpowerTab t={t}/>}{tab==="intel"&&<IntelTab t={t}/>}
     {tab==="uaindustry"&&<div>
       <Hero t={t} color="#eab308"><div style={{fontSize:11,fontWeight:800,letterSpacing:".12em",color:"#fde68a",marginBottom:6}}>🏭 UKRAINE'S DEFENSE INDUSTRY</div><div style={{fontSize:12,color:"rgba(255,255,255,.65)",lineHeight:1.6}}>From aid recipient to arsenal: roughly half of Ukraine's ammunition is now domestically made, its drone ecosystem out-produces both NATO and Russia in unit terms, and Kyiv has begun exporting — including to the countries that arm it.</div></Hero>
       <Grid2 t={t} items={[
@@ -3719,7 +3890,7 @@ function DeepDiveView({t,selectedConflict,setSelectedConflict,initialTab,onFlash
 // ── Main App ────────────────────────────────────────────────────────────────────────
 const VIEWS=[{id:"today",label:"Today",icon:"📡"},{id:"theaters",label:"Theaters",icon:"🌍"},{id:"deepdive",label:"Deep Dive",icon:"🔬"}];
 const SECTION_TAB_LISTS={
-  ukraine:[{id:"overview",label:"📊 Overview"},{id:"strikewar",label:"💥 Strikes"},{id:"frontline",label:"🎯 Frontline"},{id:"losses",label:"⚖️ Losses"},{id:"manpower",label:"👥 Manpower"},{id:"arsenal",label:"🛸 Arsenal"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"southernfront",label:"🌊 Southern Front"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"belarus",label:"🇧🇾 Belarus Axis"},{id:"analysts",label:"📺 Analysts"}],
+  ukraine:[{id:"overview",label:"📊 Overview"},{id:"strikewar",label:"💥 Strikes"},{id:"frontline",label:"🎯 Frontline"},{id:"losses",label:"⚖️ Losses"},{id:"navallosses",label:"⚓ Naval Losses"},{id:"manpower",label:"👥 Manpower"},{id:"arsenal",label:"🛸 Arsenal"},{id:"economy",label:"💸 RU Economy"},{id:"uaindustry",label:"🏭 UA Industry"},{id:"intel",label:"🔍 Intel"},{id:"southernfront",label:"🌊 Southern Front"},{id:"diploallies",label:"🗣️ Diplomacy & Allies"},{id:"belarus",label:"🇧🇾 Belarus Axis"},{id:"analysts",label:"📺 Analysts"}],
   usmil:[{id:"escvectors",label:"⚠️ Escalation & Vectors"},{id:"cyber",label:"🌪️ Cyber & Hybrid"},{id:"chinaindopac",label:"🇨🇳 China & Indo-Pacific"},{id:"hardware",label:"🚀 Military Capability"},{id:"alliances",label:"🤝 Alliances & Posture"},{id:"industry",label:"🏭 Resources & Industry"},{id:"nuclear",label:"☢️ Nuclear Posture"}],
   iran:[{id:"overview",label:"🇮🇷 Overview"},{id:"hormuz",label:"🚢 Hormuz"},{id:"timeline",label:"📅 Timeline"}],
   venezuela:[{id:"cuba",label:"🇨🇺 Cuba Blockade"},{id:"conflict",label:"🇻🇪 Venezuela"},{id:"mexico",label:"🇲🇽 Mexico"},{id:"haiti",label:"🇭🇹 Haiti"},{id:"colombia",label:"🇨🇴 Colombia"},{id:"spear",label:"🚤 Southern Spear"}],
