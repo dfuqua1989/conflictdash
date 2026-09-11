@@ -214,7 +214,7 @@ function IntensityMetrics() {
       </div>
 
       <div className="rounded-2xl border border-warm-border bg-paper p-5 shadow-[0_2px_16px_-8px_rgba(28,25,23,0.08)]">
-        <div class="mb-1 text-xs font-semibold uppercase tracking-widest text-stone-sub">Conflict Intensity Index</div>
+        <div className="mb-1 text-xs font-semibold uppercase tracking-widest text-stone-sub">Conflict Intensity Index</div>
         <div className="font-body text-sm text-subtle-text">Composite volatility estimate by theater</div>
         <div className="mt-4 h-48">
           <ResponsiveContainer width="100%" height="100%">
