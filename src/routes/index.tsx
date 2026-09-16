@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import WorldConflictDebrief from "@/components/WorldConflictDebrief.jsx";
 import SiteLinkFooter from "@/components/SiteLinkFooter";
 
-const TITLE = "World Conflict Debrief — Global Flashpoints & Daily Intelligence";
+const TITLE = "World Conflict Debrief — Live Global Flashpoints";
 const DESCRIPTION =
-  "Live, open-source intelligence on the world's active conflicts: Ukraine, Gaza, Iran, Taiwan, the South China Sea and the Americas. Updated twice daily.";
+  "Open-source intelligence and daily briefings on active conflicts worldwide: Ukraine, Gaza, Iran, Taiwan, the South China Sea and the Americas.";
 const URL = "https://conflictdash.lovable.app/";
 
 export const Route = createFileRoute("/")({

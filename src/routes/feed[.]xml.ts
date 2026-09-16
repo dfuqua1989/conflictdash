@@ -5,7 +5,7 @@ import { BRIEFINGS } from "@/data/briefings";
 const BASE_URL = "https://conflictdash.lovable.app";
 const FEED_TITLE = "World Conflict Debrief — Daily Briefings";
 const FEED_DESCRIPTION =
-  "Live, open-source intelligence on the world's active conflicts: Ukraine, Gaza, Iran, Taiwan, the South China Sea and the Americas. Updated twice daily.";
+  "Open-source intelligence and daily briefings on active conflicts worldwide: Ukraine, Gaza, Iran, Taiwan, the South China Sea and the Americas.";
 
 function esc(value: string) {
   return value
