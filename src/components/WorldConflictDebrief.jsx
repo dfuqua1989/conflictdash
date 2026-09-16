@@ -453,7 +453,7 @@ function TrendTooltip({active,payload,label,t,color,unit}){
 function useCountdown(target){const[text,setText]=useState("");useEffect(()=>{const tick=()=>{const ms=target.getTime()-Date.now();if(ms<=0){setText("ELAPSED");return;}const d=Math.floor(ms/86400000),h=Math.floor((ms%86400000)/3600000),m=Math.floor((ms%3600000)/60000);setText(`D-${d} · ${h}h ${m}m`);};tick();const id=setInterval(tick,60000);return()=>clearInterval(id);},[target]);return text;}
 
 const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-const BUILD_NUMBER=197;
+const BUILD_NUMBER=198;
 function parseNewsDate(s){if(!s)return null;const m=s.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/);if(m)return new Date(Date.UTC(+m[3],MONTHS[m[1]],+m[2]));const m2=s.match(/([A-Z][a-z]{2})\s+(\d{4})/);if(m2)return new Date(Date.UTC(+m2[2],MONTHS[m2[1]],1));return null;}
 const NEWS_MAX_AGE_DAYS=14;
 // How many stories the Today view shows by default (lead + 2 secondary + the rest as
@@ -484,22 +484,23 @@ function isFreshNews(item){const info=ageInfo(item.publishedAt);return!info||!in
 function Freshness({t,date}){const info=ageInfo(date);if(!info)return null;const label=info.days<=0?"today":info.days===1?"1d ago":`${info.days}d ago`;const color=info.stale?"#f59e0b":t.sub;return <span style={{display:"inline-flex",alignItems:"center",gap:3,fontSize:10,color,fontWeight:info.stale?700:400}}><span style={{width:5,height:5,borderRadius:"50%",background:info.stale?"#f59e0b":"#22c55e",display:"inline-block"}}/>{label}{info.stale?" · stale":""}</span>;}
 
 // ── News Ticker ──────────────────────────────────────────────────────────────────
-function NewsTicker(){const doubled=[...TICKER_ITEMS,...TICKER_ITEMS];return <div className="ticker-wrap" style={{background:"#070d1c",borderBottom:"1px solid rgba(91,142,196,0.2)",overflow:"hidden",height:34,display:"flex",alignItems:"center"}}><div className="ticker-inner" style={{display:"flex",gap:40,alignItems:"center",animation:"ticker 206.25s linear infinite",whiteSpace:"nowrap",willChange:"transform"}}>{doubled.map((n,i)=><span key={i} style={{fontSize:12,color:"rgba(255,255,255,.7)",display:"flex",alignItems:"center",gap:6}}><span style={{background:n.color+"30",border:`1px solid ${n.color}55`,borderRadius:20,padding:"1px 7px",fontSize:11,fontWeight:700,color:n.color}}>{n.tag}</span>{n.text}</span>)}</div></div>;}
+function NewsTicker({isMobile}){const[expanded,setExpanded]=useState(false);const doubled=[...TICKER_ITEMS,...TICKER_ITEMS];const lead=TICKER_ITEMS[0];if(isMobile)return <div style={{background:"#070d1c",borderBottom:"1px solid rgba(91,142,196,0.2)"}}><button onClick={()=>setExpanded(v=>!v)} aria-expanded={expanded} aria-label={expanded?"Collapse news ticker":"Expand news ticker"} style={{width:"100%",height:38,padding:"0 12px",display:"flex",alignItems:"center",gap:7,background:"none",border:0,color:"rgba(255,255,255,.78)",fontFamily:FONT,cursor:"pointer",textAlign:"left"}}><span style={{background:lead.color+"30",border:`1px solid ${lead.color}55`,borderRadius:20,padding:"1px 7px",fontSize:9,fontWeight:800,color:lead.color,flexShrink:0}}>{lead.tag}</span><span style={{fontSize:11,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",flex:1,minWidth:0}}>{lead.text}</span><span style={{fontSize:10,color:"#5b8ec8",flexShrink:0}}>{expanded?"▲":"▼"}</span></button>{expanded&&<div style={{maxHeight:190,overflowY:"auto",borderTop:"1px solid rgba(91,142,196,0.16)",padding:"2px 12px 7px"}}>{TICKER_ITEMS.slice(1,6).map((n,i)=><div key={i} style={{display:"flex",gap:7,alignItems:"flex-start",padding:"7px 0",borderBottom:i<4?"1px solid rgba(255,255,255,.06)":"none"}}><span style={{fontSize:9,fontWeight:800,color:n.color,minWidth:54}}>{n.tag}</span><span style={{fontSize:10.5,lineHeight:1.4,color:"rgba(255,255,255,.68)"}}>{n.text}</span></div>)}</div>}</div>;return <div className="ticker-wrap" style={{background:"#070d1c",borderBottom:"1px solid rgba(91,142,196,0.2)",overflow:"hidden",height:34,display:"flex",alignItems:"center"}}><div className="ticker-inner" style={{display:"flex",gap:40,alignItems:"center",animation:"ticker 206.25s linear infinite",whiteSpace:"nowrap",willChange:"transform"}}>{doubled.map((n,i)=><span key={i} style={{fontSize:12,color:"rgba(255,255,255,.7)",display:"flex",alignItems:"center",gap:6}}><span style={{background:n.color+"30",border:`1px solid ${n.color}55`,borderRadius:20,padding:"1px 7px",fontSize:11,fontWeight:700,color:n.color}}>{n.tag}</span>{n.text}</span>)}</div></div>;}
 
 // ── Briefing Panel ───────────────────────────────────────────────────────────────
 function BriefingPanel({t}){
   const briefing=BRIEFING;
   const[expanded,setExpanded]=useState(false);
+  const mobileSummary="The Iran war has cost the US more than $33.4B and strained munitions stocks. Gulf shipping pressure continues, while Russia’s 2026 losses have passed 300,000.";
 
-  return <div style={{background:t.isDark?"linear-gradient(135deg,#091321,#0d1f38)":"linear-gradient(135deg,#eef3fc,#e6edf9)",border:"1px solid rgba(59,130,246,0.25)",borderLeft:"4px solid #5b8ec8",borderRadius:14,padding:"14px 16px",marginBottom:16}}>
-    <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
+  return <div style={{background:t.isDark?"linear-gradient(135deg,#091321,#0d1f38)":"linear-gradient(135deg,#eef3fc,#e6edf9)",border:"1px solid rgba(59,130,246,0.25)",borderLeft:"4px solid #5b8ec8",borderRadius:14,padding:t.isMobile?"11px 12px":"14px 16px",marginBottom:t.isMobile?12:16}}>
+    <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:t.isMobile?7:10}}>
       <span style={{width:8,height:8,borderRadius:"50%",background:"#22c55e",display:"inline-block",flexShrink:0}}/>
       <span style={{fontSize:10,fontWeight:800,color:"#5b8ec8",textTransform:"uppercase",letterSpacing:".1em"}}>Daily Briefing</span>
       <span style={{fontSize:10,color:t.sub,marginLeft:"auto"}}>{REPORT_NOW.toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})} UTC</span>
       <ReadAloudButton text={`${briefing.summaryShort} 72 hour watch: ${briefing.watch}`} color="#5b8ec8" t={t}/>
     </div>
-    <p style={{fontSize:12.5,color:t.text,lineHeight:1.6,margin:"0 0 10px"}}>{briefing.summaryShort}</p>
-    <div style={{fontSize:11.5,color:"#f97316",background:"rgba(249,115,22,0.08)",border:"1px solid rgba(249,115,22,0.2)",borderRadius:8,padding:"7px 10px",lineHeight:1.5,marginBottom:10}}>⚠️ <strong>72hr Watch:</strong> {briefing.watch}</div>
+    <p style={{fontSize:t.isMobile?12:12.5,color:t.text,lineHeight:t.isMobile?1.5:1.6,margin:"0 0 10px"}}>{t.isMobile?mobileSummary:briefing.summaryShort}</p>
+    {!t.isMobile&&<div style={{fontSize:11.5,color:"#f97316",background:"rgba(249,115,22,0.08)",border:"1px solid rgba(249,115,22,0.2)",borderRadius:8,padding:"7px 10px",lineHeight:1.5,marginBottom:10}}>⚠️ <strong>72hr Watch:</strong> {briefing.watch}</div>}
     <div style={{display:"flex",gap:6}}>
       <button onClick={()=>setExpanded(e=>!e)} aria-expanded={expanded} style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:6,background:"none",border:`1px solid ${t.border}`,borderRadius:8,padding:"7px 10px",cursor:"pointer",color:"#5b8ec8",fontSize:11,fontWeight:700,fontFamily:FONT,letterSpacing:".03em"}}>
         {expanded?"▲ Show Less":"📝 Read Full Briefing"}
@@ -507,6 +508,7 @@ function BriefingPanel({t}){
       <ReadAloudButton text={briefing.summary} color="#5b8ec8" t={t}/>
     </div>
     {expanded&&<div style={{borderTop:`1px solid ${t.border}`,marginTop:10,paddingTop:10}}>
+      {t.isMobile&&<div style={{fontSize:11.5,color:"#f97316",background:"rgba(249,115,22,0.08)",border:"1px solid rgba(249,115,22,0.2)",borderRadius:8,padding:"7px 10px",lineHeight:1.5,marginBottom:10}}>⚠️ <strong>72hr Watch:</strong> {briefing.watch}</div>}
       <p style={{fontSize:12,color:t.sub,lineHeight:1.65,margin:0}}>{briefing.summary}</p>
     </div>}
   </div>;
@@ -3921,6 +3923,18 @@ function useIsLandscape(){
   return isLandscape;
 }
 
+function useIsMobile(){
+  const[isMobile,setIsMobile]=useState(false);
+  useEffect(()=>{
+    const media=window.matchMedia("(max-width: 600px)");
+    const handler=()=>setIsMobile(media.matches);
+    media.addEventListener("change",handler);
+    handler();
+    return()=>media.removeEventListener("change",handler);
+  },[]);
+  return isMobile;
+}
+
 const SPLASH_PARTICLES=Array.from({length:14},(_,i)=>({left:(i*68.3)%100,size:1+(i%3),delay:(i*0.31)%4,dur:5+(i%4)*1.6,color:i%3===0?"#FFD700":"#5b8ec8"}));
 function DecryptText({text,delay,style}){
   const CHARS="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&*+=";
@@ -4063,6 +4077,7 @@ function FaqModal({open,onClose,t}){
 export default function Dashboard({initialView,initialSection,initialTab}={}){
   const[showSplash,setShowSplash]=useState(!initialView||initialView==="today");
   const isLandscape=useIsLandscape();
+  const isMobile=useIsMobile();
   const[dark,setDark]=useState(true);
   const[view,setView]=useState(initialView||"today");
   useEffect(()=>{if(typeof document!=="undefined")document.body.setAttribute("data-active-view",view);},[view]);
@@ -4071,7 +4086,7 @@ export default function Dashboard({initialView,initialSection,initialTab}={}){
   const[faqOpen,setFaqOpen]=useState(false);
   const[flash,setFlash]=useState(null);
   const flashN=useRef(0);
-  const t={...(dark?DARK:LIGHT),isLandscape};
+  const t={...(dark?DARK:LIGHT),isLandscape,isMobile};
   const touchStartX=useRef(null);
   const criticalCount=NEWS.filter(n=>n.severity==="critical").slice(0,5).length;
   const _tp=Math.min(99,criticalCount*12+NEWS.filter(n=>n.severity==="major").length*5+NEWS.filter(n=>n.severity==="watch").length*2);const threatLevel=_tp>=80?{color:"#ef4444",label:"CRITICAL",pct:_tp}:_tp>=60?{color:"#f97316",label:"SEVERE",pct:_tp}:_tp>=35?{color:"#eab308",label:"HIGH",pct:_tp}:{color:"#22c55e",label:"ELEVATED",pct:_tp};
@@ -4084,10 +4099,10 @@ export default function Dashboard({initialView,initialSection,initialTab}={}){
   const handleSwipe=deltaX=>{if(Math.abs(deltaX)<60)return;const views=VIEWS.map(v=>v.id);const idx=views.indexOf(view);if(deltaX<0&&idx<views.length-1)setView(views[idx+1]);else if(deltaX>0&&idx>0)setView(views[idx-1]);};
   const handleNavigate=(sectionId,tabId)=>{setSelectedConflict(sectionId);setPendingTab(tabId||null);setView("deepdive");setPaletteOpen(false);};
 
-  return <div style={{background:t.bg,minHeight:"100vh",maxWidth:t.isLandscape?900:480,margin:"0 auto",fontFamily:FONT,lineHeight:1.5,WebkitFontSmoothing:"antialiased",paddingBottom:34,position:"relative"}} className={t.isDark?"t-dark":""}>
+  return <div style={{background:t.bg,minHeight:"100vh",maxWidth:t.isLandscape?900:480,margin:"0 auto",fontFamily:FONT,lineHeight:1.5,WebkitFontSmoothing:"antialiased",paddingBottom:"calc(48px + env(safe-area-inset-bottom, 0px))",position:"relative"}} className={t.isDark?"t-dark":""}>
     <style dangerouslySetInnerHTML={{__html:GCSS+NAV_ANIM_CSS}}/>
     <div className="grain-overlay"/>
-    <div style={{position:"fixed",bottom:0,left:0,right:0,zIndex:90,pointerEvents:"none",background:"#1f6f43",color:"#e8f5ec",fontSize:8,fontWeight:700,letterSpacing:".2em",textAlign:"center",padding:"2px 0",fontFamily:FONT,textTransform:"uppercase",maxWidth:t.isLandscape?900:480,margin:"0 auto"}}>Unclassified · OSINT · @FUQUAD08</div>
+    <div style={{position:"fixed",bottom:0,left:0,right:0,zIndex:90,pointerEvents:"none",background:"#1f6f43",color:"#e8f5ec",fontSize:8,fontWeight:700,letterSpacing:".2em",textAlign:"center",padding:"4px 0 calc(4px + env(safe-area-inset-bottom, 0px))",fontFamily:FONT,textTransform:"uppercase",maxWidth:t.isLandscape?900:480,margin:"0 auto"}}>Unclassified · OSINT · @FUQUAD08</div>
     {showSplash&&<SplashScreen onDone={()=>setShowSplash(false)}/>}
     <NavBurst flash={flash}/>
     <CommandPalette open={paletteOpen} onClose={()=>setPaletteOpen(false)} sections={SECTIONS} onNavigate={handleNavigate} t={t}/>
@@ -4116,7 +4131,7 @@ export default function Dashboard({initialView,initialSection,initialTab}={}){
       <div style={{display:"flex",gap:0}}>
         {VIEWS.map(v=>{const badge=v.id==="today"&&criticalCount>0?criticalCount:v.id==="theaters"&&CONFLICTS.length?CONFLICTS.length:0;return <button key={v.id} onClick={()=>setView(v.id)} style={{flex:1,padding:"8px 4px 10px",background:"none",border:"none",borderBottom:view===v.id?"2px solid #5b8ec8":"2px solid transparent",cursor:"pointer",fontFamily:FONT,fontSize:12,fontWeight:view===v.id?700:400,color:view===v.id?"#5b8ec8":t.sub,display:"flex",alignItems:"center",justifyContent:"center",gap:5,position:"relative"}}><span style={{fontSize:14}}>{v.icon}</span><span>{v.label}</span>{badge>0&&<span style={{background:v.id==="today"?"#ef4444":"#5b8ec8",color:"#fff",borderRadius:10,fontSize:9,fontWeight:800,padding:"1px 5px",lineHeight:1.5,minWidth:16,textAlign:"center",display:"inline-block",animation:v.id==="today"?"splashPulse 1.8s ease-in-out infinite":"none"}}>{badge}</span>}</button>;})}
       </div>
-      <NewsTicker/>
+      <NewsTicker isMobile={isMobile}/>
     </div>
     <div onTouchStart={e=>{touchStartX.current=e.touches[0].clientX;}} onTouchEnd={e=>{if(touchStartX.current!==null){handleSwipe(touchStartX.current-e.changedTouches[0].clientX);touchStartX.current=null;}}}>
       {view==="today"&&<TodayView t={t} onSelectConflict={(id,tabId)=>{setSelectedConflict(id);setPendingTab(tabId||null);setView("deepdive");}}/>}
