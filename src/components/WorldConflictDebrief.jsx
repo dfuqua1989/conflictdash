@@ -1392,7 +1392,7 @@ const BALLISTIC_INTERCEPTS_RECENT=[
   {label:"Aug 12–13 (Poltava)",n:2,downed:2,src:"UA Air Force via Ukrainska Pravda"},
 ];
 function TheaterFreshness({t,onSelectConflict}){
-  const rows=useMemo(()=>CONFLICTS.map(c=>{const ds=NEWS.filter(n=>n.conflictId===c.id).map(n=>parseNewsDate(n.publishedAt)).filter(Boolean).map(Number);const newest=ds.length?new Date(Math.max(...ds)):null;const days=newest?Math.floor((REPORT_NOW-newest)/86400000):null;return{id:c.id,name:c.name,icon:c.icon,newest,days};}).sort((a,b)=>(a.days==null?1e9:a.days)-(b.days==null?1e9:b.days)),[]);
+  const rows=useMemo(()=>CONFLICTS.map(c=>{const ds=NEWS.filter(n=>n.conflictId===c.id).map(n=>parseNewsDate(n.publishedAt)).filter(Boolean).map(Number);let src="news";let all=ds;if(!all.length){const ev=(EVENTS[c.id]||[]).filter(e=>!e.isUpcoming).map(e=>parseNewsDate(e.date)).filter(Boolean).map(Number);if(ev.length){all=ev;src="log";}}const newest=all.length?new Date(Math.max(...all)):null;const days=newest?Math.floor((REPORT_NOW-newest)/86400000):null;return{id:c.id,name:c.name,icon:c.icon,newest,days,src};}).sort((a,b)=>(a.days==null?1e9:a.days)-(b.days==null?1e9:b.days)),[]);
   const col=d=>d==null?"#8496a8":d<=1?"#22c55e":d<=6?"#5b8ec8":d<=13?"#eab308":"#f97316";
   const fmt=d=>d?d.toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:"UTC"}):"\u2014";
   return <div style={{border:`1px solid ${t.border}`,borderRadius:12,background:t.card,padding:"10px 12px",marginBottom:14}}>
@@ -1400,7 +1400,7 @@ function TheaterFreshness({t,onSelectConflict}){
     <div style={{display:"flex",gap:7,flexWrap:"wrap"}}>{rows.map(r=><button key={r.id} onClick={()=>onSelectConflict&&onSelectConflict(r.id)} style={{display:"inline-flex",alignItems:"center",gap:6,background:t.isDark?"rgba(255,255,255,.04)":"rgba(20,40,70,.05)",border:`1px solid ${col(r.days)}44`,borderLeft:`3px solid ${col(r.days)}`,borderRadius:9,padding:"5px 9px",cursor:"pointer",fontFamily:FONT,opacity:r.days!=null&&r.days>13?0.7:1}}>
       <span style={{fontSize:13}}>{r.icon}</span>
       <span style={{fontSize:10.5,fontWeight:700,color:t.text}}>{r.name}</span>
-      <span style={{fontSize:9.5,fontWeight:700,color:col(r.days),whiteSpace:"nowrap"}}>{fmt(r.newest)}{r.days!=null?` \u00b7 ${r.days===0?"today":r.days+"d"}`:" \u00b7 no item"}</span>
+      <span style={{fontSize:9.5,fontWeight:700,color:col(r.days),whiteSpace:"nowrap"}}>{r.newest?`${fmt(r.newest)} \u00b7 ${r.days===0?"today":r.days+"d"}${r.src==="log"?" \u00b7 log":""}`:"no dated item"}</span>
     </button>)}</div>
   </div>;
 }
