@@ -49,6 +49,21 @@ const NEWS=[
 "Reporting indicated Trump has signaled 'renewed openness to talks' with Iran; Iran's parliament national security chief Ebrahim Azizi said 'as long as the American side does not accept all of Iran's conditions, dialogue and negotiation are of no use' — CBS News",
 "Oman's Maritime Security Center evacuated all 23 crew from a Panama-flagged tanker that caught fire in the Gulf of Oman near the strait entrance; a Saudi refinery halted crude loading, adding further price pressure"
 ]},
+  {id:"b_ua_2026_losses_300k_sep15",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"☠️",headline:"Russia's 2026 Losses Alone Pass 300,000 as Cumulative Toll Nears 1.51 Million",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Sep 15, 2026",bullets:[
+"Ukraine's General Staff said Russian losses since the start of 2026 have surpassed 300,000 killed and wounded — equivalent, it said, to nearly 150 motorised rifle regiments — Ukrainian General Staff",
+"Cumulative Russian losses since Feb 2022 reached approximately 1,510,000 (+1,400 in 24 hours); August closed at 42,050 for the month, just short of July's record 42,860",
+"The plateau at record levels leaves 2026 on course to be the costliest year of the war so far for Russian manpower"
+]},
+  {id:"b_isw_net_gains_erased_refineries_sep14",confidence:"Confirmed",conflictId:"ukraine",severity:"major",icon:"🗺️",headline:"ISW: Ukrainian Counterattacks Have Virtually Erased Russia's Net Gains Since March; Refineries Struck",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Sep 14, 2026",bullets:[
+"ISW assessed that Ukrainian counteroffensive operations have virtually eliminated Russia's net territorial gains since March 2026 — Institute for the Study of War",
+"Ukrainian drones struck Russian oil refineries in Krasnodar Krai and Tatarstan overnight, sparking fires — a third consecutive night of strikes on Russian refining and petrochemicals",
+"Russian losses rose 1,700 in a day, the largest single-day increase in over a week"
+]},
+  {id:"b_kupiansk_counterattack_samara_sep13",confidence:"Confirmed",conflictId:"ukraine",severity:"watch",icon:"🏭",headline:"Ukraine Counterattacks Near Kupiansk; Drones Hit Samara Petrochemical Plant",conflict:"Ukraine",conflictColor:"#5b8ec8",publishedAt:"Sep 13, 2026",bullets:[
+"ISW reported intensified Russian attacks across several front-line sectors produced no confirmed gains; claimed advances in Kharkiv region were denied by Ukrainian sources",
+"Ukrainian forces counterattacked near Kupiansk",
+"Ukrainian drones struck the Tolyattikauchuk rubber and tyre plant in Russia's Samara region overnight, sparking a fire"
+]},
   {id:"b_mq1_drone_downed_trump_nondenial_sep14",confidence:"Confirmed",conflictId:"iran",severity:"critical",icon:"✈️",headline:"Iran Says It Downed US MQ-1 Drone; Trump Won't Deny Striking Iranian Vessel, Floats 'Taking Control' of Oil",conflict:"Iran",conflictColor:"#8b5cf6",publishedAt:"Sep 14, 2026",bullets:[
 "The IRGC said its 'new advanced aerospace defence system' intercepted and destroyed a US MQ-1 drone over the Strait of Hormuz — a different domain than the Saildrone and underwater-vehicle incidents reported over the preceding days — CNBC",
 "Asked whether the US struck the Iranian cargo vessel hit early Sunday, Trump told reporters in Doonbeg, Ireland: 'I don't want to say'; he separately said the US could continue its campaign and 'take control' of Iran's oil, comparing it to the Venezuela deal, while claiming Iran is 'calling constantly' wanting an agreement — CBC, ABC News",
