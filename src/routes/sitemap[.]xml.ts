@@ -6,7 +6,7 @@ const BASE_URL = "https://conflictdash.lovable.app";
 
 // Update this date whenever you publish a meaningful dashboard or backgrounder refresh.
 // It drives <lastmod> for entries that don't have their own explicit date below.
-const LAST_UPDATED = "2026-09-15";
+const LAST_UPDATED = "2026-09-16";
 
 interface SitemapEntry {
   path: string;
@@ -46,6 +46,9 @@ const ENTRIES: SitemapEntry[] = [
   { path: "/background/is-the-lebanon-ceasefire-holding", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/north-korea-russia-military-alliance", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/belarus-role-russia-ukraine-war", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/who-are-the-houthis", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/iran-nuclear-program-status", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/south-china-sea-dispute-explained", changefreq: "monthly", priority: "0.7", lastmod: LAST_UPDATED },
 
   // Daily briefing archive
   { path: "/briefing", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },

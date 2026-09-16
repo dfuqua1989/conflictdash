@@ -41,6 +41,8 @@ const THEATERS: Theater[] = [
     backgrounders: [
       { label: "Strait of Hormuz: a strategic primer", path: "/background/strait-of-hormuz" },
       { label: "Red Sea crisis: global shipping impact", path: "/background/red-sea-crisis" },
+      { label: "Who are the Houthis?", path: "/background/who-are-the-houthis" },
+      { label: "Iran's nuclear program after the strikes", path: "/background/iran-nuclear-program-status" },
     ],
   },
   {
@@ -57,7 +59,10 @@ const THEATERS: Theater[] = [
     blurb:
       "Taiwan Strait pressure operations, South China Sea incidents at Second Thomas Shoal and Scarborough, and the legal fight over the nine-dash line.",
     section: "scs",
-    backgrounders: [{ label: "Will China invade Taiwan?", path: "/background/will-china-invade-taiwan" }],
+    backgrounders: [
+      { label: "Will China invade Taiwan?", path: "/background/will-china-invade-taiwan" },
+      { label: "South China Sea dispute, explained", path: "/background/south-china-sea-dispute-explained" },
+    ],
   },
   {
     name: "Great Powers: US, China, Russia",

@@ -18,6 +18,9 @@ const BACKGROUNDERS: { to: string; label: string }[] = [
   { to: "/background/is-the-gaza-ceasefire-holding", label: "Is the Gaza ceasefire holding?" },
   { to: "/background/us-china-great-power-rivalry-explained", label: "US-China military rivalry" },
   { to: "/background/drc-m23-conflict-explained", label: "The DRC-M23 conflict, explained" },
+  { to: "/background/who-are-the-houthis", label: "Who are the Houthis?" },
+  { to: "/background/iran-nuclear-program-status", label: "Iran's nuclear program after the strikes" },
+  { to: "/background/south-china-sea-dispute-explained", label: "South China Sea dispute, explained" },
 ];
 
 const linkStyle: React.CSSProperties = {
