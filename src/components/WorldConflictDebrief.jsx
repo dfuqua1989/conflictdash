@@ -1469,7 +1469,7 @@ function TodayView({t,isMobile,onSelectConflict}){const fresh=NEWS.filter(isFres
         <div style={{fontFamily:FONT,fontSize:10.5,color:t.sub,lineHeight:1.4}}>{m.reason}</div>
       </div>)}
     </div>
-    <ST t={t} color="#5b8ec8">At a Glance</ST>
+    <ST t={t} color="#5b8ec8">Situation Board</ST>
     <div style={{display:t.isLandscape?"flex":"block",gap:12,marginBottom:14}}>
       <div style={{flex:2,minWidth:0}}>
         <SituationBoard t={t} conflicts={CONFLICTS} onSelectConflict={onSelectConflict} shownCritical={shownCritical} shownMajor={shownMajor} shownWatch={shownWatch}/>
