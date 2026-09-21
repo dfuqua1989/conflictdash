@@ -373,6 +373,49 @@ const SourceCountBadge=({bullets})=>{
   if(n<2) return null;
   return <span style={{fontSize:9.5,fontWeight:700,color:"#8496a8",background:"rgba(132,150,168,0.12)",borderRadius:20,padding:"2px 7px",display:"inline-flex",alignItems:"center",gap:3}} title="Number of distinct named sources cited across this item's bullets">🔗 {n} sources</span>;
 };
+// ── OSINT evidence & corroboration tagging ──────────────────────────────────────
+// Badges are DERIVED from the sourcing already written into each item's own text.
+// Nothing is invented: a badge only appears when the item's bullets/result name the
+// corroborating source type. Clicking the strip reveals the methodology footnote.
+const EVIDENCE_RULES=[
+  {key:"sat",icon:"\ud83d\udef0\ufe0f",label:"Sat imagery",color:"#22c55e",re:/satellite|maxar|planet labs|sentinel-?\d?|nasa firms|\bfirms\b|thermal anomal|synthetic aperture|\bsar imagery\b|overhead imagery/i,note:"Commercial optical or SAR satellite imagery (Maxar, Planet, Sentinel) or NASA FIRMS thermal-anomaly data is cited in this item's sourcing."},
+  {key:"geo",icon:"\ud83d\udccd",label:"Geolocated",color:"#06b6d4",re:/geolocat|verified (?:video|footage|imagery)|footage (?:show|confirm)|video (?:show|confirm|posted)|dashcam|social[- ]media video/i,note:"Video or photo tied to a specific location by terrain, signage or shadow matching before publication."},
+  {key:"official",icon:"\ud83d\udcd1",label:"Official claim",color:"#5b8ec8",re:/general staff|ministry of defen|defen[cs]e ministry|pentagon|centcom|\bidf\b|\birgc\b|kremlin|governor|state media|official(?:s)? (?:said|confirm)|spokes(?:man|woman|person)|\bmod\b|coast guard/i,note:"Attributed to a government, military or state body. Treated as a claim, not independent proof \u2014 belligerent figures are self-reported."},
+  {key:"analyst",icon:"\ud83e\udded",label:"Analyst assessment",color:"#a78bfa",re:/\bisw\b|critical threats|institute for the study of war|\bctp\b|\biaea\b|\bcrea\b|\bacled\b|\bunhcr\b|analysts? (?:say|said|assess)|assessment/i,note:"Third-party research bodies (ISW/CTP, IAEA, CREA, ACLED) whose collection methodology is published and reviewable."},
+  {key:"press",icon:"\ud83d\udcf0",label:"Press reporting",color:"#eab308",re:/reuters|associated press|\bap\b|\bbbc\b|wall street journal|\bwsj\b|axios|bloomberg|al jazeera|\bcnn\b|new york times|\bnyt\b|financial times|the guardian|politico|\bafp\b|\bft\b/i,note:"Named wire or newsroom reporting carrying its own editorial verification chain."},
+];
+const CONFIDENCE_NOTES={
+  Confirmed:"Corroborated by two or more independent sources, or by an official statement matched against outside reporting.",
+  Reported:"Carried by credible reporting but not yet independently corroborated. Treat the detail as provisional.",
+  Developing:"Active and still changing. Figures and attribution are expected to move as the situation resolves.",
+  Disputed:"Sourcing or attribution is contested between parties. Claims here conflict and none is established.",
+};
+function evidenceText(item){return [item.headline,item.targetName,item.result,item.impact,...(item.bullets||[])].filter(Boolean).join(" ");}
+function evidenceTags(item){const txt=evidenceText(item);return EVIDENCE_RULES.filter(r=>r.re.test(txt));}
+const EvidenceChip=({tag})=><span title={tag.note} style={{fontSize:9,fontWeight:700,color:tag.color,background:tag.color+"1a",border:`1px solid ${tag.color}44`,borderRadius:20,padding:"1.5px 7px",display:"inline-flex",alignItems:"center",gap:3,whiteSpace:"nowrap",letterSpacing:".03em"}}>{tag.icon} {tag.label}</span>;
+function SourcingStrip({t,item,compact}){
+  const[open,setOpen]=useState(false);
+  const tags=evidenceTags(item);
+  const n=countSources(item.bullets);
+  const level=item.confidence;
+  const thin=n<2&&level!=="Confirmed";
+  if(!level&&!tags.length&&!thin)return null;
+  const max=compact?2:4;
+  return <>
+    <span style={{display:"inline-flex",alignItems:"center",gap:5,flexWrap:"wrap"}}>
+      {!compact&&<ConfidenceTag level={level}/>}
+      {!compact&&<SourceCountBadge bullets={item.bullets}/>}
+      {tags.slice(0,max).map(tag=><EvidenceChip key={tag.key} tag={tag}/>)}
+      {thin&&<span title="Only one named source could be identified in this item's sourcing" style={{fontSize:9,fontWeight:700,color:"#f59e0b",background:"rgba(245,158,11,.12)",border:"1px solid rgba(245,158,11,.4)",borderRadius:20,padding:"1.5px 7px",whiteSpace:"nowrap"}}>{"\u26a0\ufe0f"} Single source</span>}
+      {!compact&&<button onClick={e=>{e.stopPropagation();setOpen(v=>!v);}} aria-expanded={open} style={{fontSize:9,fontWeight:700,color:t.sub,background:"none",border:`1px solid ${t.border}`,borderRadius:20,padding:"1.5px 7px",cursor:"pointer",fontFamily:FONT}}>{open?"\u25b2 Hide sourcing":"\u24d8 How this is verified"}</button>}
+    </span>
+    {open&&<div style={{width:"100%",marginTop:7,background:t.isDark?"rgba(255,255,255,.04)":"rgba(20,40,70,.04)",border:`1px solid ${t.border}`,borderRadius:8,padding:"9px 11px",fontSize:10.5,color:t.sub,lineHeight:1.55}}>
+      {level&&<div style={{marginBottom:tags.length?6:0}}><strong style={{color:t.text}}>{level}</strong> {"\u2014"} {CONFIDENCE_NOTES[level]||"Confidence level as assessed by the editor."}</div>}
+      {tags.map(tag=><div key={tag.key} style={{marginTop:4}}><strong style={{color:tag.color}}>{tag.icon} {tag.label}</strong> {"\u2014"} {tag.note}</div>)}
+      <div style={{marginTop:7,paddingTop:6,borderTop:`1px solid ${t.border}`,fontSize:9.5,opacity:.85}}>Corroboration is assessed against named sources in the item itself: commercial satellite imagery, geolocated video, official statements, published analyst methodology (ISW/CTP, IAEA, CREA) and AIS vessel tracking. Belligerent claims are never counted as independent confirmation.</div>
+    </div>}
+  </>;
+}
 const Card=({t,children,style,onClick})=><div onClick={onClick} style={{background:t.isDark?"linear-gradient(180deg,rgba(120,160,220,.10),rgba(255,255,255,0) 45%),"+t.card:"linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 22%),"+t.card,borderRadius:12,marginBottom:10,border:`1px solid ${t.border}`,borderTop:t.isDark?"1px solid rgba(255,255,255,.16)":`1px solid rgba(255,255,255,.7)`,overflow:"hidden",boxShadow:t.isDark?"0 6px 20px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08)":"0 4px 14px rgba(59,130,246,.16),inset 0 1px 0 rgba(255,255,255,.6)",...style}}>{children}</div>;
 const ST=({t,children,color})=><h2 style={{fontSize:11,fontWeight:700,color:color??t.sub,textTransform:"uppercase",letterSpacing:".1em",marginBottom:8,marginTop:18,paddingLeft:9,borderLeft:`3px solid ${color??(t.isDark?"#5b8ec8":"#3a4a5c")}`,lineHeight:1.3}}>{children}</h2>;
 const Row=({t,children,last})=><div style={{display:"flex",alignItems:"center",gap:10,padding:"11px 14px",borderBottom:last?0:`.5px solid ${t.sep}`}}>{children}</div>;
