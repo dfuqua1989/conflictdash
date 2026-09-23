@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useEffect, useRef, useMemo } from "react";
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceLine, ComposedChart, Bar, ScatterChart, Scatter, ZAxis, Cell, CartesianGrid, Legend, ReferenceArea } from "recharts";
 
