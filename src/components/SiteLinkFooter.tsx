@@ -172,6 +172,19 @@ body[data-active-view="deepdive"] #site-link-footer {
         </div>
 
         <div>
+          <h2 style={headingStyle}>Deep dives</h2>
+          <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+            {DEEP_DIVES.map((d) => (
+              <li key={d.to} style={{ marginBottom: 6 }}>
+                <Link to={d.to} style={linkStyle}>
+                  {d.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
           <h2 style={headingStyle}>Explore</h2>
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
             <li style={{ marginBottom: 6 }}>
