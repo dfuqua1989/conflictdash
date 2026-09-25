@@ -21,6 +21,9 @@ const BACKGROUNDERS: { to: string; label: string }[] = [
   { to: "/background/who-are-the-houthis", label: "Who are the Houthis?" },
   { to: "/background/iran-nuclear-program-status", label: "Iran's nuclear program after the strikes" },
   { to: "/background/south-china-sea-dispute-explained", label: "South China Sea dispute, explained" },
+  { to: "/background/is-iran-at-war-with-the-us", label: "Is Iran at war with the US?" },
+  { to: "/background/why-did-russia-invade-ukraine", label: "Why did Russia invade Ukraine?" },
+  { to: "/background/what-is-nato-article-5", label: "What is NATO Article 5?" },
 ];
 
 const linkStyle: React.CSSProperties = {

@@ -49,6 +49,9 @@ const ENTRIES: SitemapEntry[] = [
   { path: "/background/who-are-the-houthis", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/iran-nuclear-program-status", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
   { path: "/background/south-china-sea-dispute-explained", changefreq: "monthly", priority: "0.7", lastmod: LAST_UPDATED },
+  { path: "/background/is-iran-at-war-with-the-us", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/why-did-russia-invade-ukraine", changefreq: "weekly", priority: "0.8", lastmod: LAST_UPDATED },
+  { path: "/background/what-is-nato-article-5", changefreq: "monthly", priority: "0.7", lastmod: LAST_UPDATED },
 
   // Daily briefing archive
   { path: "/briefing", changefreq: "daily", priority: "0.9", lastmod: LAST_UPDATED },
