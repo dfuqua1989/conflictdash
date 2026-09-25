@@ -24,6 +24,20 @@ const BACKGROUNDERS: { to: string; label: string }[] = [
   { to: "/background/is-iran-at-war-with-the-us", label: "Is Iran at war with the US?" },
   { to: "/background/why-did-russia-invade-ukraine", label: "Why did Russia invade Ukraine?" },
   { to: "/background/what-is-nato-article-5", label: "What is NATO Article 5?" },
+  { to: "/background/is-the-lebanon-ceasefire-holding", label: "Is the Lebanon ceasefire holding?" },
+  { to: "/background/north-korea-russia-military-alliance", label: "North Korea–Russia military alliance" },
+  { to: "/background/belarus-role-russia-ukraine-war", label: "Belarus's role in the Ukraine war" },
+];
+
+const DEEP_DIVES: { to: string; label: string }[] = [
+  { to: "/deep-dive/ukraine", label: "Ukraine deep dive" },
+  { to: "/deep-dive/iran", label: "Iran deep dive" },
+  { to: "/deep-dive/gaza", label: "Gaza deep dive" },
+  { to: "/deep-dive/usmil", label: "US military deep dive" },
+  { to: "/deep-dive/scs", label: "South China Sea deep dive" },
+  { to: "/deep-dive/venezuela", label: "Venezuela deep dive" },
+  { to: "/deep-dive/africa", label: "Africa deep dive" },
+  { to: "/deep-dive/southasia", label: "South Asia deep dive" },
 ];
 
 const linkStyle: React.CSSProperties = {
