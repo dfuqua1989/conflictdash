@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Dashboard from "@/App";
+import SiteLinkFooter from "@/components/SiteLinkFooter";
 
 
 const TITLE = "World Conflict Debrief — Live Global Flashpoints";
@@ -90,5 +91,10 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: () => <Dashboard />,
+  component: () => (
+    <>
+      <Dashboard />
+      <SiteLinkFooter />
+    </>
+  ),
 });
