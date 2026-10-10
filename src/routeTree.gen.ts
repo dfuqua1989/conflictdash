@@ -9,61 +9,47 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as ConflictsRouteImport } from './routes/conflicts'
-import { Route as FeedDotxmlRouteImport } from './routes/feed[.]xml'
-import { Route as McpRouteImport } from './routes/mcp'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as UkraineWarMapRouteImport } from './routes/ukraine-war-map'
-import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
-import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
-import { Route as BackgroundBelarusRoleRussiaUkraineWarRouteImport } from './routes/background.belarus-role-russia-ukraine-war'
-import { Route as BackgroundDrcM23ConflictExplainedRouteImport } from './routes/background.drc-m23-conflict-explained'
-import { Route as BackgroundHezbollahCapabilitiesRouteImport } from './routes/background.hezbollah-capabilities'
-import { Route as BackgroundIranNuclearProgramStatusRouteImport } from './routes/background.iran-nuclear-program-status'
-import { Route as BackgroundIsIranAtWarWithTheUsRouteImport } from './routes/background.is-iran-at-war-with-the-us'
-import { Route as BackgroundIsTheGazaCeasefireHoldingRouteImport } from './routes/background.is-the-gaza-ceasefire-holding'
-import { Route as BackgroundIsTheLebanonCeasefireHoldingRouteImport } from './routes/background.is-the-lebanon-ceasefire-holding'
-import { Route as BackgroundIsTheUsAtWarRouteImport } from './routes/background.is-the-us-at-war'
-import { Route as BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport } from './routes/background.north-korea-russia-military-alliance'
-import { Route as BackgroundNuclearWeaponsByCountryRouteImport } from './routes/background.nuclear-weapons-by-country'
-import { Route as BackgroundPakistanAfghanistanWarExplainedRouteImport } from './routes/background.pakistan-afghanistan-war-explained'
-import { Route as BackgroundRedSeaCrisisRouteImport } from './routes/background.red-sea-crisis'
-import { Route as BackgroundRussianCasualtiesUkraineRouteImport } from './routes/background.russian-casualties-ukraine'
-import { Route as BackgroundSouthChinaSeaDisputeExplainedRouteImport } from './routes/background.south-china-sea-dispute-explained'
-import { Route as BackgroundStraitOfHormuzRouteImport } from './routes/background.strait-of-hormuz'
-import { Route as BackgroundUsChinaGreatPowerRivalryExplainedRouteImport } from './routes/background.us-china-great-power-rivalry-explained'
-import { Route as BackgroundVenezuelaCubaCrisisExplainedRouteImport } from './routes/background.venezuela-cuba-crisis-explained'
-import { Route as BackgroundWhatIsNatoArticle5RouteImport } from './routes/background.what-is-nato-article-5'
-import { Route as BackgroundWhoAreTheHouthisRouteImport } from './routes/background.who-are-the-houthis'
-import { Route as BackgroundWhyDidRussiaInvadeUkraineRouteImport } from './routes/background.why-did-russia-invade-ukraine'
-import { Route as BackgroundWhySudanIsAtWarRouteImport } from './routes/background.why-sudan-is-at-war'
-import { Route as BackgroundWillChinaInvadeTaiwanRouteImport } from './routes/background.will-china-invade-taiwan'
-import { Route as BackgroundWillIndiaPakistanGoToWarAgainRouteImport } from './routes/background.will-india-pakistan-go-to-war-again'
-import { Route as BackgroundWorldWar3RiskRouteImport } from './routes/background.world-war-3-risk'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as McpRouteImport } from './routes/mcp'
+import { Route as FeedDotxmlRouteImport } from './routes/feed[.]xml'
+import { Route as ConflictsRouteImport } from './routes/conflicts'
+import { Route as BackgroundRouteImport } from './routes/background'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as BriefingIndexRouteImport } from './routes/briefing.index'
-import { Route as BriefingDateRouteImport } from './routes/briefing.$date'
 import { Route as DeepDiveSectionRouteImport } from './routes/deep-dive.$section'
+import { Route as BriefingDateRouteImport } from './routes/briefing.$date'
+import { Route as BackgroundWorldWar3RiskRouteImport } from './routes/background.world-war-3-risk'
+import { Route as BackgroundWillIndiaPakistanGoToWarAgainRouteImport } from './routes/background.will-india-pakistan-go-to-war-again'
+import { Route as BackgroundWillChinaInvadeTaiwanRouteImport } from './routes/background.will-china-invade-taiwan'
+import { Route as BackgroundWhySudanIsAtWarRouteImport } from './routes/background.why-sudan-is-at-war'
+import { Route as BackgroundWhyDidRussiaInvadeUkraineRouteImport } from './routes/background.why-did-russia-invade-ukraine'
+import { Route as BackgroundWhoAreTheHouthisRouteImport } from './routes/background.who-are-the-houthis'
+import { Route as BackgroundWhatIsNatoArticle5RouteImport } from './routes/background.what-is-nato-article-5'
+import { Route as BackgroundVenezuelaCubaCrisisExplainedRouteImport } from './routes/background.venezuela-cuba-crisis-explained'
+import { Route as BackgroundUsChinaGreatPowerRivalryExplainedRouteImport } from './routes/background.us-china-great-power-rivalry-explained'
+import { Route as BackgroundStraitOfHormuzRouteImport } from './routes/background.strait-of-hormuz'
+import { Route as BackgroundSouthChinaSeaDisputeExplainedRouteImport } from './routes/background.south-china-sea-dispute-explained'
+import { Route as BackgroundRussianCasualtiesUkraineRouteImport } from './routes/background.russian-casualties-ukraine'
+import { Route as BackgroundRedSeaCrisisRouteImport } from './routes/background.red-sea-crisis'
+import { Route as BackgroundPakistanAfghanistanWarExplainedRouteImport } from './routes/background.pakistan-afghanistan-war-explained'
+import { Route as BackgroundNuclearWeaponsByCountryRouteImport } from './routes/background.nuclear-weapons-by-country'
+import { Route as BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport } from './routes/background.north-korea-russia-military-alliance'
+import { Route as BackgroundIsTheUsAtWarRouteImport } from './routes/background.is-the-us-at-war'
+import { Route as BackgroundIsTheLebanonCeasefireHoldingRouteImport } from './routes/background.is-the-lebanon-ceasefire-holding'
+import { Route as BackgroundIsTheGazaCeasefireHoldingRouteImport } from './routes/background.is-the-gaza-ceasefire-holding'
+import { Route as BackgroundIsIranAtWarWithTheUsRouteImport } from './routes/background.is-iran-at-war-with-the-us'
+import { Route as BackgroundIranNuclearProgramStatusRouteImport } from './routes/background.iran-nuclear-program-status'
+import { Route as BackgroundHezbollahCapabilitiesRouteImport } from './routes/background.hezbollah-capabilities'
+import { Route as BackgroundDrcM23ConflictExplainedRouteImport } from './routes/background.drc-m23-conflict-explained'
+import { Route as BackgroundBelarusRoleRussiaUkraineWarRouteImport } from './routes/background.belarus-role-russia-ukraine-war'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConflictsRoute = ConflictsRouteImport.update({
-  id: '/conflicts',
-  path: '/conflicts',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FeedDotxmlRoute = FeedDotxmlRouteImport.update({
-  id: '/feed.xml',
-  path: '/feed.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
+const UkraineWarMapRoute = UkraineWarMapRouteImport.update({
+  id: '/ukraine-war-map',
+  path: '/ukraine-war-map',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -71,162 +57,29 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const UkraineWarMapRoute = UkraineWarMapRouteImport.update({
-  id: '/ukraine-war-map',
-  path: '/ukraine-war-map',
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Char91DotmcpChar93ListToolsRoute =
-  Char91DotmcpChar93ListToolsRouteImport.update({
-    id: '/.mcp/list-tools',
-    path: '/.mcp/list-tools',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Char91DotwellKnownChar93OauthProtectedResourceRoute =
-  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
-    id: '/.well-known/oauth-protected-resource',
-    path: '/.well-known/oauth-protected-resource',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundBelarusRoleRussiaUkraineWarRoute =
-  BackgroundBelarusRoleRussiaUkraineWarRouteImport.update({
-    id: '/background/belarus-role-russia-ukraine-war',
-    path: '/background/belarus-role-russia-ukraine-war',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundDrcM23ConflictExplainedRoute =
-  BackgroundDrcM23ConflictExplainedRouteImport.update({
-    id: '/background/drc-m23-conflict-explained',
-    path: '/background/drc-m23-conflict-explained',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundHezbollahCapabilitiesRoute =
-  BackgroundHezbollahCapabilitiesRouteImport.update({
-    id: '/background/hezbollah-capabilities',
-    path: '/background/hezbollah-capabilities',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundIranNuclearProgramStatusRoute =
-  BackgroundIranNuclearProgramStatusRouteImport.update({
-    id: '/background/iran-nuclear-program-status',
-    path: '/background/iran-nuclear-program-status',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundIsIranAtWarWithTheUsRoute =
-  BackgroundIsIranAtWarWithTheUsRouteImport.update({
-    id: '/background/is-iran-at-war-with-the-us',
-    path: '/background/is-iran-at-war-with-the-us',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundIsTheGazaCeasefireHoldingRoute =
-  BackgroundIsTheGazaCeasefireHoldingRouteImport.update({
-    id: '/background/is-the-gaza-ceasefire-holding',
-    path: '/background/is-the-gaza-ceasefire-holding',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundIsTheLebanonCeasefireHoldingRoute =
-  BackgroundIsTheLebanonCeasefireHoldingRouteImport.update({
-    id: '/background/is-the-lebanon-ceasefire-holding',
-    path: '/background/is-the-lebanon-ceasefire-holding',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundIsTheUsAtWarRoute = BackgroundIsTheUsAtWarRouteImport.update({
-  id: '/background/is-the-us-at-war',
-  path: '/background/is-the-us-at-war',
+const FeedDotxmlRoute = FeedDotxmlRouteImport.update({
+  id: '/feed.xml',
+  path: '/feed.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BackgroundNorthKoreaRussiaMilitaryAllianceRoute =
-  BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport.update({
-    id: '/background/north-korea-russia-military-alliance',
-    path: '/background/north-korea-russia-military-alliance',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundNuclearWeaponsByCountryRoute =
-  BackgroundNuclearWeaponsByCountryRouteImport.update({
-    id: '/background/nuclear-weapons-by-country',
-    path: '/background/nuclear-weapons-by-country',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundPakistanAfghanistanWarExplainedRoute =
-  BackgroundPakistanAfghanistanWarExplainedRouteImport.update({
-    id: '/background/pakistan-afghanistan-war-explained',
-    path: '/background/pakistan-afghanistan-war-explained',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundRedSeaCrisisRoute = BackgroundRedSeaCrisisRouteImport.update({
-  id: '/background/red-sea-crisis',
-  path: '/background/red-sea-crisis',
+const ConflictsRoute = ConflictsRouteImport.update({
+  id: '/conflicts',
+  path: '/conflicts',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BackgroundRussianCasualtiesUkraineRoute =
-  BackgroundRussianCasualtiesUkraineRouteImport.update({
-    id: '/background/russian-casualties-ukraine',
-    path: '/background/russian-casualties-ukraine',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundSouthChinaSeaDisputeExplainedRoute =
-  BackgroundSouthChinaSeaDisputeExplainedRouteImport.update({
-    id: '/background/south-china-sea-dispute-explained',
-    path: '/background/south-china-sea-dispute-explained',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundStraitOfHormuzRoute =
-  BackgroundStraitOfHormuzRouteImport.update({
-    id: '/background/strait-of-hormuz',
-    path: '/background/strait-of-hormuz',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundUsChinaGreatPowerRivalryExplainedRoute =
-  BackgroundUsChinaGreatPowerRivalryExplainedRouteImport.update({
-    id: '/background/us-china-great-power-rivalry-explained',
-    path: '/background/us-china-great-power-rivalry-explained',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundVenezuelaCubaCrisisExplainedRoute =
-  BackgroundVenezuelaCubaCrisisExplainedRouteImport.update({
-    id: '/background/venezuela-cuba-crisis-explained',
-    path: '/background/venezuela-cuba-crisis-explained',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundWhatIsNatoArticle5Route =
-  BackgroundWhatIsNatoArticle5RouteImport.update({
-    id: '/background/what-is-nato-article-5',
-    path: '/background/what-is-nato-article-5',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundWhoAreTheHouthisRoute =
-  BackgroundWhoAreTheHouthisRouteImport.update({
-    id: '/background/who-are-the-houthis',
-    path: '/background/who-are-the-houthis',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundWhyDidRussiaInvadeUkraineRoute =
-  BackgroundWhyDidRussiaInvadeUkraineRouteImport.update({
-    id: '/background/why-did-russia-invade-ukraine',
-    path: '/background/why-did-russia-invade-ukraine',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundWhySudanIsAtWarRoute =
-  BackgroundWhySudanIsAtWarRouteImport.update({
-    id: '/background/why-sudan-is-at-war',
-    path: '/background/why-sudan-is-at-war',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundWillChinaInvadeTaiwanRoute =
-  BackgroundWillChinaInvadeTaiwanRouteImport.update({
-    id: '/background/will-china-invade-taiwan',
-    path: '/background/will-china-invade-taiwan',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundWillIndiaPakistanGoToWarAgainRoute =
-  BackgroundWillIndiaPakistanGoToWarAgainRouteImport.update({
-    id: '/background/will-india-pakistan-go-to-war-again',
-    path: '/background/will-india-pakistan-go-to-war-again',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BackgroundWorldWar3RiskRoute = BackgroundWorldWar3RiskRouteImport.update({
-  id: '/background/world-war-3-risk',
-  path: '/background/world-war-3-risk',
+const BackgroundRoute = BackgroundRouteImport.update({
+  id: '/background',
+  path: '/background',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BriefingIndexRoute = BriefingIndexRouteImport.update({
@@ -234,16 +87,169 @@ const BriefingIndexRoute = BriefingIndexRouteImport.update({
   path: '/briefing/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BriefingDateRoute = BriefingDateRouteImport.update({
-  id: '/briefing/$date',
-  path: '/briefing/$date',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const DeepDiveSectionRoute = DeepDiveSectionRouteImport.update({
   id: '/deep-dive/$section',
   path: '/deep-dive/$section',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BriefingDateRoute = BriefingDateRouteImport.update({
+  id: '/briefing/$date',
+  path: '/briefing/$date',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BackgroundWorldWar3RiskRoute = BackgroundWorldWar3RiskRouteImport.update({
+  id: '/world-war-3-risk',
+  path: '/world-war-3-risk',
+  getParentRoute: () => BackgroundRoute,
+} as any)
+const BackgroundWillIndiaPakistanGoToWarAgainRoute =
+  BackgroundWillIndiaPakistanGoToWarAgainRouteImport.update({
+    id: '/will-india-pakistan-go-to-war-again',
+    path: '/will-india-pakistan-go-to-war-again',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundWillChinaInvadeTaiwanRoute =
+  BackgroundWillChinaInvadeTaiwanRouteImport.update({
+    id: '/will-china-invade-taiwan',
+    path: '/will-china-invade-taiwan',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundWhySudanIsAtWarRoute =
+  BackgroundWhySudanIsAtWarRouteImport.update({
+    id: '/why-sudan-is-at-war',
+    path: '/why-sudan-is-at-war',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundWhyDidRussiaInvadeUkraineRoute =
+  BackgroundWhyDidRussiaInvadeUkraineRouteImport.update({
+    id: '/why-did-russia-invade-ukraine',
+    path: '/why-did-russia-invade-ukraine',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundWhoAreTheHouthisRoute =
+  BackgroundWhoAreTheHouthisRouteImport.update({
+    id: '/who-are-the-houthis',
+    path: '/who-are-the-houthis',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundWhatIsNatoArticle5Route =
+  BackgroundWhatIsNatoArticle5RouteImport.update({
+    id: '/what-is-nato-article-5',
+    path: '/what-is-nato-article-5',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundVenezuelaCubaCrisisExplainedRoute =
+  BackgroundVenezuelaCubaCrisisExplainedRouteImport.update({
+    id: '/venezuela-cuba-crisis-explained',
+    path: '/venezuela-cuba-crisis-explained',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundUsChinaGreatPowerRivalryExplainedRoute =
+  BackgroundUsChinaGreatPowerRivalryExplainedRouteImport.update({
+    id: '/us-china-great-power-rivalry-explained',
+    path: '/us-china-great-power-rivalry-explained',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundStraitOfHormuzRoute =
+  BackgroundStraitOfHormuzRouteImport.update({
+    id: '/strait-of-hormuz',
+    path: '/strait-of-hormuz',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundSouthChinaSeaDisputeExplainedRoute =
+  BackgroundSouthChinaSeaDisputeExplainedRouteImport.update({
+    id: '/south-china-sea-dispute-explained',
+    path: '/south-china-sea-dispute-explained',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundRussianCasualtiesUkraineRoute =
+  BackgroundRussianCasualtiesUkraineRouteImport.update({
+    id: '/russian-casualties-ukraine',
+    path: '/russian-casualties-ukraine',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundRedSeaCrisisRoute = BackgroundRedSeaCrisisRouteImport.update({
+  id: '/red-sea-crisis',
+  path: '/red-sea-crisis',
+  getParentRoute: () => BackgroundRoute,
+} as any)
+const BackgroundPakistanAfghanistanWarExplainedRoute =
+  BackgroundPakistanAfghanistanWarExplainedRouteImport.update({
+    id: '/pakistan-afghanistan-war-explained',
+    path: '/pakistan-afghanistan-war-explained',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundNuclearWeaponsByCountryRoute =
+  BackgroundNuclearWeaponsByCountryRouteImport.update({
+    id: '/nuclear-weapons-by-country',
+    path: '/nuclear-weapons-by-country',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundNorthKoreaRussiaMilitaryAllianceRoute =
+  BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport.update({
+    id: '/north-korea-russia-military-alliance',
+    path: '/north-korea-russia-military-alliance',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundIsTheUsAtWarRoute = BackgroundIsTheUsAtWarRouteImport.update({
+  id: '/is-the-us-at-war',
+  path: '/is-the-us-at-war',
+  getParentRoute: () => BackgroundRoute,
+} as any)
+const BackgroundIsTheLebanonCeasefireHoldingRoute =
+  BackgroundIsTheLebanonCeasefireHoldingRouteImport.update({
+    id: '/is-the-lebanon-ceasefire-holding',
+    path: '/is-the-lebanon-ceasefire-holding',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundIsTheGazaCeasefireHoldingRoute =
+  BackgroundIsTheGazaCeasefireHoldingRouteImport.update({
+    id: '/is-the-gaza-ceasefire-holding',
+    path: '/is-the-gaza-ceasefire-holding',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundIsIranAtWarWithTheUsRoute =
+  BackgroundIsIranAtWarWithTheUsRouteImport.update({
+    id: '/is-iran-at-war-with-the-us',
+    path: '/is-iran-at-war-with-the-us',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundIranNuclearProgramStatusRoute =
+  BackgroundIranNuclearProgramStatusRouteImport.update({
+    id: '/iran-nuclear-program-status',
+    path: '/iran-nuclear-program-status',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundHezbollahCapabilitiesRoute =
+  BackgroundHezbollahCapabilitiesRouteImport.update({
+    id: '/hezbollah-capabilities',
+    path: '/hezbollah-capabilities',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundDrcM23ConflictExplainedRoute =
+  BackgroundDrcM23ConflictExplainedRouteImport.update({
+    id: '/drc-m23-conflict-explained',
+    path: '/drc-m23-conflict-explained',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const BackgroundBelarusRoleRussiaUkraineWarRoute =
+  BackgroundBelarusRoleRussiaUkraineWarRouteImport.update({
+    id: '/belarus-role-russia-ukraine-war',
+    path: '/belarus-role-russia-ukraine-war',
+    getParentRoute: () => BackgroundRoute,
+  } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotmcpChar93ListToolsRoute =
+  Char91DotmcpChar93ListToolsRouteImport.update({
+    id: '/.mcp/list-tools',
+    path: '/.mcp/list-tools',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const Char91DotmcpChar93InvokeToolToolRoute =
   Char91DotmcpChar93InvokeToolToolRouteImport.update({
     id: '/.mcp/invoke-tool/$tool',
@@ -253,6 +259,7 @@ const Char91DotmcpChar93InvokeToolToolRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/background': typeof BackgroundRouteWithChildren
   '/conflicts': typeof ConflictsRoute
   '/feed.xml': typeof FeedDotxmlRoute
   '/mcp': typeof McpRoute
@@ -291,6 +298,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/background': typeof BackgroundRouteWithChildren
   '/conflicts': typeof ConflictsRoute
   '/feed.xml': typeof FeedDotxmlRoute
   '/mcp': typeof McpRoute
@@ -330,6 +338,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/background': typeof BackgroundRouteWithChildren
   '/conflicts': typeof ConflictsRoute
   '/feed.xml': typeof FeedDotxmlRoute
   '/mcp': typeof McpRoute
@@ -370,6 +379,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/background'
     | '/conflicts'
     | '/feed.xml'
     | '/mcp'
@@ -408,6 +418,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/background'
     | '/conflicts'
     | '/feed.xml'
     | '/mcp'
@@ -446,6 +457,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/background'
     | '/conflicts'
     | '/feed.xml'
     | '/mcp'
@@ -485,6 +497,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BackgroundRoute: typeof BackgroundRouteWithChildren
   ConflictsRoute: typeof ConflictsRoute
   FeedDotxmlRoute: typeof FeedDotxmlRoute
   McpRoute: typeof McpRoute
@@ -492,6 +505,277 @@ export interface RootRouteChildren {
   UkraineWarMapRoute: typeof UkraineWarMapRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  BriefingDateRoute: typeof BriefingDateRoute
+  DeepDiveSectionRoute: typeof DeepDiveSectionRoute
+  BriefingIndexRoute: typeof BriefingIndexRoute
+  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/ukraine-war-map': {
+      id: '/ukraine-war-map'
+      path: '/ukraine-war-map'
+      fullPath: '/ukraine-war-map'
+      preLoaderRoute: typeof UkraineWarMapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feed.xml': {
+      id: '/feed.xml'
+      path: '/feed.xml'
+      fullPath: '/feed.xml'
+      preLoaderRoute: typeof FeedDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conflicts': {
+      id: '/conflicts'
+      path: '/conflicts'
+      fullPath: '/conflicts'
+      preLoaderRoute: typeof ConflictsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/background': {
+      id: '/background'
+      path: '/background'
+      fullPath: '/background'
+      preLoaderRoute: typeof BackgroundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/briefing/': {
+      id: '/briefing/'
+      path: '/briefing'
+      fullPath: '/briefing/'
+      preLoaderRoute: typeof BriefingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deep-dive/$section': {
+      id: '/deep-dive/$section'
+      path: '/deep-dive/$section'
+      fullPath: '/deep-dive/$section'
+      preLoaderRoute: typeof DeepDiveSectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/briefing/$date': {
+      id: '/briefing/$date'
+      path: '/briefing/$date'
+      fullPath: '/briefing/$date'
+      preLoaderRoute: typeof BriefingDateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/background/world-war-3-risk': {
+      id: '/background/world-war-3-risk'
+      path: '/world-war-3-risk'
+      fullPath: '/background/world-war-3-risk'
+      preLoaderRoute: typeof BackgroundWorldWar3RiskRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/will-india-pakistan-go-to-war-again': {
+      id: '/background/will-india-pakistan-go-to-war-again'
+      path: '/will-india-pakistan-go-to-war-again'
+      fullPath: '/background/will-india-pakistan-go-to-war-again'
+      preLoaderRoute: typeof BackgroundWillIndiaPakistanGoToWarAgainRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/will-china-invade-taiwan': {
+      id: '/background/will-china-invade-taiwan'
+      path: '/will-china-invade-taiwan'
+      fullPath: '/background/will-china-invade-taiwan'
+      preLoaderRoute: typeof BackgroundWillChinaInvadeTaiwanRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/why-sudan-is-at-war': {
+      id: '/background/why-sudan-is-at-war'
+      path: '/why-sudan-is-at-war'
+      fullPath: '/background/why-sudan-is-at-war'
+      preLoaderRoute: typeof BackgroundWhySudanIsAtWarRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/why-did-russia-invade-ukraine': {
+      id: '/background/why-did-russia-invade-ukraine'
+      path: '/why-did-russia-invade-ukraine'
+      fullPath: '/background/why-did-russia-invade-ukraine'
+      preLoaderRoute: typeof BackgroundWhyDidRussiaInvadeUkraineRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/who-are-the-houthis': {
+      id: '/background/who-are-the-houthis'
+      path: '/who-are-the-houthis'
+      fullPath: '/background/who-are-the-houthis'
+      preLoaderRoute: typeof BackgroundWhoAreTheHouthisRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/what-is-nato-article-5': {
+      id: '/background/what-is-nato-article-5'
+      path: '/what-is-nato-article-5'
+      fullPath: '/background/what-is-nato-article-5'
+      preLoaderRoute: typeof BackgroundWhatIsNatoArticle5RouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/venezuela-cuba-crisis-explained': {
+      id: '/background/venezuela-cuba-crisis-explained'
+      path: '/venezuela-cuba-crisis-explained'
+      fullPath: '/background/venezuela-cuba-crisis-explained'
+      preLoaderRoute: typeof BackgroundVenezuelaCubaCrisisExplainedRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/us-china-great-power-rivalry-explained': {
+      id: '/background/us-china-great-power-rivalry-explained'
+      path: '/us-china-great-power-rivalry-explained'
+      fullPath: '/background/us-china-great-power-rivalry-explained'
+      preLoaderRoute: typeof BackgroundUsChinaGreatPowerRivalryExplainedRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/strait-of-hormuz': {
+      id: '/background/strait-of-hormuz'
+      path: '/strait-of-hormuz'
+      fullPath: '/background/strait-of-hormuz'
+      preLoaderRoute: typeof BackgroundStraitOfHormuzRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/south-china-sea-dispute-explained': {
+      id: '/background/south-china-sea-dispute-explained'
+      path: '/south-china-sea-dispute-explained'
+      fullPath: '/background/south-china-sea-dispute-explained'
+      preLoaderRoute: typeof BackgroundSouthChinaSeaDisputeExplainedRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/russian-casualties-ukraine': {
+      id: '/background/russian-casualties-ukraine'
+      path: '/russian-casualties-ukraine'
+      fullPath: '/background/russian-casualties-ukraine'
+      preLoaderRoute: typeof BackgroundRussianCasualtiesUkraineRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/red-sea-crisis': {
+      id: '/background/red-sea-crisis'
+      path: '/red-sea-crisis'
+      fullPath: '/background/red-sea-crisis'
+      preLoaderRoute: typeof BackgroundRedSeaCrisisRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/pakistan-afghanistan-war-explained': {
+      id: '/background/pakistan-afghanistan-war-explained'
+      path: '/pakistan-afghanistan-war-explained'
+      fullPath: '/background/pakistan-afghanistan-war-explained'
+      preLoaderRoute: typeof BackgroundPakistanAfghanistanWarExplainedRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/nuclear-weapons-by-country': {
+      id: '/background/nuclear-weapons-by-country'
+      path: '/nuclear-weapons-by-country'
+      fullPath: '/background/nuclear-weapons-by-country'
+      preLoaderRoute: typeof BackgroundNuclearWeaponsByCountryRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/north-korea-russia-military-alliance': {
+      id: '/background/north-korea-russia-military-alliance'
+      path: '/north-korea-russia-military-alliance'
+      fullPath: '/background/north-korea-russia-military-alliance'
+      preLoaderRoute: typeof BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/is-the-us-at-war': {
+      id: '/background/is-the-us-at-war'
+      path: '/is-the-us-at-war'
+      fullPath: '/background/is-the-us-at-war'
+      preLoaderRoute: typeof BackgroundIsTheUsAtWarRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/is-the-lebanon-ceasefire-holding': {
+      id: '/background/is-the-lebanon-ceasefire-holding'
+      path: '/is-the-lebanon-ceasefire-holding'
+      fullPath: '/background/is-the-lebanon-ceasefire-holding'
+      preLoaderRoute: typeof BackgroundIsTheLebanonCeasefireHoldingRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/is-the-gaza-ceasefire-holding': {
+      id: '/background/is-the-gaza-ceasefire-holding'
+      path: '/is-the-gaza-ceasefire-holding'
+      fullPath: '/background/is-the-gaza-ceasefire-holding'
+      preLoaderRoute: typeof BackgroundIsTheGazaCeasefireHoldingRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/is-iran-at-war-with-the-us': {
+      id: '/background/is-iran-at-war-with-the-us'
+      path: '/is-iran-at-war-with-the-us'
+      fullPath: '/background/is-iran-at-war-with-the-us'
+      preLoaderRoute: typeof BackgroundIsIranAtWarWithTheUsRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/iran-nuclear-program-status': {
+      id: '/background/iran-nuclear-program-status'
+      path: '/iran-nuclear-program-status'
+      fullPath: '/background/iran-nuclear-program-status'
+      preLoaderRoute: typeof BackgroundIranNuclearProgramStatusRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/hezbollah-capabilities': {
+      id: '/background/hezbollah-capabilities'
+      path: '/hezbollah-capabilities'
+      fullPath: '/background/hezbollah-capabilities'
+      preLoaderRoute: typeof BackgroundHezbollahCapabilitiesRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/drc-m23-conflict-explained': {
+      id: '/background/drc-m23-conflict-explained'
+      path: '/drc-m23-conflict-explained'
+      fullPath: '/background/drc-m23-conflict-explained'
+      preLoaderRoute: typeof BackgroundDrcM23ConflictExplainedRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/background/belarus-role-russia-ukraine-war': {
+      id: '/background/belarus-role-russia-ukraine-war'
+      path: '/belarus-role-russia-ukraine-war'
+      fullPath: '/background/belarus-role-russia-ukraine-war'
+      preLoaderRoute: typeof BackgroundBelarusRoleRussiaUkraineWarRouteImport
+      parentRoute: typeof BackgroundRoute
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/list-tools': {
+      id: '/.mcp/list-tools'
+      path: '/.mcp/list-tools'
+      fullPath: '/.mcp/list-tools'
+      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/invoke-tool/$tool': {
+      id: '/.mcp/invoke-tool/$tool'
+      path: '/.mcp/invoke-tool/$tool'
+      fullPath: '/.mcp/invoke-tool/$tool'
+      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
+}
+
+interface BackgroundRouteChildren {
   BackgroundBelarusRoleRussiaUkraineWarRoute: typeof BackgroundBelarusRoleRussiaUkraineWarRoute
   BackgroundDrcM23ConflictExplainedRoute: typeof BackgroundDrcM23ConflictExplainedRoute
   BackgroundHezbollahCapabilitiesRoute: typeof BackgroundHezbollahCapabilitiesRoute
@@ -516,279 +800,9 @@ export interface RootRouteChildren {
   BackgroundWillChinaInvadeTaiwanRoute: typeof BackgroundWillChinaInvadeTaiwanRoute
   BackgroundWillIndiaPakistanGoToWarAgainRoute: typeof BackgroundWillIndiaPakistanGoToWarAgainRoute
   BackgroundWorldWar3RiskRoute: typeof BackgroundWorldWar3RiskRoute
-  BriefingDateRoute: typeof BriefingDateRoute
-  DeepDiveSectionRoute: typeof DeepDiveSectionRoute
-  BriefingIndexRoute: typeof BriefingIndexRoute
-  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/conflicts': {
-      id: '/conflicts'
-      path: '/conflicts'
-      fullPath: '/conflicts'
-      preLoaderRoute: typeof ConflictsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feed.xml': {
-      id: '/feed.xml'
-      path: '/feed.xml'
-      fullPath: '/feed.xml'
-      preLoaderRoute: typeof FeedDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ukraine-war-map': {
-      id: '/ukraine-war-map'
-      path: '/ukraine-war-map'
-      fullPath: '/ukraine-war-map'
-      preLoaderRoute: typeof UkraineWarMapRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.mcp/list-tools': {
-      id: '/.mcp/list-tools'
-      path: '/.mcp/list-tools'
-      fullPath: '/.mcp/list-tools'
-      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/belarus-role-russia-ukraine-war': {
-      id: '/background/belarus-role-russia-ukraine-war'
-      path: '/background/belarus-role-russia-ukraine-war'
-      fullPath: '/background/belarus-role-russia-ukraine-war'
-      preLoaderRoute: typeof BackgroundBelarusRoleRussiaUkraineWarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/drc-m23-conflict-explained': {
-      id: '/background/drc-m23-conflict-explained'
-      path: '/background/drc-m23-conflict-explained'
-      fullPath: '/background/drc-m23-conflict-explained'
-      preLoaderRoute: typeof BackgroundDrcM23ConflictExplainedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/hezbollah-capabilities': {
-      id: '/background/hezbollah-capabilities'
-      path: '/background/hezbollah-capabilities'
-      fullPath: '/background/hezbollah-capabilities'
-      preLoaderRoute: typeof BackgroundHezbollahCapabilitiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/iran-nuclear-program-status': {
-      id: '/background/iran-nuclear-program-status'
-      path: '/background/iran-nuclear-program-status'
-      fullPath: '/background/iran-nuclear-program-status'
-      preLoaderRoute: typeof BackgroundIranNuclearProgramStatusRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/is-iran-at-war-with-the-us': {
-      id: '/background/is-iran-at-war-with-the-us'
-      path: '/background/is-iran-at-war-with-the-us'
-      fullPath: '/background/is-iran-at-war-with-the-us'
-      preLoaderRoute: typeof BackgroundIsIranAtWarWithTheUsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/is-the-gaza-ceasefire-holding': {
-      id: '/background/is-the-gaza-ceasefire-holding'
-      path: '/background/is-the-gaza-ceasefire-holding'
-      fullPath: '/background/is-the-gaza-ceasefire-holding'
-      preLoaderRoute: typeof BackgroundIsTheGazaCeasefireHoldingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/is-the-lebanon-ceasefire-holding': {
-      id: '/background/is-the-lebanon-ceasefire-holding'
-      path: '/background/is-the-lebanon-ceasefire-holding'
-      fullPath: '/background/is-the-lebanon-ceasefire-holding'
-      preLoaderRoute: typeof BackgroundIsTheLebanonCeasefireHoldingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/is-the-us-at-war': {
-      id: '/background/is-the-us-at-war'
-      path: '/background/is-the-us-at-war'
-      fullPath: '/background/is-the-us-at-war'
-      preLoaderRoute: typeof BackgroundIsTheUsAtWarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/north-korea-russia-military-alliance': {
-      id: '/background/north-korea-russia-military-alliance'
-      path: '/background/north-korea-russia-military-alliance'
-      fullPath: '/background/north-korea-russia-military-alliance'
-      preLoaderRoute: typeof BackgroundNorthKoreaRussiaMilitaryAllianceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/nuclear-weapons-by-country': {
-      id: '/background/nuclear-weapons-by-country'
-      path: '/background/nuclear-weapons-by-country'
-      fullPath: '/background/nuclear-weapons-by-country'
-      preLoaderRoute: typeof BackgroundNuclearWeaponsByCountryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/pakistan-afghanistan-war-explained': {
-      id: '/background/pakistan-afghanistan-war-explained'
-      path: '/background/pakistan-afghanistan-war-explained'
-      fullPath: '/background/pakistan-afghanistan-war-explained'
-      preLoaderRoute: typeof BackgroundPakistanAfghanistanWarExplainedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/red-sea-crisis': {
-      id: '/background/red-sea-crisis'
-      path: '/background/red-sea-crisis'
-      fullPath: '/background/red-sea-crisis'
-      preLoaderRoute: typeof BackgroundRedSeaCrisisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/russian-casualties-ukraine': {
-      id: '/background/russian-casualties-ukraine'
-      path: '/background/russian-casualties-ukraine'
-      fullPath: '/background/russian-casualties-ukraine'
-      preLoaderRoute: typeof BackgroundRussianCasualtiesUkraineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/south-china-sea-dispute-explained': {
-      id: '/background/south-china-sea-dispute-explained'
-      path: '/background/south-china-sea-dispute-explained'
-      fullPath: '/background/south-china-sea-dispute-explained'
-      preLoaderRoute: typeof BackgroundSouthChinaSeaDisputeExplainedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/strait-of-hormuz': {
-      id: '/background/strait-of-hormuz'
-      path: '/background/strait-of-hormuz'
-      fullPath: '/background/strait-of-hormuz'
-      preLoaderRoute: typeof BackgroundStraitOfHormuzRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/us-china-great-power-rivalry-explained': {
-      id: '/background/us-china-great-power-rivalry-explained'
-      path: '/background/us-china-great-power-rivalry-explained'
-      fullPath: '/background/us-china-great-power-rivalry-explained'
-      preLoaderRoute: typeof BackgroundUsChinaGreatPowerRivalryExplainedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/venezuela-cuba-crisis-explained': {
-      id: '/background/venezuela-cuba-crisis-explained'
-      path: '/background/venezuela-cuba-crisis-explained'
-      fullPath: '/background/venezuela-cuba-crisis-explained'
-      preLoaderRoute: typeof BackgroundVenezuelaCubaCrisisExplainedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/what-is-nato-article-5': {
-      id: '/background/what-is-nato-article-5'
-      path: '/background/what-is-nato-article-5'
-      fullPath: '/background/what-is-nato-article-5'
-      preLoaderRoute: typeof BackgroundWhatIsNatoArticle5RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/who-are-the-houthis': {
-      id: '/background/who-are-the-houthis'
-      path: '/background/who-are-the-houthis'
-      fullPath: '/background/who-are-the-houthis'
-      preLoaderRoute: typeof BackgroundWhoAreTheHouthisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/why-did-russia-invade-ukraine': {
-      id: '/background/why-did-russia-invade-ukraine'
-      path: '/background/why-did-russia-invade-ukraine'
-      fullPath: '/background/why-did-russia-invade-ukraine'
-      preLoaderRoute: typeof BackgroundWhyDidRussiaInvadeUkraineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/why-sudan-is-at-war': {
-      id: '/background/why-sudan-is-at-war'
-      path: '/background/why-sudan-is-at-war'
-      fullPath: '/background/why-sudan-is-at-war'
-      preLoaderRoute: typeof BackgroundWhySudanIsAtWarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/will-china-invade-taiwan': {
-      id: '/background/will-china-invade-taiwan'
-      path: '/background/will-china-invade-taiwan'
-      fullPath: '/background/will-china-invade-taiwan'
-      preLoaderRoute: typeof BackgroundWillChinaInvadeTaiwanRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/will-india-pakistan-go-to-war-again': {
-      id: '/background/will-india-pakistan-go-to-war-again'
-      path: '/background/will-india-pakistan-go-to-war-again'
-      fullPath: '/background/will-india-pakistan-go-to-war-again'
-      preLoaderRoute: typeof BackgroundWillIndiaPakistanGoToWarAgainRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/background/world-war-3-risk': {
-      id: '/background/world-war-3-risk'
-      path: '/background/world-war-3-risk'
-      fullPath: '/background/world-war-3-risk'
-      preLoaderRoute: typeof BackgroundWorldWar3RiskRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/briefing/': {
-      id: '/briefing/'
-      path: '/briefing'
-      fullPath: '/briefing/'
-      preLoaderRoute: typeof BriefingIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/briefing/$date': {
-      id: '/briefing/$date'
-      path: '/briefing/$date'
-      fullPath: '/briefing/$date'
-      preLoaderRoute: typeof BriefingDateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/deep-dive/$section': {
-      id: '/deep-dive/$section'
-      path: '/deep-dive/$section'
-      fullPath: '/deep-dive/$section'
-      preLoaderRoute: typeof DeepDiveSectionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.mcp/invoke-tool/$tool': {
-      id: '/.mcp/invoke-tool/$tool'
-      path: '/.mcp/invoke-tool/$tool'
-      fullPath: '/.mcp/invoke-tool/$tool'
-      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-  }
-}
-
-const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  ConflictsRoute: ConflictsRoute,
-  FeedDotxmlRoute: FeedDotxmlRoute,
-  McpRoute: McpRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
-  UkraineWarMapRoute: UkraineWarMapRoute,
-  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
-  Char91DotwellKnownChar93OauthProtectedResourceRoute:
-    Char91DotwellKnownChar93OauthProtectedResourceRoute,
+const BackgroundRouteChildren: BackgroundRouteChildren = {
   BackgroundBelarusRoleRussiaUkraineWarRoute:
     BackgroundBelarusRoleRussiaUkraineWarRoute,
   BackgroundDrcM23ConflictExplainedRoute:
@@ -827,6 +841,23 @@ const rootRouteChildren: RootRouteChildren = {
   BackgroundWillIndiaPakistanGoToWarAgainRoute:
     BackgroundWillIndiaPakistanGoToWarAgainRoute,
   BackgroundWorldWar3RiskRoute: BackgroundWorldWar3RiskRoute,
+}
+
+const BackgroundRouteWithChildren = BackgroundRoute._addFileChildren(
+  BackgroundRouteChildren,
+)
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  BackgroundRoute: BackgroundRouteWithChildren,
+  ConflictsRoute: ConflictsRoute,
+  FeedDotxmlRoute: FeedDotxmlRoute,
+  McpRoute: McpRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  UkraineWarMapRoute: UkraineWarMapRoute,
+  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BriefingDateRoute: BriefingDateRoute,
   DeepDiveSectionRoute: DeepDiveSectionRoute,
   BriefingIndexRoute: BriefingIndexRoute,
