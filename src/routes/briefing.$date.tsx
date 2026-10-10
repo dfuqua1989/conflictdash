@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { BRIEFINGS, formatBriefingDate, getBriefing } from "@/data/briefings";
+import { relatedExplainers } from "@/data/explainers";
+import { RelatedExplainers } from "@/components/RelatedExplainers";
 
 const BASE = "https://conflictdash.lovable.app";
 const FONT = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -212,6 +214,8 @@ function BriefingDetail() {
           <span />
         )}
       </nav>
+
+      <RelatedExplainers items={relatedExplainers(b.theaters, undefined, 6)} title="Background on these stories" />
 
       <p style={{ fontSize: 12.5, lineHeight: 1.75, color: T.sub, marginTop: 22 }}>
         Live figures, maps and timelines for these theaters are on the{" "}
