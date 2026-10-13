@@ -427,6 +427,7 @@ const DOMAIN_RULES=[
 const DOMAIN_DEFAULT={key:"sit",label:"Situation",icon:"◉",color:"#64748b"};
 function newsDomain(item){const h=item.headline||"";return DOMAIN_RULES.find(r=>r.re.test(h))||DOMAIN_RULES.find(r=>r.re.test(evidenceText(item)))||DOMAIN_DEFAULT;}
 function blufTakeaway(item){const b=(item.bullets||[])[0];if(!b)return "";const noSrc=b.replace(/\s+[—–-]\s+[^—–]*$/,"");const m=noSrc.match(/^.*?[.;](?=\s+[A-Z(])/);const out=(m?m[0]:noSrc).trim();return out.length>260?out.slice(0,257).replace(/\s+\S*$/,"")+"…":out;}
+const DomainBadge=({item})=>{const d=newsDomain(item);return <span title={`Operational domain: ${d.label}`} style={{fontSize:9,fontWeight:800,color:d.color,background:d.color+"1a",border:`1px solid ${d.color}55`,borderRadius:4,padding:"1.5px 6px",letterSpacing:".06em",textTransform:"uppercase",whiteSpace:"nowrap",fontFamily:"'IBM Plex Mono',ui-monospace,monospace"}}>{d.icon} {d.label}</span>;};
 function BlufCard({t,item}){
   const[open,setOpen]=useState(false);const accent=item.impactColor||sevColor(item.severity);const take=blufTakeaway(item);const n=(item.bullets||[]).length;
   return <Card t={t} style={{borderLeft:`4px solid ${accent}`}}><div style={{display:"flex",gap:10,alignItems:"flex-start"}}><span style={{fontSize:18,flexShrink:0,marginTop:1}}>{item.icon}</span><div style={{flex:1,minWidth:0}}>
