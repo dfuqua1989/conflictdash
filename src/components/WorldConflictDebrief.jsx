@@ -414,7 +414,7 @@ function SourcingStrip({t,item,compact}){
 let _rvIO=null;const _rvCb=new Map();
 function _revealWatch(el,cb){if(typeof IntersectionObserver==="undefined"){cb();return null;}if(!_rvIO){_rvIO=new IntersectionObserver(es=>{for(const e of es){if(e.isIntersecting){const f=_rvCb.get(e.target);_rvCb.delete(e.target);_rvIO.unobserve(e.target);f&&f();}}},{rootMargin:"0px 0px -6% 0px"});}_rvCb.set(el,cb);_rvIO.observe(el);return()=>{_rvCb.delete(el);_rvIO&&_rvIO.unobserve(el);};}
 function _reducedMotion(){return typeof window!=="undefined"&&!!window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;}
-// ── BLUF cards + story map (map ↔ feed linking) ─────────────────────────────────
+// ── BLUF cards ─────────────────────────────────
 const DOMAIN_RULES=[
   {key:"naval",label:"Naval / Maritime",icon:"⚓",color:"#0ea5e9",re:/tanker|warship|\bnav(y|al)\b|vessel|\bships?\b|strait|blockade|coast guard|maritime|shoal|UKMTO|fleet/i},
   {key:"drone",label:"Drone / EW",icon:"🛸",color:"#a855f7",re:/drone|\bUAVs?\b|Shahed|electronic warfare|jamming/i},
@@ -426,37 +426,7 @@ const DOMAIN_RULES=[
 ];
 const DOMAIN_DEFAULT={key:"sit",label:"Situation",icon:"◉",color:"#64748b"};
 function newsDomain(item){const h=item.headline||"";return DOMAIN_RULES.find(r=>r.re.test(h))||DOMAIN_RULES.find(r=>r.re.test(evidenceText(item)))||DOMAIN_DEFAULT;}
-const STORY_PLACES=[
-  ["Kyiv",50.45,30.52,/\bKyiv\b/],["Kharkiv",49.99,36.23,/Kharkiv/],["Odesa",46.48,30.72,/Odesa/],["Zaporizhzhia",47.84,35.14,/Zaporizhzhia/],["Dnipro",48.46,35.05,/\bDnipro\b/],["Kramatorsk",48.72,37.56,/Kramatorsk/],["Sloviansk",48.85,37.6,/Sloviansk/],["Pokrovsk",48.28,37.18,/Pokrovsk/],["Kostiantynivka",48.53,37.71,/Kostiantynivka|Kostyantynivka/],["Kherson",46.64,32.61,/Kherson/],["Sumy",50.91,34.8,/\bSumy\b/],["Crimea",45.3,34.4,/Crimea|Sevastopol/],["Moscow",55.75,37.62,/Moscow|Kremlin/],["Belgorod",50.6,36.6,/Belgorod/],["Minsk",53.9,27.57,/Minsk|Belarus/],["Warsaw",52.23,21.01,/Poland|Warsaw/],["Baltic",57,20,/Baltic|Lithuania|Latvia|Estonia/],["Black Sea",43.4,34,/Black Sea/],
-  ["Tehran",35.69,51.39,/Tehran/],["Strait of Hormuz",26.57,56.25,/Hormuz/],["Riyadh",24.71,46.68,/Riyadh/],["Dammam",26.43,50.1,/Dammam/],["Qatar",25.29,51.53,/Qatar|Doha/],["Oman",23.59,58.4,/\bOman\b|Muscat/],["Sanaa",15.37,44.19,/Sanaa|Houthi/],["Red Sea",20,38.5,/Red Sea|Bab el-Mandeb/],["Gaza",31.45,34.4,/Gaza/],["Tel Aviv",32.08,34.78,/Tel Aviv|Israel/],["Beirut",33.89,35.5,/Beirut|Lebanon|Hezbollah/],["Damascus",33.51,36.29,/Damascus|Syria/],["Baghdad",33.31,44.36,/Baghdad|Iraq/],
-  ["Taiwan",25.03,121.56,/Taiwan|Taipei/],["Kinmen",24.43,118.32,/Kinmen/],["Second Thomas Shoal",9.73,115.87,/Second Thomas|Ayungin/],["Scarborough Shoal",15.15,117.76,/Scarborough/],["Manila",14.6,120.98,/Manila|Philippin/],["Beijing",39.9,116.4,/Beijing/],["Pyongyang",39.04,125.76,/Pyongyang|North Korea/],
-  ["Khartoum",15.5,32.56,/Khartoum/],["Darfur",13.63,25.35,/Darfur|El Fasher/],["Goma",-1.68,29.22,/Goma|M23/],["Kabul",34.55,69.2,/Kabul|Afghan/],["Islamabad",33.68,73.05,/Islamabad|Pakistan/],["Kashmir",34.08,74.8,/Kashmir/],
-  ["Caracas",10.48,-66.9,/Caracas|Venezuela/],["Havana",23.11,-82.37,/Havana|Cuba/],["Port-au-Prince",18.59,-72.31,/Haiti|Port-au-Prince/],["Washington",38.9,-77.04,/Washington|White House|Pentagon/],["Miami",25.76,-80.19,/Miami/],["Brussels",50.85,4.35,/Brussels|\bNATO\b/],
-].map(([name,lat,lon,re])=>{const r=lat*Math.PI/180;return{name,re,x:(lon+180)/360*800,y:211.8-127.3*Math.log(Math.tan(Math.PI/4+r/2))};});
-const _placeCache=new Map();
-function newsPlaces(item){if(_placeCache.has(item.id))return _placeCache.get(item.id);const h=item.headline||"",full=evidenceText(item);const head=STORY_PLACES.filter(p=>p.re.test(h));const rest=STORY_PLACES.filter(p=>!head.includes(p)&&p.re.test(full));const out=[...head,...rest].slice(0,4);_placeCache.set(item.id,out);return out;}
 function blufTakeaway(item){const b=(item.bullets||[])[0];if(!b)return "";const noSrc=b.replace(/\s+[—–-]\s+[^—–]*$/,"");const m=noSrc.match(/^.*?[.;](?=\s+[A-Z(])/);const out=(m?m[0]:noSrc).trim();return out.length>260?out.slice(0,257).replace(/\s+\S*$/,"")+"…":out;}
-const StoryFocusCtx=createContext({focus:null,setFocus:()=>{}});
-function useStoryFocus(){return useContext(StoryFocusCtx);}
-function applyStoryFocus(items,focus){if(!focus)return items;return items.filter(n=>newsPlaces(n).some(p=>p.name===focus));}
-const DomainBadge=({item})=>{const d=newsDomain(item);return <span title={`Operational domain: ${d.label}`} style={{fontSize:9,fontWeight:800,color:d.color,background:d.color+"1a",border:`1px solid ${d.color}55`,borderRadius:4,padding:"1.5px 6px",letterSpacing:".06em",textTransform:"uppercase",whiteSpace:"nowrap",fontFamily:"'IBM Plex Mono',ui-monospace,monospace"}}>{d.icon} {d.label}</span>;};
-function PlaceChips({t,item}){const{focus,setFocus}=useStoryFocus();const places=newsPlaces(item);if(!places.length)return null;return <div style={{display:"flex",gap:5,flexWrap:"wrap",marginTop:7}}>{places.map(p=>{const on=focus===p.name;return <button key={p.name} onClick={e=>{e.stopPropagation();setFocus(on?null:p.name);const scope=e.currentTarget.closest("[data-story-scope]");const map=scope&&scope.querySelector("[data-story-map]");if(map&&!on)map.scrollIntoView({behavior:"smooth",block:"center"});}} aria-pressed={on} title={on?"Clear location filter":`Show ${p.name} on the story map and filter reports`} style={{fontSize:10,fontWeight:700,color:on?"#fff":"#5b8ec8",background:on?"#5b8ec8":t.isDark?"rgba(91,142,200,.10)":"rgba(91,142,200,.08)",border:"1px solid rgba(91,142,200,.45)",borderRadius:20,padding:"2px 8px",cursor:"pointer",fontFamily:FONT}}>📍 {p.name}</button>;})}</div>;}
-function StoryMap({t,items}){
-  const{focus,setFocus}=useStoryFocus();
-  const pts=useMemo(()=>{const m=new Map();items.forEach(n=>newsPlaces(n).forEach(p=>{const e=m.get(p.name)||{p,count:0,crit:false};e.count++;if(n.severity==="critical")e.crit=true;m.set(p.name,e);}));return [...m.values()];},[items]);
-  if(!pts.length)return null;
-  const xs=pts.map(e=>e.p.x),ys=pts.map(e=>e.p.y);let x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
-  let w=Math.max(x1-x0,60)+50,h=Math.max(y1-y0,30)+40;const ar=2.3;if(w/h<ar)w=h*ar;else h=w/ar;const cx=(x0+x1)/2,cy=(y0+y1)/2;const vb=[cx-w/2,cy-h/2,w,h];
-  const u=w/400;const ocean=t.isDark?"#060d1a":"#dae4f0",land=t.isDark?"#0e1e35":"#b8cce0",border=t.isDark?"#1d3658":"#8aaec8";
-  const focusCount=focus?applyStoryFocus(items,focus).length:0;const ranked=[...pts].sort((a,b)=>b.count-a.count);const labelSet=new Set(ranked.slice(0,8).map(e=>e.p.name));if(focus)labelSet.add(focus);
-  return <div data-story-map style={{background:ocean,borderRadius:12,overflow:"hidden",border:`1px solid ${t.border}`,marginBottom:12}}>
-    <div style={{padding:"8px 12px 4px",display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}><span style={{fontSize:10,fontWeight:800,color:t.sub,textTransform:"uppercase",letterSpacing:".1em",fontFamily:"'IBM Plex Mono',ui-monospace,monospace"}}>📍 Story map · {pts.length} locations</span><span style={{fontSize:10,color:t.sub,marginLeft:"auto"}}>tap a pin to filter reports</span></div>
-    <svg viewBox={vb.join(" ")} width="100%" style={{display:"block"}} role="img" aria-label="Map of locations mentioned in these reports"><rect x={vb[0]} y={vb[1]} width={w} height={h} fill={ocean}/><path d={WORLD_LAND_PATH} fill={land} stroke={border} strokeWidth="0.8" vectorEffect="non-scaling-stroke"/>
-      {pts.map(({p,count,crit})=>{const on=focus===p.name,dim=focus&&!on;const r=u*(3+Math.min(count,5)*0.9);const col=crit?"#ef4444":"#f59e0b";return <g key={p.name} style={{cursor:"pointer"}} opacity={dim?0.35:1} onClick={()=>setFocus(on?null:p.name)}><circle cx={p.x} cy={p.y} r={r*2.6} fill="transparent"/><circle cx={p.x} cy={p.y} r={r*1.8} fill={col} opacity={0.14}/>{on&&<circle cx={p.x} cy={p.y} r={r} fill="none" stroke={col} strokeWidth={u*0.8} style={{transformOrigin:`${p.x}px ${p.y}px`,animation:"radarPing 1.6s ease-out infinite"}}/>}<circle cx={p.x} cy={p.y} r={r} fill={col} stroke={on?"#fff":ocean} strokeWidth={u*(on?0.9:0.5)}/>{labelSet.has(p.name)&&<text x={p.x+r+u*2} y={p.y+u*2.5} fontSize={u*(on?8.5:7)} fontWeight={on?800:600} fill={t.isDark?"rgba(255,255,255,.85)":"rgba(10,20,40,.8)"} style={{pointerEvents:"none",paintOrder:"stroke",stroke:ocean,strokeWidth:u*2}}>{p.name}{count>1?` ·${count}`:""}</text>}</g>;})}
-    </svg>
-    {focus&&<div style={{display:"flex",alignItems:"center",gap:8,padding:"7px 12px",borderTop:`1px solid ${t.border}`,background:t.card,flexWrap:"wrap"}}><span style={{fontSize:11,color:t.text}}>Filtering by <strong>📍 {focus}</strong> · {focusCount} report{focusCount===1?"":"s"}</span><button onClick={()=>setFocus(null)} style={{marginLeft:"auto",fontSize:10,fontWeight:700,color:t.sub,background:"none",border:`1px solid ${t.border}`,borderRadius:20,padding:"2px 9px",cursor:"pointer",fontFamily:FONT}}>✕ Clear filter</button></div>}
-  </div>;
-}
 function BlufCard({t,item}){
   const[open,setOpen]=useState(false);const accent=item.impactColor||sevColor(item.severity);const take=blufTakeaway(item);const n=(item.bullets||[]).length;
   return <Card t={t} style={{borderLeft:`4px solid ${accent}`}}><div style={{display:"flex",gap:10,alignItems:"flex-start"}}><span style={{fontSize:18,flexShrink:0,marginTop:1}}>{item.icon}</span><div style={{flex:1,minWidth:0}}>
@@ -465,12 +435,11 @@ function BlufCard({t,item}){
     <div style={{fontSize:13.5,fontWeight:800,color:t.text,lineHeight:1.35,marginBottom:take?6:0,overflowWrap:"anywhere"}}>{item.headline}</div>
     {take&&<div style={{fontSize:12,color:t.sub,lineHeight:1.5,paddingLeft:10,borderLeft:`2px solid ${accent}66`,overflowWrap:"anywhere"}}>{take}</div>}
     {item.impact&&<div style={{fontSize:11,color:accent,fontWeight:700,marginTop:6}}>{item.impact}</div>}
-    <PlaceChips t={t} item={item}/>
     {n>0&&<button onClick={()=>setOpen(v=>!v)} aria-expanded={open} style={{marginTop:8,fontSize:10,fontWeight:700,color:t.sub,background:"none",border:"none",padding:0,cursor:"pointer",fontFamily:FONT,letterSpacing:".04em"}}>{open?"▾":"▸"} Evidence & sources <SourceCountBadge bullets={item.bullets}/></button>}
     {open&&<div style={{marginTop:7}}>{item.bullets.map((b,i)=><div key={i} style={{display:"flex",gap:6,fontSize:12,color:t.sub,marginBottom:5,lineHeight:1.5}}><span style={{color:accent,flexShrink:0}}>▸</span><span style={{overflowWrap:"anywhere"}}>{b}</span></div>)}<div style={{marginTop:4,display:"flex",flexWrap:"wrap",gap:5}}><SourcingStrip t={t} item={item}/></div></div>}
   </div></div></Card>;
 }
-function StoryFeed({t,items}){const{focus}=useStoryFocus();const shown=applyStoryFocus(items,focus);return <div data-story-scope><StoryMap t={t} items={items}/>{shown.map(item=><BlufCard key={item.id} t={t} item={item}/>)}</div>;}
+function StoryFeed({t,items}){return <div>{items.map(item=><BlufCard key={item.id} t={t} item={item}/>)}</div>;}
 function Card({t,children,style,onClick}){const ref=useRef(null);const[rv,setRv]=useState(0);useEffect(()=>{const el=ref.current;if(!el||typeof window==="undefined"||_reducedMotion())return;const r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.94)return;setRv(1);return _revealWatch(el,()=>setRv(2));},[]);return <div ref={ref} className="wcd-card" onClick={onClick} style={{background:t.isDark?"linear-gradient(180deg,rgba(120,160,220,.10),rgba(255,255,255,0) 45%),"+t.card:"linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 22%),"+t.card,borderRadius:12,marginBottom:10,border:`1px solid ${t.border}`,borderTop:t.isDark?"1px solid rgba(255,255,255,.16)":`1px solid rgba(255,255,255,.7)`,overflow:"hidden",boxShadow:t.isDark?"0 6px 20px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08)":"0 4px 14px rgba(59,130,246,.16),inset 0 1px 0 rgba(255,255,255,.6)",opacity:rv===1?0:undefined,animation:rv===1?"none":"riseIn .5s cubic-bezier(.22,1,.36,1) backwards",...style}}>{children}</div>;}
 const ST=({t,children,color})=><h2 style={{fontSize:11,fontWeight:700,color:color??t.sub,textTransform:"uppercase",letterSpacing:".1em",marginBottom:8,marginTop:18,paddingLeft:9,borderLeft:`3px solid ${color??(t.isDark?"#5b8ec8":"#3a4a5c")}`,lineHeight:1.3,animation:"stIn .45s cubic-bezier(.22,1,.36,1) backwards"}}>{children}</h2>;
 const Row=({t,children,last})=><div style={{display:"flex",alignItems:"center",gap:10,padding:"11px 14px",borderBottom:last?0:`.5px solid ${t.sep}`}}>{children}</div>;
@@ -564,7 +533,7 @@ function MultiTrendTooltip({active,payload,label,t}){
 function useCountdown(target){const[text,setText]=useState("");useEffect(()=>{if(!target||isNaN(target.getTime())){setText("");return;}const tick=()=>{const ms=target.getTime()-Date.now();if(ms<=0){setText("ELAPSED");return;}const d=Math.floor(ms/86400000),h=Math.floor((ms%86400000)/3600000),m=Math.floor((ms%3600000)/60000);setText(`D-${d} · ${h}h ${m}m`);};tick();const id=setInterval(tick,60000);return()=>clearInterval(id);},[target]);return text;}
 
 const MONTHS={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-const BUILD_NUMBER=286;
+const BUILD_NUMBER=287;
 function parseNewsDate(s){if(!s)return null;const m=s.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/);if(m)return new Date(Date.UTC(+m[3],MONTHS[m[1]],+m[2]));const m2=s.match(/([A-Z][a-z]{2})\s+(\d{4})/);if(m2)return new Date(Date.UTC(+m2[2],MONTHS[m2[1]],1));return null;}
 const TIMELINE=[...DEADLINES.map(d=>({...d})),...POLITICAL_CALENDAR.map(p=>({icon:p.icon||"\ud83d\uddd3\ufe0f",date:p.date,label:p.label,desc:p.note,color:p.color,status:p.status,target:parseNewsDate(p.date)}))].sort((a,b)=>{const at=a.target?+a.target:null,bt=b.target?+b.target:null,now=+REPORT_NOW;const rank=x=>x==null?2:(x>=now?0:1);const ra=rank(at),rb=rank(bt);if(ra!==rb)return ra-rb;if(ra===0)return at-bt;if(ra===1)return bt-at;return 0;});
 const NEWS_MAX_AGE_DAYS=14;
@@ -4516,7 +4485,7 @@ export default function Dashboard({initialView,initialSection,initialTab}={}){
   const[paletteOpen,setPaletteOpen]=useState(false);const[pendingTab,setPendingTab]=useState(initialTab||null);
   const[faqOpen,setFaqOpen]=useState(false);
   const[flash,setFlash]=useState(null);
-  const[storyFocus,setStoryFocus]=useState(null);useEffect(()=>{setStoryFocus(null);},[view,selectedConflict]);const storyCtx=useMemo(()=>({focus:storyFocus,setFocus:setStoryFocus}),[storyFocus]);
+  
   const flashN=useRef(0);
   const t={...(dark?DARK:LIGHT),isLandscape,isMobile};
   const touchStartX=useRef(null);
@@ -4531,7 +4500,7 @@ export default function Dashboard({initialView,initialSection,initialTab}={}){
   const handleSwipe=deltaX=>{if(Math.abs(deltaX)<60)return;const views=VIEWS.map(v=>v.id);const idx=views.indexOf(view);if(deltaX<0&&idx<views.length-1)setView(views[idx+1]);else if(deltaX>0&&idx>0)setView(views[idx-1]);};
   const handleNavigate=(sectionId,tabId)=>{setSelectedConflict(sectionId);setPendingTab(tabId||null);setView("deepdive");setPaletteOpen(false);};
 
-  return <StoryFocusCtx.Provider value={storyCtx}><div style={{background:t.bg,minHeight:"100vh",maxWidth:t.isLandscape?900:480,margin:"0 auto",fontFamily:FONT,lineHeight:1.5,WebkitFontSmoothing:"antialiased",paddingBottom:"calc(48px + env(safe-area-inset-bottom, 0px))",position:"relative"}} className={t.isDark?"t-dark":""}>
+  return <div style={{background:t.bg,minHeight:"100vh",maxWidth:t.isLandscape?900:480,margin:"0 auto",fontFamily:FONT,lineHeight:1.5,WebkitFontSmoothing:"antialiased",paddingBottom:"calc(48px + env(safe-area-inset-bottom, 0px))",position:"relative"}} className={t.isDark?"t-dark":""}>
     <style dangerouslySetInnerHTML={{__html:GCSS+NAV_ANIM_CSS}}/>
     <div className="grain-overlay"/>
     <div style={{position:"fixed",bottom:0,left:0,right:0,zIndex:90,pointerEvents:"none",background:"#1f6f43",color:"#e8f5ec",fontSize:8,fontWeight:700,letterSpacing:".2em",textAlign:"center",padding:"4px 0 calc(4px + env(safe-area-inset-bottom, 0px))",fontFamily:FONT,textTransform:"uppercase",maxWidth:t.isLandscape?900:480,margin:"0 auto"}}>Unclassified · OSINT · @FUQUAD08</div>
@@ -4576,6 +4545,6 @@ export default function Dashboard({initialView,initialSection,initialTab}={}){
       {view==="theaters"&&<div style={{padding:"16px 16px 0",animation:"fadeIn .25s ease-out",position:"relative"}}><SJMark size={26} style={{bottom:10,right:8,transform:"rotate(-4deg)"}}/><WorldMap t={t} conflicts={CONFLICTS} onSelect={id=>{const sectionId=id==="south-china-sea"||id==="taiwan"?"scs":(SECTION_MAP[id]??id);const tabId=NESTED_TAB_IDS.includes(id)?id:undefined;setSelectedConflict(sectionId);setPendingTab(tabId||null);setView("deepdive");}} selectedId={selectedConflict==="scs"?"south-china-sea":selectedConflict}/><TheatersOverview t={t} conflicts={CONFLICTS} onSelectConflict={(id,tabId)=>{setSelectedConflict(id);setPendingTab(tabId||null);setView("deepdive");}}/></div>}
       {view==="deepdive"&&<DeepDiveView t={t} selectedConflict={selectedConflict} setSelectedConflict={setSelectedConflict} initialTab={pendingTab} onFlash={triggerFlash}/>}
     </div>
-  </div></StoryFocusCtx.Provider>;
+  </div>;
 }
 
