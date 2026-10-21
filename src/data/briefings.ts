@@ -25,6 +25,14 @@ export interface Briefing {
 
 export const BRIEFINGS: Briefing[] = [
   {
+    date: "2026-10-21",
+    title: "Russian attacks killed at least 9 and wounded 45 across Ukraine over the past day,…",
+    lede: "Russian attacks killed at least 9 and wounded 45 across Ukraine over the past day, including at least 2 killed in Kyiv, after an overnight raid with Iskander-K missiles and 186 drones, per Ukrainian authorities. In the Gulf, Brent settled at $108.79 on Oct 20 after a five-month intraday high, and Araghchi says Iran is fully prepared to defend itself while Pezeshkian rules out dialogue under blockade. The General Staff puts Russian losses at 1,570,540 (+1,820), per the Kyiv Independent.",
+    body: "Russian attacks killed at least 9 and wounded 45 across Ukraine over the past day, including at least 2 killed in Kyiv, after an overnight raid with Iskander-K missiles and 186 drones, per Ukrainian authorities. In the Gulf, Brent settled at $108.79 on Oct 20 after a five-month intraday high, and Araghchi says Iran is fully prepared to defend itself while Pezeshkian rules out dialogue under blockade. The General Staff puts Russian losses at 1,570,540 (+1,820), per the Kyiv Independent. Reuters, citing Iranian officials, reported on Oct 20 that Tehran is prolonging talks until after the Nov 3 midterms, and the IRGC claim that mines halted two tankers remains unconfirmed while CENTCOM says the strait is open. Israel and Lebanon were due to hold working-level talks in Tampa on Oct 20–21 per a US official; no outcome was sourced in this refresh — Kyiv Independent, Express Tribune (Reuters), Al Jazeera, Times of Israel (Reuters).",
+    watch: "Further Russian strikes on Ukrainian energy and cities; independent confirmation of the Hormuz mine claims; the outcome of the Tampa Israel–Lebanon talks; Trump’s Iran decision; and Wednesday’s Brent settle against $108.79.",
+    theaters: ["Ukraine","Iran","Strait of Hormuz","Israel","Lebanon"],
+  },
+  {
     date: "2026-10-19",
     title: "Ukraine and Russia exchanged large long-range strikes overnight on Oct 18–19 while the…",
     lede: "Ukraine and Russia exchanged large long-range strikes overnight on Oct 18–19 while the Strait of Hormuz remains contested. Zelensky says Russia fired 16 ballistic missiles at Kyiv and its region, killing at least 1 and injuring 8 in the capital, and Russian officials say Ukraine launched more than 1,000 drones, with a death and oil-site fires reported in St Petersburg. The IRGC says tankers hit mines in Hormuz, which no independent source has confirmed, and Brent’s last confirmed settle was $109.86 on Oct 16. The General Staff report dated Oct 19 puts Russian losses at 1,567,160 (+2,100).",
