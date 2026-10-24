@@ -25,6 +25,14 @@ export interface Briefing {
 
 export const BRIEFINGS: Briefing[] = [
   {
+    date: "2026-10-24",
+    title: "Ukraine’s General Staff puts Russian losses at 1,574,620 (+1,830), and the Kyiv Independent…",
+    lede: "Ukraine’s General Staff puts Russian losses at 1,574,620 (+1,830), and the Kyiv Independent reports Russian attacks on energy facilities killed at least 8 and injured 67 over the past day. In the Gulf, CNBC says Brent topped $113 on Oct 22, the highest since May, as the US pulls non-emergency staff from Saudi Arabia after Houthi attacks. US-hosted Lebanon–Israel talks in Tampa appear to have ended without a breakthrough, per Lebanese military sources.",
+    body: "Ukraine’s General Staff puts Russian losses at 1,574,620 (+1,830), and the Kyiv Independent reports Russian attacks on energy facilities killed at least 8 and injured 67 over the past day. In the Gulf, CNBC says Brent topped $113 on Oct 22, the highest since May, as the US pulls non-emergency staff from Saudi Arabia after Houthi attacks. US-hosted Lebanon–Israel talks in Tampa appear to have ended without a breakthrough, per Lebanese military sources. Finland announces more than $336 million for Ukraine, and the Kremlin says it is ready for trilateral talks without a date. Reports of renewed US-Israeli strikes on Iran differ on timing and are unconfirmed, and a Brent settle of $113.17 reported by one outlet is not used pending a second source. Sections of this briefing not covered by fresh sourcing, including Africa, South Asia, Taiwan and the South China Sea, and Venezuela, were not updated in this refresh — Kyiv Independent, CNBC, Al Jazeera, Fox News, The New Arab.",
+    watch: "Trilateral talks dates; Russian strikes on energy facilities; US or Israeli action on Iran; further Houthi attacks; and the US statement on the Tampa talks.",
+    theaters: ["Ukraine","Iran","Israel","Lebanon","Yemen","Taiwan","China"],
+  },
+  {
     date: "2026-10-23",
     title: "Ukraine’s General Staff puts Russian losses at 1,574,620 (+1,830), and the Kyiv Independent…",
     lede: "Ukraine’s General Staff puts Russian losses at 1,574,620 (+1,830), and the Kyiv Independent reports Russian attacks on energy facilities killed at least 8 and injured 67 over the past day. In the Gulf, CNBC says Brent topped $113 on Oct 22, the highest since May, as the US pulls non-emergency staff from Saudi Arabia after Houthi attacks. US-hosted Lebanon–Israel talks in Tampa appear to have ended without a breakthrough, per Lebanese military sources.",
