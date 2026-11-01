@@ -25,6 +25,14 @@ export interface Briefing {
 
 export const BRIEFINGS: Briefing[] = [
   {
+    date: "2026-11-01",
+    title: "Ukraine’s General Staff puts Russian losses at about 1,588,170 (+1,670) as of Oct 31, per…",
+    lede: "Ukraine’s General Staff puts Russian losses at about 1,588,170 (+1,670) as of Oct 31, per the Ministry of Defence of Ukraine, and ISW says a humanitarian mission in occupied Kherson Oblast was completed under the Oleshky ceasefire. Al Jazeera reports Iran’s foreign minister says Tehran has a two-day plan with Qatari mediators to reopen Hormuz if the US meets its conditions; Trump says talks are going fine but he is in no hurry.",
+    body: "Ukraine’s General Staff puts Russian losses at about 1,588,170 (+1,670) as of Oct 31, per the Ministry of Defence of Ukraine. ISW says both sides largely observed the Oleshky local ceasefire and completed a humanitarian mission in occupied Kherson Oblast, that the State Department approved a possible sale of 500 PAC-3 interceptors to Ukraine with delivery years away, and that the Kremlin still rejects compromise on its 2022 demands. In the Gulf, Al Jazeera reports Foreign Minister Araghchi says Tehran has a plan with Qatari mediators to reopen Hormuz within two days if the US meets its conditions, while Trump says talks are going fine but he is not in that much of a hurry; Fox News reports Pentagon strike options for after the Nov 3 midterms. The last confirmed Brent settle in this dashboard is $113.88 on Oct 27; a newer settle was not found. Sections not covered by fresh sourcing, including Africa, South Asia, Taiwan and the South China Sea, Venezuela and the Levant, were not updated in this refresh — Ministry of Defence of Ukraine, ISW, Al Jazeera, Fox News.",
+    watch: "Oleshky truce after Sunday; US response to the Qatari plan; the Nov 3 midterms and any strike decision; Russian strikes on energy facilities; and the next confirmed Brent settle.",
+    theaters: ["Ukraine","Iran","Strait of Hormuz","Taiwan","China"],
+  },
+  {
     date: "2026-10-24",
     title: "Ukraine’s General Staff puts Russian losses at 1,574,620 (+1,830), and the Kyiv Independent…",
     lede: "Ukraine’s General Staff puts Russian losses at 1,574,620 (+1,830), and the Kyiv Independent reports Russian attacks on energy facilities killed at least 8 and injured 67 over the past day. In the Gulf, CNBC says Brent topped $113 on Oct 22, the highest since May, as the US pulls non-emergency staff from Saudi Arabia after Houthi attacks. US-hosted Lebanon–Israel talks in Tampa appear to have ended without a breakthrough, per Lebanese military sources.",
